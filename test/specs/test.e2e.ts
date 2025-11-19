@@ -5,7 +5,7 @@ import SearchPage from '../pageobjects/search.page'
 describe('My Login application', () => {
     it('should login with valid credentials', async () => {
         await HomePage.open()
-        await HomePage.cookiePopup.close()
+        // await HomePage.cookiePopup.close()
         await HomePage.searchBar.search("wire")
         await browser.pause(100000)
         // await HomePage.login('tomsmith', 'SuperSecretPassword!')

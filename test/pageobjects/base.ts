@@ -1,20 +1,20 @@
 import { str } from '../utils/utils'
 import { browser, $, $ as $x } from '@wdio/globals'
-import searchBar from './elements/base/searchBar'
-import cookiePopup from './elements/base/cookiePopup'
+import SearchBar from './elements/base/searchBar'
+import Popup from './elements/base/popup'
 
 
 
 export default class Base {
-    public get searchBar() { return new searchBar() }
-    public get cookiePopup() { return new cookiePopup() }
-
-    /** @param baseUrl https://www.taydaelectronics.com */
-    public get baseUrl() { return new URL("https://www.taydaelectronics.com").toString() }
-
+    /** @param baseUrl https://www.parts-express.com */
+    public get baseUrl() { return new URL("https://www.parts-express.com") }
+    
+    public get Popup() { return new Popup}
+    public get SearchBar() { return new SearchBar() }
     public async open(path?:str) {
-        path = path ?? this.baseUrl
+        path = path ?? this.baseUrl.toString()
         await browser.url(path)
+        this.searchBar.typeahead.base.click()
     }
 }
 
