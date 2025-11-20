@@ -1,6 +1,6 @@
 import { bool, str, int, Int, _ } from "../utils/utils"
 import { $ } from "@wdio/globals"
-import { base } from "../pageobjects/base"
+import { base } from "../pageobjects/base/base"
 
 
 export default abstract class Element {

@@ -1,6 +1,6 @@
-import { str } from '../utils/utils';
+import { str } from '../../utils/utils';
 import { $ } from '@wdio/globals';
-import Base from './base';
+import Base from '../base/base';
 
 
 
@@ -15,7 +15,6 @@ class SearchPage extends Base {
         if(keywords) {
             url.searchParams.set("keywords", keywords)
         }
-        
         return url.toString()
     }
 

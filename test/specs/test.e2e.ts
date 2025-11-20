@@ -1,6 +1,6 @@
 import { browser, expect } from '@wdio/globals'
-import HomePage from '../pageobjects/home.page'
-import { base } from '../pageobjects/base';
+import HomePage from '../pageobjects/page/home.page'
+import { base } from '../pageobjects/base/base';
 
 
 describe('My Login application', () => {

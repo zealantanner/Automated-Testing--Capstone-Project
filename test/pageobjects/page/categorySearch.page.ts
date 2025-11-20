@@ -1,10 +1,11 @@
-import { str } from '../utils/utils';
+import { str } from '../../utils/utils';
 import { $ } from '@wdio/globals';
-import Base from './base';
+import Base from '../base/base';
+import SearchPage from './search.page';
 
 
 
-class CategorySearch extends Base {
+class CategorySearch extends SearchPage {
     /** @param subUrl ss_category */
     public get subUrl() { return "ss_category" }
     /** @param baseUrl https://www.parts-express.com/ss_category */

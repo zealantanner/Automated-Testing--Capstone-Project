@@ -1,7 +1,7 @@
-import { str } from '../utils/utils'
+import { str } from '../../utils/utils'
 import { browser, $, $ as $x } from '@wdio/globals'
-import SearchBar from '../elements/base/searchBar'
-import Popup from '../elements/base/popup'
+import SearchBar from '../../elements/base/searchBar'
+import Popup from '../../elements/base/popup'
 
 
 
