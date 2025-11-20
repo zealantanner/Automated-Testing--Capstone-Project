@@ -12,6 +12,7 @@ describe('My Login application', () => {
         await HomePage.SearchBar.search("wire")
         await HomePage.SearchBar.search("usb")
         await HomePage.SearchBar.search("wire")
+        await 
         await HomePage.SearchBar.search("usb")
         await HomePage.SearchBar.search("wire")
         await HomePage.SearchBar.search("usb")

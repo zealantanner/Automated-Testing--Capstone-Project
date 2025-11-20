@@ -9,7 +9,6 @@ class SearchPage extends Base {
     public get subUrl() { return "search" }
     /** @param baseUrl https://www.parts-express.com/search */
     public get baseUrl() { return new URL(this.subUrl, super.baseUrl) }
-    
     /** @param keywords https://www.parts-express.com/search?keywords={{query}} */
     public baseUrlWithQuery(keywords?:str) {
         const url = this.baseUrl
@@ -19,6 +18,9 @@ class SearchPage extends Base {
         
         return url.toString()
     }
+
+    // public get itemsBox() { return }
+    // public get itemsBox() { return }
     public async open(query:str) {
         await super.open(this.baseUrlWithQuery(query));
     }
