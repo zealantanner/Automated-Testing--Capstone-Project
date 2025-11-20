@@ -20,5 +20,6 @@ class CategorySearch extends Base {
         return url.toString()
     }
 }
+//> maybe extend from search?
 
 export default new CategorySearch();

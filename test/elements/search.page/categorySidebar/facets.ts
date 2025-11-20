@@ -2,8 +2,8 @@ import { Int } from "../../../utils/utils"
 
 
 
-/** @param Facet part of category sidebar */
-export default class Facet extends Element {
+/** @param Facets part of category sidebar */
+export default class Facets extends Element {
     constructor(private _base: ChainablePromiseElement) {
         super()
     }
