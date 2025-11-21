@@ -25,11 +25,6 @@ export default class Popup extends Element {
                     disabledTeasers: { V6Vcns: { lastCloseTime: now } }
                 }
             }
-            // viewedForms: {
-            //     modal: {
-            //         disabledForms: { V6Vcns: { lastCloseTime: now } },
-            //         viewedForms: { SJhXNt: 17938578, V6Vcns: 18109314 },
-            //         disabledTeasers:{V6Vcns:{lastCloseTime:1763610440}}}}}
         }
         await browser.execute((storage) => {
             localStorage.setItem(

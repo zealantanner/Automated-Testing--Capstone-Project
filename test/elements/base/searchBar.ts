@@ -8,6 +8,7 @@ import Typeahead from "./searchBar/typeahead"
 
 
 export default class SearchBar extends Element {
+    //> use something like the python library for finding closest word for tpyoes... maybe
     public get base() { return $('.row-one-search') }
     
     public get inputField() { return this.base.$('input[type="search"]')  }

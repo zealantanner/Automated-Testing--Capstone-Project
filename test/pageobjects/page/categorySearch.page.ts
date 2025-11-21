@@ -1,26 +1,14 @@
-import { str } from '../../utils/utils';
+import { int, str } from '../../utils/utils';
 import { $ } from '@wdio/globals';
 import Base from '../base/base';
 import SearchPage from './search.page';
+import BaseSearch, { CategoryOptions } from '../base/baseSearch';
 
 
 
-class CategorySearch extends SearchPage {
-    /** @param subUrl ss_category */
-    public get subUrl() { return "ss_category" }
-    /** @param baseUrl https://www.parts-express.com/ss_category */
-    public get baseUrl() { return new URL(this.subUrl, super.baseUrl) }
-    
-    /** @param categoryName https://www.parts-express.com/ss_category/{{categoryName}}?keywords={{keywords}} */
-    /** @param keywords https://www.parts-express.com/ss_category/{{categoryName}}?keywords={{keywords}} */
-    public baseUrlWithCategory(categoryName:str, keywords?:str) {
-        const url = new URL(categoryName, this.baseUrl)
-        if(keywords) {
-            url.searchParams.set("keywords", keywords)
-        }
-        return url.toString()
-    }
+class CategorySearchPage extends BaseSearch<CategoryOptions> {
+    /** `ss_category` */
+    readonly subUrl = "ss_category"
 }
-//> maybe extend from search?
 
-export default new CategorySearch();
+export default new CategorySearchPage();

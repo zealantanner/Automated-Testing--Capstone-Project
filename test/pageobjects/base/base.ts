@@ -6,18 +6,15 @@ import Popup from '../../elements/base/popup'
 
 
 export default class Base {
-    /** @param baseUrl https://www.parts-express.com */
+    /** https://www.parts-express.com */
     public get baseUrl() { return new URL("https://www.parts-express.com") }
 
     public get logo() { return $('#site-logo') }
     public get Popup() { return new Popup() }
     public get SearchBar() { return new SearchBar() }
 
-    
-    public async open(path?:str) {
-        path = path ?? this.baseUrl.toString()
-        await browser.url(path)
-        // this.SearchBar.Typeahead.base.click()
+    protected async open(path:str|URL= this.baseUrl) {
+        await browser.url(path.toString())
     }
 }
 
