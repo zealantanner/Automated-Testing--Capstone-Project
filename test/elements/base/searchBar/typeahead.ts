@@ -4,7 +4,7 @@ import Element from "../../element"
 
 
 export default class Typeahead extends Element {
-    constructor(private searchBarBase: ChainablePromiseElement) {
+    constructor(private searchBarBase:ChainablePromiseElement) {
         super()
     }
     public get base() { return this.searchBarBase.$('*[data-type="typeahead"]') }

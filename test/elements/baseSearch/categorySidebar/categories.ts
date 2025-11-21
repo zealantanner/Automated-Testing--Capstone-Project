@@ -3,9 +3,9 @@ import { browser, $, $ as $x } from '@wdio/globals'
 
 
 
-/** @param Facets part of category sidebar */
-export default class Facets extends Element {
-    constructor(private _base: ChainablePromiseElement) {
+/** @param Categories part of category sidebar */
+export default class Categories extends Element {
+    constructor(private _base:ChainablePromiseElement) {
         super()
     }
     public get base() { return this._base }

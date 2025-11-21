@@ -1,23 +1,27 @@
 import { browser, expect } from '@wdio/globals'
-import HomePage from '../pageobjects/page/home.page'
+import HomePage from '../pageobjects/pages/home.page'
 import { base } from '../pageobjects/base/base';
-import SearchPage from '../pageobjects/page/search.page';
-import CategorySearchPage from '../pageobjects/page/categorySearch.page';
+import SearchPage from '../pageobjects/pages/search.page';
+import CategorySearchPage from '../pageobjects/pages/categorySearch.page';
 import { customTimeout } from '../utils/utils';
 
 
 describe('My Login application', () => {
-    // before(async () => await base.Popup.killBeforeItsEvenBorn());
-    it('should login with valid credentials', async () => {
+    before(async () => {
         await HomePage.open()
         await base.Popup.dismissPopupViaLocalStorage()
-        await browser.pause(4000)
-        // await SearchPage.open()
+    });
+    it('should login with valid credentials', async () => {
+        await browser.pause(3000)
+        await SearchPage.open()
+        await browser.pause(3000)
         await SearchPage.openSearch({keywords:"door lock"})
-        await browser.pause(4000)
+        await browser.pause(3000)
+        await CategorySearchPage.open()
+        await browser.pause(3000)
         await CategorySearchPage.openSearch({category:"Wire & Cables"})
-        await browser.pause(4000)
-        await browser.pause(4000)
+        // await CategorySearchPage.openSearch({ca})
+        await browser.pause(3000)
         // await HomePage.cookiePopup.close()
         await HomePage.SearchBar.search("wire")
         await HomePage.SearchBar.search("usb")

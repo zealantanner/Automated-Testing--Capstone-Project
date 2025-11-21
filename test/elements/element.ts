@@ -15,6 +15,9 @@ export default abstract class Element {
         // await this.base.waitForEnabled() // works
         // await this.base.waitForDisplayed() // doesn't work
     }
+    // public async clickBase() {
+    //     await this.base.click()
+    // }
 }
 
 //> tell jeremy dont use waitForDisplayed, use waitForExist instead

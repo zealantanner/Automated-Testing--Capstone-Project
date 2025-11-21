@@ -4,9 +4,9 @@ import Element from "../element"
 
 
 
-/** @param Item an item in the search results */
-export default class Item extends Element {
-    constructor(private _base: ChainablePromiseElement) {
+/** @param Items an item in the search results */
+export default class Items extends Element {
+    constructor(private _base:ChainablePromiseElement) {
         super()
     }
     public get base() { return this._base }
@@ -29,10 +29,10 @@ export default class Item extends Element {
         )
         const stockText = await this.stock.getText()
         return {
-            title:titleText,
-            price:priceText,
-            starRating:ratingPercent,
-            reviews:reviewCount,
+            title: titleText,
+            price: priceText,
+            starRating: ratingPercent,
+            reviews: reviewCount,
             stockStatus: stockText,
         }
     }

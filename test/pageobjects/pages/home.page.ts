@@ -4,6 +4,7 @@ import Base from '../base/base';
 
 
 class HomePage extends Base {
+    public get subUrl():str { return "" }
     public async open() {
         await super.open();
     }

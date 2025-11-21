@@ -9,6 +9,10 @@ import BaseSearch, { CategoryOptions } from '../base/baseSearch';
 class CategorySearchPage extends BaseSearch<CategoryOptions> {
     /** `ss_category` */
     readonly subUrl = "ss_category"
+    /** `category:str, keywords?:str, page?:int` */
+    public async openSearch(options:CategoryOptions) {
+        await super.openSearch(options)
+    }
 }
 
 export default new CategorySearchPage();

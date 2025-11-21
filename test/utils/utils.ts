@@ -1,3 +1,4 @@
+import { browser } from '@wdio/globals'
 
 
 export const _ = undefined;
@@ -14,13 +15,13 @@ export const customTimeout = 5000;
 //     const proto = Object.getPrototypeOf(browser.$('body'))
 
 // }
-// export async function doSafe<T extends WebdriverIO.Element>(el: T) {
+// export async function doSafe<T extends WebdriverIO.Element>(el:T) {
 //     return new Proxy(el, {
 //         get(target, prop) {
 //             const value = target[prop];
 
 //             if (typeof value === 'function') {
-//                 return async (...args: any[]) => {
+//                 return async (...args:any[]) => {
 //                     await base.Popup.dismissPopupIfPresent();
 //                     const result = await value.apply(target, args);
 //                     await base.Popup.dismissPopupIfPresent();

@@ -1,17 +1,14 @@
 import { bool, str, int, Int, _ } from "../../utils/utils"
 import { $, $ as $x, $$ } from "@wdio/globals"
 import Element from "../element"
-import Facets from "./categorySidebar/facets"
+import Categories from "./categorySidebar/categories"
 
 
 
-export default class Category extends Element {
+export default class CategorySidebar extends Element {
     public get base() { return $('[data-facet-id="ss_category"]') }
-    public get facets() {
+    public get categories() {
         return this.base.$$('li')
-        .map(el => new Facets($(el)))
-    }
-    public async clickbase() {
-        await this.base.click()
+        .map(el => new Categories($(el)))
     }
 }
