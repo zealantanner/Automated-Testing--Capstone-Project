@@ -1,0 +1,295 @@
+{
+  "main": {
+    "id": "8f4232669561935e",
+    "type": "split",
+    "children": [
+      {
+        "id": "8c2c76100cfb1866",
+        "type": "tabs",
+        "dimension": 40.638428483732355,
+        "children": [
+          {
+            "id": "4a3970ab645746c5",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Search Bar/images/Typeahead/Results.png"
+              },
+              "icon": "lucide-image",
+              "title": "Results"
+            }
+          },
+          {
+            "id": "06f8e30278efe7a4",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Search Bar/images/Typeahead/Brands.png"
+              },
+              "icon": "lucide-image",
+              "title": "Brands"
+            }
+          }
+        ]
+      },
+      {
+        "id": "c6dbcbd7d13b7b68",
+        "type": "tabs",
+        "dimension": 59.36157151626765,
+        "children": [
+          {
+            "id": "9483a5067a12bd2f",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Search Category/!Category.canvas",
+                "viewState": {
+                  "x": 946.6520033233805,
+                  "y": -64.9706318000597,
+                  "zoom": -0.9885600663436744
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "!Category"
+            }
+          },
+          {
+            "id": "a772b06e36e1304d",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Search Bar/!Search Bar.canvas",
+                "viewState": {
+                  "x": -1662.4286773624929,
+                  "y": -535.9084508338879,
+                  "zoom": -2.396666666666665
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "!Search Bar"
+            }
+          },
+          {
+            "id": "e62ab1a25da8fc0a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bc5511ba76469d5a",
+    "type": "split",
+    "children": [
+      {
+        "id": "3c0c68f157d347e4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c5f698f6bc87b306",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "259159346a9c1211",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "ParentElement",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "49924e91029a6444",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 246.5
+  },
+  "right": {
+    "id": "24dc774896c24788",
+    "type": "split",
+    "children": [
+      {
+        "id": "b144d5fe2e345413",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c82a55f49c972186",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Search Bar/!Search Bar.canvas",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for !Search Bar"
+            }
+          },
+          {
+            "id": "d6ad66f3aa9de353",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Search Bar/!Search Bar.canvas",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from !Search Bar"
+            }
+          },
+          {
+            "id": "a829a687fb9c8676",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "2dbc76e018ac4b72",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "377e2f100677e026",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Search Bar/!Search Bar.canvas",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of !Search Bar"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "a772b06e36e1304d",
+  "lastOpenFiles": [
+    "Search Bar/images/Typeahead/Brands.png",
+    "Search Bar/!Search Bar.canvas",
+    "Search Category/!Category.canvas",
+    "Search Bar/images/Typeahead/Results.png",
+    "Nav Links/Dropdowns/Deals.md",
+    "Nav Links/!Nav Links.canvas",
+    "Search Bar/Typeahead.md",
+    "Search Bar/images/Typeahead",
+    "Search Bar/Typeahead items",
+    "Search Bar/images/Typeahead/Terms.png",
+    "images/Cursors/Arrow.png",
+    "images/Cursors/Text.png.sb-296749ae-aMs5mW",
+    "images/Cursors/Pointer.png.sb-296749ae-f4OuKN",
+    "images/Cursors/Pointer.png",
+    "images/Cursors/Text.png",
+    "images/Cursors",
+    "images",
+    "Search Category/Dropdown button.png",
+    "Search Category/Hover on Category.png",
+    "Nav Links/images/Dropdowns/Deals.png",
+    "Search Category/Category chosen.png",
+    "Search Sort By Dropdown/Untitled.md",
+    "Test Plan.canvas",
+    "Untitled.canvas",
+    "Search Category/Category.md",
+    "Search Bar/Input Field.md",
+    "Nav Links/Dropdowns/Professional.md",
+    "Nav Links/Dropdowns/Get Help.md",
+    "Nav Links/images/Dropdowns",
+    "Nav Links/Navbar Dropdown links.md",
+    "Nav Links/Dropdowns/Learn.md",
+    "Nav Links/Dropdowns/Shop.md",
+    "Nav Links/Dropdowns",
+    "Nav Links/Nav Links.md",
+    "Search Sort By Dropdown/images",
+    "Search Category/images",
+    "Search Bar/Search bar.md",
+    "Search Bar/Submit Search Button.md",
+    "2025-11-21.md",
+    "Mouseover.md",
+    "Search Bar/Mouseover.md",
+    "Welcome.md",
+    "Users/qastudentafternoon/Documents/code/capstone/Test.md"
+  ]
+}
