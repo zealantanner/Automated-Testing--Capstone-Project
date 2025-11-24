@@ -3,3 +3,4 @@ node_modules
 playground
 .o
 Test Plan/.obsidian
+*.png
