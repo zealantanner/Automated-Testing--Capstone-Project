@@ -13,6 +13,10 @@ class CategorySearchPage extends BaseSearch<CategoryOptions> {
     public async openSearch(options:CategoryOptions) {
         await super.openSearch(options)
     }
+    public get categoryFilters() {
+        return this.base.$$('li')
+        .map(el => new Categories($(el)))
+    }
 }
 
 export default new CategorySearchPage();

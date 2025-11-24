@@ -12,12 +12,10 @@
             "id": "4a3970ab645746c5",
             "type": "leaf",
             "state": {
-              "type": "image",
-              "state": {
-                "file": "Search Bar/images/Typeahead/Results.png"
-              },
-              "icon": "lucide-image",
-              "title": "Results"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           },
           {
@@ -64,9 +62,9 @@
               "state": {
                 "file": "Search Bar/!Search Bar.canvas",
                 "viewState": {
-                  "x": -1662.4286773624929,
-                  "y": -535.9084508338879,
-                  "zoom": -2.396666666666665
+                  "x": -4613.279878453492,
+                  "y": -139.1544261481472,
+                  "zoom": 0.6533333333333352
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -248,10 +246,10 @@
   },
   "active": "a772b06e36e1304d",
   "lastOpenFiles": [
-    "Search Bar/images/Typeahead/Brands.png",
-    "Search Bar/!Search Bar.canvas",
-    "Search Category/!Category.canvas",
     "Search Bar/images/Typeahead/Results.png",
+    "Search Bar/!Search Bar.canvas",
+    "Search Bar/images/Typeahead/Brands.png",
+    "Search Category/!Category.canvas",
     "Nav Links/Dropdowns/Deals.md",
     "Nav Links/!Nav Links.canvas",
     "Search Bar/Typeahead.md",
