@@ -10,7 +10,7 @@ export default class Typeahead extends Element {
     public get base() { return this.searchBarBase.$('*[data-type="typeahead"]') }
     
     public get terms() { return this.base.$('typehaead-searchspring-terms')}
-    public get facets() { return this.base.$('typehaead-searchspring-facets')}
+    public get brands() { return this.base.$('typehaead-searchspring-facets')}
     public get results() { return this.base.$('typehaead-searchspring-results')}
 }
 

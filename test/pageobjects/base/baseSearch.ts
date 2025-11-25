@@ -6,7 +6,9 @@ import Items from '../../elements/baseSearch/items'
 /** `keywords:str, page?:int` */
 export type SearchOptions = { keywords:str, page?:int }
 /** `category:str, keywords?:str, page?:int` */
-export type CategoryOptions = { category:str, keywords?:str, page?:int }
+export type CategoryOptions = { categories:str[], keywords?:str, page?:int }
+//> sometimes they have "keywords=wire connector&oq=wire"
+//> like if
 
 export default abstract class BaseSearch<TOptions extends SearchOptions | CategoryOptions> extends Base {
     /** `search` or `ss_category` */
@@ -21,8 +23,8 @@ export default abstract class BaseSearch<TOptions extends SearchOptions | Catego
     }
 
     public baseUrlWithParameters(options:TOptions):URL {
-        const url = (options && 'category' in options)
-            ? new URL(`${this.subUrl}/${options.category}`, this.baseUrl) //category
+        const url = (options && 'categories' in options)
+            ? new URL(`${this.subUrl}/${options.categories.join()}`, this.baseUrl) //category
             : this.baseUrl //search
         if(options?.page && options.page !== 1) {
             url.searchParams.set("page", options.page.toString())

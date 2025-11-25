@@ -19,7 +19,7 @@ describe('My Login application', () => {
         await browser.pause(3000)
         await CategorySearchPage.open()
         await browser.pause(3000)
-        await CategorySearchPage.openSearch({category:"Wire & Cables"})
+        await CategorySearchPage.openSearch({categories:["dooky sucklage~—"]})
         // await CategorySearchPage.openSearch({ca})
         await browser.pause(3000)
         // await HomePage.cookiePopup.close()

@@ -1,7 +1,0 @@
-- Shows up and shows relevant content![[Typeahead.png]]
-- Terms
-	- Show close words
-- Brands
-	- Brands with specified item
-- Results
-	- Show relevant items
