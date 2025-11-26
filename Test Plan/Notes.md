@@ -1,0 +1,1 @@
+Sometimes category dropdown doesn't appear depending on 

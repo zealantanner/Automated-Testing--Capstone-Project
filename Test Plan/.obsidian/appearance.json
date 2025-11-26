@@ -1,4 +1,6 @@
 {
   "cssTheme": "",
-  "theme": "moonstone"
+  "theme": "moonstone",
+  "translucency": true,
+  "showRibbon": true
 }

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8c2c76100cfb1866",
+        "id": "a50c5a72ba9688ca",
         "type": "tabs",
         "children": [
           {
-            "id": "a83e653e39b31ae1",
+            "id": "f106ab3686935a8e",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -16,9 +16,9 @@
               "state": {
                 "file": "Test Plan.canvas",
                 "viewState": {
-                  "x": 232.46013071584738,
-                  "y": -853.905565985345,
-                  "zoom": -0.8033333333333341
+                  "x": -371.3416228223976,
+                  "y": -518.7165336033539,
+                  "zoom": 0.39
                 }
               },
               "pinned": true,
@@ -27,40 +27,97 @@
             }
           },
           {
-            "id": "bf4fc89bceea2010",
+            "id": "ee92ad4e8421f663",
             "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Search Sort By Dropdown/!Sort By Dropdown.canvas",
-                "viewState": {
-                  "x": 574.5,
-                  "y": 231.24343909928353,
-                  "zoom": -1.1689073892255224
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "!Sort By Dropdown"
-            }
-          },
-          {
-            "id": "54036cc5c672972a",
-            "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "canvas",
               "state": {
                 "file": "Search Category/!Category.canvas",
                 "viewState": {
-                  "x": 1660.3873840490812,
-                  "y": 613.384826993865,
-                  "zoom": -1.778595589636454
+                  "x": 669.8134630217337,
+                  "y": 1162.5067569730463,
+                  "zoom": -1.6366666666666718
                 }
               },
+              "pinned": true,
               "icon": "lucide-layout-dashboard",
               "title": "!Category"
             }
+          },
+          {
+            "id": "425dd43c48501a6e",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Search Bar/!Search Bar.canvas",
+                "viewState": {
+                  "x": -1322.015384564123,
+                  "y": -1873.7594117697033,
+                  "zoom": -1.971781047688567
+                }
+              },
+              "pinned": true,
+              "icon": "lucide-layout-dashboard",
+              "title": "!Search Bar"
+            }
+          },
+          {
+            "id": "8de098433a65ad7c",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Nav Links/!Nav Links.canvas",
+                "viewState": {
+                  "x": 1971.2482597991825,
+                  "y": -1084.1663062723976,
+                  "zoom": -1.5533333333333357
+                }
+              },
+              "pinned": true,
+              "icon": "lucide-layout-dashboard",
+              "title": "!Nav Links"
+            }
+          },
+          {
+            "id": "dbe433f85abef471",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Search Sort By Dropdown/!Sort By Dropdown.canvas",
+                "viewState": {
+                  "x": 368.0385261003071,
+                  "y": 260.5177830092119,
+                  "zoom": -1.1689073892255224
+                }
+              },
+              "pinned": true,
+              "icon": "lucide-layout-dashboard",
+              "title": "!Sort By Dropdown"
+            }
+          },
+          {
+            "id": "dd612d605c775af8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Notes"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -92,7 +149,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ParentElement",
+                "query": "highli",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -222,36 +279,37 @@
       "bases:Create new base": false
     }
   },
-  "active": "a83e653e39b31ae1",
+  "active": "dbe433f85abef471",
   "lastOpenFiles": [
-    "Search Category/!Category.canvas",
-    "Test Plan.canvas",
-    "Search Bar/!Search Bar.canvas",
-    "Search Sort By Dropdown/!Sort By Dropdown.canvas",
     "Nav Links/!Nav Links.canvas",
-    "Welcome.md",
-    "Untitled.canvas",
-    "!misc/Manual Test.md",
+    "Search Bar/!Search Bar.canvas",
+    "Search Category/!Category.canvas",
     "Nav Links/Navbar Dropdown links.md",
-    "!misc/On Hover.md",
-    "Search Sort By Dropdown/images/Page 1-69.png",
-    "!misc/?.md",
-    "Nav Links/images/Links.png",
-    "Search Sort By Dropdown/Untitled.md",
-    "Nav Links/Dropdowns/Shop.md",
-    "Nav Links/Dropdowns/Learn.md",
-    "Nav Links/images/Dropdowns/Dropdown button.png",
-    "Search Bar/Typeahead.md",
+    "Test Plan.canvas",
+    "Search Sort By Dropdown/!Sort By Dropdown.canvas",
+    "Notes.md",
+    "Search Bar/images/Search Bar/Too many characters.png",
+    "Search Bar/images/Typeahead/Results Footer.png",
+    "Search Bar/images/Typeahead/Item Results.png",
+    "Search Bar/images/Typeahead/Results.png",
     "Search Bar/images/Search Results.png",
-    "Search Bar/Input Field.md",
-    "!misc/Automated Test.md",
-    "Search Category/images/Category chosen.png",
-    "!misc/images/Cursors/Text.png",
-    "!misc/images/Cursors/Arrow.png",
-    "Search Bar/Submit Search Button.md",
+    "Search Bar/images/Search Bar/Bad Text No results.png",
+    "Search Bar/images/Search Bar/Bad Text Input.png",
     "Search Bar/images/Search Bar/Text Input.png",
     "Search Bar/images/Search Bar/Search Button.png",
     "Search Bar/images/Search Bar/Search Bar.png",
+    "Welcome.md",
+    "Untitled.canvas",
+    "!misc/Manual Test.md",
+    "!misc/On Hover.md",
+    "!misc/?.md",
+    "Search Sort By Dropdown/Untitled.md",
+    "Nav Links/Dropdowns/Shop.md",
+    "Nav Links/Dropdowns/Learn.md",
+    "Search Bar/Typeahead.md",
+    "Search Bar/Input Field.md",
+    "!misc/Automated Test.md",
+    "Search Bar/Submit Search Button.md",
     "Search Bar/images/Search Bar",
     "!misc/Manual vs automated.md",
     "!misc",
