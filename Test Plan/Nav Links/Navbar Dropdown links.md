@@ -1,9 +1,1 @@
-![[Shop]]
-
-![[Deals]]
-
-![[Professional]]
-
-![[Get Help]]
-
-![[Learn]]
+![[Shop links]]![[Deals links]]![[Professional links]]![[Get Help links]]![[Learn links]]

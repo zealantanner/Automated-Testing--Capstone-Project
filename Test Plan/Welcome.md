@@ -32,3 +32,4 @@ link to page [[Welcome]]
 
 
 
+command p to open command line

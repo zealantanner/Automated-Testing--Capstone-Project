@@ -1,4 +1,6 @@
 node_modules
 .DS_Store
 playground
-Test Plan/.obsidian/themes
+Test Plan/.obsidian/themes/*
+!Test Plan/.obsidian/themes/Blue Topaz
+!Test Plan/.obsidian/themes/Blue Topaz/**

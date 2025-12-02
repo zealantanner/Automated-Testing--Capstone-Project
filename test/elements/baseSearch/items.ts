@@ -36,9 +36,10 @@ export default class Items extends Element {
             stockStatus: stockText,
         }
     }
-    public isAddedToCart = false
+    // //> am I even adding items to cart? no
+    // public isAddedToCart = false
     public async addToCart() {
-        this.isAddedToCart = true
+        // this.isAddedToCart = true
         await this.btnAddToCart.click()
     }
 }
