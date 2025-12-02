@@ -1,58 +1,86 @@
 - ## Epic: [[Nav Links.canvas|Nav Links]]
 	- #### Story: Nav Dropdown Button
-		- Tasks: (Automated)
+		- Tasks: (Automated) #test/automated
 			- Test: Dropdown opens with links
 				- [[Each dropdown opens]]
-		- Tasks: (Manual)
+		- Tasks: (Manual) #test/manual
 			- Test: on click dropdown becomes highlighted
 				- [[Dropdown aspects look right]]
 	- #### Story Nav Links in Each Dropdown
-		- Tasks: (Automated)
+		- Tasks: (Automated) #test/automated
             - Test: Each link under specified dropdown directs to the correct URL
                 - [[Shop links]]
                 - [[Deals links]]
                 - [[Professional links]]
                 - [[Get Help links]]
                 - [[Learn links]]
-		- Tasks: (Manual)
+		- Tasks: (Manual) #test/manual
 			- Test: Specified link is highlighted when hovered over
 				- [[Each link is highlighted on hover]]
-- ## Epic: [[Search Bar.canvas|Search Bar]] //> finish
-	- #### Story: Typeahead
+- ## Epic: [[Search Bar.canvas|Search Bar]]
+	- #### Story: Typeahead #related/typeahead
 		- #### Sub-Story: Terms
-		    - Tasks: (Automated)
-                - Test: URL changes according to category
-	                - [[url change tem]]
-                - Test: Input text
-		    - Tasks: (Manual)
-                - Test: Terms are relevant
-                - Test: Highlights on hover
+		    - Tasks: (Automated) #test/automated
+                - Test: When term is clicked the url changes accordingly
+	                - [[URL changes according to chosen term]]
+                - Test: Typeahead changes accordingly
+	                - [[Changes typeahead results accordingly]] 
+		    - Tasks: (Manual) #test/manual
+                - Test: Term results are relevant
+	                - [[Terms are relevant]]
+                - Test: Specified term is highlighted when hovered over
+	                - [[Terms highlight on hover]]
 		- #### Sub-Story: Brands
-		    - Tasks: (Automated)
-                - Test: Input text
+		    - Tasks: (Manual) #test/manual
+                - Test: Specified brand is underlined when hovered over
+	                - [[Underlines specified text on hover]]
+                - Test: Brand results are relevant
+	                - [[Brands are relevant]]
+		    - Tasks: ([[?]]) #test/unsure
+                - Test: Brand link is clicked
+	                - [[Brand on click?]]
+                - Test: Brand link is hovered over
+	                - [[Brand on hover?]]
 		- #### Sub-Story: Results
-		    - Tasks: (Automated)
-                - Test: Input text
+            - Tasks: (Automated) #test/automated
+                - Test: URL changes when an item is clicked
+	                - [[URL changes to the corresponding item's url]]
+                - Test: Title and footer keywords match input
+	                - [[Title and footer show correct keywords]]
+                - Test: Footer is clicked and activates search #related/activateSearch
+	                - [[URL changes according to text inputted]]
+		    - Tasks: (Manual) #test/manual
+                - Test: Typeahead items are relevant
+	                - [[Results are relevant]]
 	- #### Story: Input Field
-		- Tasks: (Automated)
-            - Test: Input text
-            - Test(Negative): Input random text
+		- Tasks: (Automated) #test/automated
+            - Test: Input text #related/typeahead
+	            - [[Typeahead appears]]
+            - Test(Negative): Input nonsense text #related/typeahead
+	            - [[No results in Typeahead]]
             - Test(Negative): Input too many characters
-		- Test:
+	            - [[Limited to 100 characters]]
+		- Tasks: (Manual) #test/manual
+            - Test: Typing in the search bar feels normal
+	            - [[Inputting text feels normal]]
 	- #### Story: Submit Button
-		- Tasks: (Automated)
-            - Test: Input text
-            - Test(Negative): Input random text
-            - Test(Negative): Input too many characters
-- ## Epic: [[Search Page Category.canvas|Search Page Category]]
+		- Tasks: (Automated) #test/automated
+            - Test: URL changes with valid text inputted #related/activateSearch
+	            - [[URL changes according to text inputted]]
+            - Test(Negative): When the search bar has no text inputted it doesn't search
+	            - [[With no text in input field nothing happens on click]]
+		- Tasks: (Manual) #test/manual
+            - Test: Search item results are relevant
+	            - [[Search results are relevant]]
+- ## Epic: [[Search Page Category.canvas|Search Page Category]] #related/searchPageCategory
 	- #### Story: Category Dropdown Button
-		- Tasks: (Automated)
+		- Tasks: (Automated) #test/automated
 			- Test: Opens the category dropdown
                 - [[Opens on click]]
 			- Test: Closes the category dropdown
                 - [[Closes on click]]
 	- #### Story: Category Options
-		- Tasks: (Automated)
+		- Tasks: (Automated) #test/automated
 			- Test: Choosing a category applies the filter
                 - [[The correct number of results are displayed]]
                 - [[URL changes according to category]]
@@ -60,7 +88,7 @@
 			- Test: Removing the category filters accordingly
 				- [[Category is removed]]
                 - [[URL changes according to category]]
-		- Tasks: (Manual)
+		- Tasks: (Manual) #test/manual
 			- Test: Items are filtered accordingly when a category is chosen
                 - [[Displayed items are relevant to the category]]
 			- Test: Irrelevant items are not included
@@ -69,12 +97,7 @@
 				- [[Highlights red on hover]]
 - ## Epic: [[Search Page Sort By Dropdown.canvas|Search Page Sort By Dropdown]]
 	- #### Story: Sort By Dropdown Option Behavior
-		- Tasks: (Manual)
-			- Test: Option - Best Match
-				- [[Sorts by most relevant]]
-			- Test: Option - Newest First
-				- [[Sorts by newest]]
-		- Tasks: (Automated)
+		- Tasks: (Automated) #test/automated
 			- Test: Option - Most Popular
 				- [[Loosely sorts by reviews]]
 			- Test: Option - Highest Rated
@@ -89,8 +112,14 @@
 				- [[URL changes according to category]]
 			- Test: Option is selected after selection
 				- [[Option appears to be selected]]
+		- Tasks: (Manual) #test/manual
+			- Test: Option - Best Match
+				- [[Sorts by most relevant]]
+        - Tasks: ([[?]]) #test/unsure
+			- Test: Option - Newest First
+				- [[Sorts by newest]]
 	- #### Story: Sort Dropdown UI
-		- Tasks: (Manual)
+		- Tasks: (Manual) #test/manual
 			- Test: Blue highlight when hovered over
 				- [[Option highlights blue on hover]]
 

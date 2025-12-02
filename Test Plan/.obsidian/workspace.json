@@ -6,7 +6,7 @@
       {
         "id": "a50c5a72ba9688ca",
         "type": "tabs",
-        "dimension": 48.537234042553195,
+        "dimension": 46.62538699690402,
         "children": [
           {
             "id": "f106ab3686935a8e",
@@ -36,9 +36,9 @@
               "state": {
                 "file": "Nav Links/Nav Links.canvas",
                 "viewState": {
-                  "x": 1178.4801934157467,
-                  "y": -2070.3095281072065,
-                  "zoom": 0.013333333333332914
+                  "x": 1911.5904339863193,
+                  "y": -580.5531882741101,
+                  "zoom": -2.0166666666666684
                 }
               },
               "pinned": true,
@@ -55,9 +55,9 @@
               "state": {
                 "file": "Search Bar/Search Bar.canvas",
                 "viewState": {
-                  "x": -4956.457041223832,
-                  "y": 3032.8731814699454,
-                  "zoom": -1.2033333333333087
+                  "x": -2121.8848875080794,
+                  "y": -1881.6554912968547,
+                  "zoom": -2.379999999999989
                 }
               },
               "pinned": true,
@@ -74,9 +74,9 @@
               "state": {
                 "file": "Search Page Category/Search Page Category.canvas",
                 "viewState": {
-                  "x": -1817.8213454083418,
-                  "y": 2500.4137835915185,
-                  "zoom": -3.6899999999999897
+                  "x": 1633.446726739568,
+                  "y": 1240.724920929238,
+                  "zoom": -2.866666666666657
                 }
               },
               "pinned": true,
@@ -93,9 +93,9 @@
               "state": {
                 "file": "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
                 "viewState": {
-                  "x": 1726.9525098134416,
-                  "y": 223.2898575123829,
-                  "zoom": -1.587228287416548
+                  "x": 1506.0122149931015,
+                  "y": 304.6818157957233,
+                  "zoom": -1.0038949540832174
                 }
               },
               "pinned": true,
@@ -104,43 +104,40 @@
             }
           },
           {
-            "id": "87cabbb4f8730191",
+            "id": "814517866f71d28b",
             "type": "leaf",
+            "pinned": true,
             "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
-                "viewState": {
-                  "x": 787.0940661524186,
-                  "y": 11.799783577052951,
-                  "zoom": -2.1005616207498803
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "Search Page Sort By Dropdown"
+              "type": "graph",
+              "state": {},
+              "pinned": true,
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           },
           {
-            "id": "82330ad8c0ae22ca",
+            "id": "b3dbc3133a0ade63",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Search Bar/Tests/Typeahead/Brands/Brand on click?.md",
+                "file": "Simpler epics and stories.md",
                 "mode": "source",
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "Brand on click?"
+              "title": "Simpler epics and stories"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 6
       },
       {
         "id": "0305f0ad94332d43",
         "type": "tabs",
-        "dimension": 51.462765957446805,
+        "dimension": 53.37461300309597,
         "children": [
           {
             "id": "b1f1c82fa25d8021",
@@ -159,76 +156,85 @@
             }
           },
           {
-            "id": "9229e07c984160cf",
+            "id": "d44920d8d0b2babd",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Nav Links/Dropdowns/Learn links.md",
+                "file": "Simpler epics and stories.md",
                 "mode": "source",
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
-              "title": "Learn links"
+              "title": "Simpler epics and stories"
             }
           },
           {
-            "id": "659b12d0aba37992",
+            "id": "c4fe80ff41c4f806",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Nav Links/Dropdowns/Get Help links.md",
-                "mode": "source",
-                "source": false
+                "file": "Nav Links/Nav Links.canvas",
+                "viewState": {
+                  "x": 1892.089656206492,
+                  "y": -1862.656572314478,
+                  "zoom": -0.7233949333218749
+                }
               },
-              "icon": "lucide-file",
-              "title": "Get Help links"
+              "icon": "lucide-layout-dashboard",
+              "title": "Nav Links"
             }
           },
           {
-            "id": "e67ed9c7bf0e5200",
+            "id": "9a5880d47b974ad3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Nav Links/Dropdowns/Professional links.md",
-                "mode": "source",
-                "source": false
+                "file": "Nav Links/Nav Links.canvas",
+                "viewState": {
+                  "x": 1320,
+                  "y": -1200,
+                  "zoom": -1.9092345360768177
+                }
               },
-              "icon": "lucide-file",
-              "title": "Professional links"
+              "icon": "lucide-layout-dashboard",
+              "title": "Nav Links"
             }
           },
           {
-            "id": "d51c6ab686f2866f",
+            "id": "9cea8a0af59d2b8e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Nav Links/Dropdowns/Deals links.md",
+                "file": "Search Bar/Tests/Typeahead/Terms/Changes typeahead results accordingly.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Deals links"
+              "title": "Changes typeahead results accordingly"
             }
           },
           {
-            "id": "5af9d9ab0835f14f",
+            "id": "9b3882d63b14dac0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Nav Links/Dropdowns/Shop links.md",
+                "file": "Search Bar/Tests/Typeahead/Terms/URL changes according to chosen term.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Shop links"
+              "title": "URL changes according to chosen term"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -260,7 +266,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#test/automated",
+                "query": "tag:#related/typeahead",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -285,7 +291,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 401.5
+    "width": 261.5
   },
   "right": {
     "id": "24dc774896c24788",
@@ -348,13 +354,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Nav Links/Nav Links.canvas",
+                "file": "Simpler epics and stories.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Nav Links"
+              "title": "Outline of Simpler epics and stories"
             }
           },
           {
@@ -373,11 +379,11 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 200,
+    "width": 241.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -391,45 +397,46 @@
       "bases:Create new base": false
     }
   },
-  "active": "b1f1c82fa25d8021",
+  "active": "d44920d8d0b2babd",
   "lastOpenFiles": [
+    "Epics and stories.md",
+    "Simpler epics and stories.md",
     "Search Bar/Search Bar.canvas",
+    "Search Bar/Tests/Typeahead/Terms/URL changes according to chosen term.md",
+    "Test Plan.canvas",
+    "Search Bar/Tests/Typeahead/Terms/Changes typeahead results accordingly.md",
+    "thing.md",
+    "Untitled.canvas",
+    "Nav Links/Nav Links.canvas",
+    "!misc/?.md",
+    "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
+    "Tests.md",
+    "!misc/Manual vs automated.md",
+    "!misc/Automated Test.md",
+    "Search Page Category/Search Page Category.canvas",
+    "Nav Links/Tests/Dropdown aspects look right.md",
+    "Nav Links/Dropdowns/Learn links.md",
+    "Nav Links/Dropdowns/Shop links.md",
+    "Nav Links/Dropdowns/Deals links.md",
+    "Nav Links/Dropdowns/Professional links.md",
+    "Nav Links/Dropdowns/Get Help links.md",
+    "Search results are relevant.md",
+    "Search Bar/Tests/Typeahead/Brands/Brand on click?.md",
     "Title and footer show correct keywords.md",
     "Search Bar/Tests/Typeahead/Results/Results are relevant.md",
     "Search Bar/Tests/Typeahead/Results/URL changes to the corresponding item's url.md",
-    "Nav Links/Nav Links.canvas",
-    "Search Bar/Tests/Typeahead/Brands/Brand on click?.md",
     "Search Page Sort By Dropdown/Tests/Option appears to be selected.md",
     "Search Bar/Tests/Typeahead/Brands/Brands are relevant.md",
     "Search Bar/Tests/Typeahead/Brands/Underlines specified text on hover.md",
     "Search Bar/Tests/Typeahead/Brands/Brand on hover?.md",
-    "Epics and stories.md",
     "Search Bar/Tests/Typeahead/Terms/Terms are relevant.md",
     "Search Bar/Tests/Submit Button",
-    "Search Page Category/Search Page Category.canvas",
-    "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
-    "Search Bar/Tests/Submit Button/URL changes according to search terms.md",
-    "Search Bar/Tests/Typeahead/Terms/Changes Typeahead Results Accordingly.md",
-    "Search Bar/Tests/Input field/No results in Typeahead.md",
     "Search Bar/Tests/Typeahead/Results",
     "Search Bar/Tests/Typeahead/Brands",
     "Search Bar/Tests/Typeahead/Terms",
     "Search Bar/Tests/Input field",
-    "Search Bar/Tests/Typeahead/Terms/Terms highlights on hover.md",
     "Search Bar/Tests/Typeahead",
-    "Search Bar/Tests/Typeahead/Terms/URL changes according to chosen term.md",
-    "Search Bar/Tests/Input field/Limited to 100 characters.md",
-    "Search Bar/Tests/Input field/Typeahead appears.md",
-    "Search Bar/Tests/Input field/Inputting text feels normal.md",
-    "Search Bar/Tests/Submit Button/With no text in input field nothing happens on click.md",
-    "Nav Links/Dropdowns/Shop links.md",
-    "Search Page Category/Tests/URL changes according to category.md",
-    "Search Page Category/Tests/Highlights red on hover.md",
-    "Tests.md",
     "Search Bar/Tests",
-    "Search Page Category/Tests/Items that are irrelevant  to the filter are not included.md",
-    "Test Plan.canvas",
-    "Search Page Sort By Dropdown/Tests/URL changes according to search item.md",
     "Untitled",
     "Untitled.base",
     "Nav Links/images/Dropdowns/Shop.png",
@@ -442,7 +449,6 @@
     "Search Bar/images/Search Bar/Bad Text No results.png",
     "Search Bar/images/Search Bar/Bad Text Input.png",
     "Search Bar/images/Search Bar/Text Input.png",
-    "Search Bar/images/Search Bar/Search Button.png",
-    "Untitled.canvas"
+    "Search Bar/images/Search Bar/Search Button.png"
   ]
 }

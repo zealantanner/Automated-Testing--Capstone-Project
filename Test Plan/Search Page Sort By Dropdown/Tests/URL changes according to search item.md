@@ -15,3 +15,4 @@ sortByOptions = {
 "Newest First": "ss_searchable_updated_date%3Aasc",
 }
 ```
+#test/automated

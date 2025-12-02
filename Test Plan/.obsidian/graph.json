@@ -1,24 +1,38 @@
 {
   "collapse-filter": false,
   "search": "",
-  "showTags": false,
+  "showTags": true,
   "showAttachments": false,
-  "hideUnresolved": false,
+  "hideUnresolved": true,
   "showOrphans": true,
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "tag:parent",
+      "query": "tag:#test/manual  ",
       "color": {
         "a": 1,
-        "rgb": 14048348
+        "rgb": 15496448
       }
     },
     {
-      "query": "tag:child",
+      "query": "tag:#test/automated",
       "color": {
         "a": 1,
-        "rgb": 14069084
+        "rgb": 7885550
+      }
+    },
+    {
+      "query": "tag:#test/unsure ",
+      "color": {
+        "a": 1,
+        "rgb": 49084
+      }
+    },
+    {
+      "query": "file:canvas",
+      "color": {
+        "a": 1,
+        "rgb": 14810880
       }
     }
   ],
@@ -32,6 +46,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.18337983020998444,
-  "close": true
+  "scale": 0.27046164772525777,
+  "close": false
 }

@@ -1,0 +1,115 @@
+# Epic: [[Nav Links.canvas|Nav Links]]
+- ## Test Case: Nav links (Automated tests) #test/automated
+	- Test: Dropdown opens with links
+		- [[Each dropdown opens]]
+	- Test: Each link under specified dropdown directs to the correct URL
+		- [[Shop links]]
+		- [[Deals links]]
+		- [[Professional links]]
+		- [[Get Help links]]
+		- [[Learn links]]
+- ## Test Case: Nav links (Manual tests) #test/manual
+	- Test: On click dropdown becomes highlighted
+		- [[Dropdown aspects look right]]
+	- Test: Specified link is highlighted when hovered over
+		- [[Each link is highlighted on hover]]
+# Epic: [[Search Bar.canvas|Search Bar]]
+- ## Test Case: Typeahead (Automated tests) #test/automated
+	- #### Terms:
+		- Test: When term is clicked the url changes accordingly
+			- [[URL changes according to chosen term]]
+		- Test: Typeahead changes accordingly
+			- [[Changes typeahead results accordingly]] 
+	- #### Results:
+		- Test: URL changes when an item is clicked
+			- [[URL changes to the corresponding item's url]]
+		- Test: Title and footer keywords match input
+			- [[Title and footer show correct keywords]]
+		- Test: Footer is clicked and activates search #related/activateSearch
+			- [[URL changes according to text inputted]]
+- ## Test Case: Typeahead (Manual tests)
+	- #### Terms:
+		- Test: Term results are relevant
+			- [[Terms are relevant]]
+		- Test: Specified term is highlighted when hovered over
+			- [[Terms highlight on hover]]
+	- #### Brands:
+		- Test(unsure): Brand link is clicked
+			- [[Brand on click?]]
+		- Test(unsure): Brand link is hovered over
+			- [[Brand on hover?]]
+		- Test: Specified brand is underlined when hovered over
+			- [[Underlines specified text on hover]]
+		- Test: Brand results are relevant
+			- [[Brands are relevant]]
+	- #### Results:
+		- Test: Typeahead items are relevant
+			- [[Results are relevant]]
+- ## Test Case: Input Field (Automated tests)
+	- Test: Input text #related/typeahead
+		- [[Typeahead appears]]
+	- Test(Negative): Input nonsense text #related/typeahead
+		- [[No results in Typeahead]]
+	- Test(Negative): Input too many characters
+		- [[Limited to 100 characters]]
+- ## Test Case: Input Field (Manual tests)
+	- Test: Typing in the search bar feels normal
+		- [[Inputting text feels normal]]
+- ## Test Case: Submit Button (Automated tests)
+	- Test: URL changes with valid text inputted #related/activateSearch
+		- [[URL changes according to text inputted]]
+	- Test(Negative): When the search bar has no text inputted it doesn't search
+		- [[With no text in input field nothing happens on click]]
+- ## Test Case: Submit Button (Manual tests)
+	- Test: Search item results are relevant
+		- [[Search results are relevant]]
+# Epic: [[Search Page Category.canvas|Search Page Category]] #related/searchPageCategory
+- ## Test Case: Submit Button (Automated tests)
+    - Test: Opens the category dropdown
+        - [[Opens on click]]
+    - Test: Closes the category dropdown
+        - [[Closes on click]]
+    - Test: Choosing a category applies the filter
+        - [[The correct number of results are displayed]]
+        - [[URL changes according to category]]
+        - [[Category is displayed as chosen]]
+    - Test: Removing the category filters accordingly
+        - [[Category is removed]]
+        - [[URL changes according to category]]
+- ## Test Case: Submit Button (Manual tests)
+    - Test: Items are filtered accordingly when a category is chosen
+        - [[Displayed items are relevant to the category]]
+    - Test: Irrelevant items are not included
+        - [[Items that are irrelevant  to the filter are not included]]
+    - Test: Highlights red when hovered over
+        - [[Highlights red on hover]]
+# Epic: [[Search Page Sort By Dropdown.canvas|Search Page Sort By Dropdown]]
+- ## Test Case: Sort By Dropdown (Automated tests)
+    - Test: dropdown options #related/sort-by-dropdown-options
+        - "Most Popular"
+            - [[Loosely sorts by reviews]]
+        - "Highest Rated"
+            - [[Loosely sorts by stars]]
+        - "Name: A - Z" and "Name: Z - A"
+            - [[Loosely sorts alphabetically]]
+        - "Price: Low to High" and "Price: High to Low"
+            - [[Loosely sorts by price]]
+    - Test: Url changes for each option
+        - [[URL changes according to category]]
+    - Test: Option is selected after selection
+        - [[Option appears to be selected]]
+- ## Test Case: Sort By Dropdown (Manual tests)
+    - Test: dropdown options #related/sort-by-dropdown-options
+        - "Best Match"
+            - [[Sorts by most relevant]]
+        - (unsure) "Newest First"
+            - [[Sorts by newest]]
+    - Test: Blue highlight when hovered over
+        - [[Option highlights blue on hover]]
+
+
+
+
+> Each sub-task can reference the same story
+
+The tasks after story go in the acceptance criteria
