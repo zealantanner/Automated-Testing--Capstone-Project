@@ -1,2 +1,2 @@
-
+#test/negative
 #test/automated
