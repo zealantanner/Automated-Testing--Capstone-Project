@@ -6,17 +6,53 @@
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": false,
-  "colorGroups": [],
+  "colorGroups": [
+    {
+      "query": "path:Epics and stories.md",
+      "color": {
+        "a": 1,
+        "rgb": 255
+      }
+    },
+    {
+      "query": "tag:#test/negative",
+      "color": {
+        "a": 1,
+        "rgb": 15282503
+      }
+    },
+    {
+      "query": "tag:#test/automated",
+      "color": {
+        "a": 1,
+        "rgb": 7885550
+      }
+    },
+    {
+      "query": "tag:#test/manual",
+      "color": {
+        "a": 1,
+        "rgb": 15496448
+      }
+    },
+    {
+      "query": "tag:#test/unsure",
+      "color": {
+        "a": 1,
+        "rgb": 49084
+      }
+    }
+  ],
   "collapse-display": false,
-  "showArrow": false,
+  "showArrow": true,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
-  "lineSizeMultiplier": 1,
+  "lineSizeMultiplier": 1.11190014114326,
   "collapse-forces": false,
   "centerStrength": 0.518713248970312,
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.40071884966113835,
-  "close": true
+  "scale": 0.44119888379520567,
+  "close": false
 }

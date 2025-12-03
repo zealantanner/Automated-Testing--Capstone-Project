@@ -15,4 +15,5 @@ sortByOptions = {
 "Newest First": "ss_searchable_updated_date%3Aasc",
 }
 ```
+[Ticket](https://mtechqa.atlassian.net/browse/MTQA-4231)
 #test/automated

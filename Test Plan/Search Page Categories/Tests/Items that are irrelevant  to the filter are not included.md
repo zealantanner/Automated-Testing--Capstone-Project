@@ -1,2 +1,0 @@
-#test/negative
-#test/manual

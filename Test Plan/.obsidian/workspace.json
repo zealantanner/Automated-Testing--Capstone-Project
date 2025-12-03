@@ -6,7 +6,7 @@
       {
         "id": "a50c5a72ba9688ca",
         "type": "tabs",
-        "dimension": 48.77232142857143,
+        "dimension": 43.27941996653654,
         "children": [
           {
             "id": "8de098433a65ad7c",
@@ -17,8 +17,8 @@
               "state": {
                 "file": "Nav Links/Nav Links.canvas",
                 "viewState": {
-                  "x": 1170.9169844338687,
-                  "y": -1269.507958035124,
+                  "x": 1109.5000269477193,
+                  "y": -1033.2888907807046,
                   "zoom": -2.2133056201109973
                 }
               },
@@ -36,9 +36,9 @@
               "state": {
                 "file": "Search Bar/Search Bar.canvas",
                 "viewState": {
-                  "x": 294.15307057369927,
-                  "y": 9.166487973143056,
-                  "zoom": -1.7433830986038772
+                  "x": 1323.406882569015,
+                  "y": -479.2432085248298,
+                  "zoom": -0.8889359223470934
                 }
               },
               "pinned": true,
@@ -55,9 +55,9 @@
               "state": {
                 "file": "Search Page Categories/Search Page Categories.canvas",
                 "viewState": {
-                  "x": 3385.6532930275935,
-                  "y": -598.5219415840724,
-                  "zoom": -0.9063870339030621
+                  "x": 1337.7700478412369,
+                  "y": 1737.5139143159536,
+                  "zoom": -1.8557727852994954
                 }
               },
               "pinned": true,
@@ -74,23 +74,39 @@
               "state": {
                 "file": "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
                 "viewState": {
-                  "x": 1776.0798361559346,
-                  "y": -49.96959791797197,
-                  "zoom": -0.98562304561025
+                  "x": -30.134875436002943,
+                  "y": 753.7229615192394,
+                  "zoom": -1.2639198687145643
                 }
               },
               "pinned": true,
               "icon": "lucide-layout-dashboard",
               "title": "Search Page Sort By Dropdown"
             }
+          },
+          {
+            "id": "c42fbc1efec6286f",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Test Plan.canvas",
+                "viewState": {
+                  "x": 1218.869926495711,
+                  "y": 1129.1242282581466,
+                  "zoom": -0.8851222667344177
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Test Plan"
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "0305f0ad94332d43",
         "type": "tabs",
-        "dimension": 51.22767857142857,
+        "dimension": 56.72058003346346,
         "children": [
           {
             "id": "b1f1c82fa25d8021",
@@ -109,115 +125,17 @@
             }
           },
           {
-            "id": "0c744c1d056ad220",
+            "id": "b8ecc7c0fa8ed48d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Search Bar/Tests/Typeahead/Terms/Changes typeahead results accordingly.md",
+                "file": "Search Page Categories/Tests/Items that are irrelevant to the filter are not included.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Changes typeahead results accordingly"
-            }
-          },
-          {
-            "id": "0f6994e63d27adf8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Search Bar/Tests/Typeahead/Results/URL changes to the corresponding item's url.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "URL changes to the corresponding item's url"
-            }
-          },
-          {
-            "id": "d5ec11d373e61ea6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Search Bar/Tests/Typeahead/Title and footer show correct keywords.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Title and footer show correct keywords"
-            }
-          },
-          {
-            "id": "2d7f014f37b30735",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Search Bar/Tests/Submit Button/URL changes according to text inputted.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "URL changes according to text inputted"
-            }
-          },
-          {
-            "id": "ecb194b6ef228f49",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Search Bar/Tests/Typeahead/Terms/Changes typeahead results accordingly.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Changes typeahead results accordingly"
-            }
-          },
-          {
-            "id": "11bcc423e59af6be",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Search Bar/Tests/Typeahead/Terms/URL changes according to chosen term.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "URL changes according to chosen term"
-            }
-          },
-          {
-            "id": "f326ccec6520e589",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Nav Links/Tests/Dropdown aspects behave correctly.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Dropdown aspects behave correctly"
-            }
-          },
-          {
-            "id": "8d28c210c7057341",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Nav Links/Tests/Dropdown aspects behave correctly.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Dropdown aspects behave correctly"
+              "title": "Items that are irrelevant to the filter are not included"
             }
           }
         ]
@@ -252,7 +170,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"- ## Test Case\"",
+                "query": "#",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -273,7 +191,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -369,8 +288,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 341.5,
-    "collapsed": true
+    "width": 416.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -381,43 +299,43 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "card-board:CardBoard": false
+      "publish:Publish changes...": false
     }
   },
-  "active": "b1f1c82fa25d8021",
+  "active": "8de098433a65ad7c",
   "lastOpenFiles": [
-    "Search Bar/Search Bar.canvas",
     "Epics and stories.md",
-    "Search Bar/Tests/Typeahead/Terms/Changes typeahead results accordingly.md",
-    "Search Bar/Tests/Typeahead/Title and footer show correct keywords.md",
-    "Search Bar/Tests/Submit Button/URL changes according to text inputted.md",
-    "Search Bar/Tests/Typeahead/Results/URL changes to the corresponding item's url.md",
-    "Nav Links/Tests/Dropdown aspects behave correctly.md",
-    "Search Bar/Tests/Typeahead/Terms/URL changes according to chosen term.md",
-    "Nav Links/Nav Links.canvas",
-    "Nav Links/Tests/Each link is highlighted on hover.md",
-    "Nav Links/Tests/Closes the dropdown on a click elsewhere.md",
-    "Nav Links/Tests/Each dropdown opens.md",
-    "Nav Links/Tests/URL changes according to link.md",
-    "Nav Links/Navbar dropdown links.md",
-    "Nav Links/Dropdowns/Professional links.md",
-    "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
-    "Notes.md",
-    "Search Page Categories/Tests/URL changes according to category.md",
-    "Test Plan.canvas",
-    "!misc/Canvases.md",
-    "Search Page Sort By Dropdown/images/Page 1-69.png",
+    "Search Page Categories/Tests/Items that are irrelevant to the filter are not included.md",
+    "Search Bar/Search Bar.canvas",
     "Search Page Categories/Search Page Categories.canvas",
-    "Test Planban.md",
-    "Each dropdown opens.md",
-    "Epics and stories copy.md",
-    "Nav links.md",
-    "Welcome.md",
-    "Search Bar/Tests/Submit Button/With valid text inputted search results are relevant.md",
+    "Search Bar/Tests/Input field/Typeahead appears.md",
+    "Search Bar/Tests/Input field/No results in Typeahead.md",
     "Search Page Sort By Dropdown/Tests/Sorts by newest?.md",
-    "Tests.md",
+    "Search Page Sort By Dropdown/Tests/Loosely sorts by reviews.md",
+    "Search Page Sort By Dropdown/Tests/Sorts by most relevant.md",
+    "Search Page Sort By Dropdown/Tests/Loosely sorts by stars.md",
+    "Search Page Sort By Dropdown/Tests/Loosely sorts by price.md",
+    "Search Page Sort By Dropdown/Tests/Loosely sorts alphabetically.md",
+    "Search Page Sort By Dropdown/Tests/URL changes according to sort by option.md",
+    "Search Page Sort By Dropdown/Tests/Option highlights blue on hover.md",
+    "Search Page Sort By Dropdown/Tests/Option appears to be selected.md",
+    "Search Page Categories/Tests/URL changes according to category.md",
+    "Search Page Categories/Tests/Opens on click.md",
+    "Search Page Categories/Tests/Highlights red on hover.md",
+    "Search Page Categories/Tests/Displayed items are relevant to the category.md",
+    "Search Page Categories/Tests/Closes on click.md",
+    "Search Page Categories/Tests/Category is removed.md",
+    "Search Page Categories/Tests/Category is displayed as chosen.md",
+    "Search Bar/Tests/Typeahead/Results/Title and footer show correct keywords.md",
+    "Search Bar/Tests/Typeahead/Terms/Changes typeahead results accordingly.md",
+    "Search Bar/Tests/Typeahead/Terms/URL changes according to chosen term.md",
+    "Search Bar/Tests/Typeahead/Terms/Terms highlight on hover.md",
+    "Search Bar/Tests/Typeahead/Terms/Terms are relevant.md",
+    "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
+    "Test Plan.canvas",
+    "Nav Links/Nav Links.canvas",
+    "Search Page Sort By Dropdown/images/Page 1-69.png",
     "Untitled.base",
-    "Search Page Sort By Dropdown/Tests/URL changes according to search item.md",
     "Search Bar/Tests/Submit Button",
     "Search Bar/Tests/Typeahead/Results",
     "Search Bar/Tests/Typeahead/Brands",

@@ -4,7 +4,8 @@
 		{"id":"200d55abe5f51508","type":"file","file":"Search Bar/Search Bar.canvas","x":-320,"y":-480,"width":320,"height":320,"color":"3"},
 		{"id":"649eda364884b063","type":"file","file":"Search Page Categories/Search Page Categories.canvas","x":0,"y":-480,"width":320,"height":320,"color":"3"},
 		{"id":"559f7f510ebcfb62","type":"file","file":"Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas","x":320,"y":-480,"width":320,"height":320,"color":"3"},
-		{"id":"a93acbf87d481df1","type":"link","url":"https://mtechqa.atlassian.net/browse/MTQA-4218","x":-640,"y":0,"width":1280,"height":720}
+		{"id":"a93acbf87d481df1","type":"link","url":"https://mtechqa.atlassian.net/browse/MTQA-4218","x":-640,"y":0,"width":1280,"height":720},
+		{"id":"4494220764bf5298","x":640,"y":720,"width":1280,"height":720,"type":"link","url":"https://mtechqa.atlassian.net/browse/MTQA-4220"}
 	],
 	"edges":[]
 }
