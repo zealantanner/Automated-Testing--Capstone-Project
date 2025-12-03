@@ -1,89 +1,86 @@
-# Epic: [[Nav Links.canvas|Nav Links]]
-- ## Test Case: Nav links (Automated tests) #test/automated
-	- Test: Dropdown opens with links
+# Element: [[Nav Links.canvas|Nav Links]]
+- ## Test Case: [Nav links (Automated)](https://mtechqa.atlassian.net/browse/MTQA-4219) #test/automated
+	1. Test: Dropdowns open with links visible
 		- [[Each dropdown opens]]
-	- Test: Each link under specified dropdown directs to the correct URL
-		- [[Navbar Dropdown links]]
-- ## Test Case: Nav links (Manual tests) #test/manual
-	- Test: On click dropdown becomes highlighted
-		- [[Dropdown aspects look right]]
-	- Test: With dropdown open, on click elsewhere closes it
-		- [[Closes the dropdown on click elsewhere]]
-	- Test: Specified link is highlighted when hovered over
-		- [[Each link is highlighted on hover]]
-# Epic: [[Search Bar.canvas|Search Bar]]
-- ## Test Case: Typeahead (Automated tests) #test/automated
+	2. Test: Each link under specified dropdown directs to the correct URL
+		- [[URL changes according to link]]
+- ## Test Case: [Nav links (Manual)](https://mtechqa.atlassian.net/browse/MTQA-4220) #test/manual
+	1. Test: Dropdown aspects behave correctly Dropdown button becomes highlighted
+		- [[Dropdown aspects behave correctly]]
+# Element: [[Search Bar.canvas|Search Bar]]
+- ## Test Case: [Search Bar - Typeahead (Automated)]([Ticket](https://mtechqa.atlassian.net/browse/MTQA-4221)) #test/automated
 	- #### Terms:
-		- Test: When term is clicked the url changes accordingly
+		1. Test: When a term in typeahead is clicked the URL changes accordingly
 			- [[URL changes according to chosen term]]
-		- Test: Typeahead changes accordingly
+		2. Test: Typeahead changes accordingly
 			- [[Changes typeahead results accordingly]] 
+	- #### Brands:
+		None
 	- #### Results:
-		- Test: URL changes when an item is clicked
+		1. Test: URL changes when an item is clicked
 			- [[URL changes to the corresponding item's url]]
-		- Test: Title and footer keywords match input
+		2. Test: Title and footer keywords match input
 			- [[Title and footer show correct keywords]]
-		- Test: Footer is clicked and activates search #related/activateSearch
+		3. Test: Footer is clicked and activates search #related/activateSearch
 			- [[URL changes according to text inputted]]
-- ## Test Case: Typeahead (Manual tests) #test/manual
+- ## Test Case: Search Bar - Typeahead (Manual) #test/manual
 	- #### Terms:
-		- Test: Term results are relevant
+		1. Test: Term results are relevant
 			- [[Terms are relevant]]
-		- Test: Specified term is highlighted when hovered over
+		2. Test: Specified term is highlighted when hovered over
 			- [[Terms highlight on hover]]
 	- #### Brands:
-		- Test(unsure): Brand link is clicked
+		1. Test(unsure): Brand link is clicked
 			- [[Brand on click?]]
-		- Test(unsure): Brand link is hovered over
+		2. Test(unsure): Brand link is hovered over
 			- [[Brand on hover?]]
-		- Test: Specified brand is underlined when hovered over
+		3. Test: Specified brand is underlined when hovered over
 			- [[Underlines specified text on hover]]
-		- Test: Brand results are relevant
+		4. Test: Brand results are relevant
 			- [[Brands are relevant]]
 	- #### Results:
-		- Test: Typeahead items are relevant
+		1. Test: Typeahead items are relevant
 			- [[Typeahead results are relevant]]
-- ## Test Case: Input Field (Automated tests) #test/automated
-	- Test: Input text #related/typeahead
+- ## Test Case: Search bar - Input Field (Automated) #test/automated
+	1. Test: Input text #related/typeahead
 		- [[Typeahead appears]]
-	- Test(Negative): Input nonsense text #related/typeahead #test/negative
+	2. Test(Negative): Input nonsense text #related/typeahead #test/negative
 		- [[No results in Typeahead]]
-	- Test(Negative): Input too many characters #test/negative
+	3. Test(Negative): Input too many characters #test/negative
 		- [[Limited to 100 characters]]
-- ## Test Case: Input Field (Manual tests) #test/manual
-	- Test: Typing in the search bar feels normal
+- ## Test Case: Search bar - Input Field (Manual) #test/manual
+	1. Test: Typing in the search bar feels normal
 		- [[Inputting text feels normal]]
-- ## Test Case: Submit Button (Automated tests) #test/automated
-	- Test: URL changes with valid text inputted #related/activateSearch
+- ## Test Case: Search bar - Submit Button (Automated) #test/automated
+	1. Test: URL changes with valid text inputted #related/activateSearch
 		- [[URL changes according to text inputted]]
-	- Test(Negative): When the search bar has no text inputted it doesn't search #test/negative
+	2. Test(Negative): When the search bar has no text inputted it doesn't search #test/negative
 		- [[With no text in input field nothing happens on click]]
-- ## Test Case: Submit Button (Manual tests) #test/manual
-	- Test: Search item results are relevant
+- ## Test Case: Search bar - Submit Button (Manual) #test/manual
+	1. Test: Search item results are relevant
 		- [[With valid text inputted search results are relevant]]
-# Epic: [[Search Page Category.canvas|Search Page Category]] #related/searchPageCategory
-- ## Test Case: Submit Button (Automated tests) #test/automated
-    - Test: Opens the category dropdown
+# Element: [[Search Page Categories.canvas|Search Page Categories]] #related/searchPageCategories
+- ## Test Case: Search Page Categories (Automated) #test/automated
+    1. Test: The category dropdown opens and closes
         - [[Opens on click]]
-    - Test: Closes the category dropdown
         - [[Closes on click]]
-    - Test: Choosing a category applies the filter
+    2. Test: Choosing a category applies the filter
         - [[The correct number of results are displayed]]
         - [[URL changes according to category]]
         - [[Category is displayed as chosen]]
-    - Test: Removing the category filters accordingly
+    3. Test: Removing the category filters accordingly
         - [[Category is removed]]
         - [[URL changes according to category]]
-- ## Test Case: Submit Button (Manual tests) #test/manual
-    - Test: Items are filtered accordingly when a category is chosen
+- ## Test Case: Search Page Categories (Manual) #test/manual
+    1. Test: Items are filtered accordingly when a category is chosen
         - [[Displayed items are relevant to the category]]
-    - Test: Irrelevant items are not included
+    2. Test: Irrelevant items are not included
         - [[Items that are irrelevant  to the filter are not included]]
-    - Test: Highlights red when hovered over
+    3. Test: Highlights red when hovered over
         - [[Highlights red on hover]]
-# Epic: [[Search Page Sort By Dropdown.canvas|Search Page Sort By Dropdown]]
-- ## Test Case: Sort By Dropdown (Automated tests) #test/automated
-    - Test: dropdown options #related/sortByOptions
+# Element: [[Search Page Sort By Dropdown.canvas|Search Page Sort By Dropdown]]
+- ## Test Case: Sort By Dropdown (Automated) #test/automated
+    1. Test: dropdown options #related/sortByOptions
         - "Most Popular"
             - [[Loosely sorts by reviews]]
         - "Highest Rated"
@@ -92,17 +89,17 @@
             - [[Loosely sorts alphabetically]]
         - "Price: Low to High" and "Price: High to Low"
             - [[Loosely sorts by price]]
-    - Test: Url changes for each option
+    2. Test: Url changes for each option
         - [[URL changes according to search item]]
-    - Test: Option is selected after selection
+    3. Test: Option is selected after selection
         - [[Option appears to be selected]]
-- ## Test Case: Sort By Dropdown (Manual tests) #test/manual
-    - Test: dropdown options #related/sortByOptions
+- ## Test Case: Sort By Dropdown (Manual) #test/manual
+    1. Test: dropdown options #related/sortByOptions
         - "Best Match"
             - [[Sorts by most relevant]]
         - (unsure) "Newest First"
             - [[Sorts by newest?]]
-    - Test: Blue highlight when hovered over
+    2. Test: Blue highlight when hovered over
         - [[Option highlights blue on hover]]
 
 

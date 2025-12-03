@@ -6,7 +6,7 @@
       {
         "id": "a50c5a72ba9688ca",
         "type": "tabs",
-        "dimension": 62.69946808510638,
+        "dimension": 48.77232142857143,
         "children": [
           {
             "id": "8de098433a65ad7c",
@@ -17,9 +17,9 @@
               "state": {
                 "file": "Nav Links/Nav Links.canvas",
                 "viewState": {
-                  "x": 1743.6601309596715,
-                  "y": -1730.5497266542038,
-                  "zoom": -1.4900000000000024
+                  "x": 1170.9169844338687,
+                  "y": -1269.507958035124,
+                  "zoom": -2.2133056201109973
                 }
               },
               "pinned": true,
@@ -36,9 +36,9 @@
               "state": {
                 "file": "Search Bar/Search Bar.canvas",
                 "viewState": {
-                  "x": 716.3401991585989,
-                  "y": -276.86878825829706,
-                  "zoom": -0.5866666666666549
+                  "x": 294.15307057369927,
+                  "y": 9.166487973143056,
+                  "zoom": -1.7433830986038772
                 }
               },
               "pinned": true,
@@ -47,22 +47,22 @@
             }
           },
           {
-            "id": "3287d0068e63358f",
+            "id": "213bdfce818995a7",
             "type": "leaf",
             "pinned": true,
             "state": {
               "type": "canvas",
               "state": {
-                "file": "Search Page Category/Search Page Category.canvas",
+                "file": "Search Page Categories/Search Page Categories.canvas",
                 "viewState": {
-                  "x": 1684.1203272196776,
-                  "y": 1097.540627533434,
-                  "zoom": -1.9966666666666555
+                  "x": 3385.6532930275935,
+                  "y": -598.5219415840724,
+                  "zoom": -0.9063870339030621
                 }
               },
               "pinned": true,
               "icon": "lucide-layout-dashboard",
-              "title": "Search Page Category"
+              "title": "Search Page Categories"
             }
           },
           {
@@ -74,52 +74,23 @@
               "state": {
                 "file": "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
                 "viewState": {
-                  "x": 593.1024083921051,
-                  "y": 250.81506474085032,
-                  "zoom": -1.0805616207498905
+                  "x": 1776.0798361559346,
+                  "y": -49.96959791797197,
+                  "zoom": -0.98562304561025
                 }
               },
               "pinned": true,
               "icon": "lucide-layout-dashboard",
               "title": "Search Page Sort By Dropdown"
             }
-          },
-          {
-            "id": "814517866f71d28b",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "graph",
-              "state": {},
-              "pinned": true,
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          },
-          {
-            "id": "515079925a33044f",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Search Page Category/Search Page Category.canvas",
-                "viewState": {
-                  "x": 741.7435777706843,
-                  "y": 1329.74882648248,
-                  "zoom": -1.201822735606818
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "Search Page Category"
-            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       },
       {
         "id": "0305f0ad94332d43",
         "type": "tabs",
-        "dimension": 37.30053191489361,
+        "dimension": 51.22767857142857,
         "children": [
           {
             "id": "b1f1c82fa25d8021",
@@ -138,54 +109,115 @@
             }
           },
           {
-            "id": "c4fe80ff41c4f806",
+            "id": "0c744c1d056ad220",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Nav Links/Nav Links.canvas",
-                "viewState": {
-                  "x": 1892.089656206492,
-                  "y": -1862.656572314478,
-                  "zoom": -0.7233949333218749
-                }
+                "file": "Search Bar/Tests/Typeahead/Terms/Changes typeahead results accordingly.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Nav Links"
+              "icon": "lucide-file",
+              "title": "Changes typeahead results accordingly"
             }
           },
           {
-            "id": "9a5880d47b974ad3",
+            "id": "0f6994e63d27adf8",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Nav Links/Nav Links.canvas",
-                "viewState": {
-                  "x": 1320,
-                  "y": -1200,
-                  "zoom": -1.9092345360768177
-                }
+                "file": "Search Bar/Tests/Typeahead/Results/URL changes to the corresponding item's url.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Nav Links"
+              "icon": "lucide-file",
+              "title": "URL changes to the corresponding item's url"
             }
           },
           {
-            "id": "9cea8a0af59d2b8e",
+            "id": "d5ec11d373e61ea6",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Search Page Category/Search Page Category.canvas",
-                "viewState": {
-                  "x": 2028.341987642647,
-                  "y": 1218.3057509887199,
-                  "zoom": -0.6256904525338365
-                }
+                "file": "Search Bar/Tests/Typeahead/Title and footer show correct keywords.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Search Page Category"
+              "icon": "lucide-file",
+              "title": "Title and footer show correct keywords"
+            }
+          },
+          {
+            "id": "2d7f014f37b30735",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Search Bar/Tests/Submit Button/URL changes according to text inputted.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "URL changes according to text inputted"
+            }
+          },
+          {
+            "id": "ecb194b6ef228f49",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Search Bar/Tests/Typeahead/Terms/Changes typeahead results accordingly.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Changes typeahead results accordingly"
+            }
+          },
+          {
+            "id": "11bcc423e59af6be",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Search Bar/Tests/Typeahead/Terms/URL changes according to chosen term.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "URL changes according to chosen term"
+            }
+          },
+          {
+            "id": "f326ccec6520e589",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Nav Links/Tests/Dropdown aspects behave correctly.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Dropdown aspects behave correctly"
+            }
+          },
+          {
+            "id": "8d28c210c7057341",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Nav Links/Tests/Dropdown aspects behave correctly.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Dropdown aspects behave correctly"
             }
           }
         ]
@@ -220,7 +252,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#related/searchPageCategory",
+                "query": "\"- ## Test Case\"",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -241,12 +273,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 372.5
+    "width": 266.5
   },
   "right": {
     "id": "24dc774896c24788",
@@ -338,7 +369,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.5
+    "width": 341.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -348,43 +380,44 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "card-board:CardBoard": false
     }
   },
-  "active": "259159346a9c1211",
+  "active": "b1f1c82fa25d8021",
   "lastOpenFiles": [
-    "Search Page Category/Search Page Category.canvas",
-    "Nav Links/Nav Links.canvas",
     "Search Bar/Search Bar.canvas",
-    "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
     "Epics and stories.md",
-    "Nav Links/Tests/Closes the dropdown on click elsewhere.md",
-    "Notes.md",
-    "Welcome.md",
-    "!misc/Canvases.md",
-    "Search Bar/Tests/Submit Button/With valid text inputted search results are relevant.md",
-    "Test Plan.canvas",
     "Search Bar/Tests/Typeahead/Terms/Changes typeahead results accordingly.md",
+    "Search Bar/Tests/Typeahead/Title and footer show correct keywords.md",
+    "Search Bar/Tests/Submit Button/URL changes according to text inputted.md",
+    "Search Bar/Tests/Typeahead/Results/URL changes to the corresponding item's url.md",
+    "Nav Links/Tests/Dropdown aspects behave correctly.md",
     "Search Bar/Tests/Typeahead/Terms/URL changes according to chosen term.md",
+    "Nav Links/Nav Links.canvas",
+    "Nav Links/Tests/Each link is highlighted on hover.md",
+    "Nav Links/Tests/Closes the dropdown on a click elsewhere.md",
+    "Nav Links/Tests/Each dropdown opens.md",
+    "Nav Links/Tests/URL changes according to link.md",
+    "Nav Links/Navbar dropdown links.md",
+    "Nav Links/Dropdowns/Professional links.md",
+    "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
+    "Notes.md",
+    "Search Page Categories/Tests/URL changes according to category.md",
+    "Test Plan.canvas",
+    "!misc/Canvases.md",
+    "Search Page Sort By Dropdown/images/Page 1-69.png",
+    "Search Page Categories/Search Page Categories.canvas",
+    "Test Planban.md",
+    "Each dropdown opens.md",
+    "Epics and stories copy.md",
+    "Nav links.md",
+    "Welcome.md",
+    "Search Bar/Tests/Submit Button/With valid text inputted search results are relevant.md",
     "Search Page Sort By Dropdown/Tests/Sorts by newest?.md",
     "Tests.md",
     "Untitled.base",
-    "Nav Links/Dropdowns/Professional links.md",
     "Search Page Sort By Dropdown/Tests/URL changes according to search item.md",
-    "Search Bar/Tests/Typeahead/Title and footer show correct keywords.md",
-    "thing.md",
-    "Simpler epics and stories.md",
-    "Untitled.canvas",
-    "!misc/?.md",
-    "!misc/Manual vs automated.md",
-    "!misc/Automated Test.md",
-    "Nav Links/Tests/Dropdown aspects look right.md",
-    "Nav Links/Dropdowns/Learn links.md",
-    "Nav Links/Dropdowns/Shop links.md",
-    "Nav Links/Dropdowns/Deals links.md",
-    "Nav Links/Dropdowns/Get Help links.md",
-    "Search Bar/Tests/Typeahead/Brands/Brand on click?.md",
-    "Search Bar/Tests/Typeahead/Results/Typeahead results are relevant.md",
     "Search Bar/Tests/Submit Button",
     "Search Bar/Tests/Typeahead/Results",
     "Search Bar/Tests/Typeahead/Brands",
@@ -402,7 +435,6 @@
     "Search Bar/images/Search Results.png",
     "Search Bar/images/Search Bar/Bad Text No results.png",
     "Search Bar/images/Search Bar/Bad Text Input.png",
-    "Search Bar/images/Search Bar/Text Input.png",
-    "Search Bar/images/Search Bar/Search Button.png"
+    "Search Bar/images/Search Bar/Text Input.png"
   ]
 }

@@ -6,53 +6,17 @@
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": false,
-  "colorGroups": [
-    {
-      "query": "path:\"Epics and stories\"",
-      "color": {
-        "a": 1,
-        "rgb": 3718655
-      }
-    },
-    {
-      "query": "tag:#test/automated",
-      "color": {
-        "a": 1,
-        "rgb": 7885550
-      }
-    },
-    {
-      "query": "tag:#test/manual",
-      "color": {
-        "a": 1,
-        "rgb": 15496448
-      }
-    },
-    {
-      "query": "tag:#test/unsure",
-      "color": {
-        "a": 1,
-        "rgb": 49084
-      }
-    },
-    {
-      "query": "file:canvas",
-      "color": {
-        "a": 1,
-        "rgb": 14724096
-      }
-    }
-  ],
+  "colorGroups": [],
   "collapse-display": false,
-  "showArrow": true,
-  "textFadeMultiplier": -0.7,
-  "nodeSizeMultiplier": 1.4086662371134,
-  "lineSizeMultiplier": 1.88027545103093,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
   "collapse-forces": false,
-  "centerStrength": 0.463756443298969,
+  "centerStrength": 0.518713248970312,
   "repelStrength": 10,
-  "linkStrength": 0.592702963917526,
-  "linkDistance": 282,
-  "scale": 0.32132496924377385,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 0.40071884966113835,
   "close": true
 }

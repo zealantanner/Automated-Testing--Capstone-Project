@@ -1,2 +1,0 @@
-Account for the highlight of the link and the dropdown being visible
-#test/manual
