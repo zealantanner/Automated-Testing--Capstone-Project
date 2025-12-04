@@ -302,8 +302,9 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "8de098433a65ad7c",
+  "active": "b1f1c82fa25d8021",
   "lastOpenFiles": [
+    "Nav Links/Nav Links.canvas",
     "Epics and stories.md",
     "Search Page Categories/Tests/Items that are irrelevant to the filter are not included.md",
     "Search Bar/Search Bar.canvas",
@@ -333,7 +334,6 @@
     "Search Bar/Tests/Typeahead/Terms/Terms are relevant.md",
     "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
     "Test Plan.canvas",
-    "Nav Links/Nav Links.canvas",
     "Search Page Sort By Dropdown/images/Page 1-69.png",
     "Untitled.base",
     "Search Bar/Tests/Submit Button",
