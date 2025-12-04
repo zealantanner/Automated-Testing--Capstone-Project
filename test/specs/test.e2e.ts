@@ -5,7 +5,7 @@ import SearchPage from '../pageobjects/pages/search.page';
 import CategorySearchPage from '../pageobjects/pages/categorySearch.page';
 import { customTimeout } from '../utils/utils';
 
-
+//> don't make assert functions like last project, do them on here
 describe('My Login application', () => {
     before(async () => {
         await HomePage.open()
@@ -19,7 +19,7 @@ describe('My Login application', () => {
         await browser.pause(3000)
         await CategorySearchPage.open()
         await browser.pause(3000)
-        await CategorySearchPage.openSearch({categories:["dooky sucklage~—"]})
+        await CategorySearchPage.openSearch({categories:["Car Audio"]})
         // await CategorySearchPage.openSearch({ca})
         await browser.pause(3000)
         // await HomePage.cookiePopup.close()

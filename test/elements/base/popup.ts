@@ -5,11 +5,12 @@ import Element from "../element"
 
 export default class Popup extends Element {
     public get base() { return $('*[data-testid="POPUP"]') }
+    
     public get btnClose() { return this.base.$('button[aria-label="Close dialog"]') }
     public async dismissPopupIfPresent() {
-        if(await this.base.isDisplayed()) {
+        if(await this.base.isExisting()) {
             await this.btnClose.click()
-            await this.base.waitForDisplayed({
+            await this.base.waitForExist({
                 reverse: true,
                 timeout: customTimeout,
             })
@@ -34,25 +35,3 @@ export default class Popup extends Element {
         },storage)
     }
 }
-
-// await browser.execute(() => {
-//     const now = Math.floor(Date.now() / 1000); // Unix timestamp in seconds
-//     const storage = {
-//         viewedForms: {
-//             modal: {
-//                 disabledForms: {
-//                     "V6Vcns": { lastCloseTime: now }
-//                 },
-//                 viewedForms: {
-//                     "SJhXNt": 17938578,
-//                     "V6Vcns": 18109314
-//                 },
-//                 disabledTeasers: {
-//                     "V6Vcns": { lastCloseTime: now }
-//                 }
-//             }
-//         }
-//     };
-
-//     localStorage.setItem("viewedForms", JSON.stringify(storage));
-// });

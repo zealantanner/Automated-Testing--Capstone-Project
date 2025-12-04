@@ -8,7 +8,6 @@ export type SearchOptions = { keywords:str, page?:int }
 /** `category:str, keywords?:str, page?:int` */
 export type CategoryOptions = { categories:str[], keywords?:str, page?:int }
 //> sometimes they have "keywords=wire connector&oq=wire"
-//> like if
 
 export default abstract class BaseSearch<TOptions extends SearchOptions | CategoryOptions> extends Base {
     /** `search` or `ss_category` */
@@ -24,7 +23,7 @@ export default abstract class BaseSearch<TOptions extends SearchOptions | Catego
 
     public baseUrlWithParameters(options:TOptions):URL {
         const url = (options && 'categories' in options)
-            ? new URL(`${this.subUrl}/${options.categories.join()}`, this.baseUrl) //category
+            ? new URL(`${this.subUrl}/${encodeURI(options.categories.join())}`, this.baseUrl) //category
             : this.baseUrl //search
         if(options?.page && options.page !== 1) {
             url.searchParams.set("page", options.page.toString())
@@ -40,8 +39,7 @@ export default abstract class BaseSearch<TOptions extends SearchOptions | Catego
     }
     
     /** @deprecated Use openSearch */
-    public override async open(path:str|URL= this.baseUrl) {
-        console.warn("Shouldn't be used")
+    public async open(path:str|URL= this.baseUrl) {
         await super.open(path)
     }
 }

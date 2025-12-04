@@ -9,6 +9,7 @@ export default class Categories extends Element {
         super()
     }
     public get base() { return this._base }
+    
     public get link() { return this.base.$('a') }
     public get title() { return this.link.$('label span') }
     public async getTitleInfo() {

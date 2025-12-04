@@ -10,7 +10,7 @@ export default class Items extends Element {
         super()
     }
     public get base() { return this._base }
-    public get btnAddToCart() { return this.base.$('.add-to-cart-button-plp') }
+    
     private get title() { return this.base.$('.facets-item-cell-grid-title') }
     private get price() { return this.base.$('.product-views-price-exact') }
     private get starRating() { return this.base.$('.global-views-star-rating') }
@@ -35,12 +35,6 @@ export default class Items extends Element {
             reviews: reviewCount,
             stockStatus: stockText,
         }
-    }
-    // //> am I even adding items to cart? no
-    // public isAddedToCart = false
-    public async addToCart() {
-        // this.isAddedToCart = true
-        await this.btnAddToCart.click()
     }
 }
 

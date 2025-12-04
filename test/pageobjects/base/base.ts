@@ -7,6 +7,7 @@ import Popup from '../../elements/base/popup'
 
 export default abstract class Base {
     public abstract get subUrl():str
+
     /** https://www.parts-express.com */
     public get baseUrl() { return new URL(this.subUrl,"https://www.parts-express.com") }
     
@@ -20,7 +21,6 @@ export default abstract class Base {
     }
 }
 
-// export const base = new Base() 
 export const base = new class extends Base {
     public get subUrl() { return "" }
 }

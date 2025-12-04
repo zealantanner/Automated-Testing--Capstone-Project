@@ -11,6 +11,7 @@ export default class CategoryFilters extends Element {
         super()
     }
     public get base() { return this._base }
+    
     public get btnX() { return this.base.$('.facets-facets-display-filter-delete-icon') }
     private get title() { return this.base.$('.facets-facets-display-filter-value') }
     private get titleBox() { return this.title.$('.facets-facets-display-filter-value') }
