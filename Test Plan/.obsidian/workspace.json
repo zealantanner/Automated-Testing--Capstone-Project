@@ -6,8 +6,68 @@
       {
         "id": "a50c5a72ba9688ca",
         "type": "tabs",
-        "dimension": 43.27941996653654,
         "children": [
+          {
+            "id": "b1f1c82fa25d8021",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Epics and stories.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Epics and stories"
+            }
+          },
+          {
+            "id": "81d43064e4ee9ba5",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Search Page Categories/Search Page Categories.canvas",
+                "viewState": {
+                  "x": -866.5426389333627,
+                  "y": 762.6818531212643,
+                  "zoom": -1.1455178252373255
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Search Page Categories"
+            }
+          },
+          {
+            "id": "88cba9884b33099e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Search Bar/Tests/Typeahead/Results/Shows correct keywords in the title and footer.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Shows correct keywords in the title and footer"
+            }
+          },
+          {
+            "id": "6d7580c7c2181f9f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Search Bar/Tests/Typeahead/Terms/Changes terms in typeahead results accordingly.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Changes terms in typeahead results accordingly"
+            }
+          },
           {
             "id": "8de098433a65ad7c",
             "type": "leaf",
@@ -36,9 +96,9 @@
               "state": {
                 "file": "Search Bar/Search Bar.canvas",
                 "viewState": {
-                  "x": 1323.406882569015,
-                  "y": -479.2432085248298,
-                  "zoom": -0.8889359223470934
+                  "x": -5221.85861432333,
+                  "y": 2693.0814103730195,
+                  "zoom": -0.45806085055948714
                 }
               },
               "pinned": true,
@@ -55,9 +115,9 @@
               "state": {
                 "file": "Search Page Categories/Search Page Categories.canvas",
                 "viewState": {
-                  "x": 1337.7700478412369,
-                  "y": 1737.5139143159536,
-                  "zoom": -1.8557727852994954
+                  "x": 916.8218020769696,
+                  "y": 1602.9369142297128,
+                  "zoom": -1.0670523149086188
                 }
               },
               "pinned": true,
@@ -74,9 +134,9 @@
               "state": {
                 "file": "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
                 "viewState": {
-                  "x": -30.134875436002943,
-                  "y": 753.7229615192394,
-                  "zoom": -1.2639198687145643
+                  "x": 307.2407089003869,
+                  "y": 219.73953814801558,
+                  "zoom": -0.7746210583794824
                 }
               },
               "pinned": true,
@@ -100,42 +160,101 @@
               "icon": "lucide-layout-dashboard",
               "title": "Test Plan"
             }
-          }
-        ]
-      },
-      {
-        "id": "0305f0ad94332d43",
-        "type": "tabs",
-        "dimension": 56.72058003346346,
-        "children": [
+          },
           {
-            "id": "b1f1c82fa25d8021",
+            "id": "799f079d90567949",
             "type": "leaf",
-            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Epics and stories.md",
+                "file": "Notes.md",
                 "mode": "source",
                 "source": false
               },
-              "pinned": true,
               "icon": "lucide-file",
-              "title": "Epics and stories"
+              "title": "Notes"
             }
           },
           {
-            "id": "b8ecc7c0fa8ed48d",
+            "id": "a7ba29a4e1bcaad6",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Search Page Categories/images/Category.png"
+              },
+              "icon": "lucide-image",
+              "title": "Category"
+            }
+          },
+          {
+            "id": "18cd03ba1ac067e1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Search Page Categories/Tests/Items that are irrelevant to the filter are not included.md",
+                "file": "Search Page Categories/Tests/Removes a category.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Items that are irrelevant to the filter are not included"
+              "title": "Removes a category"
+            }
+          },
+          {
+            "id": "20815a07b0a2643c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Search Page Sort By Dropdown/Tests/Sorts by name alphabetically.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sorts by name alphabetically"
+            }
+          },
+          {
+            "id": "eb9cd5d1bb729099",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Search Page Sort By Dropdown/Tests/Sorts by name alphabetically.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sorts by name alphabetically"
+            }
+          },
+          {
+            "id": "7c91d05b0c3138f3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Search Page Sort By Dropdown/Tests/Sorts by most popular.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sorts by most popular"
+            }
+          },
+          {
+            "id": "cdcd5edde7ed5a32",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Search Page Sort By Dropdown/Tests/Sorts by highest rated.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sorts by highest rated"
             }
           }
         ]
@@ -191,8 +310,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -304,36 +422,40 @@
   },
   "active": "b1f1c82fa25d8021",
   "lastOpenFiles": [
-    "Nav Links/Nav Links.canvas",
-    "Epics and stories.md",
-    "Search Page Categories/Tests/Items that are irrelevant to the filter are not included.md",
-    "Search Bar/Search Bar.canvas",
-    "Search Page Categories/Search Page Categories.canvas",
-    "Search Bar/Tests/Input field/Typeahead appears.md",
-    "Search Bar/Tests/Input field/No results in Typeahead.md",
-    "Search Page Sort By Dropdown/Tests/Sorts by newest?.md",
-    "Search Page Sort By Dropdown/Tests/Loosely sorts by reviews.md",
-    "Search Page Sort By Dropdown/Tests/Sorts by most relevant.md",
-    "Search Page Sort By Dropdown/Tests/Loosely sorts by stars.md",
-    "Search Page Sort By Dropdown/Tests/Loosely sorts by price.md",
-    "Search Page Sort By Dropdown/Tests/Loosely sorts alphabetically.md",
-    "Search Page Sort By Dropdown/Tests/URL changes according to sort by option.md",
-    "Search Page Sort By Dropdown/Tests/Option highlights blue on hover.md",
-    "Search Page Sort By Dropdown/Tests/Option appears to be selected.md",
-    "Search Page Categories/Tests/URL changes according to category.md",
-    "Search Page Categories/Tests/Opens on click.md",
-    "Search Page Categories/Tests/Highlights red on hover.md",
-    "Search Page Categories/Tests/Displayed items are relevant to the category.md",
-    "Search Page Categories/Tests/Closes on click.md",
-    "Search Page Categories/Tests/Category is removed.md",
-    "Search Page Categories/Tests/Category is displayed as chosen.md",
-    "Search Bar/Tests/Typeahead/Results/Title and footer show correct keywords.md",
-    "Search Bar/Tests/Typeahead/Terms/Changes typeahead results accordingly.md",
-    "Search Bar/Tests/Typeahead/Terms/URL changes according to chosen term.md",
-    "Search Bar/Tests/Typeahead/Terms/Terms highlight on hover.md",
-    "Search Bar/Tests/Typeahead/Terms/Terms are relevant.md",
     "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
+    "Epics and stories.md",
+    "Search Page Sort By Dropdown/Tests/Sorts by highest rated.md",
+    "Search Page Sort By Dropdown/Tests/Sorts by most popular.md",
+    "Search Page Sort By Dropdown/Tests/Sorts by name alphabetically.md",
+    "Search Page Categories/Tests/Removes a category.md",
+    "Search Page Categories/Tests/Adds a category.md",
+    "Search Page Categories/Search Page Categories.canvas",
+    "Search Page Categories/images/Category.png",
+    "Search Page Categories/images/Category chosen.png",
+    "Search Page Categories/images/Chosen category filter.png",
+    "Search Page Categories/images/Chosen category in dropdown.png",
+    "Search Page Categories/images/Close category dropdown.png",
+    "Search Page Categories/Tests/Shows category as chosen.md",
+    "Search Bar/Search Bar.canvas",
+    "Nav Links/Nav Links.canvas",
+    "Search Page Categories/Tests/Changes URL according to category.md",
+    "Notes.md",
+    "Search Bar/Tests/Submit Button/Should make nothing happen on click with no text in input field.md",
+    "Search Bar/Tests/Input field/Is limited to 100 characters.md",
+    "Search Bar/Tests/Input field/Shows no results in the typeahead.md",
+    "Search Bar/Tests/Input field/Makes the typeahead appear.md",
+    "Nav Links/Tests/Changes URL according to link.md",
+    "Nav Links/Tests/Opens each dropdown.md",
+    "Search Bar/Tests/Typeahead/Results/Shows correct keywords in the title and footer.md",
+    "Search Bar/Tests/Submit Button/Changes URL according to text inputted.md",
+    "Search Bar/Tests/Typeahead/Results/Changes URL to match the corresponding item.md",
+    "Search Bar/Tests/Typeahead/Terms/Changes URL according to chosen term.md",
+    "Search Bar/Tests/Typeahead/Terms/Changes terms in typeahead results accordingly.md",
     "Test Plan.canvas",
+    "Search Page Categories/Tests/Items that are irrelevant to the filter are not included.md",
+    "Search Page Sort By Dropdown/Tests/Sorts by newest?.md",
+    "Search Page Sort By Dropdown/Tests/Sorts by most relevant.md",
+    "Search Page Sort By Dropdown/Tests/Sorts by price.md",
     "Search Page Sort By Dropdown/images/Page 1-69.png",
     "Untitled.base",
     "Search Bar/Tests/Submit Button",
@@ -348,11 +470,6 @@
     "Nav Links/Tests",
     "Search Bar/images/Search Bar/Too many characters.png",
     "Search Bar/images/Typeahead/Results Footer.png",
-    "Search Bar/images/Typeahead/Item Results.png",
-    "Search Bar/images/Typeahead/Results.png",
-    "Search Bar/images/Search Results.png",
-    "Search Bar/images/Search Bar/Bad Text No results.png",
-    "Search Bar/images/Search Bar/Bad Text Input.png",
-    "Search Bar/images/Search Bar/Text Input.png"
+    "Search Bar/images/Typeahead/Item Results.png"
   ]
 }

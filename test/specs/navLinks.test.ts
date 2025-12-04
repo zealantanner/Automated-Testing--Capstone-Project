@@ -5,13 +5,18 @@
 
 describe(`Nav Links [MTQA-4219]`, () => {
     describe(`Dropdowns open with links visible`, () => {
-        it(`Should open each dropdown`, async () => {
-            
+        it(`Opens each dropdown`, async () => {
+            // Open each dropdown
+                // Click dropdown
+                    // Confirm it’s open and links are visible
         })
-    })//> dont need as many describes?
+    })
     describe(`Each link under specified dropdown directs to the correct URL`, () => {
-        it(`Should direct to the correct URL`, async () => {
-
+        it(`Changes URL according to link`, async () => {
+            // URL is correct for each link
+                // Open each nav dropdown
+                    // Click each link in the dropdown
+                        // Confirm the link directs to the correct URL
         })
     })
 })

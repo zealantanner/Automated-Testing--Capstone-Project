@@ -12,4 +12,4 @@
 - [Novelty](https://www.parts-express.com/novelty)
 
 
-[[URL changes according to link]]
+[[Changes URL according to link]]

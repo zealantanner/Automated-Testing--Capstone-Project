@@ -4,4 +4,4 @@
 - [Gift Certificates](https://www.parts-express.com/gift-certificate)
 
 
-[[URL changes according to link]]
+[[Changes URL according to link]]

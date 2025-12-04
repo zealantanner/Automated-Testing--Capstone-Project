@@ -6,4 +6,4 @@
 - [Installer/Integrator Referral Sign-up](https://www.parts-express.com/installerintegrator-referral-signup)
 
 
-[[URL changes according to link]]
+[[Changes URL according to link]]

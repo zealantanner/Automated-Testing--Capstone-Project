@@ -1,31 +1,33 @@
-import HamburgerAssert from "../asserts/hamburgerAssert";
 
 
 
 
 
-describe(`Opening [MTQA-3846]`, () => {
-    it(`Should open and close the hamburger menu from random pages`, async () => {
-        await HamburgerAssert.assertOpenAndClose()
+describe(`Search Page Categories [MTQA-4229]`, () => {
+    describe(`The category dropdown opens and closes`, () => {
+        it(`Opens and closes on click`, async () => {
+            // Click the category dropdown button
+                // Confirm it closes
+            // Click the category dropdown button again
+                // Confirm it opens
+        })
     })
-})
-describe(`All Items button [MTQA-3847]`, () => {
-    it(`should direct to inventory page`, async () => {
-        await HamburgerAssert.assertAllItems()
-    })
-})
-describe(`About button [MTQA-3849]`, () => {
-    it(`should direct to saucelabs page`, async () => {
-        await HamburgerAssert.assertAbout(false)
-    })
-})
-describe(`Logout button [MTQA-3850]`, () => {
-    it(`should log the user out`, async () => {
-        await HamburgerAssert.assertLogout()
-    })
-})
-describe(`Reset App State button [MTQA-3851]`, () => {
-    it(`should reset the status of items added to the cart`, async () => {
-        await HamburgerAssert.assertResetAppState()
+    describe(`Adding and removing categories`, () => {
+        describe(`Adding a category filters and changes URL`, () => {
+            it(`Adds a category`, async () => {
+                // Click to add a category
+                    // Confirm URL changes accordingly
+                    // Confirm category is displayed as chosen
+                    // Confirm items are filtered accordingly
+            })
+        })
+        describe(`Removing a category`, () => {
+            it(`Removes a category`, async () => {
+                // Click to remove a category
+                    // Confirm URL changes accordingly
+                    // Confirm category is not displayed as chosen
+                    // Confirm items are filtered accordingly
+            })
+        })
     })
 })
