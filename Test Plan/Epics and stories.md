@@ -1,4 +1,4 @@
-# Element: [[Nav Links.canvas|Nav Links]]
+# Element: Nav Links [[Nav Links.canvas]]
 - ## Test Case: [Nav links (Automated)](https://mtechqa.atlassian.net/browse/MTQA-4219) #test/automated
 	1. Test: Dropdowns open with links visible
 		- [[Each dropdown opens]]
@@ -7,7 +7,7 @@
 - ## Test Case: [Nav links (Manual)](https://mtechqa.atlassian.net/browse/MTQA-4220) #test/manual
 	1. Test: Dropdown aspects behave correctly Dropdown button becomes highlighted
 		- [[Dropdown aspects behave correctly]]
-# Element: [[Search Bar.canvas|Search Bar]]
+# Element: Search Bar [[Search Bar.canvas]]
 - ## Test Case: [Search Bar - Typeahead (Automated)]([Ticket](https://mtechqa.atlassian.net/browse/MTQA-4221)) #test/automated
 	- #### Terms:
 		1. Test: When a term in typeahead is clicked the URL changes accordingly
@@ -58,7 +58,7 @@
 	- #### Submit Button:
         1. Test: Search item results are relevant
             - [[With valid text inputted search results are relevant]]
-# Element: [[Search Page Categories.canvas|Search Page Categories]]
+# Element: Search Page Categories [[Search Page Categories.canvas]]
 - ## Test Case: [Search Page Categories (Automated)](https://mtechqa.atlassian.net/browse/MTQA-4229) #test/automated
     1. Test: The category dropdown opens and closes
         - [[Opens on click]]
@@ -74,7 +74,7 @@
         - [[Items that are irrelevant to the filter are not included]]
     3. Test: Highlights red when hovered over
         - [[Highlights red on hover]]
-# Element: [[Search Page Sort By Dropdown.canvas|Search Page Sort By Dropdown]]
+# Element: Search Page Sort By Dropdown [[Search Page Sort By Dropdown.canvas]]
 - ## Test Case: [Sort By Dropdown (Automated)](https://mtechqa.atlassian.net/browse/MTQA-4231) #test/automated
     1. Test: Dropdown options
         - "Most Popular"
