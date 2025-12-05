@@ -1,7 +1,7 @@
 import { int, str } from '../../utils/utils'
 import { browser, $, $ as $x } from '@wdio/globals'
 import Base from './base'
-import Items from '../../elements/baseSearch/items'
+import Items from '../../elements/baseSearch/item.els'
 
 /** `keywords:str, page?:int` */
 export type SearchOptions = { keywords:str, page?:int }

@@ -1,6 +1,6 @@
 import { Int, str } from "../../../utils/utils"
 import { browser, $, $ as $x } from '@wdio/globals'
-import Element from "../../element"
+import Element from "../../element.el"
 
 
 

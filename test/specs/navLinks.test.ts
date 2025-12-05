@@ -8,7 +8,7 @@ describe(`Nav Links [MTQA-4219]`, () => {
         it(`Opens each dropdown`, async () => {
             // Open each dropdown
                 // Click dropdown
-                    // Confirm it’s open and links are visible
+                // Confirm it's open and links are visible
         })
     })
     describe(`Each link under specified dropdown directs to the correct URL`, () => {
@@ -16,7 +16,7 @@ describe(`Nav Links [MTQA-4219]`, () => {
             // URL is correct for each link
                 // Open each nav dropdown
                     // Click each link in the dropdown
-                        // Confirm the link directs to the correct URL
+                    // Confirm the link directs to the correct URL
         })
     })
 })

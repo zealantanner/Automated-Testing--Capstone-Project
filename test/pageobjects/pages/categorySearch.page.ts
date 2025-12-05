@@ -3,7 +3,7 @@ import { $ } from '@wdio/globals';
 import Base from '../base/base';
 import SearchPage from './search.page';
 import BaseSearch, { CategoryOptions } from '../base/baseSearch';
-import CategoryFilters from '../../elements/baseSearch/categorySearchPage/categoryFilters';
+import CategoryFilters from '../../elements/baseSearch/categorySearchPage/categoryFilter.els';
 
 
 

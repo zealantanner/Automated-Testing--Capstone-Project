@@ -45,9 +45,9 @@
 		1. Test: Brand results are relevant
 			- [[Brands are relevant]]
 		2. Test: Brand link is clicked (unsure) #test/unsure
-			- [[Brand on click?]]
+			- [[Clicks on a brand?]]
 		3. Test: Brand link is hovered over (unsure) #test/unsure
-			- [[Brand on hover?]]
+			- [[Hovers over a brand?]]
 			- [[Underlines specified text on hover]]
 	- #### Typeahead Results:
 		1. Test: Typeahead items are relevant
@@ -77,26 +77,26 @@
 # Component: Search Page Sort By Dropdown [[Search Page Sort By Dropdown.canvas]]
 - ## Test Case: [Sort By Dropdown (Automated)](https://mtechqa.atlassian.net/browse/MTQA-4231) #test/automated
     1. Test: Dropdown options
-        - Test: Sorting by "Most Popular"
-            - [[Sorts by most popular]]
-        - Test: Sorting by "Highest Rated"
-            - [[Sorts by highest rated]]
-        - Test: Sorting by "Name: A - Z" and "Name: Z - A"
-            - [[Sorts by name alphabetically]]
-        - Test: Sorting by "Price: Low to High" and "Price: High to Low"
-            - [[Sorts by price]]
+        - Test: Sorts by "Most Popular"
+            - [[Sorting by popularity]]
+        - Test: Sorts by "Highest Rated"
+            - [[Sorting by rating]]
+        - Test: Sorts by "Name: A - Z" and "Name: Z - A"
+            - [[Sorting by name alphabetically]]
+        - Test: Sorts by "Price: Low to High" and "Price: High to Low"
+            - [[Sorting by price]]
+        - Test: Sorts by "Newest First" #test/unsure
+            - [[Sorting by date?]]
     2. Test: URL changes for each sort by option
-        - [[URL changes according to sort by option]]
+        - [[Changes URL according to sort by option]]
     3. Test: Option is labeled as selected after chosen
-        - [[Option appears to be selected]]
+        - [[Shows option appears to be selected]]
 - ## Test Case: [Sort By Dropdown (Manual)](https://mtechqa.atlassian.net/browse/MTQA-4232) #test/manual
     1. Test: Dropdown options
         - "Best Match"
             - [[Sorts by most relevant]]
-        - "Newest First" (unsure) #test/unsure
-            - [[Sorts by newest?]]
     2. Test: Blue highlight when hovered over
-        - [[Option highlights blue on hover]]
+        - [[Highlights blue on hover]]
 
 
 

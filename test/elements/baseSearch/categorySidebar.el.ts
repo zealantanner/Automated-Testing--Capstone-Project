@@ -1,7 +1,7 @@
 import { bool, str, int, Int, _ } from "../../utils/utils"
 import { $, $ as $x, $$ } from "@wdio/globals"
-import Element from "../element"
-import Categories from "./categorySidebar/categories"
+import Element from "../element.el"
+import Categories from "./categorySidebar/category.els"
 
 
 

@@ -8,7 +8,7 @@
 		{"id":"30bfc9a8b15a1748","type":"group","x":1240,"y":760,"width":480,"height":320,"color":"1","label":"Irrelevant items"},
 		{"id":"5abf614ef6b7baf3","type":"text","text":"# On Click","x":-1160,"y":200,"width":140,"height":60,"color":"4"},
 		{"id":"9d7048f6418dc259","type":"file","file":"Search Page Categories/images/Close category dropdown.png","x":-1040,"y":540,"width":418,"height":120,"color":"4"},
-		{"id":"3c7221b6a44b108b","type":"file","file":"Search Page Categories/Tests/Opens and closes on click.md","x":-1360,"y":300,"width":180,"height":200,"color":"6"},
+		{"id":"3c7221b6a44b108b","type":"file","file":"Search Page Categories/Tests/Opens and closes on click.md","x":-1420,"y":300,"width":240,"height":200,"color":"6"},
 		{"id":"826546785787c7b4","type":"file","file":"Search Page Categories/images/Category.png","x":-1540,"y":540,"width":360,"height":438,"color":"4"},
 		{"id":"e7b8afbf502e4ec1","type":"file","file":"Search Page Categories/images/Dropdown button.png","x":-1400,"y":-40,"width":100,"height":126,"color":"3"},
 		{"id":"f20efe443925f912","type":"link","url":"https://mtechqa.atlassian.net/browse/MTQA-4218","x":2820,"y":-1160,"width":960,"height":790},
@@ -22,8 +22,8 @@
 		{"id":"5ef1e504ca1bbb60","type":"text","text":"# Category is chosen","x":840,"y":1220,"width":280,"height":60,"color":"4"},
 		{"id":"0be77343cd375128","type":"file","file":"Search Page Categories/images/Hover on Category.png","x":1240,"y":0,"width":340,"height":418,"color":"3"},
 		{"id":"0b9033ee3c7953cf","type":"file","file":"Search Page Categories/Tests/Displayed items are relevant to the category.md","x":660,"y":1420,"width":280,"height":220,"color":"2"},
-		{"id":"e23ab662db5bb121","type":"file","file":"Search Page Categories/Tests/Adds a category.md","x":980,"y":1420,"width":320,"height":400,"color":"6"},
-		{"id":"0ef9b0fa6cdfeab4","type":"file","file":"Search Page Categories/Tests/Removes a category.md","x":1340,"y":1420,"width":320,"height":520,"color":"6"}
+		{"id":"e23ab662db5bb121","type":"file","file":"Search Page Categories/Tests/Adds a category.md","x":980,"y":1420,"width":320,"height":420,"color":"6"},
+		{"id":"0ef9b0fa6cdfeab4","type":"file","file":"Search Page Categories/Tests/Removes a category.md","x":1340,"y":1420,"width":320,"height":540,"color":"6"}
 	],
 	"edges":[
 		{"id":"f2d28eec2979572b","fromNode":"a989cd6590815ea3","fromSide":"bottom","toNode":"d8eaa2a717235677","toSide":"top","color":"3"},
@@ -31,8 +31,6 @@
 		{"id":"5a79bd844aeb0736","fromNode":"e7b8afbf502e4ec1","fromSide":"right","toNode":"5abf614ef6b7baf3","toSide":"top","color":"4"},
 		{"id":"d8b4f31c352f6f15","fromNode":"3c7221b6a44b108b","fromSide":"right","toNode":"826546785787c7b4","toSide":"right","color":"4"},
 		{"id":"5c52e3e4a44ab243","fromNode":"b8e3cfa75dfed904","fromSide":"right","toNode":"5ef1e504ca1bbb60","toSide":"top","color":"4"},
-		{"id":"8c34cf0bd950f178","fromNode":"25dacbd6c02b168e","fromSide":"right","toNode":"0ef9b0fa6cdfeab4","toSide":"top","color":"4"},
-		{"id":"5d43d3fb09abfecc","fromNode":"5ef1e504ca1bbb60","fromSide":"bottom","toNode":"0b9033ee3c7953cf","toSide":"top","color":"4"},
 		{"id":"adbbeda1bfe062c7","fromNode":"a989cd6590815ea3","fromSide":"bottom","toNode":"4154889f9e092f34","toSide":"top","color":"3"},
 		{"id":"14d538e3e586a1f1","fromNode":"0be77343cd375128","fromSide":"bottom","toNode":"82a96f3eeefaa79b","toSide":"top","color":"4"},
 		{"id":"f39d16de760f70fd","fromNode":"fb8b06c7281c0a0a","fromSide":"right","toNode":"d4b81dffb3f8f283","toSide":"top","color":"4"},
@@ -41,6 +39,8 @@
 		{"id":"39d5f26594ed589d","fromNode":"0be77343cd375128","fromSide":"bottom","toNode":"aab3c98bfb7a3309","toSide":"top","color":"4"},
 		{"id":"f1b87f80d7b8e47b","fromNode":"3c7221b6a44b108b","fromSide":"right","toNode":"9d7048f6418dc259","toSide":"top","color":"4"},
 		{"id":"f702cac7cbb64177","fromNode":"5ef1e504ca1bbb60","fromSide":"bottom","toNode":"e23ab662db5bb121","toSide":"top","color":"4"},
+		{"id":"5d43d3fb09abfecc","fromNode":"5ef1e504ca1bbb60","fromSide":"bottom","toNode":"0b9033ee3c7953cf","toSide":"top","color":"4"},
+		{"id":"8c34cf0bd950f178","fromNode":"25dacbd6c02b168e","fromSide":"right","toNode":"0ef9b0fa6cdfeab4","toSide":"top","color":"4"},
 		{"id":"b4788ba4e741b0f6","fromNode":"5ef1e504ca1bbb60","fromSide":"right","toNode":"25dacbd6c02b168e","toSide":"left","color":"4"}
 	]
 }

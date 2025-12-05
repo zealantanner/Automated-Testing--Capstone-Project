@@ -1,6 +1,6 @@
 import { str } from "../../../utils/utils"
 import { $, $ as $x } from "@wdio/globals"
-import Element from "../../element"
+import Element from "../../element.el"
 
 
 export default class Typeahead extends Element {
