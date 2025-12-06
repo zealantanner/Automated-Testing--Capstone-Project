@@ -11,6 +11,7 @@ describe(`Search Bar`, () => {
                     // Input text into search box
                     // Click a term in the typeahead results
                     // Confirm the URL changed accordingly
+                    //> also do for hitting enter
                 })
             })
             describe(`Typeahead terms change accordingly`, () => {

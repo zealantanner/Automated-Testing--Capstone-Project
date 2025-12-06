@@ -1,7 +1,7 @@
 import { bool, str, int, Int, _ } from "../../utils/utils"
 import { $, $ as $x, $$ } from "@wdio/globals"
-import Element from "../element.el"
-import Categories from "./categorySidebar/category.els"
+import Element from "../element"
+import Category from "./categorySidebar/category.els"
 
 
 
@@ -10,6 +10,6 @@ export default class CategorySidebar extends Element {
     
     public get categories() {
         return this.base.$$('li')
-        .map(el => new Categories($(el)))
+        .map(el => new Category($(el)))
     }
 }

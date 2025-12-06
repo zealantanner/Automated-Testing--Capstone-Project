@@ -134,9 +134,9 @@
               "state": {
                 "file": "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
                 "viewState": {
-                  "x": 1569.661801953712,
-                  "y": 89.3660269633686,
-                  "zoom": -0.5336231368711587
+                  "x": -173.31974056387637,
+                  "y": 281.7301642871861,
+                  "zoom": -0.5555320388264606
                 }
               },
               "pinned": true,
@@ -327,7 +327,8 @@
               "title": "Sorting by date?"
             }
           }
-        ]
+        ],
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -491,10 +492,10 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "b1f1c82fa25d8021",
+  "active": "dd71dde77e86bec6",
   "lastOpenFiles": [
-    "Search Page Sort By Dropdown/Tests/Sorting by date?.md",
     "Epics and stories.md",
+    "Search Page Sort By Dropdown/Tests/Sorting by date?.md",
     "Search Page Sort By Dropdown/Tests/Sorting by price.md",
     "Search Page Sort By Dropdown/Tests/Sorting by name alphabetically.md",
     "Search Page Sort By Dropdown/Tests/Sorting by rating.md",

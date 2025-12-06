@@ -1,12 +1,12 @@
 import { Int, str } from "../../../utils/utils"
 import { browser, $, $ as $x } from '@wdio/globals'
-import Element from "../../element.el"
+import Element from "../../element"
 
 
 
 
-/** @param CategoryFilters a chosen category filter on category page */
-export default class CategoryFilters extends Element {
+/** @param CategoryFilter a chosen category filter on category page */
+export default class CategoryFilter extends Element {
     constructor(private _base:ChainablePromiseElement) {
         super()
     }

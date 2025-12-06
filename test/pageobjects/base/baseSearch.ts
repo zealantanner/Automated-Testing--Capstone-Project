@@ -1,7 +1,8 @@
-import { int, str } from '../../utils/utils'
+import { Int, int, str } from '../../utils/utils'
 import { browser, $, $ as $x } from '@wdio/globals'
 import Base from './base'
-import Items from '../../elements/baseSearch/item.els'
+import Item from '../../elements/baseSearch/item.els'
+import SortByDropdown from '../../elements/baseSearch/sortByDropdown.el'
 
 /** `keywords:str, page?:int` */
 export type SearchOptions = { keywords:str, page?:int }
@@ -15,10 +16,16 @@ export default abstract class BaseSearch<TOptions extends SearchOptions | Catego
     /**  https://www.parts-express.com/ `subUrl` */
     public get baseUrl() { return new URL(this.subUrl, super.baseUrl) }
     
-    private get resultItemsBox() { return $('.facets-items-collection-view-row') }
-    public get resultItems() {
-        return this.resultItemsBox.$$('.facets-item-collection-view-cell')
-        .map(el => new Items($(el)))
+    public get SortByDropdown() { return new SortByDropdown()}
+
+    public get items() {
+        return $$('.facets-item-collection-view-cell')
+        .map(el => new Item($(el)))
+    }
+
+    private get totalItems() { return $('.facets-facet-browse-title-products h2') }
+    public async getTotalItemInt() {
+        return parseInt(await this.totalItems.getAttribute("data-quantity"))
     }
 
     public baseUrlWithParameters(options:TOptions):URL {

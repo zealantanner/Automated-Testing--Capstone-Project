@@ -1,11 +1,11 @@
 import { Int } from "../../utils/utils"
 import { browser, $, $ as $x } from '@wdio/globals'
-import Element from "../element.el"
+import Element from "../element"
 
 
 
-/** @param Items an item in the search results */
-export default class Items extends Element {
+/** @param Item an item in the search results */
+export default class Item extends Element {
     constructor(private _base:ChainablePromiseElement) {
         super()
     }

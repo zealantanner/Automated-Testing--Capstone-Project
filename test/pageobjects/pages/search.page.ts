@@ -14,7 +14,6 @@ class SearchPage extends BaseSearch<SearchOptions> {
     }
 }
 
-//> use an ai to generate relevant search terms
 
 
 export default new SearchPage();

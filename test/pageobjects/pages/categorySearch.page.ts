@@ -3,7 +3,7 @@ import { $ } from '@wdio/globals';
 import Base from '../base/base';
 import SearchPage from './search.page';
 import BaseSearch, { CategoryOptions } from '../base/baseSearch';
-import CategoryFilters from '../../elements/baseSearch/categorySearchPage/categoryFilter.els';
+import CategoryFilter from '../../elements/baseSearch/categorySearchPage/categoryFilter.els';
 
 
 
@@ -17,7 +17,7 @@ class CategorySearchPage extends BaseSearch<CategoryOptions> {
     public get categoryFiltersBox() { return $('.facets-facet-browse-narrowedby') }
     public get categoryFilters() {
         return this.categoryFiltersBox.$$('.facets-facets-display-filter')
-        .map(el => new CategoryFilters($(el)))
+        .map(el => new CategoryFilter($(el)))
     }
     public get btnClearAll() {
         return $('.facets-facets-display-clear')

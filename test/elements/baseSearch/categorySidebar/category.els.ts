@@ -3,8 +3,8 @@ import { browser, $, $ as $x } from '@wdio/globals'
 
 
 
-/** @param Categories part of category sidebar */
-export default class Categories extends Element {
+/** @param Category part of category sidebar */
+export default class Category extends Element {
     constructor(private _base:ChainablePromiseElement) {
         super()
     }
@@ -16,7 +16,7 @@ export default class Categories extends Element {
         const titleText = await this.title.getText()
         const match = titleText.match(/(?<name>.+) \((?<amount>\d+)\)/)
         const {name="", amount="0"} = match?.groups ?? {}
-        return {name, amount: Int(amount)}
+        return {name, amount: parseInt(amount)}
     }
     public isChosen = false //> eh maybe not
     public async choose() {

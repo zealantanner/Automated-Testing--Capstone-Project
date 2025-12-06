@@ -1,6 +1,6 @@
 import { str } from "../../utils/utils"
 import { $, $ as $x } from "@wdio/globals"
-import Element from "../element.el"
+import Element from "../element"
 import Typeahead from "./searchBar/typeahead.el"
 
 
@@ -16,7 +16,9 @@ export default class SearchBar extends Element {
 
     public async search(text:str="") { //> click or press enter?
         await this.waitFor()
+        await this.inputField.waitForExist()
         await this.inputField.setValue(text)
+        await this.btnConfirm.waitForExist()
         await this.btnConfirm.click()
     }
 }
