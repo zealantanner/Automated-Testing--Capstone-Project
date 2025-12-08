@@ -23,7 +23,7 @@ describe(`Search Page Sort By Dropdown [MTQA-4231]`, () => {
             // Select "Best Match"
             await SearchPage.SortByDropdown.selectOption(0)
             // Confirm URL changes accordingly
-            await Assert.urlContains(/\/search|ss_category/)
+            await Assert.urlContains("/search")
             // Confirm "Best Match" is selected
             await Assert.SearchPageSortByDropdown.optionIsSelected(0)
             // Confirm items are sorted by relevance - Manual test [MTQA-4232]
@@ -36,6 +36,7 @@ describe(`Search Page Sort By Dropdown [MTQA-4231]`, () => {
             // Confirm "Most Popular" is selected
             await Assert.SearchPageSortByDropdown.optionIsSelected(1)
             // Confirm items are sorted by popularity, aka reviews
+            await Assert.SearchPageSortByDropdown.popularity()
         })
         it(`Sorts by "Highest Rated"`, async () => {
             // Select "Highest Rated"
@@ -45,6 +46,7 @@ describe(`Search Page Sort By Dropdown [MTQA-4231]`, () => {
             // Confirm "Highest Rated" is selected
             await Assert.SearchPageSortByDropdown.optionIsSelected(2)
             // Confirm items are sorted by rating, aka stars
+            await Assert.SearchPageSortByDropdown.rating()
         })
         it(`Sorts by "Name: A - Z"`, async () => {
             // Select "Name: A - Z"
@@ -54,6 +56,7 @@ describe(`Search Page Sort By Dropdown [MTQA-4231]`, () => {
             // Confirm "Name: A - Z" is selected
             await Assert.SearchPageSortByDropdown.optionIsSelected(3)
             // Confirm items are sorted by name alphabetically
+            await Assert.SearchPageSortByDropdown.nameAlphabetically()
         })
         it(`Sorts by "Name: Z - A"`, async () => {
             // Select "Name: Z - A"
@@ -63,6 +66,7 @@ describe(`Search Page Sort By Dropdown [MTQA-4231]`, () => {
             // Confirm "Name: Z - A" is selected
             await Assert.SearchPageSortByDropdown.optionIsSelected(4)
             // Confirm items are sorted by name reverse alphabetically
+            await Assert.SearchPageSortByDropdown.nameAlphabetically(true)
         })
         it(`Sorts by "Price: Low to High"`, async () => {
             // Select "Price: Low to High"
@@ -72,6 +76,7 @@ describe(`Search Page Sort By Dropdown [MTQA-4231]`, () => {
             // Confirm "Price: Low to High" is selected
             await Assert.SearchPageSortByDropdown.optionIsSelected(5)
             // Confirm items are sorted by price
+            await Assert.SearchPageSortByDropdown.price()
         })
         it(`Sorts by "Price: High to Low"`, async () => {
             // Select "Price: High to Low"
@@ -81,6 +86,7 @@ describe(`Search Page Sort By Dropdown [MTQA-4231]`, () => {
             // Confirm "Price: High to Low" is selected
             await Assert.SearchPageSortByDropdown.optionIsSelected(6)
             // Confirm items are sorted by price reverse
+            await Assert.SearchPageSortByDropdown.price(true)
         })
         it(`Sorts by "Newest First"`, async () => {
             // Select "Newest First"

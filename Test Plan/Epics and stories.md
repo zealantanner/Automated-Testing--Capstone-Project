@@ -45,9 +45,9 @@
 		1. Test: Brand results are relevant
 			- [[Brands are relevant]]
 		2. Test: Brand link is clicked (unsure) #test/unsure
-			- [[Clicks on a brand?]]
+			- [[Clicks on a brand - unsure]]
 		3. Test: Brand link is hovered over (unsure) #test/unsure
-			- [[Hovers over a brand?]]
+			- [[Hovers over a brand - unsure]]
 			- [[Underlines specified text on hover]]
 	- #### Typeahead Results:
 		1. Test: Typeahead items are relevant
@@ -86,7 +86,7 @@
         - Test: Sorts by "Price: Low to High" and "Price: High to Low"
             - [[Sorting by price]]
         - Test: Sorts by "Newest First" #test/unsure
-            - [[Sorting by date?]]
+            - [[Sorting by date -  unsure]]
     2. Test: URL changes for each sort by option
         - [[Changes URL according to sort by option]]
     3. Test: Option is labeled as selected after chosen

@@ -18,6 +18,19 @@ export default abstract class BaseSearch<TOptions extends SearchOptions | Catego
     
     public get SortByDropdown() { return new SortByDropdown()}
 
+    private get pageNumber() { return $('p.global-views-pagination-label-plp-header')}
+    public async getPageInfo() {
+        const textAttr = await this.pageNumber.getText()
+        const match = textAttr.match(/Page (\d+)\/(\d+)/)
+        const currentPageNum = match ? parseInt(match[1]) : -1
+        const totalPages = match ? parseInt(match[2]) : -1
+        return {
+            currentPageNum,
+            totalPages,
+        }
+    }
+
+
     public get items() {
         return $$('.facets-item-collection-view-cell')
         .map(el => new Item($(el)))
@@ -40,6 +53,17 @@ export default abstract class BaseSearch<TOptions extends SearchOptions | Catego
         }
         return url
     }
+
+    public async goToPage(num=1) {
+        const url = new URL(this.baseUrl)
+        if(num < 0) {
+            const lastPage = (await this.getPageInfo()).totalPages
+            num = lastPage + num + 1
+        }
+        url.searchParams.set('page',num.toString())
+        await super.open(url)
+    }
+
     public async openSearch(options:TOptions) {
         const url = this.baseUrlWithParameters(options)
         await super.open(url)
