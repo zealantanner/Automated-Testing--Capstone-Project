@@ -1,25 +1,58 @@
-import { bool, str, int, Int, _ } from "./utils"
+import { bool, str, int, Int, _, getElementByText } from "./utils"
 import SearchPage from "../pageobjects/pages/search.page"
 import { base } from "../pageobjects/base/base"
 
-class NavLinks {
-
-}
-
-class SearchBar {
-
-}
-
-class SearchPageCategories {
-
-}
-
-class SearchPageSortByDropdown {
-    public async optionIsSelected(optionNum:int) {
+class Asserters {
+    public async waitForLoad() {
         await base.waitForLoad()
+    }
+    public async urlContains(path:str|RegExp|URL, isReverse=false) {
+        if(path instanceof URL) {
+            path = path.toString()
+        }
+
+        await this.waitForLoad()
+        const currentUrl = await browser.getUrl()
+
+        const expectUrl = (isReverse) ? expect(currentUrl).not : expect(currentUrl)
+        
+        await this.waitForLoad()
+        if(path instanceof RegExp) {
+            await expectUrl.toMatch(path)
+        } else {
+            await expectUrl.toContain(path)
+        }
+    }
+}
+
+class NavLinks extends Asserters {
+    public async confirmDropdownOpen(dropdownTitle:str) {
+        await this.waitForLoad()
+        const $dropdown = getElementByText(dropdownTitle)
+        const isOpen = (await $dropdown.getAttribute("aria-expanded")) === "true"
+        await expect(isOpen).toBe(true)
+    }
+    public async confirmNavLink(dropdownTitle:str, linkName:str, path:str|RegExp) {
+        await this.waitForLoad()
+        this.urlContains(path)
+        this.urlContains
+    }
+}
+
+class SearchBar extends Asserters {
+
+}
+
+class SearchPageCategories extends Asserters {
+
+}
+
+class SearchPageSortByDropdown extends Asserters {
+    public async optionIsSelected(optionNum:int) {
+        await this.waitForLoad()
         const option = SearchPage.SortByDropdown.$$options[optionNum]
         await expect(await option.isSelected()).toBe(true)
-        await base.waitForLoad()
+        await this.waitForLoad()
     }
     private dropdownAssert(value1:int,value2ndToLast:int,isReverse=false) {
         if(isReverse) {
@@ -31,15 +64,15 @@ class SearchPageSortByDropdown {
         }
     }
     private async goToPageAndWait(pageNum:int) {
-        await base.waitForLoad()
+        await this.waitForLoad()
         await SearchPage.goToPage(pageNum)
-        await base.waitForLoad()
+        await this.waitForLoad()
         await SearchPage.SortByDropdown.waitFor()
         await (await SearchPage.items)[1].waitFor()
     }
     public async popularity() {
         // loosely sorts by review
-        await base.waitForLoad()
+        await this.waitForLoad()
         const page1Items = await SearchPage.items
         let page1Total = 0
         for(const item of page1Items) {
@@ -58,7 +91,7 @@ class SearchPageSortByDropdown {
     }
     public async rating() {
         // loosely sorts by stars
-        await base.waitForLoad()
+        await this.waitForLoad()
         const page1Items = await SearchPage.items
         let page1Total = 0
         for(const item of page1Items) {
@@ -84,7 +117,7 @@ class SearchPageSortByDropdown {
             return char.charCodeAt(0);
         }
 
-        await base.waitForLoad()
+        await this.waitForLoad()
 
         const page1Items = await SearchPage.items
         let page1Total = 0
@@ -101,9 +134,11 @@ class SearchPageSortByDropdown {
         }
         
         this.dropdownAssert(page1Total,page2ndToLastTotal,isReverse)
+        await this.waitForLoad()
     }
     public async price(isReverse=false) {
         // loosely sorts by price
+        await this.waitForLoad()
         const page1Items = await SearchPage.items
         let page1Total = 0
         for(const item of page1Items) {
@@ -119,32 +154,15 @@ class SearchPageSortByDropdown {
         }
 
         this.dropdownAssert(page1Total,page2ndToLastTotal,isReverse)
+        await this.waitForLoad()
     } 
 }
 
-class Assert {
+class Assert extends Asserters {
     public get NavLinks() { return new NavLinks() }
     public get SearchBar() { return new SearchBar() }
     public get SearchPageCategories() { return new SearchPageCategories() }
     public get SearchPageSortByDropdown() { return new SearchPageSortByDropdown() }
-
-    public async urlContains(path:str|RegExp|URL, isReverse=false) {
-        if(path instanceof URL) {
-            path = path.toString()
-        }
-
-        await base.waitForLoad()
-        const currentUrl = await browser.getUrl()
-
-        const expectUrl = (isReverse) ? expect(currentUrl).not : expect(currentUrl)
-        
-        await base.waitForLoad()
-        if(path instanceof RegExp) {
-            await expectUrl.toMatch(path)
-        } else {
-            await expectUrl.toContain(path)
-        }
-    }
 }
 
 export default new Assert();

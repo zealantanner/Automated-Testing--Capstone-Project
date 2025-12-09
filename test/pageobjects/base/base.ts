@@ -2,6 +2,7 @@ import { str } from '../../utils/utils'
 import { browser, expect, $, $ as $x } from '@wdio/globals'
 import SearchBar from '../../elements/base/searchBar.el'
 import Popup from '../../elements/base/popup.el'
+import NavBar from '../../elements/base/navBar.el'
 
 
 
@@ -14,6 +15,7 @@ export default abstract class Base {
     public get $logo() { return $('#site-logo') }
     public get Popup() { return new Popup() }
     public get SearchBar() { return new SearchBar() }
+    public get NavBar() { return new NavBar() }
 
     private get $loadingIcon() { return $('#loadingIndicator') }
     /** waits to stop loading */
