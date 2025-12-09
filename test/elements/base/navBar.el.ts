@@ -2,12 +2,18 @@ import { customTimeout, getElementByText, str } from "../../utils/utils"
 import { $, $ as $x } from "@wdio/globals"
 import MyElement from "../element"
 
-
+type NavMenu = {
+    menuName:str,
+    links:{
+        text:str,
+        url:str,
+    }[],
+}
 export default class NavBar extends MyElement {
     public get $base() { return $('.navbar') }
     
-    readonly dropdownLinks = {
-        SHOP: {
+    readonly dropdownLinks:NavMenu[] = [
+        {
             menuName: "SHOP",
             links: [
                 { text:"New Products", url:"/promodisplay/N?order=ss_searchable_updated_date:asc" },
@@ -24,7 +30,7 @@ export default class NavBar extends MyElement {
                 { text:"Novelty", url:"/novelty" },
             ]
         },
-        DEALS: {
+        {
             menuName: "DEALS",
             links: [
                 { text:"On Sale", url:"/promo/on_sale_today" },
@@ -33,7 +39,7 @@ export default class NavBar extends MyElement {
                 { text:"Gift Certificates", url:"/gift-certificate" },
             ]
         },
-        PROFESSIONAL: {
+        {
             menuName: "PROFESSIONAL",
             links: [
                 { text:"Commercial Accounts", url:"/commercial-account" },
@@ -44,7 +50,7 @@ export default class NavBar extends MyElement {
                 { text:"Installer/Integrator Referral Sign-up", url:"/installerintegrator-referral-signup" },
             ]
         },
-        GET_HELP: {
+        {
             menuName: "GET HELP",
             links: [
                 { text:"FAQs", url:"/faq" },
@@ -54,7 +60,7 @@ export default class NavBar extends MyElement {
                 { text:"Contact Us", url:"/contact-us" },
             ]
         },
-        LEARN: {
+        {
             menuName: "LEARN",
             links: [
                 { text:"Resource Center", url:"/resource-center" },
@@ -62,7 +68,7 @@ export default class NavBar extends MyElement {
                 { text:"TechTalk Forum", url:"http://techtalk.parts-express.com/" },
             ]
         },
-    }
+    ]
 
     public async openDropdown(dropdownTitle:str) {
         await this.waitForLoad()

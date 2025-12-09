@@ -37,6 +37,6 @@ export function pickRandomFrom<T>(array:T[]):T {
 }
 
 export function getElementByText(text:str, $base=$('body')) {
-    const elementToClick = $base.$(`//*[contains(text(),'${text}')]`)
-    return elementToClick
+    const $element = $base.$(`//*[contains(text(),'${text}')]`)
+    return $element
 }

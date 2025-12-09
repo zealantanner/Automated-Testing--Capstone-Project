@@ -23,19 +23,36 @@ class Asserters {
             await expectUrl.toContain(path)
         }
     }
+    public async href($element:ChainablePromiseElement, path:str|RegExp, isReverse=false) {
+        await this.waitForLoad()
+        const linkText = await $element.getAttribute("href")
+        
+        const expectUrl = (isReverse) ? expect(linkText).not : expect(linkText)
+        
+        await this.waitForLoad()
+        if(path instanceof RegExp) {
+            await expectUrl.toMatch(path)
+        } else {
+            await expectUrl.toContain(path)
+        }
+    }
 }
 
 class NavLinks extends Asserters {
-    public async confirmDropdownOpen(dropdownTitle:str) {
+    public async confirmDropdownOpen(menuName:str) {
         await this.waitForLoad()
-        const $dropdown = getElementByText(dropdownTitle)
+        const $dropdown = getElementByText(menuName,base.NavBar.$base)
+        // const dropdownName = base.NavBar.dropdownLinks[menuName]
         const isOpen = (await $dropdown.getAttribute("aria-expanded")) === "true"
         await expect(isOpen).toBe(true)
     }
-    public async confirmNavLink(dropdownTitle:str, linkName:str, path:str|RegExp) {
+    public async confirmNavLink(menuName:str, link:{text:str,url:str}, isReverse=false) {
         await this.waitForLoad()
-        this.urlContains(path)
-        this.urlContains
+        const $dropdown = getElementByText(menuName,base.NavBar.$base)
+        const $link = getElementByText(link.text,$dropdown)
+        const linkText = await $link.getAttribute("href")
+        await this.href($link, linkText, isReverse)
+        await expect(linkText).toBe(link.url)
     }
 }
 

@@ -8,8 +8,6 @@
 		{"id":"e7363b8d2926197e","type":"text","text":"# For each dropdown button","x":1760,"y":-2320,"width":260,"height":100,"color":"4"},
 		{"id":"3bc40201d2374d80","type":"text","text":"# On Click","x":1880,"y":-2180,"width":140,"height":60,"color":"4"},
 		{"id":"0c39f9828a9a3623","type":"text","text":"# For each link in each dropdown","x":1760,"y":-1140,"width":240,"height":100,"color":"4"},
-		{"id":"2b74581879c192a8","type":"text","text":"# On Click","x":1860,"y":-1000,"width":140,"height":60,"color":"4"},
-		{"id":"f7c6836d3e7f524d","type":"file","file":"Nav Links/Tests/Changes URL according to link.md","x":1640,"y":-820,"width":320,"height":340,"color":"6"},
 		{"id":"b4816ade034a2800","type":"text","text":"# Learn","x":1380,"y":-2300,"width":120,"height":60,"color":"4"},
 		{"id":"0a66f3eae4fecc3b","type":"file","file":"Nav Links/Tests/Dropdown aspects behave correctly.md","x":2260,"y":-2000,"width":300,"height":360,"color":"2"},
 		{"id":"cb9b710879cf2435","type":"file","file":"Nav Links/images/Dropdowns/Learn.png","x":1300,"y":-2200,"width":280,"height":250,"color":"4"},
@@ -26,7 +24,8 @@
 		{"id":"133385e11c41c12e","type":"file","file":"Nav Links/images/Dropdowns/Deals.png","x":260,"y":-2200,"width":280,"height":308,"color":"4"},
 		{"id":"44ee1bdb160651a4","type":"text","text":"# Deals","x":340,"y":-2300,"width":120,"height":60,"color":"4"},
 		{"id":"938fce4fa09f79c9","type":"file","file":"Nav Links/Dropdowns/Deals links.md","x":260,"y":-1320,"width":280,"height":460,"color":"4"},
-		{"id":"10e130ce5062a1f1","type":"file","file":"Nav Links/Navbar dropdown links.md","x":-60,"y":-680,"width":420,"height":1280,"color":"4"}
+		{"id":"10e130ce5062a1f1","type":"file","file":"Nav Links/Navbar dropdown links.md","x":-60,"y":-680,"width":420,"height":1280,"color":"4"},
+		{"id":"f7c6836d3e7f524d","type":"file","file":"Nav Links/Tests/Confirms href is correct.md","x":1680,"y":-880,"width":320,"height":340,"color":"6"}
 	],
 	"edges":[
 		{"id":"ad2191fa5bdb9d89","fromNode":"f28424e8caa2e5e7","fromSide":"bottom","toNode":"16294cf3dbecaaad","toSide":"top","color":"3"},
@@ -36,8 +35,7 @@
 		{"id":"1f3e48d4228e63d5","fromNode":"b4816ade034a2800","fromSide":"right","toNode":"e7363b8d2926197e","toSide":"left","color":"4"},
 		{"id":"dd3842e08234b86c","fromNode":"e0fc0cbf5586a4a1","fromSide":"right","toNode":"e7363b8d2926197e","toSide":"left","color":"4"},
 		{"id":"bdb7504cf0acf60c","fromNode":"e7363b8d2926197e","fromSide":"right","toNode":"3bc40201d2374d80","toSide":"right","color":"4"},
-		{"id":"59dcf24236b5696e","fromNode":"0c39f9828a9a3623","fromSide":"right","toNode":"2b74581879c192a8","toSide":"right","color":"4"},
-		{"id":"fd0b5b58f7ef6fc1","fromNode":"2b74581879c192a8","fromSide":"bottom","toNode":"f7c6836d3e7f524d","toSide":"top","color":"4"},
+		{"id":"59dcf24236b5696e","fromNode":"0c39f9828a9a3623","fromSide":"right","toNode":"f7c6836d3e7f524d","toSide":"right","color":"4"},
 		{"id":"3594b17a6167266a","fromNode":"f7c6836d3e7f524d","fromSide":"left","toNode":"5718314b0a56becf","toSide":"bottom","color":"4"},
 		{"id":"3158b65c8b4c161e","fromNode":"f7c6836d3e7f524d","fromSide":"left","toNode":"8234fba86b42af8a","toSide":"bottom","color":"4"},
 		{"id":"f61555d07d061843","fromNode":"f7c6836d3e7f524d","fromSide":"left","toNode":"9c7f3f35fab4cc44","toSide":"bottom","color":"4"},

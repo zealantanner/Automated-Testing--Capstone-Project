@@ -1,9 +1,10 @@
 # Component: Nav Links [[Nav Links.canvas]]
 - ## Test Case: [Nav links (Automated)](https://mtechqa.atlassian.net/browse/MTQA-4219) #test/automated
-	1. Test: Dropdowns open with links visible
-		- [[Opens each dropdown]]
-	2. Test: Each link under specified dropdown directs to the correct URL
-		- [[Changes URL according to link]]
+	- For each dropdown:
+		1. Test: Dropdown opens
+			- [[Opens each dropdown]]
+			1. Test: Each link under specified dropdown hrefs to the correct URL
+				- [[Confirms href is correct]]
 - ## Test Case: [Nav links (Manual)](https://mtechqa.atlassian.net/browse/MTQA-4220) #test/manual
 	1. Test: Dropdown aspects behave correctly Dropdown button becomes highlighted
 		- [[Dropdown aspects behave correctly]]
