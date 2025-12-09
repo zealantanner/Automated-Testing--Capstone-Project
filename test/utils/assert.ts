@@ -74,7 +74,7 @@ class SearchPageSortByDropdown {
             page2ndToLastTotal += await item.getStarRating()
         }
         
-        this.dropdownAssert(page1Total,page2ndToLastTotal)
+        this.dropdownAssert(page1Total,page2ndToLastTotal, true)
     }
     public async nameAlphabetically(isReverse=false) {
         // loosely sorts by name
