@@ -6,10 +6,10 @@ import Category from "./categorySidebar/category.els"
 
 
 export default class CategorySidebar extends MyElement {
-    public get base() { return $('[data-facet-id="ss_category"]') }
+    public get $base() { return $('[data-facet-id="ss_category"]') }
     
-    public get categories() {
-        return this.base.$$('li')
+    public get $$categories() {
+        return this.$base.$$('li')
         .map(el => new Category($(el)))
     }
 }

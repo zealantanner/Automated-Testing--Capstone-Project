@@ -4,14 +4,14 @@ import MyElement from "../element"
 
 
 export default class Popup extends MyElement {
-    public get base() { return $('*[data-testid="POPUP"]') }
+    public get $base() { return $('*[data-testid="POPUP"]') }
     
-    public get btnClose() { return this.base.$('button[aria-label="Close dialog"]') }
+    public get $btnClose() { return this.$base.$('button[aria-label="Close dialog"]') }
     public async dismissPopupIfPresent() {
         await this.waitForLoad()
-        if(await this.base.isExisting()) {
-            await this.btnClose.click()
-            await this.base.waitForExist({
+        if(await this.$base.isExisting()) {
+            await this.$btnClose.click()
+            await this.$base.waitForExist({
                 reverse: true,
                 timeout: customTimeout,
             })

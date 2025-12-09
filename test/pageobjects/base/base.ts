@@ -11,14 +11,14 @@ export default abstract class Base {
     /** https://www.parts-express.com */
     public get baseUrl() { return new URL(this.subUrl,"https://www.parts-express.com") }
     
-    public get logo() { return $('#site-logo') }
+    public get $logo() { return $('#site-logo') }
     public get Popup() { return new Popup() }
     public get SearchBar() { return new SearchBar() }
 
-    private get loadingIcon() { return $('#loadingIndicator') }
+    private get $loadingIcon() { return $('#loadingIndicator') }
     /** waits to stop loading */
     public async waitForLoad() {
-        await this.loadingIcon.waitForDisplayed({reverse:true})
+        await this.$loadingIcon.waitForDisplayed({reverse:true})
         // await this.loadingIcon.waitForExist({reverse:true})
     }
 

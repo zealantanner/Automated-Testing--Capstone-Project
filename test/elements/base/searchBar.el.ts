@@ -5,24 +5,20 @@ import Typeahead from "./searchBar/typeahead.el"
 
 
 
-
-
 export default class SearchBar extends MyElement {
-    public get base() { return $('.row-one-search') }
+    public get $base() { return $('.row-one-search') }
     
-    public get Typeahead() { return new Typeahead(this.base) }
-    public get inputField() { return this.base.$('input[type="search"]') }
-    public get btnConfirm() { return this.base.$('button[type="submit"]') }
+    public get Typeahead() { return new Typeahead(this.$base) }
+    public get $inputField() { return this.$base.$('input[type="search"]') }
+    public get $btnConfirm() { return this.$base.$('button[type="submit"]') }
 
-    public async search(text:str="") { //> click or press enter?
+    public async search(text:str="",pressEnterInstead=false) { //> click or press enter?
         await this.waitForLoad()
-        await this.inputField.waitForExist()
-        await this.inputField.setValue(text)
+        await this.$inputField.waitForExist()
+        await this.$inputField.setValue(text)
         await this.waitForLoad()
-        await this.btnConfirm.waitForExist()
-        await this.btnConfirm.click()
+        await this.$btnConfirm.waitForExist()
+        await this.$btnConfirm.click()
         await this.waitForLoad()
     }
 }
-
-

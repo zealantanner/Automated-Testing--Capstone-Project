@@ -3,23 +3,24 @@ import SearchPage from "../pageobjects/pages/search.page"
 import { base } from "../pageobjects/base/base"
 
 class NavLinks {
-    
+
 }
+
 class SearchBar {
 
 }
+
 class SearchPageCategories {
 
 }
+
 class SearchPageSortByDropdown {
     public async optionIsSelected(optionNum:int) {
         await base.waitForLoad()
-        const option = SearchPage.SortByDropdown.options[optionNum]
+        const option = SearchPage.SortByDropdown.$$options[optionNum]
         await expect(await option.isSelected()).toBe(true)
         await base.waitForLoad()
     }
-    // public async relevance() {}
-    
     private dropdownAssert(value1:int,value2ndToLast:int,isReverse=false) {
         if(isReverse) {
             // expect(value1).toBe(value2ndToLast)
@@ -67,7 +68,6 @@ class SearchPageSortByDropdown {
         const middlePage = Math.ceil((await SearchPage.getPageInfo()).totalPages/2)
         await this.goToPageAndWait(middlePage)
 
-
         const page2ndToLastItems = await SearchPage.items
         let page2ndToLastTotal = 0
         for(const item of page2ndToLastItems) {
@@ -111,7 +111,6 @@ class SearchPageSortByDropdown {
         }
 
         await this.goToPageAndWait(-2)
-        await base.waitForLoad()
 
         const page2ndToLastItems = await SearchPage.items
         let page2ndToLastTotal = 0
@@ -121,7 +120,6 @@ class SearchPageSortByDropdown {
 
         this.dropdownAssert(page1Total,page2ndToLastTotal,isReverse)
     } 
-    // public async date() {}
 }
 
 class Assert {

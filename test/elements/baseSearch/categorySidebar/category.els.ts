@@ -6,23 +6,23 @@ import MyElement from "../../element"
 
 /** @param Category part of category sidebar */
 export default class Category extends MyElement {
-    constructor(private _base:ChainablePromiseElement) {
+    constructor(private _$base:ChainablePromiseElement) {
         super()
     }
-    public get base() { return this._base }
+    public get $base() { return this._$base }
     
-    public get link() { return this.base.$('a') }
-    public get title() { return this.link.$('label span') }
+    public get $link() { return this.$base.$('a') }
+    public get $title() { return this.$link.$('label span') }
     public async getTitleInfo() {
         await this.waitForLoad()
-        const titleText = await this.title.getText()
+        const titleText = await this.$title.getText()
         const match = titleText.match(/(?<name>.+) \((?<amount>\d+)\)/)
         const {name="", amount="0"} = match?.groups ?? {}
         return {name, amount: parseInt(amount)}
     }
     public async choose() {
         await this.waitForLoad()
-        await this.link.click()
+        await this.$link.click()
         await this.waitForLoad()
     }
 }
