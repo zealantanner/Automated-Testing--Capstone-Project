@@ -1,22 +1,19 @@
-import { bool, str, int, Int, _, getElementByText } from "./utils"
+import { bool, str, int, Int, _, getElementByText, waitForLoad } from "./utils"
 import SearchPage from "../pageobjects/pages/search.page"
 import { base } from "../pageobjects/base/base"
 
 class Asserters {
-    public async waitForLoad() {
-        await base.waitForLoad()
-    }
     public async urlContains(path:str|RegExp|URL, isReverse=false) {
         if(path instanceof URL) {
             path = path.toString()
         }
 
-        await this.waitForLoad()
+        await waitForLoad()
         const currentUrl = await browser.getUrl()
 
         const expectUrl = (isReverse) ? expect(currentUrl).not : expect(currentUrl)
         
-        await this.waitForLoad()
+        await waitForLoad()
         if(path instanceof RegExp) {
             await expectUrl.toMatch(path)
         } else {
@@ -24,12 +21,12 @@ class Asserters {
         }
     }
     public async href($element:ChainablePromiseElement, path:str|RegExp, isReverse=false) {
-        await this.waitForLoad()
+        await waitForLoad()
         const linkText = await $element.getAttribute("href")
         
         const expectUrl = (isReverse) ? expect(linkText).not : expect(linkText)
         
-        await this.waitForLoad()
+        await waitForLoad()
         if(path instanceof RegExp) {
             await expectUrl.toMatch(path)
         } else {
@@ -40,14 +37,14 @@ class Asserters {
 
 class NavLinks extends Asserters {
     public async confirmDropdownOpen(menuName:str) {
-        await this.waitForLoad()
+        await waitForLoad()
         const $dropdown = getElementByText(menuName,base.NavBar.$base)
         // const dropdownName = base.NavBar.dropdownLinks[menuName]
         const isOpen = (await $dropdown.getAttribute("aria-expanded")) === "true"
         await expect(isOpen).toBe(true)
     }
     public async confirmNavLink(menuName:str, link:{text:str,url:str}, isReverse=false) {
-        await this.waitForLoad()
+        await waitForLoad()
         const $dropdown = getElementByText(menuName,base.NavBar.$base)
         const $link = getElementByText(link.text,$dropdown)
         const linkText = await $link.getAttribute("href")
@@ -66,10 +63,10 @@ class SearchPageCategories extends Asserters {
 
 class SearchPageSortByDropdown extends Asserters {
     public async optionIsSelected(optionNum:int) {
-        await this.waitForLoad()
+        await waitForLoad()
         const option = SearchPage.SortByDropdown.$$options[optionNum]
         await expect(await option.isSelected()).toBe(true)
-        await this.waitForLoad()
+        await waitForLoad()
     }
     private dropdownAssert(value1:int,value2ndToLast:int,isReverse=false) {
         if(isReverse) {
@@ -81,15 +78,15 @@ class SearchPageSortByDropdown extends Asserters {
         }
     }
     private async goToPageAndWait(pageNum:int) {
-        await this.waitForLoad()
+        await waitForLoad()
         await SearchPage.goToPage(pageNum)
-        await this.waitForLoad()
+        await waitForLoad()
         await SearchPage.SortByDropdown.waitFor()
         await (await SearchPage.items)[1].waitFor()
     }
     public async popularity() {
         // loosely sorts by review
-        await this.waitForLoad()
+        await waitForLoad()
         const page1Items = await SearchPage.items
         let page1Total = 0
         for(const item of page1Items) {
@@ -108,7 +105,7 @@ class SearchPageSortByDropdown extends Asserters {
     }
     public async rating() {
         // loosely sorts by stars
-        await this.waitForLoad()
+        await waitForLoad()
         const page1Items = await SearchPage.items
         let page1Total = 0
         for(const item of page1Items) {
@@ -134,7 +131,7 @@ class SearchPageSortByDropdown extends Asserters {
             return char.charCodeAt(0);
         }
 
-        await this.waitForLoad()
+        await waitForLoad()
 
         const page1Items = await SearchPage.items
         let page1Total = 0
@@ -151,11 +148,11 @@ class SearchPageSortByDropdown extends Asserters {
         }
         
         this.dropdownAssert(page1Total,page2ndToLastTotal,isReverse)
-        await this.waitForLoad()
+        await waitForLoad()
     }
     public async price(isReverse=false) {
         // loosely sorts by price
-        await this.waitForLoad()
+        await waitForLoad()
         const page1Items = await SearchPage.items
         let page1Total = 0
         for(const item of page1Items) {
@@ -171,7 +168,7 @@ class SearchPageSortByDropdown extends Asserters {
         }
 
         this.dropdownAssert(page1Total,page2ndToLastTotal,isReverse)
-        await this.waitForLoad()
+        await waitForLoad()
     } 
 }
 

@@ -9,17 +9,16 @@ import Assert from "../utils/assert";
 
 
 describe(`Search Page Sort By Dropdown [MTQA-4231]`, () => {
+    before(async () => {
+        // Go to https://www.parts-express.com
+        await HomePage.open()
+        // Dismiss popup modal via local storage
+        await HomePage.Popup.dismissPopupViaLocalStorage()
+        // Search for an item in the search bar
+        await HomePage.SearchBar.search(pickRandomFrom(searchQueries))
+        // Be on the search page
+    })
     describe(`Dropdown options`, () => {
-        before(async () => {
-            // Go to https://www.parts-express.com
-            await HomePage.open()
-            // Dismiss popup modal
-            await HomePage.Popup.dismissPopupViaLocalStorage()
-            // Search for an item in the search bar
-            // await SearchPage.open()
-            await HomePage.SearchBar.search(pickRandomFrom(searchQueries))
-            // Be on the search page
-        })
         it(`Sorts by "Best Match"`, async () => {
             // Select "Best Match"
             await SearchPage.SortByDropdown.selectOption(0)

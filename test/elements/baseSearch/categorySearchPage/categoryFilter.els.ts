@@ -1,4 +1,4 @@
-import { Int, str } from "../../../utils/utils"
+import { Int, str, waitForLoad } from "../../../utils/utils"
 import { browser, $, $ as $x } from '@wdio/globals'
 import MyElement from "../../element"
 
@@ -17,7 +17,7 @@ export default class CategoryFilter extends MyElement {
     private get $titleBox() { return this.$title.$('.facets-facets-display-filter-value') }
 
     public async getInfo() {
-        await this.waitForLoad()
+        await waitForLoad()
         const fullName = await this.$titleBox.getText()
         const nameChain = fullName.split(">")
         return {
@@ -26,9 +26,9 @@ export default class CategoryFilter extends MyElement {
         }
     }
     public async remove() {
-        await this.waitForLoad()
+        await waitForLoad()
         await this.$btnX.click()
-        await this.waitForLoad()
+        await waitForLoad()
     }
 }
 

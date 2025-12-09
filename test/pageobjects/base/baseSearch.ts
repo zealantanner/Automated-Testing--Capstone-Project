@@ -1,4 +1,4 @@
-import { Int, int, str } from '../../utils/utils'
+import { Int, int, str, waitForLoad } from '../../utils/utils'
 import { browser, $, $ as $x } from '@wdio/globals'
 import Base from './base'
 import Item from '../../elements/baseSearch/item.els'
@@ -20,7 +20,7 @@ export default abstract class BaseSearch<TOptions extends SearchOptions | Catego
 
     private get pageNumber() { return $('p.global-views-pagination-label-plp-header')}
     public async getPageInfo() {
-        await this.waitForLoad()
+        await waitForLoad()
         const textAttr = await this.pageNumber.getText()
         const match = textAttr.match(/Page (\d+)\/(\d+)/)
         const currentPageNum = match ? parseInt(match[1]) : -1

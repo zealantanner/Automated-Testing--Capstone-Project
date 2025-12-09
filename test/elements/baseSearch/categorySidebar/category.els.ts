@@ -1,4 +1,4 @@
-import { Int } from "../../../utils/utils"
+import { Int, waitForLoad } from "../../../utils/utils"
 import { browser, $, $ as $x } from '@wdio/globals'
 import MyElement from "../../element"
 
@@ -14,16 +14,16 @@ export default class Category extends MyElement {
     public get $link() { return this.$base.$('a') }
     public get $title() { return this.$link.$('label span') }
     public async getTitleInfo() {
-        await this.waitForLoad()
+        await waitForLoad()
         const titleText = await this.$title.getText()
         const match = titleText.match(/(?<name>.+) \((?<amount>\d+)\)/)
         const {name="", amount="0"} = match?.groups ?? {}
         return {name, amount: parseInt(amount)}
     }
     public async choose() {
-        await this.waitForLoad()
+        await waitForLoad()
         await this.$link.click()
-        await this.waitForLoad()
+        await waitForLoad()
     }
 }
 

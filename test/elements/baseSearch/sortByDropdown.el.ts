@@ -1,4 +1,4 @@
-import { bool, str, int, Int, _ } from "../../utils/utils"
+import { bool, str, int, Int, _, waitForLoad } from "../../utils/utils"
 import { $, $ as $x, $$ } from "@wdio/globals"
 import MyElement from "../element"
 import Category from "./categorySidebar/category.els"
@@ -12,12 +12,12 @@ export default class SortByDropdown extends MyElement {
     public get $selectedOption() { return this.$base.$('option[selected]') }
 
     public async selectOption(optionNum:int) {
-        await this.waitForLoad()
+        await waitForLoad()
         await this.$base.click()
-        await this.waitForLoad()
+        await waitForLoad()
         await this.$$options[optionNum].waitForExist()
         await this.$$options[optionNum].click()
-        await this.waitForLoad()
+        await waitForLoad()
     }
 }
 

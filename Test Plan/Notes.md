@@ -17,3 +17,5 @@ I figured out that for it's better practice in the field to confirm the href is 
 Make diagram of the convention I went with, to have base, utils, baseSearch, elements, the asserts
 
 Show off epic ticket
+
+Due to it being blackbox testing I can't test everything because I don't know how they're supposed to function

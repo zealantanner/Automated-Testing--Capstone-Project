@@ -1,4 +1,4 @@
-import { customTimeout, str } from "../../utils/utils"
+import { customTimeout, str, waitForLoad } from "../../utils/utils"
 import { $, $ as $x } from "@wdio/globals"
 import MyElement from "../element"
 
@@ -8,7 +8,7 @@ export default class Popup extends MyElement {
     
     public get $btnClose() { return this.$base.$('button[aria-label="Close dialog"]') }
     public async dismissPopupIfPresent() {
-        await this.waitForLoad()
+        await waitForLoad()
         if(await this.$base.isExisting()) {
             await this.$btnClose.click()
             await this.$base.waitForExist({
@@ -18,7 +18,7 @@ export default class Popup extends MyElement {
         }
     }
     public async dismissPopupViaLocalStorage() {
-        await this.waitForLoad()
+        await waitForLoad()
         const now = Math.floor(Date.now()/1000)
         const storage = {
             viewedForms: {

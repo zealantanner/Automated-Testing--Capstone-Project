@@ -354,8 +354,23 @@
               "icon": "lucide-file",
               "title": "Navbar dropdown links"
             }
+          },
+          {
+            "id": "e58267f953b5a8b1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Notes"
+            }
           }
-        ]
+        ],
+        "currentTab": 23
       }
     ],
     "direction": "vertical"
@@ -518,8 +533,9 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "b1f1c82fa25d8021",
+  "active": "e58267f953b5a8b1",
   "lastOpenFiles": [
+    "Epics and stories.md",
     "Nav Links/Nav Links.canvas",
     "Nav Links/Navbar dropdown links.md",
     "Notes.md",
@@ -530,7 +546,6 @@
     "Search Page Sort By Dropdown/Tests/Sorting by date -  unsure.md",
     "Search Bar/Tests/Typeahead/Brands/Hovers over a brand - unsure.md",
     "Search Bar/Tests/Typeahead/Brands/Clicks on a brand - unsure.md",
-    "Epics and stories.md",
     "Search Page Sort By Dropdown/Tests/Sorting by price.md",
     "Search Page Sort By Dropdown/Tests/Sorting by name alphabetically.md",
     "Search Page Sort By Dropdown/Tests/Sorting by rating.md",

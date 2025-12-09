@@ -1,4 +1,4 @@
-import { str } from "../../utils/utils"
+import { str, waitForLoad } from "../../utils/utils"
 import { $, $ as $x } from "@wdio/globals"
 import MyElement from "../element"
 import Typeahead from "./searchBar/typeahead.el"
@@ -13,12 +13,12 @@ export default class SearchBar extends MyElement {
     public get $btnConfirm() { return this.$base.$('button[type="submit"]') }
 
     public async search(text:str="",pressEnterInstead=false) { //> click or press enter?
-        await this.waitForLoad()
+        await waitForLoad()
         await this.$inputField.waitForExist()
         await this.$inputField.setValue(text)
-        await this.waitForLoad()
+        await waitForLoad()
         await this.$btnConfirm.waitForExist()
         await this.$btnConfirm.click()
-        await this.waitForLoad()
+        await waitForLoad()
     }
 }
