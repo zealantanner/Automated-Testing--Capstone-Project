@@ -16,6 +16,7 @@ describe(`Search Page Sort By Dropdown [MTQA-4231]`, () => {
             // Dismiss popup modal
             await HomePage.Popup.dismissPopupViaLocalStorage()
             // Search for an item in the search bar
+            // await SearchPage.open()
             await HomePage.SearchBar.search(pickRandomFrom(searchQueries))
             // Be on the search page
         })
@@ -23,7 +24,7 @@ describe(`Search Page Sort By Dropdown [MTQA-4231]`, () => {
             // Select "Best Match"
             await SearchPage.SortByDropdown.selectOption(0)
             // Confirm URL changes accordingly
-            await Assert.urlContains("/search")
+            await Assert.urlContains("/search?keywords")
             // Confirm "Best Match" is selected
             await Assert.SearchPageSortByDropdown.optionIsSelected(0)
             // Confirm items are sorted by relevance - Manual test [MTQA-4232]
@@ -38,6 +39,7 @@ describe(`Search Page Sort By Dropdown [MTQA-4231]`, () => {
             // Confirm items are sorted by popularity, aka reviews
             await Assert.SearchPageSortByDropdown.popularity()
         })
+
         it(`Sorts by "Highest Rated"`, async () => {
             // Select "Highest Rated"
             await SearchPage.SortByDropdown.selectOption(2)
@@ -48,6 +50,7 @@ describe(`Search Page Sort By Dropdown [MTQA-4231]`, () => {
             // Confirm items are sorted by rating, aka stars
             await Assert.SearchPageSortByDropdown.rating()
         })
+
         it(`Sorts by "Name: A - Z"`, async () => {
             // Select "Name: A - Z"
             await SearchPage.SortByDropdown.selectOption(3)

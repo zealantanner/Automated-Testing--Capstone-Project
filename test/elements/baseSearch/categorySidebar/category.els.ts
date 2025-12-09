@@ -1,10 +1,11 @@
 import { Int } from "../../../utils/utils"
 import { browser, $, $ as $x } from '@wdio/globals'
+import MyElement from "../../element"
 
 
 
 /** @param Category part of category sidebar */
-export default class Category extends Element {
+export default class Category extends MyElement {
     constructor(private _base:ChainablePromiseElement) {
         super()
     }
@@ -13,15 +14,16 @@ export default class Category extends Element {
     public get link() { return this.base.$('a') }
     public get title() { return this.link.$('label span') }
     public async getTitleInfo() {
+        await this.waitForLoad()
         const titleText = await this.title.getText()
         const match = titleText.match(/(?<name>.+) \((?<amount>\d+)\)/)
         const {name="", amount="0"} = match?.groups ?? {}
         return {name, amount: parseInt(amount)}
     }
-    public isChosen = false //> eh maybe not
     public async choose() {
-        this.isChosen = true
+        await this.waitForLoad()
         await this.link.click()
+        await this.waitForLoad()
     }
 }
 

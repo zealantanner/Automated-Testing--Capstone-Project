@@ -3,18 +3,21 @@ import HomePage from '../pageobjects/pages/home.page'
 import { base } from '../pageobjects/base/base';
 import SearchPage from '../pageobjects/pages/search.page';
 import CategorySearchPage from '../pageobjects/pages/categorySearch.page';
-import { customTimeout } from '../utils/utils';
+import { customTimeout, pickRandomFrom, searchQueries } from '../utils/utils';
 
 //> don't make assert functions like last project, do them on here
 describe('My Login application', () => {
     before(async () => {
         await HomePage.open()
         await base.Popup.dismissPopupViaLocalStorage()
+        await HomePage.SearchBar.search(pickRandomFrom(searchQueries))
     });
     it('should login with valid credentials', async () => {
         await browser.pause(3000)
-        await SearchPage.open()
-        await browser.pause(3000)
+        for(const term of searchQueries) {
+            await SearchPage.SearchBar.search(term)
+            await browser.pause(3000)
+        }
         await SearchPage.openSearch({keywords:"door lock"})
         await browser.pause(3000)
         await CategorySearchPage.open()

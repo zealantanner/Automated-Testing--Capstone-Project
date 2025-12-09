@@ -10,7 +10,10 @@ export const Int = Number;
 export const customTimeout = 5000;
 
 export const searchQueries = [
-    "adapter","amp","amplifier","analog","audio","bluetooth","cable","case","cd","cleaner","DAC","digital","earbuds","headphones","interface","microphone","mixer","phono","player","portable","power","preamp","receiver","record","remote","speaker","sound","stage","stand","stream","tuner","turntable","vinyl","wire"
+    "adapter","amp","amplifier","audio","cable","jack","microphone","plug","power","speaker","sound","stand","stereo","tool","wire"
+]
+export const worseSearchQueries = [
+    "adapter","amp","amplifier","audio","bluetooth","cable","case","cleaner","digital","headphones","jack","microphone","mixer","mono","phono","plug","portable","power","receiver","record","speaker","sound","stage","stand","stereo","stream","tool","turntable","wire"
 ]
 
 

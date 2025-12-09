@@ -1,12 +1,12 @@
 import { Int, str } from "../../../utils/utils"
 import { browser, $, $ as $x } from '@wdio/globals'
-import Element from "../../element"
+import MyElement from "../../element"
 
 
 
 
 /** @param CategoryFilter a chosen category filter on category page */
-export default class CategoryFilter extends Element {
+export default class CategoryFilter extends MyElement {
     constructor(private _base:ChainablePromiseElement) {
         super()
     }
@@ -17,6 +17,7 @@ export default class CategoryFilter extends Element {
     private get titleBox() { return this.title.$('.facets-facets-display-filter-value') }
 
     public async getInfo() {
+        await this.waitForLoad()
         const fullName = await this.titleBox.getText()
         const nameChain = fullName.split(">")
         return {
@@ -25,7 +26,9 @@ export default class CategoryFilter extends Element {
         }
     }
     public async remove() {
+        await this.waitForLoad()
         await this.btnX.click()
+        await this.waitForLoad()
     }
 }
 

@@ -20,6 +20,7 @@ export default abstract class BaseSearch<TOptions extends SearchOptions | Catego
 
     private get pageNumber() { return $('p.global-views-pagination-label-plp-header')}
     public async getPageInfo() {
+        await this.waitForLoad()
         const textAttr = await this.pageNumber.getText()
         const match = textAttr.match(/Page (\d+)\/(\d+)/)
         const currentPageNum = match ? parseInt(match[1]) : -1
@@ -55,13 +56,17 @@ export default abstract class BaseSearch<TOptions extends SearchOptions | Catego
     }
 
     public async goToPage(num=1) {
-        const url = new URL(this.baseUrl)
+        const pageInfo = await this.getPageInfo()
+        const lastPageNum = pageInfo.totalPages
+        // support negative numbers (-1 = last page)
         if(num < 0) {
-            const lastPage = (await this.getPageInfo()).totalPages
-            num = lastPage + num + 1
+            num = lastPageNum + num + 1
         }
-        url.searchParams.set('page',num.toString())
-        await super.open(url)
+        num = Math.max(1, Math.min(num, lastPageNum))
+        
+        const url = new URL(await browser.getUrl())
+        url.searchParams.set('page',String(num))
+        await super.open(url.toString())
     }
 
     public async openSearch(options:TOptions) {

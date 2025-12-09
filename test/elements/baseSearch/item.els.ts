@@ -1,11 +1,11 @@
 import { Int } from "../../utils/utils"
 import { browser, $, $ as $x } from '@wdio/globals'
-import Element from "../element"
+import MyElement from "../element"
 
 
 
 /** @param Item an item in the search results */
-export default class Item extends Element {
+export default class Item extends MyElement {
     constructor(private _base:ChainablePromiseElement) {
         super()
     }
@@ -13,27 +13,44 @@ export default class Item extends Element {
     
     private get reviews() { return this.base.$('.ratings-total') }
     public async getReviewCount() {
+        await this.waitForLoad()
+        await this.reviews.waitForExist()
         const reviewText = await this.reviews.getText()
-        const reviewCount = Int(
-            reviewText.match(/(?<amount>\d+) Reviews?/)?.groups?.amount ?? -1
-        )
+
+        const match = reviewText.match(/(?<amount>\d+) Reviews?/)
+        const reviewCount = match?.groups?.amount ? parseInt(match.groups.amount) : 0
         return reviewCount
     }
 
-    private get starRating() { return this.base.$('.global-views-star-rating') }
+    private get starRating() { return this.base.$('.global-views-star-rating-area-fill') }
+    
     public async getStarRating() {
+        await this.waitForLoad()
+        await this.starRating.waitForExist()
         const ratingText = await this.starRating.getAttribute('style')
-        const ratingPercent = Int(
-            ratingText.match(/width:(?<amount>\d+)%/)?.groups?.amount ?? -1
-        )
+        if(!ratingText) {
+            return 0
+        }
+        const match = ratingText.match(/width:(?<amount>\d+)%/)
+        const ratingPercent = match?.groups?.amount ? parseInt(match.groups.amount) : 0
         return ratingPercent
     }
 
     private get title() { return this.base.$('.facets-item-cell-grid-title') }
-    public async getTitle() { return this.title.getText() }
+    public async getTitle() {
+        await this.waitForLoad()
+        await this.title.waitForExist()
+        return this.title.getText()
+    }
 
     private get price() { return this.base.$('.product-views-price-exact') }
-    public async getPrice() { return Int(this.price.getAttribute('data-rate')) }
+    public async getPrice() {
+        await this.waitForLoad()
+        await this.price.waitForExist()
+        const priceText = await this.price.getAttribute('data-rate')
+        const priceNum = priceText ? parseFloat(priceText) : 0
+        return priceNum
+    }
 }
 
 
