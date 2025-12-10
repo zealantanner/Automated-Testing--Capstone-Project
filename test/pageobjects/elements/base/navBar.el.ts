@@ -2,11 +2,11 @@ import { customTimeout, getElementByText, str } from "../../../utils/utils"
 import { $, $ as $x } from "@wdio/globals"
 import MyElement from "../element"
 
-type NavMenu = {
+export type NavMenu = {
     menuName:str,
     links:{
         text:str,
-        url:str,
+        path:str,
     }[],
 }
 export default class NavBar extends MyElement {
@@ -15,64 +15,64 @@ export default class NavBar extends MyElement {
     readonly dropdownLinks:NavMenu[] = [
         {
             menuName: "SHOP",
-            links: [ //> change the name from "url" to "path"
-                { text:"New Products", url:"/promodisplay/N?order=ss_searchable_updated_date:asc" },
-                { text:"Shop by Brand", url:"/brands" },
-                { text:"Home A/V", url:"/home-a-v" },
-                { text:"Speaker Components", url:"/speaker-components" },
-                { text:"Pro Audio", url:"/pro-audio" },
-                { text:"Car Audio", url:"/car-audio" },
-                { text:"Electronic Parts", url:"/electronic-parts" },
-                { text:"Connectors & Adapters", url:"/connectors-adapters" },
-                { text:"Tools & Supplies", url:"/tools-supplies" },
-                { text:"Battery & Power", url:"/battery-power" },
-                { text:"Wire & Cables", url:"/wire-cables" },
-                { text:"Novelty", url:"/novelty" },
+            links: [
+                { text:"New Products", path:"/promodisplay/N?order=ss_searchable_updated_date:asc" },
+                { text:"Shop by Brand", path:"/brands" },
+                { text:"Home A/V", path:"/home-a-v" },
+                { text:"Speaker Components", path:"/speaker-components" },
+                { text:"Pro Audio", path:"/pro-audio" },
+                { text:"Car Audio", path:"/car-audio" },
+                { text:"Electronic Parts", path:"/electronic-parts" },
+                { text:"Connectors & Adapters", path:"/connectors-adapters" },
+                { text:"Tools & Supplies", path:"/tools-supplies" },
+                { text:"Battery & Power", path:"/battery-power" },
+                { text:"Wire & Cables", path:"/wire-cables" },
+                { text:"Novelty", path:"/novelty" },
             ]
         },
         {
             menuName: "DEALS",
             links: [
-                { text:"On Sale", url:"/promo/on_sale_today" },
-                { text:"Liquidation Center", url:"/liquidation" },
-                { text:"Open Box & Refurbished", url:"/promo/refurbished-restocked-open-box-products" },
-                { text:"Gift Certificates", url:"/gift-certificate" },
+                { text:"On Sale", path:"/promo/on_sale_today" },
+                { text:"Liquidation Center", path:"/liquidation" },
+                { text:"Open Box & Refurbished", path:"/promo/refurbished-restocked-open-box-products" },
+                { text:"Gift Certificates", path:"/gift-certificate" },
             ]
         },
         {
             menuName: "PROFESSIONAL",
             links: [
-                { text:"Commercial Accounts", url:"/commercial-account" },
-                { text:"OEM/ODM Services", url:"/oem" },
-                { text:"Business Forms", url:"/forms" },
-                { text:"Education", url:"/education" },
-                { text:"Installer/Integrator Referral Network", url:"/installerintegrator-referral-network" },
-                { text:"Installer/Integrator Referral Sign-up", url:"/installerintegrator-referral-signup" },
+                { text:"Commercial Accounts", path:"/commercial-account" },
+                { text:"OEM/ODM Services", path:"/oem" },
+                { text:"Business Forms", path:"/forms" },
+                { text:"Education", path:"/education" },
+                { text:"Installer/Integrator Referral Network", path:"/installerintegrator-referral-network" },
+                { text:"Installer/Integrator Referral Sign-up", path:"/installerintegrator-referral-signup" },
             ]
         },
         {
             menuName: "GET HELP",
             links: [
-                { text:"FAQs", url:"/faq" },
-                { text:"Tech Support", url:"/contact-us" },
-                { text:"Woofer Replacement Tool", url:"/woofer-replacement" },
-                { text:"Track My Order", url:"https://orderstatus.parts-express.com/" },
-                { text:"Contact Us", url:"/contact-us" },
+                { text:"FAQs", path:"/faq" },
+                { text:"Tech Support", path:"/contact-us" },
+                { text:"Woofer Replacement Tool", path:"/woofer-replacement" },
+                { text:"Track My Order", path:"https://orderstatus.parts-express.com/" },
+                { text:"Contact Us", path:"/contact-us" },
             ]
         },
         {
             menuName: "LEARN",
             links: [
-                { text:"Resource Center", url:"/resource-center" },
-                { text:"Customer Project Gallery", url:"http://projectgallery.parts-express.com/" },
-                { text:"TechTalk Forum", url:"http://techtalk.parts-express.com/" },
+                { text:"Resource Center", path:"/resource-center" },
+                { text:"Customer Project Gallery", path:"http://projectgallery.parts-express.com/" },
+                { text:"TechTalk Forum", path:"http://techtalk.parts-express.com/" },
             ]
         },
     ]
 
-    public async openDropdown(dropdownTitle:str) {
+    public async openDropdown(dropdown:NavMenu) {
         await this.waitForLoad()
-        const $dropdown = getElementByText(dropdownTitle)
+        const $dropdown = getElementByText(dropdown.menuName)
         const isOpen = (await $dropdown.getAttribute("aria-expanded")) === "true"
         if(!isOpen) {
             await $dropdown.click()
@@ -80,11 +80,11 @@ export default class NavBar extends MyElement {
         await this.waitForLoad()
     }
     
-    public async clickLink(dropdownTitle:str, linkName:str) {
+    public async clickLink(dropdown:NavMenu, linkName:str) {
         //> use dropdownLinks.dropdowntitle, not just title. I need the menuname if I want to get the element by text
         //> same with asserts and openDropdown
         await this.waitForLoad()
-        const $dropdown = getElementByText(dropdownTitle)
+        const $dropdown = getElementByText(dropdown.menuName)
         const $linkToClick = getElementByText(linkName,$dropdown)
         await $linkToClick.click()
         await this.waitForLoad()

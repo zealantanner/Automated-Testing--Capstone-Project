@@ -17,7 +17,8 @@ describe(`Search Page Categories [MTQA-4229]`, () => {
         // Dismiss popup modal via local storage
         await HomePage.Popup.dismissPopupViaLocalStorage()
         //Search for an item in the search bar
-        await HomePage.SearchBar.search(pickRandomFrom(searchQueries))
+        await HomePage.SearchBar.search(pickRandomFrom(searchQueries), {pressEnterInstead:true})
+        //> check if enter actually works
         // Be on the search page
     })
     describe(`The category dropdown opens and closes`, () => {
@@ -41,7 +42,7 @@ describe(`Search Page Categories [MTQA-4229]`, () => {
                 await SearchPage.CategorySidebar.addCategory()
                 // Confirm URL changes
                 await Assert.confirmUrlContains(CategorySearchPage.subUrl)
-                await Assert.confirmUrlContains(beforeUrl, true)
+                await Assert.confirmUrlContains(beforeUrl, {reverse:true})
                 // Confirm category is displayed as chosen
                 await Assert.SearchPageCategories.confirmCategoryDisplayed()
                 // Confirm items are filtered
@@ -56,11 +57,11 @@ describe(`Search Page Categories [MTQA-4229]`, () => {
                 await CategorySearchPage.clearCategories()
                 // Confirm URL changes
                 await Assert.confirmUrlContains(SearchPage.subUrl)
-                await Assert.confirmUrlContains(beforeUrl, true)
+                await Assert.confirmUrlContains(beforeUrl,{reverse:true})
                 // Confirm category is not displayed as chosen
-                await Assert.SearchPageCategories.confirmCategoryDisplayed(true)
+                await Assert.SearchPageCategories.confirmCategoryDisplayed({reverse:true})
                 // Confirm items are filtered
-                await Assert.SearchPageCategories.confirmItemsFiltered(beforeItemAmount,true)
+                await Assert.SearchPageCategories.confirmItemsFiltered(beforeItemAmount,{reverse:true})
             })
         })
     })

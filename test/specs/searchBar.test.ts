@@ -25,8 +25,8 @@ describe(`Search Bar [MTQA-4227]`, () => {
                 // Input random text into search box
                 await SearchPage.SearchBar.inputText(text)
                 // Confirm typeahead appears with no results
-                await Assert.SearchBar.confirmTypeaheadAppears()
-                await Assert.SearchBar.confirmTypeaheadNoResults()
+                await Assert.SearchBar.confirmTypeaheadDisplayed()
+                await Assert.SearchBar.confirmTypeaheadShowsResults({reverse:true})
             })
         })
         describe(`(Negative) Input too many characters`, () => {
@@ -36,6 +36,7 @@ describe(`Search Bar [MTQA-4227]`, () => {
                 await SearchPage.SearchBar.inputText(text)
                 // Confirm only 100 characters are able to be in the text box
                 await Assert.SearchBar.confirmTextLength(100)
+                await Assert.SearchBar.confirmTextLength(125,{reverse:true})
             })
         })
         describe(`Input text`, () => {
@@ -56,9 +57,9 @@ describe(`Search Bar [MTQA-4227]`, () => {
                 await SearchPage.SearchBar.inputText(randLetters(101))
                 const beforeUrl = await browser.getUrl()
                 // Click the search button
-                await SearchPage.SearchBar.clickSearch()
+                await SearchPage.SearchBar.activateSearch()
                 // Confirm URL changes
-                await Assert.confirmUrlContains(beforeUrl,true)
+                await Assert.confirmUrlContains(beforeUrl,{reverse:true})
             })
         })
         describe(`(Negative) When the search bar has no text inputted it doesn't search`, () => {
@@ -67,12 +68,11 @@ describe(`Search Bar [MTQA-4227]`, () => {
                 await SearchPage.SearchBar.clearText()
                 const beforeUrl = await browser.getUrl()
                 // Click the search button
-                await Assert.SearchBar.saveResults()
                 await SearchPage.SearchBar.activateSearch()
-                // Confirm the URL and results don't change
+                // Confirm the URL stays and no results
                 await Assert.confirmUrlContains(beforeUrl)
-                await Assert.SearchBar.confirmResults(something)
-            })
+                await Assert.SearchBar.confirmTypeaheadShowsResults({reverse:true})
+            })//> add {reverse:true} to everything instead of using isreverse
         })
     })
 })

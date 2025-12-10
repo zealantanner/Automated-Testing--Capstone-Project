@@ -11,6 +11,7 @@ export default class SearchBar extends MyElement {
     public get $btnConfirm() { return this.$base.$('.itemssearcher-button') }
     public get Typeahead() {
         return {
+            $base: this.$base.$('.typeahead-searchspring-container'),
             $$terms: this.$base.$$('.typehaead-searchspring-term'),
             Results: {
                 $title: this.$base.$('typehaead-searchspring-results-title'),
@@ -28,8 +29,10 @@ export default class SearchBar extends MyElement {
         await this.waitForLoad()
         await this.$inputField.setValue(text)
     }
-    public async activateSearch(pressEnterInstead=false) {
+    public async activateSearch(ops:{pressEnterInstead?:bool}={}) {
+        const {pressEnterInstead=false} = ops;
         await this.waitForLoad()
+
         if(pressEnterInstead) {
             await this.$inputField.click()
             await browser.keys('Enter')
@@ -38,9 +41,11 @@ export default class SearchBar extends MyElement {
         }
     }
 
-    public async search(text:str="",pressEnterInstead=false) {
+    public async search(text:str="",ops:{pressEnterInstead?:bool}={}) {
+        const {pressEnterInstead=false} = ops;
         await this.waitForLoad()
+
         await this.inputText(text)
-        await this.activateSearch(pressEnterInstead)
+        await this.activateSearch({pressEnterInstead})
     }
 }

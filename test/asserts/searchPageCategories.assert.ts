@@ -18,17 +18,19 @@ export default class SearchPageCategories extends AssertBase {
         await expect(isOpen).toBe(true)
     }
 
-    public async confirmCategoryDisplayed(isReverse=false) {
+    public async confirmCategoryDisplayed(ops:{reverse?:bool}={}) {
+        const {reverse=false} = ops;
         await base.waitForLoad()
 
         const isCategoryDisplayed = await baseSearch.CategorySidebar.$chosenCategory.isDisplayed()
-        await expect(isCategoryDisplayed).not.toBe(isReverse)
+        await expect(isCategoryDisplayed).not.toBe(reverse)
     }
-    public async confirmItemsFiltered(beforeItemAmount:int, isReverse=false) {
+    public async confirmItemsFiltered(beforeItemAmount:int, ops:{reverse?:bool}={}) {
+        const {reverse=false} = ops;
         await base.waitForLoad()
 
         const itemAmount = await baseSearch.getresultAmount()
-        if(isReverse) {
+        if(reverse) {
             await expect(itemAmount).toBeGreaterThan(beforeItemAmount)
         } else {
             await expect(itemAmount).toBeLessThan(beforeItemAmount)

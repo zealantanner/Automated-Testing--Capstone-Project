@@ -14,15 +14,16 @@ class Assert {
     public get SearchPageCategories() { return new SearchPageCategories() }
     public get SearchPageSortByDropdown() { return new SearchPageSortByDropdown() }
 
-    public async confirmUrlContains(path:str|RegExp|URL, isReverse=false) {
+    public async confirmUrlContains(path:str|RegExp|URL, ops:{reverse?:bool}={}) {
         if(path instanceof URL) {
             path = path.toString()
         }
-
+        const {reverse=false} = ops;
         await base.waitForLoad()
+
         const currentUrl = await browser.getUrl()
 
-        const expectUrl = (isReverse) ? expect(currentUrl).not : expect(currentUrl)
+        const expectUrl = (reverse) ? expect(currentUrl).not : expect(currentUrl)
         
         await base.waitForLoad()
         if(path instanceof RegExp) {

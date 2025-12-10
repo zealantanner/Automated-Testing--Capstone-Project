@@ -19,16 +19,16 @@ describe(`Nav Links [MTQA-4219]`, () => {
         describe(`Navbar - ${dropdown.menuName}`, () => {
             it(`Opens ${dropdown.menuName}`, async () => {
                 // Click dropdown
-                await base.NavBar.openDropdown(dropdown.menuName)
+                await base.NavBar.openDropdown(dropdown)
                 // Confirm it's open and links are visible
-                await Assert.NavLinks.confirmDropdownOpen(dropdown.menuName)
+                await Assert.NavLinks.confirmDropdownOpen(dropdown)
             })
             // Open each nav dropdown
             for(const link of dropdown.links) {
                 describe(`Tests link "${link.text}"`, () => {
-                    it(`Confirm "${link.text}" links to the url "${link.url}"`, async () => {
+                    it(`Confirm "${link.text}" links to the url "${link.path}"`, async () => {
                         // Confirm href is correct
-                        Assert.NavLinks.confirmNavLink(dropdown.menuName,link)
+                        Assert.NavLinks.confirmNavLink(dropdown,link)
                     })
                 })
             }
