@@ -46,7 +46,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Search Bar/Tests/Typeahead/Results/Shows correct keywords in the title and footer.md",
+                "file": "!misc/trash/Typeahead/Results/Shows correct keywords in the title and footer.md",
                 "mode": "source",
                 "source": false
               },
@@ -60,7 +60,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Search Bar/Tests/Typeahead/Terms/Changes terms in typeahead results accordingly.md",
+                "file": "!misc/trash/Typeahead/Terms/Changes terms in typeahead results accordingly.md",
                 "mode": "source",
                 "source": false
               },
@@ -96,9 +96,9 @@
               "state": {
                 "file": "Search Bar/Search Bar.canvas",
                 "viewState": {
-                  "x": -350.89163123885373,
-                  "y": 524.015595052335,
-                  "zoom": -1.5315970463692963
+                  "x": -1122.904606454504,
+                  "y": -1860.423137973204,
+                  "zoom": -2.3714382879892018
                 }
               },
               "pinned": true,
@@ -143,234 +143,8 @@
               "icon": "lucide-layout-dashboard",
               "title": "Search Page Sort By Dropdown"
             }
-          },
-          {
-            "id": "c42fbc1efec6286f",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Test Plan.canvas",
-                "viewState": {
-                  "x": 1218.869926495711,
-                  "y": 1129.1242282581466,
-                  "zoom": -0.8851222667344177
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "Test Plan"
-            }
-          },
-          {
-            "id": "a7ba29a4e1bcaad6",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Search Page Categories/images/Category.png"
-              },
-              "icon": "lucide-image",
-              "title": "Category"
-            }
-          },
-          {
-            "id": "18cd03ba1ac067e1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Search Page Categories/Tests/Removes a category.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Removes a category"
-            }
-          },
-          {
-            "id": "20815a07b0a2643c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Search Page Sort By Dropdown/Tests/Sorting by name alphabetically.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Sorting by name alphabetically"
-            }
-          },
-          {
-            "id": "eb9cd5d1bb729099",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Search Page Sort By Dropdown/Tests/Sorting by name alphabetically.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Sorting by name alphabetically"
-            }
-          },
-          {
-            "id": "7c91d05b0c3138f3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Search Page Sort By Dropdown/Tests/Sorting by popularity.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Sorting by popularity"
-            }
-          },
-          {
-            "id": "cdcd5edde7ed5a32",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Search Page Sort By Dropdown/Tests/Sorting by rating.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Sorting by rating"
-            }
-          },
-          {
-            "id": "6b33a49dc944a66c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Search Page Sort By Dropdown/Tests/Sorting by popularity.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Sorting by popularity"
-            }
-          },
-          {
-            "id": "94140f7e88e9e87b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Search Page Sort By Dropdown/Tests/Sorting by rating.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Sorting by rating"
-            }
-          },
-          {
-            "id": "f504bfc092a81e5b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Search Page Sort By Dropdown/Tests/Sorting by name alphabetically.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Sorting by name alphabetically"
-            }
-          },
-          {
-            "id": "ab02b325e799b7c5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Search Page Sort By Dropdown/Tests/Sorting by price.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Sorting by price"
-            }
-          },
-          {
-            "id": "21e4b5322d9cc3dc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Search Page Sort By Dropdown/Tests/Sorting by date -  unsure.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Sorting by date -  unsure"
-            }
-          },
-          {
-            "id": "45387034f645c7f8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Search Page Sort By Dropdown/Tests/Sorting by date -  unsure.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Sorting by date -  unsure"
-            }
-          },
-          {
-            "id": "bd6163dcb53f55a1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Notes"
-            }
-          },
-          {
-            "id": "d8949461d3e0b084",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Nav Links/Navbar dropdown links.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Navbar dropdown links"
-            }
-          },
-          {
-            "id": "e58267f953b5a8b1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Notes"
-            }
           }
-        ],
-        "currentTab": 23
+        ]
       }
     ],
     "direction": "vertical"
@@ -402,7 +176,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "?",
+                "query": "tag:#test/automated",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -423,7 +197,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -533,26 +308,32 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "e58267f953b5a8b1",
+  "active": "b1f1c82fa25d8021",
   "lastOpenFiles": [
-    "Epics and stories.md",
-    "Nav Links/Nav Links.canvas",
-    "Nav Links/Navbar dropdown links.md",
-    "Notes.md",
-    "!misc/Unsure.md",
-    "Search Bar/Search Bar.canvas",
-    "Search Page Categories/Search Page Categories.canvas",
     "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
-    "Search Page Sort By Dropdown/Tests/Sorting by date -  unsure.md",
-    "Search Bar/Tests/Typeahead/Brands/Hovers over a brand - unsure.md",
-    "Search Bar/Tests/Typeahead/Brands/Clicks on a brand - unsure.md",
-    "Search Page Sort By Dropdown/Tests/Sorting by price.md",
+    "Test Plan.canvas",
+    "Search Page Categories/images/Category.png",
+    "Search Page Categories/Tests/Removes a category.md",
     "Search Page Sort By Dropdown/Tests/Sorting by name alphabetically.md",
+    "Search Page Categories/Tests/Items that are irrelevant to the filter are not included.md",
+    "!misc/trash/Removed.canvas",
+    "Notes.md",
+    "Nav Links/Navbar dropdown links.md",
+    "Search Page Sort By Dropdown/Tests/Sorting by date -  unsure.md",
+    "Search Page Sort By Dropdown/Tests/Sorting by price.md",
     "Search Page Sort By Dropdown/Tests/Sorting by rating.md",
     "Search Page Sort By Dropdown/Tests/Sorting by popularity.md",
-    "Search Page Categories/Tests/Removes a category.md",
+    "Epics and stories.md",
     "Search Page Categories/Tests/Adds a category.md",
-    "Search Page Categories/images/Category.png",
+    "Search Bar/Search Bar.canvas",
+    "!misc/trash/Untitled.md",
+    "!misc/Canvases.md",
+    "!misc/trash",
+    "Nav Links/Nav Links.canvas",
+    "!misc/Unsure.md",
+    "Search Page Categories/Search Page Categories.canvas",
+    "!misc/trash/Typeahead/Brands/Hovers over a brand - unsure.md",
+    "!misc/trash/Typeahead/Brands/Clicks on a brand - unsure.md",
     "Search Page Categories/images/Category chosen.png",
     "Search Page Categories/images/Chosen category filter.png",
     "Search Page Categories/images/Chosen category in dropdown.png",
@@ -565,23 +346,18 @@
     "Search Bar/Tests/Input field/Makes the typeahead appear.md",
     "Nav Links/Tests/Confirms href is correct.md",
     "Nav Links/Tests/Opens each dropdown.md",
-    "Search Bar/Tests/Typeahead/Results/Shows correct keywords in the title and footer.md",
-    "Search Bar/Tests/Submit Button/Changes URL according to text inputted.md",
-    "Search Bar/Tests/Typeahead/Results/Changes URL to match the corresponding item.md",
-    "Search Bar/Tests/Typeahead/Terms/Changes URL according to chosen term.md",
-    "Test Plan.canvas",
+    "!misc/trash/Typeahead/Results/Shows correct keywords in the title and footer.md",
     "Search Page Sort By Dropdown/images/Page 1-69.png",
     "Untitled.base",
     "Search Bar/Tests/Submit Button",
-    "Search Bar/Tests/Typeahead/Results",
-    "Search Bar/Tests/Typeahead/Brands",
-    "Search Bar/Tests/Typeahead/Terms",
+    "!misc/trash/Typeahead/Results",
+    "!misc/trash/Typeahead/Brands",
+    "!misc/trash/Typeahead/Terms",
     "Search Bar/Tests/Input field",
-    "Search Bar/Tests/Typeahead",
+    "!misc/trash/Typeahead",
     "Search Bar/Tests",
     "Untitled",
     "Nav Links/images/Dropdowns/Shop.png",
-    "Nav Links/Tests",
     "Search Bar/images/Search Bar/Too many characters.png",
     "Search Bar/images/Typeahead/Results Footer.png",
     "Search Bar/images/Typeahead/Item Results.png"

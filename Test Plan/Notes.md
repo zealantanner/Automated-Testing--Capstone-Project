@@ -19,3 +19,6 @@ Make diagram of the convention I went with, to have base, utils, baseSearch, ele
 Show off epic ticket
 
 Due to it being blackbox testing I can't test everything because I don't know how they're supposed to function
+
+I was having a hard time figuring out how to make my code wait for the page to load
+I realized I can just use the loading icon that follows the mouse

@@ -12,8 +12,8 @@ export default class Typeahead extends MyElement {
     private get $termsBox() { return this.$base.$('.typehaead-searchspring-terms') }
     public get $$terms() { return this.$termsBox.$$('.typehaead-searchspring-term') }
 
-    private get $brandsBox() { return this.$base.$('.typehaead-searchspring-facets') }
-    public get $$brands() { return this.$brandsBox.$$('.typehaead-searchspring-facet') }
+    // private get $brandsBox() { return this.$base.$('.typehaead-searchspring-facets') }
+    // public get $$brands() { return this.$brandsBox.$$('.typehaead-searchspring-facet') }
 
     private get $resultsBox() { return this.$base.$('.typehaead-searchspring-results') }
     public get $resultsTitle() { return this.$resultsBox.$('.typehaead-searchspring-results-title')}

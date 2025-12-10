@@ -3,7 +3,6 @@ import { $ } from '@wdio/globals';
 import Base from '../base/base';
 import SearchPage from './search.page';
 import BaseSearch, { CategoryOptions } from '../base/baseSearch';
-import CategoryFilter from '../../elements/baseSearch/categorySearchPage/categoryFilter.els';
 
 
 
@@ -14,12 +13,11 @@ class CategorySearchPage extends BaseSearch<CategoryOptions> {
     public async openSearch(options:CategoryOptions) {
         await super.openSearch(options)
     }
-    public get categoryFiltersBox() { return $('.facets-facet-browse-narrowedby') }
-    public get categoryFilters() {
-        return this.categoryFiltersBox.$$('.facets-facets-display-filter')
-        .map(el => new CategoryFilter($(el)))
+    public get $categoryFiltersBox() { return $('.facets-facet-browse-narrowedby') }
+    public get $$categoryFilters() {
+        return this.$categoryFiltersBox.$$('.facets-facets-display-filter')
     }
-    public get btnClearAll() {
+    public get $btnClearAll() {
         return $('.facets-facets-display-clear')
     }
 }

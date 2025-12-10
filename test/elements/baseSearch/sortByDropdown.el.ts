@@ -1,7 +1,6 @@
 import { bool, str, int, Int, _, waitForLoad } from "../../utils/utils"
 import { $, $ as $x, $$ } from "@wdio/globals"
 import MyElement from "../element"
-import Category from "./categorySidebar/category.els"
 
 
 

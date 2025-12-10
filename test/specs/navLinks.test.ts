@@ -1,5 +1,5 @@
 import { customTimeout, getElementByText, int, pickRandomFrom, searchQueries } from "../utils/utils";
-import Assert from "../utils/assert"
+import Assert from "../asserts/assert"
 import { base } from "../pageobjects/base/base";
 import HomePage from "../pageobjects/pages/home.page";
 

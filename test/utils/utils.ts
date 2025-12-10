@@ -43,6 +43,11 @@ export function shuffle<T>(array:T[]):T[] {
 export function pickRandomFrom<T>(array:T[]):T {
     return shuffle(array)[0]
 }
+export async function pickRandom$From($$elements:ChainablePromiseArray):Promise<ChainablePromiseElement> {
+    const randomVal = shuffle(range(0, await $$elements.length - 1))[0]
+    const $toReturn = $$elements[randomVal]
+    return $toReturn
+}
 
 export function getElementByText(text:str, $base=$('body')) {
     const $element = $base.$(`//*[contains(text(),'${text}')]`)
