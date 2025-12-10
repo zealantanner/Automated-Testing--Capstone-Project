@@ -1,6 +1,6 @@
 import { customTimeout, getElementByText, int, pickRandomFrom, searchQueries } from "../utils/utils";
 import Assert from "../asserts/assert"
-import { base } from "../pageobjects/base/base";
+import { base } from "../pageobjects/pages/base/base";
 import HomePage from "../pageobjects/pages/home.page";
 import SearchPage from "../pageobjects/pages/search.page";
 import CategorySearchPage from "../pageobjects/pages/categorySearch.page";
@@ -53,9 +53,9 @@ describe(`Search Page Categories [MTQA-4229]`, () => {
                 const beforeUrl = await browser.getUrl()
                 const beforeItemAmount = await CategorySearchPage.getresultAmount()
                 // Click to remove a category
-                await SearchPage.CategorySidebar.removeCategory()
+                await CategorySearchPage.clearCategories()
                 // Confirm URL changes
-                await Assert.confirmUrlContains(CategorySearchPage.subUrl)
+                await Assert.confirmUrlContains(SearchPage.subUrl)
                 await Assert.confirmUrlContains(beforeUrl, true)
                 // Confirm category is not displayed as chosen
                 await Assert.SearchPageCategories.confirmCategoryDisplayed(true)

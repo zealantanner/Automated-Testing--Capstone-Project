@@ -1,4 +1,4 @@
-import { Int, waitForLoad } from "../../utils/utils"
+import { bool, str, int, Int, _, pickRandomFrom, pickRandom$From } from "../../../utils/utils"
 import { browser, $, $ as $x } from '@wdio/globals'
 import MyElement from "../element"
 
@@ -13,7 +13,7 @@ export default class Item extends MyElement {
     
     private get $reviews() { return this.$base.$('.ratings-total') }
     public async getReviewCount() {
-        await waitForLoad()
+        await this.waitForLoad()
         await this.$reviews.waitForExist()
         const reviewText = await this.$reviews.getText()
 
@@ -25,7 +25,7 @@ export default class Item extends MyElement {
     private get $starRating() { return this.$base.$('.global-views-star-rating-area-fill') }
     
     public async getStarRating() {
-        await waitForLoad()
+        await this.waitForLoad()
         await this.$starRating.waitForExist()
         const ratingText = await this.$starRating.getAttribute('style')
         if(!ratingText) {
@@ -38,14 +38,14 @@ export default class Item extends MyElement {
 
     private get $title() { return this.$base.$('.facets-item-cell-grid-title') }
     public async getTitle() {
-        await waitForLoad()
+        await this.waitForLoad()
         await this.$title.waitForExist()
         return this.$title.getText()
     }
 
     private get $price() { return this.$base.$('.product-views-price-exact') }
     public async getPrice() {
-        await waitForLoad()
+        await this.waitForLoad()
         await this.$price.waitForExist()
         const priceText = await this.$price.getAttribute('data-rate')
         const priceNum = priceText ? parseFloat(priceText) : 0

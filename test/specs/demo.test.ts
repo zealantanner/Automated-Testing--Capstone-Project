@@ -1,6 +1,6 @@
 import { browser, expect } from '@wdio/globals'
 import HomePage from '../pageobjects/pages/home.page'
-import { base } from '../pageobjects/base/base';
+import { base } from '../pageobjects/pages/base/base';
 import SearchPage from '../pageobjects/pages/search.page';
 import CategorySearchPage from '../pageobjects/pages/categorySearch.page';
 import { customTimeout, pickRandomFrom, searchQueries } from '../utils/utils';

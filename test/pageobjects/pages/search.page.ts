@@ -1,7 +1,7 @@
 import { int, str } from '../../utils/utils';
 import { $ } from '@wdio/globals';
-import Base from '../base/base';
-import BaseSearch, { SearchOptions } from '../base/baseSearch';
+import Base from './base/base';
+import BaseSearch, { SearchOptions } from './base/baseSearch';
 
 
 

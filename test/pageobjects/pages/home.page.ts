@@ -1,6 +1,6 @@
 import { str } from '../../utils/utils'
 import { $ } from '@wdio/globals'
-import Base from '../base/base';
+import Base from './base/base';
 
 
 class HomePage extends Base {

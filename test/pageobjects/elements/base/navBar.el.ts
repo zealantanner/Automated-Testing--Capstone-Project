@@ -1,4 +1,4 @@
-import { customTimeout, getElementByText, str, waitForLoad } from "../../utils/utils"
+import { customTimeout, getElementByText, str } from "../../../utils/utils"
 import { $, $ as $x } from "@wdio/globals"
 import MyElement from "../element"
 
@@ -71,22 +71,22 @@ export default class NavBar extends MyElement {
     ]
 
     public async openDropdown(dropdownTitle:str) {
-        await waitForLoad()
+        await this.waitForLoad()
         const $dropdown = getElementByText(dropdownTitle)
         const isOpen = (await $dropdown.getAttribute("aria-expanded")) === "true"
         if(!isOpen) {
             await $dropdown.click()
         }
-        await waitForLoad()
+        await this.waitForLoad()
     }
     
     public async clickLink(dropdownTitle:str, linkName:str) {
         //> use dropdownLinks.dropdowntitle, not just title. I need the menuname if I want to get the element by text
         //> same with asserts and openDropdown
-        await waitForLoad()
+        await this.waitForLoad()
         const $dropdown = getElementByText(dropdownTitle)
         const $linkToClick = getElementByText(linkName,$dropdown)
         await $linkToClick.click()
-        await waitForLoad()
+        await this.waitForLoad()
     }
 }

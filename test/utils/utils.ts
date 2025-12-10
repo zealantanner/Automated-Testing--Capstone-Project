@@ -54,9 +54,16 @@ export function getElementByText(text:str, $base=$('body')) {
     return $element
 }
 
-/** waits to stop loading */
-export async function waitForLoad() {
-    const $loadingIcon = $('#loadingIndicator')
-    await $loadingIcon.waitForDisplayed({reverse:true})
-    // await this.loadingIcon.waitForExist({reverse:true})
+export function charScore(word:str):number {
+    const char = word.trim().toLowerCase()[0];
+    if (!char) return 0;
+    return char.charCodeAt(0);
 }
+
+
+/** waits to stop loading */
+// export async function waitForLoad() {
+//     const $loadingIcon = $('#loadingIndicator')
+//     await $loadingIcon.waitForDisplayed({reverse:true})
+//     // await this.loadingIcon.waitForExist({reverse:true})
+// }

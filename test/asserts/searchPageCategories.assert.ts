@@ -1,52 +1,50 @@
-import { bool, str, int, Int, _, getElementByText, waitForLoad } from "../../utils/utils"
-import SearchPage from "../../pageobjects/pages/search.page"
-import { base } from "../../pageobjects/base/base"
-import { Asserters } from "../assert"
-import { baseSearch } from "../../pageobjects/base/baseSearch"
+import { bool, str, int, Int, _, getElementByText } from "../utils/utils"
+import SearchPage from "../pageobjects/pages/search.page"
+import { base } from "../pageobjects/pages/base/base"
+import AssertBase from "./assert.base"
+import { baseSearch } from "../pageobjects/pages/base/baseSearch"
 
 
-export default class SearchPageCategories extends Asserters {
+export default class SearchPageCategories extends AssertBase {
     public async confirmClosed() {
-        await waitForLoad()
+        await base.waitForLoad()
         const isOpen = await baseSearch.CategorySidebar.isOpen()
         await expect(isOpen).toBe(false)
-        await waitForLoad()
+        await base.waitForLoad()
     }
     public async confirmOpened() {
-        await waitForLoad()
+        await base.waitForLoad()
         const isOpen = await baseSearch.CategorySidebar.isOpen()
         await expect(isOpen).toBe(true)
-        await waitForLoad()
+        await base.waitForLoad()
     }
 
     public async confirmCategoryDisplayed(isReverse=false) {
-        await waitForLoad()
-        await baseSearch.CategorySidebar.$chosenCategory.waitForExist()
+        await base.waitForLoad()
+
         const isCategoryDisplayed = await baseSearch.CategorySidebar.$chosenCategory.isDisplayed()
-        if(!isReverse) {
-            await expect(isCategoryDisplayed).toBe(true)
-        } else {
-            await expect(isCategoryDisplayed).toBe(false)
-        }
-        await waitForLoad()
+        await expect(isCategoryDisplayed).not.toBe(isReverse)
+
+        await base.waitForLoad()
     }
     public async confirmItemsFiltered(beforeItemAmount:int, isReverse=false) {
-        await waitForLoad()
+        await base.waitForLoad()
+
         const itemAmount = await baseSearch.getresultAmount()
-        if(!isReverse) {
-            await expect(itemAmount).toBeLessThan(beforeItemAmount)
-        } else {
+        if(isReverse) {
             await expect(itemAmount).toBeGreaterThan(beforeItemAmount)
+        } else {
+            await expect(itemAmount).toBeLessThan(beforeItemAmount)
         }
-        await waitForLoad()
+        await base.waitForLoad()
     }
 
 
     // public async optionIsSelected(optionNum:int) {
-    //     await waitForLoad()
+    //     await base.waitForLoad()
     //     const option = SearchPage.SortByDropdown.$$options[optionNum]
     //     await expect(await option.isSelected()).toBe(true)
-    //     await waitForLoad()
+    //     await base.waitForLoad()
     // }
     // private dropdownAssert(value1:int,value2ndToLast:int,isReverse=false) {
     //     if(isReverse) {
@@ -56,9 +54,9 @@ export default class SearchPageCategories extends Asserters {
     //     }
     // }
     // private async goToPageAndWait(pageNum:int) {
-    //     await waitForLoad()
+    //     await base.waitForLoad()
     //     await SearchPage.goToPage(pageNum)
-    //     await waitForLoad()
+    //     await base.waitForLoad()
     //     await SearchPage.SortByDropdown.waitFor()
     //     await (await SearchPage.items)[1].waitFor()
     // }

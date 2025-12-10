@@ -1,15 +1,15 @@
-import { bool, str, int, Int, _, getElementByText, waitForLoad } from "../../utils/utils"
-import SearchPage from "../../pageobjects/pages/search.page"
-import { base } from "../../pageobjects/base/base"
-import { Asserters } from "../assert"
+import { bool, str, int, Int, _, getElementByText, charScore } from "../utils/utils"
+import SearchPage from "../pageobjects/pages/search.page"
+import { base } from "../pageobjects/pages/base/base"
+import AssertBase from "./assert.base"
 
 
-export default class SearchPageSortByDropdown extends Asserters {
+export default class SearchPageSortByDropdown extends AssertBase {
     public async confirmOptionIsSelected(optionNum:int) {
-        await waitForLoad()
+        await base.waitForLoad()
         const option = SearchPage.SortByDropdown.$$options[optionNum]
         await expect(await option.isSelected()).toBe(true)
-        await waitForLoad()
+        await base.waitForLoad()
     }
     private dropdownAssert(value1:int,value2ndToLast:int,isReverse=false) {
         if(isReverse) {
@@ -19,21 +19,20 @@ export default class SearchPageSortByDropdown extends Asserters {
         }
     }
     private async goToPageAndWait(pageNum:int) {
-        await waitForLoad()
+        await base.waitForLoad()
         await SearchPage.goToPage(pageNum)
-        await waitForLoad()
+        await base.waitForLoad()
         await SearchPage.SortByDropdown.waitFor()
         await (await SearchPage.items)[1].waitFor()
     }
     public async confirmPopularity() {
         // loosely sorts by review
-        await waitForLoad()
+        await base.waitForLoad()
         const page1Items = await SearchPage.items
         let page1Total = 0
         for(const item of page1Items) {
             page1Total += await item.getPrice()
         }
-
         await this.goToPageAndWait(-2)
 
         const page2ndToLastItems = await SearchPage.items
@@ -41,18 +40,16 @@ export default class SearchPageSortByDropdown extends Asserters {
         for(const item of page2ndToLastItems) {
             page2ndToLastTotal += await item.getPrice()
         }
-        
         this.dropdownAssert(page1Total,page2ndToLastTotal)
     }
     public async confirmRating() {
         // loosely sorts by stars
-        await waitForLoad()
+        await base.waitForLoad()
         const page1Items = await SearchPage.items
         let page1Total = 0
         for(const item of page1Items) {
             page1Total += await item.getStarRating()
         }
-
         const middlePage = Math.ceil((await SearchPage.getPageInfo()).totalPages/2)
         await this.goToPageAndWait(middlePage)
 
@@ -66,13 +63,7 @@ export default class SearchPageSortByDropdown extends Asserters {
     }
     public async confirmNameAlphabetically(isReverse=false) {
         // loosely sorts by name
-        function charScore(word:str):number {
-            const char = word.trim().toLowerCase()[0];
-            if (!char) return 0;
-            return char.charCodeAt(0);
-        }
-
-        await waitForLoad()
+        await base.waitForLoad()
 
         const page1Items = await SearchPage.items
         let page1Total = 0
@@ -89,11 +80,11 @@ export default class SearchPageSortByDropdown extends Asserters {
         }
         
         this.dropdownAssert(page1Total,page2ndToLastTotal,isReverse)
-        await waitForLoad()
+        await base.waitForLoad()
     }
     public async confirmPrice(isReverse=false) {
         // loosely sorts by price
-        await waitForLoad()
+        await base.waitForLoad()
         const page1Items = await SearchPage.items
         let page1Total = 0
         for(const item of page1Items) {
@@ -109,6 +100,6 @@ export default class SearchPageSortByDropdown extends Asserters {
         }
 
         this.dropdownAssert(page1Total,page2ndToLastTotal,isReverse)
-        await waitForLoad()
+        await base.waitForLoad()
     } 
 }
