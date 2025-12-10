@@ -1,4 +1,4 @@
-import { bool, str, int, Int, _, getElementByText } from "../utils/utils"
+import { bool, str, int, _, getElementByText } from "../utils/utils"
 import SearchPage from "../pageobjects/pages/search.page"
 import { base } from "../pageobjects/pages/base/base"
 import AssertBase from "./assert.base"

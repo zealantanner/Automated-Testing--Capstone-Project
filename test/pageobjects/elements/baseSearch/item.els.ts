@@ -1,4 +1,4 @@
-import { bool, str, int, Int, _, pickRandomFrom, pickRandom$From } from "../../../utils/utils"
+import { bool, str, int, _, pickRandomFrom, pickRandom$From } from "../../../utils/utils"
 import { browser, $, $ as $x } from '@wdio/globals'
 import MyElement from "../element"
 

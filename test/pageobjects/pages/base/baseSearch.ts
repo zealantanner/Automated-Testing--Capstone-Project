@@ -1,4 +1,4 @@
-import { bool, str, int, Int, _, pickRandomFrom, pickRandom$From } from "../../../utils/utils"
+import { bool, str, int, _, pickRandomFrom, pickRandom$From } from "../../../utils/utils"
 import { browser, $, $ as $x } from '@wdio/globals'
 import Base from './base'
 import Item from '../../elements/baseSearch/item.els'
@@ -10,6 +10,7 @@ export type SearchOptions = { keywords:str, page?:int }
 /** `category:str, keywords?:str, page?:int` */
 export type CategoryOptions = { categories:str[], keywords?:str, page?:int }
 //> sometimes they have "keywords=wire connector&oq=wire"
+//> maybe delete all the ability to search
 
 export default abstract class BaseSearch<TOptions extends SearchOptions | CategoryOptions> extends Base {
     /** `search` or `ss_category` */

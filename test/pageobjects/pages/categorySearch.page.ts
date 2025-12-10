@@ -24,6 +24,5 @@ class CategorySearchPage extends BaseSearch<CategoryOptions> {
         await this.waitForLoad()
     }
 }
-//> you can still add categories from the search page
 
 export default new CategorySearchPage();

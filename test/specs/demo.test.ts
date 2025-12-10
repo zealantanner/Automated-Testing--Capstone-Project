@@ -5,7 +5,7 @@ import SearchPage from '../pageobjects/pages/search.page';
 import CategorySearchPage from '../pageobjects/pages/categorySearch.page';
 import { customTimeout, pickRandomFrom, searchQueries } from '../utils/utils';
 
-//> don't make assert functions like last project, do them on here
+
 describe('My Login application', () => {
     before(async () => {
         await HomePage.open()

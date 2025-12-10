@@ -71,7 +71,7 @@ describe(`Search Bar [MTQA-4227]`, () => {
                 await SearchPage.SearchBar.activateSearch()
                 // Confirm the URL and results don't change
                 await Assert.confirmUrlContains(beforeUrl)
-                await Assert.SearchBar.confirmResults(something)//>
+                await Assert.SearchBar.confirmResults(something)
             })
         })
     })
@@ -89,7 +89,6 @@ describe(`Search Bar [MTQA-4227]`, () => {
 //                 await SearchPage.SearchBar.Typeahead.clickRandomTerm()
 //                 // Confirm the URL changed accordingly
 //                 await Assert.SearchBar.Typeahead.confirmUrl(text)
-//                 //> also do for hitting enter
 //             })
 //         })
 //         describe(`Typeahead terms change accordingly`, () => {
@@ -150,7 +149,7 @@ describe(`Search Bar [MTQA-4227]`, () => {
 //                 // Click the results footer in the typeahead
 //                 await SearchPage.SearchBar.Typeahead.click
 //                 // Confirm the URL changes to the search page
-//                 await Assert.SearchBar.confirmUrl("")//>
+//                 await Assert.SearchBar.confirmUrl("")
 //             })
 //         })
 //     })

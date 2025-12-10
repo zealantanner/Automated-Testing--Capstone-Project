@@ -15,7 +15,7 @@ export default class NavBar extends MyElement {
     readonly dropdownLinks:NavMenu[] = [
         {
             menuName: "SHOP",
-            links: [
+            links: [ //> change the name from "url" to "path"
                 { text:"New Products", url:"/promodisplay/N?order=ss_searchable_updated_date:asc" },
                 { text:"Shop by Brand", url:"/brands" },
                 { text:"Home A/V", url:"/home-a-v" },
