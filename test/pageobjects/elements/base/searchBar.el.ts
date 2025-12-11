@@ -4,7 +4,6 @@ import MyElement from "../element"
 import Typeahead from "../baseSearch/typeahead.el"
 
 
-
 /** The search bar on the top of the page */
 export default class SearchBar extends MyElement {
     public get $base() { return $('.row-one-search') }

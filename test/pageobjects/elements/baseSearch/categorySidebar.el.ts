@@ -2,7 +2,6 @@ import { int, pickRandom$From } from "../../../utils/utils"
 import MyElement from "../element"
 
 
-
 /** Category menu on search page */
 export default class CategorySidebar extends MyElement {
     public get $base() { return $('[data-facet-id="ss_category"]') }

@@ -3,6 +3,7 @@ import { $ } from "@wdio/globals"
 import { base } from "../pages/base/base"
 
 
+/** The base for my custom elements */
 export default abstract class MyElement {
     /** The selector for this element */
     public abstract get $base():ChainablePromiseElement

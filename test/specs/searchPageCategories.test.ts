@@ -7,8 +7,6 @@ import CategorySearchPage from "../pageobjects/pages/categorySearch.page";
 
 
 
-
-
 describe(`Search Page Categories [MTQA-4229]`, () => {
     before(async () => {
         // Go to https://www.parts-express.com

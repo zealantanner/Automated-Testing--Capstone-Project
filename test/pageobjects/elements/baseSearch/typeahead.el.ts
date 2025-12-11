@@ -1,7 +1,6 @@
 import MyElement from "../element"
 
 
-
 /** Typeahead that appears when using the search bar */
 export default class Typeahead extends MyElement {
     constructor(private $parentBase:ChainablePromiseElement) {

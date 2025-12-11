@@ -2,11 +2,14 @@ import { getElementByText, str } from "../../../utils/utils"
 import { $ } from "@wdio/globals"
 import MyElement from "../element"
 
+
+/** Link under Navbar dropdowns */
 export type NavLink = {
     text:str,
     path:str,
 }
 
+/** Dropdowns on Navbar */
 export type NavMenu = {
     menuName:str,
     links:NavLink[],

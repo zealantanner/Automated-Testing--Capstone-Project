@@ -6,8 +6,6 @@ import SortByDropdown from '../../elements/baseSearch/sortByDropdown.el'
 import CategorySidebar from '../../elements/baseSearch/categorySidebar.el'
 
 
-//> look at all references
-
 /** The base search page */
 export default abstract class BaseSearch extends Base {
     /** @param subUrl "search" or "ss_category" */

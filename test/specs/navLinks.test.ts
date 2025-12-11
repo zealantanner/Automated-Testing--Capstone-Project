@@ -5,7 +5,6 @@ import HomePage from "../pageobjects/pages/home.page";
 
 
 
-
 describe(`Nav Links [MTQA-4219]`, () => {
     before(async () => {
         // Go to https://www.parts-express.com

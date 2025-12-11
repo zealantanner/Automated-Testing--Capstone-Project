@@ -1,7 +1,6 @@
 import MyElement from "../element"
 
 
-
 /** An item in the search results */
 export default class Item extends MyElement {
     constructor(private _$base:ChainablePromiseElement) {

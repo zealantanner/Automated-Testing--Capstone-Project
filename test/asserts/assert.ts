@@ -6,7 +6,6 @@ import SearchPageCategories from "./searchPageCategories.assert"
 import SearchPageSortByDropdown from "./searchPageSortByDropdown.assert"
 
 
-
 /** Parent class for testing */
 class Assert {
     /** Testing the nav bar */

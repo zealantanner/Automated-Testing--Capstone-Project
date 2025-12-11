@@ -6,7 +6,6 @@ import Assert from "../asserts/assert";
 
 
 
-
 describe(`Search Page Sort By Dropdown [MTQA-4231]`, () => {
     const textToSearch = pickRandomFrom(searchQueries)
     before(async () => {
