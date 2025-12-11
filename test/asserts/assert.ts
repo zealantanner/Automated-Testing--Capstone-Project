@@ -17,7 +17,7 @@ class Assert {
 
     /** Testing the categories on the search page */
     public get SearchPageCategories() { return new SearchPageCategories() }
-
+    
     /** Testing the "Sort By" dropdown on the search page */
     public get SearchPageSortByDropdown() { return new SearchPageSortByDropdown() }
 
@@ -38,6 +38,7 @@ class Assert {
             await expectUrl.toContain(path)
         }
     }
+
     /** Confirms the current url is exactly `path` */
     public async confirmUrlIs(path:str|URL, ops:{reverse?:bool}={}) {
         if(path instanceof URL) {
@@ -52,7 +53,6 @@ class Assert {
         await expectUrl.toBe(path)
     }
 }
-
 
 /** Parent class for testing */
 export default new Assert();

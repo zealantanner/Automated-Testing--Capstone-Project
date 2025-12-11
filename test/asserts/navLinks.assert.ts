@@ -15,6 +15,7 @@ export default class NavLinks extends AssertBase {
         const isOpen = (await $dropdown.getAttribute("aria-expanded")) === "true"
         await expect(isOpen).toBe(!reverse)
     }
+
     /** Confirms the href of `link` under `dropdown` */
     public async confirmNavLink(dropdown:NavMenu, link:NavLink, ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;

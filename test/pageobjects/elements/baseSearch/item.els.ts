@@ -55,5 +55,3 @@ export default class Item extends MyElement {
         return priceNum
     }
 }
-
-

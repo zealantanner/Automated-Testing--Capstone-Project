@@ -25,7 +25,6 @@ export default class CategorySidebar extends MyElement {
             await this.$btnExpander.click()
         }
         await this.$$categories[0].waitForDisplayed()
-        await this.waitForLoad()
     }
 
     /** Clicks to close the category dropdown */
@@ -35,9 +34,8 @@ export default class CategorySidebar extends MyElement {
             await this.$btnExpander.click()
         }
         await this.$$categories[0].waitForDisplayed({reverse:true})
-        await this.waitForLoad()
     }
-    
+
     /** Clicks to add a random category unless specified by `index?` */
     public async addCategory(index?:int) {
         await this.waitForLoad()
@@ -45,13 +43,11 @@ export default class CategorySidebar extends MyElement {
         ? this.$$categories[index]
         : await pickRandom$From(this.$$categories)
         await $category.click()
-        await this.waitForLoad()
     }
-    
+
     /** Clicks the added category to remove it */
     public async removeCategory() {
         await this.waitForLoad()
         await this.$chosenCategory.click()
-        await this.waitForLoad()
     }
 }

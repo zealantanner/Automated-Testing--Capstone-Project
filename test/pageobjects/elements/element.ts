@@ -22,4 +22,3 @@ export default abstract class MyElement {
         await base.waitForLoad()
     }
 }
-

@@ -30,7 +30,7 @@ export default class SearchPageCategories extends AssertBase {
             await expect($chosenCategory).toBeDisplayed()
         }
     }
-    
+
     /** Confirms items are filtered, should be less than before */
     public async confirmItemsFiltered(beforeItemAmount:int, ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;

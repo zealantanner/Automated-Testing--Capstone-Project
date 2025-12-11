@@ -51,7 +51,6 @@ export default class SearchBar extends MyElement {
         } else {
             await this.$btnConfirm.click()
         }
-        await this.waitForLoad()
     }
 
     /** Inputs text and activates search */

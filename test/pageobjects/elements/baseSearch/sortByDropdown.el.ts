@@ -21,4 +21,3 @@ export default class SortByDropdown extends MyElement {
         await this.waitForLoad()
     }
 }
-

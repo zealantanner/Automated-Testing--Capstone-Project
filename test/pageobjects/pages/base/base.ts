@@ -9,10 +9,9 @@ import NavBar from '../../elements/base/navBar.el'
 export default abstract class Base {
     /** @param subUrl https://www.parts-express.com/ `subUrl` */
     public abstract get subUrl():str
-
     /** https://www.parts-express.com/ `subUrl` */
     public get baseUrl() { return new URL(this.subUrl,"https://www.parts-express.com") }
-    
+
     /** Annoying popup that interrupts the test, disable with `dismissPopupViaLocalStorage` */
     public get Popup() { return new Popup() }
 
