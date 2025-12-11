@@ -1,4 +1,4 @@
-import { customTimeout, str } from "../../../utils/utils"
+import { customTimeout } from "../../../utils/utils"
 import { $ } from "@wdio/globals"
 import MyElement from "../element"
 

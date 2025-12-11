@@ -1,7 +1,7 @@
-import { bool, str, int, getElementByText } from "../utils/utils"
+import { bool, str } from "../utils/utils"
 import { base } from "../pageobjects/pages/base/base"
 
-//> look at all asserts and make sure expects are readable
+
 /** Base for assertions */
 export default class AssertBase {
     /** Asserts `$element` has href that contains `path` */

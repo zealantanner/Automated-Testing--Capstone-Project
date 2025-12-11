@@ -1,5 +1,5 @@
-import { bool, str, int, pickRandomFrom, pickRandom$From } from "../../../utils/utils"
-import { browser, expect, $ } from '@wdio/globals'
+import { bool, str } from "../../../utils/utils"
+import { browser, $ } from '@wdio/globals'
 import MyElement from "../element"
 import Typeahead from "../baseSearch/typeahead.el"
 
@@ -13,15 +13,6 @@ export default class SearchBar extends MyElement {
 
     /** Typeahead that appears when using the search bar */
     public get Typeahead() { return new Typeahead(this.$base) }
-
-    // /** Clears text in the search bar */
-    // public async clearText() {
-    //     await this.waitForLoad()
-        
-    //     await this.$inputField.click()
-    //     await browser.keys(['Control', 'a'])
-    //     await browser.keys('Backspace')
-    // } //> remove this
 
     /** Sets the value of the input field */
     public async inputText(text:str) {
@@ -40,7 +31,7 @@ export default class SearchBar extends MyElement {
         }
     }
 
-    /** Presses `enter` or clicks search button */
+    /** Activates search by pressing `enter` or clicking search button */
     public async activateSearch(ops:{pressEnterInstead?:bool}={}) {
         const {pressEnterInstead=false} = ops;
         await this.waitForLoad()

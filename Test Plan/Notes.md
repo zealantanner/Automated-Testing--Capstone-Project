@@ -1,4 +1,8 @@
 Sometimes category dropdown doesn't appear depending on 
+click to remove cookie toast
+
+for name z-a 
+`//> Error: element (".facets-item-cell-grid-title") still not existing after 10000ms`
 
 
 For ever test make a md file and add it to the canvas where it should be. with the link to jira

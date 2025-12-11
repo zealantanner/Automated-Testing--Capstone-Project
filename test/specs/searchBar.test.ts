@@ -1,12 +1,10 @@
 import HomePage from "../pageobjects/pages/home.page"
 import SearchPage from "../pageobjects/pages/search.page"
 import Assert from "../asserts/assert"
-import { pickRandomFrom, randChars, randLetters, range, searchQueries } from "../utils/utils"
-import { base } from "../pageobjects/pages/base/base"
+import { pickRandomFrom, randChars, randLetters, searchQueries } from "../utils/utils"
 
 
 
-//> remove url search
 
 describe(`Search Bar [MTQA-4227]`, () => {
     before(async () => {
@@ -14,9 +12,6 @@ describe(`Search Bar [MTQA-4227]`, () => {
         await HomePage.open()
         // Dismiss popup modal via local storage
         await HomePage.Popup.dismissPopupViaLocalStorage()
-        //> get rid of cookie toast
-        //> class="cookie-warning-banner-view-close-button"
-
         // Go to search page
         await HomePage.SearchBar.search(pickRandomFrom(searchQueries))
     })
@@ -41,7 +36,6 @@ describe(`Search Bar [MTQA-4227]`, () => {
             it(`Is limited to 100 characters`, async () => {
                 const almostTooMuchText = randLetters(98)
                 // Input more than 100 characters into search box
-                // await SearchPage.SearchBar.clearText()
                 await SearchPage.SearchBar.inputText(almostTooMuchText)
                 await SearchPage.SearchBar.typeText(randLetters(5))
                 // Confirm only 100 characters are able to be in the text box
@@ -78,13 +72,11 @@ describe(`Search Bar [MTQA-4227]`, () => {
                 const beforeUrl = await browser.getUrl()
                 // Have no text inputted in the search box
                 await SearchPage.SearchBar.inputText("")
-                // await SearchPage.SearchBar.clearText()
                 // Click the search button
                 await SearchPage.SearchBar.activateSearch()
                 // Confirm the URL stays and no results
                 await Assert.confirmUrlIs(beforeUrl)
                 await Assert.SearchBar.confirmTypeaheadDisplayed({reverse:true})
-                //> add if there's no items on the results page
             })
         })
     })

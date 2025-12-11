@@ -1,6 +1,5 @@
-import { customTimeout, getElementByText, int, pickRandomFrom, searchQueries } from "../utils/utils";
+import { pickRandomFrom, searchQueries } from "../utils/utils";
 import Assert from "../asserts/assert"
-import { base } from "../pageobjects/pages/base/base";
 import HomePage from "../pageobjects/pages/home.page";
 import SearchPage from "../pageobjects/pages/search.page";
 import CategorySearchPage from "../pageobjects/pages/categorySearch.page";

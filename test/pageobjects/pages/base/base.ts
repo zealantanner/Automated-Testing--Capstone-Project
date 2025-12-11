@@ -1,5 +1,5 @@
-import { bool, str, int, pickRandomFrom, pickRandom$From } from "../../../utils/utils"
-import { browser, expect, $ } from '@wdio/globals'
+import { str } from "../../../utils/utils"
+import { browser, $ } from '@wdio/globals'
 import SearchBar from '../../elements/base/searchBar.el'
 import Popup from '../../elements/base/popup.el'
 import NavBar from '../../elements/base/navBar.el'

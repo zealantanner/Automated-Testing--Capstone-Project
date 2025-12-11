@@ -1,7 +1,6 @@
-import { customTimeout, int, pickRandomFrom, searchQueries } from "../utils/utils";
+import { pickRandomFrom, searchQueries } from "../utils/utils";
 import HomePage from "../pageobjects/pages/home.page"
 import SearchPage from "../pageobjects/pages/search.page"
-import { expect } from '@wdio/globals';
 import Assert from "../asserts/assert";
 
 
@@ -60,7 +59,6 @@ describe(`Search Page Sort By Dropdown [MTQA-4231]`, () => {
             await Assert.SearchPageSortByDropdown.confirmNameAlphabetically()
         })
         it(`Sorts by "Name: Z - A"`, async () => {
-            //> Error: element (".facets-item-cell-grid-title") still not existing after 10000ms
             // Select "Name: Z - A"
             await SearchPage.SortByDropdown.selectOption(4)
             // Confirm URL changes accordingly

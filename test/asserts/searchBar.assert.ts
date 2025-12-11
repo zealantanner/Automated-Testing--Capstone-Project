@@ -1,8 +1,6 @@
-import { bool, str, int, getElementByText, customTimeout } from "../utils/utils"
-import SearchPage from "../pageobjects/pages/search.page"
+import { bool, int, customTimeout } from "../utils/utils"
 import { base } from "../pageobjects/pages/base/base"
 import AssertBase from "./assert.base"
-import { baseSearch } from "../pageobjects/pages/base/baseSearch"
 
 
 export default class SearchBar extends AssertBase {

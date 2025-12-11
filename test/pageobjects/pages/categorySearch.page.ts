@@ -1,14 +1,11 @@
-import { int, str } from '../../utils/utils';
 import { $ } from '@wdio/globals';
-import Base from './base/base';
-import SearchPage from './search.page';
-import BaseSearch, { CategoryOptions } from './base/baseSearch';
+import BaseSearch from './base/baseSearch';
 
 
 /** Page after applying a category
  * 
  *  https://www.parts-express.com/ss_category */
-class CategorySearchPage extends BaseSearch<CategoryOptions> {
+class CategorySearchPage extends BaseSearch {
     /** @param subUrl "ss_category" */
     public get subUrl() { return "ss_category" }
 
@@ -18,13 +15,13 @@ class CategorySearchPage extends BaseSearch<CategoryOptions> {
     public async clearCategories() {
         await this.waitForLoad()
         await this.$btnClearAll.waitForExist()
-        
+
         await this.$btnClearAll.click()
     }
 
-    /** `category:str, keywords?:str, page?:int` */
-    public async openSearch(options:CategoryOptions) {
-        await super.openSearch(options)
+    /** @deprecated Get to this page by applying a category */
+    public async open() {
+        await super.open(this.baseUrl)
     }
 }
 

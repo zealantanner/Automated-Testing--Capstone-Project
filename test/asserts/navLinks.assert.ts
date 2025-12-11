@@ -1,7 +1,6 @@
-import { bool, str, int, getElementByText } from "../utils/utils"
+import { bool, getElementByText } from "../utils/utils"
 import AssertBase from "./assert.base"
 import { base } from "../pageobjects/pages/base/base"
-import { baseSearch } from "../pageobjects/pages/base/baseSearch"
 import { NavLink, NavMenu } from "../pageobjects/elements/base/navBar.el";
 
 

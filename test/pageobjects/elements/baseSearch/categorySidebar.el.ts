@@ -1,5 +1,4 @@
-import { bool, str, int, pickRandomFrom, pickRandom$From } from "../../../utils/utils"
-import { $, $$ } from "@wdio/globals"
+import { int, pickRandom$From } from "../../../utils/utils"
 import MyElement from "../element"
 
 

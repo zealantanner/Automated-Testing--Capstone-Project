@@ -1,4 +1,4 @@
-import { bool, str, int, getElementByText } from "../utils/utils"
+import { bool, str } from "../utils/utils"
 import { base } from "../pageobjects/pages/base/base"
 import NavLinks from "./navLinks.assert"
 import SearchBar from "./searchBar.assert"
@@ -17,7 +17,7 @@ class Assert {
 
     /** Testing the categories on the search page */
     public get SearchPageCategories() { return new SearchPageCategories() }
-    
+
     /** Testing the "Sort By" dropdown on the search page */
     public get SearchPageSortByDropdown() { return new SearchPageSortByDropdown() }
 

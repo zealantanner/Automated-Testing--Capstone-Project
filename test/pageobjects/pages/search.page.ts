@@ -1,23 +1,18 @@
-import { int, str } from '../../utils/utils';
-import { $ } from '@wdio/globals';
-import Base from './base/base';
-import BaseSearch, { SearchOptions } from './base/baseSearch';
+import BaseSearch from './base/baseSearch';
 
 
 /** Page after searching
  * 
  *  https://www.parts-express.com/search */
-class SearchPage extends BaseSearch<SearchOptions> {
+class SearchPage extends BaseSearch {
     /** @param subUrl "search" */
     public get subUrl() { return "search" }
 
-    /** `keywords:str, page?:int` */
-    public async openSearch(options:SearchOptions) {
-        await super.openSearch(options)
+    /** @deprecated Get to this page by searching from the search bar */
+    public async open() {
+        await super.open(this.baseUrl)
     }
 }
-
-
 
 /** Page after searching
  * 

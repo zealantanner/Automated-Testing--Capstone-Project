@@ -1,4 +1,4 @@
-import { bool, str, int } from "../../utils/utils"
+import { bool } from "../../utils/utils"
 import { $ } from "@wdio/globals"
 import { base } from "../pages/base/base"
 

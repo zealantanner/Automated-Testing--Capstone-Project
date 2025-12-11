@@ -1,21 +1,15 @@
-import { bool, str, int, pickRandomFrom, pickRandom$From } from "../../../utils/utils"
+import { str } from "../../../utils/utils"
 import { browser, $ } from '@wdio/globals'
 import Base from './base'
 import Item from '../../elements/baseSearch/item.els'
 import SortByDropdown from '../../elements/baseSearch/sortByDropdown.el'
 import CategorySidebar from '../../elements/baseSearch/categorySidebar.el'
 
-/** `keywords:str, page?:int` */
-export type SearchOptions = { keywords:str, page?:int }
-/** `category:str, keywords?:str, page?:int` */
-export type CategoryOptions = { categories:str[], keywords?:str, page?:int }
 
-//> sometimes they have "keywords=wire connector&oq=wire"
-//> delete all the ability to search via url //>//>//>
 //> look at all references
 
 /** The base search page */
-export default abstract class BaseSearch<TOptions extends SearchOptions | CategoryOptions> extends Base {
+export default abstract class BaseSearch extends Base {
     /** @param subUrl "search" or "ss_category" */
     public abstract get subUrl():str
     
@@ -67,34 +61,9 @@ export default abstract class BaseSearch<TOptions extends SearchOptions | Catego
         url.searchParams.set('page',String(num))
         await super.open(url.toString())
     }
-
-    /** Returns baseUrl with the specified parameters */
-    public baseUrlWithParameters(options:TOptions):URL {
-        const url = (options && 'categories' in options)
-            ? new URL(`${this.subUrl}/${encodeURI(options.categories.join())}`, this.baseUrl) //category
-            : this.baseUrl //search
-        if(options?.page && options.page !== 1) {
-            url.searchParams.set("page", options.page.toString())
-        }
-        if(options?.keywords) {
-            url.searchParams.set("keywords", options.keywords)
-        }
-        return url
-    } 
-
-    /** Opens page with specified search parameters */
-    public async openSearch(options:TOptions) {
-        const url = this.baseUrlWithParameters(options)
-        await super.open(url)
-    }
-    
-    /** @deprecated Use openSearch */
-    public async open(path:str|URL= this.baseUrl) {
-        await super.open(path)
-    }
 }
 
 /** The base search page */
-export const baseSearch = new class extends BaseSearch<CategoryOptions> {
+export const baseSearch = new class extends BaseSearch {
     public get subUrl() { return "search" }
 }
