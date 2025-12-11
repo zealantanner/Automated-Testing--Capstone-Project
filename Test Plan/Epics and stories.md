@@ -13,6 +13,7 @@
 	- #### Input Field:
 	1. Test: Input text
 		- [[Makes the typeahead appear]]
+		- [[Activates search on enter]]
 	2. Test(Negative): Input nonsense text 
 		- [[Shows no results in the typeahead]]
 	3. Test(Negative): Input too many characters 

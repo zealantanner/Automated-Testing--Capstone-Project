@@ -24,7 +24,7 @@ describe(`Search Bar [MTQA-4227]`, () => {
                 // Confirm typeahead appears
                 await Assert.SearchBar.confirmTypeaheadDisplayed()
             })
-            it(`Activates search on enter`, async () => {//> add to obsidian and jira
+            it(`Activates search on enter`, async () => {
                 const beforeUrl = await browser.getUrl()
                 // Press enter to search
                 await SearchPage.SearchBar.activateSearch({pressEnterInstead:true})

@@ -150,16 +150,29 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes.md",
+                "file": "Search Bar/Tests/Input field/Activates search on enter.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Notes"
+              "title": "Activates search on enter"
+            }
+          },
+          {
+            "id": "f83e603a6165b6ac",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Search Bar/Tests/Input field/Activates search on enter.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Activates search on enter"
             }
           }
-        ],
-        "currentTab": 8
+        ]
       }
     ],
     "direction": "vertical"
@@ -322,24 +335,26 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "f0a3f6c516b647be",
+  "active": "b1f1c82fa25d8021",
   "lastOpenFiles": [
+    "Search Bar/Tests/Input field/Activates search on enter.md",
     "Epics and stories.md",
-    "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
+    "Search Bar/Tests/Input field/Inputting text feels normal.md",
+    "Search Bar/Search Bar.canvas",
     "Test Plan.canvas",
+    "Notes.md",
+    "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
     "Search Page Categories/images/Category.png",
     "Search Page Categories/Tests/Removes a category.md",
     "Search Page Sort By Dropdown/Tests/Sorting by name alphabetically.md",
     "Search Page Categories/Tests/Items that are irrelevant to the filter are not included.md",
     "!misc/trash/Removed.canvas",
-    "Notes.md",
     "Nav Links/Navbar dropdown links.md",
     "Search Page Sort By Dropdown/Tests/Sorting by date -  unsure.md",
     "Search Page Sort By Dropdown/Tests/Sorting by price.md",
     "Search Page Sort By Dropdown/Tests/Sorting by rating.md",
     "Search Page Sort By Dropdown/Tests/Sorting by popularity.md",
     "Search Page Categories/Tests/Adds a category.md",
-    "Search Bar/Search Bar.canvas",
     "!misc/trash/Untitled.md",
     "!misc/Canvases.md",
     "!misc/trash",
@@ -360,7 +375,6 @@
     "Search Bar/Tests/Input field/Makes the typeahead appear.md",
     "Nav Links/Tests/Confirms href is correct.md",
     "Nav Links/Tests/Opens each dropdown.md",
-    "!misc/trash/Typeahead/Results/Shows correct keywords in the title and footer.md",
     "Search Page Sort By Dropdown/images/Page 1-69.png",
     "Untitled.base",
     "Search Bar/Tests/Submit Button",
