@@ -9,6 +9,7 @@ import NavBar from '../../elements/base/navBar.el'
 export default abstract class Base {
     /** @param subUrl https://www.parts-express.com/ `subUrl` */
     public abstract get subUrl():str
+    
     /** https://www.parts-express.com/ `subUrl` */
     public get baseUrl() { return new URL(this.subUrl,"https://www.parts-express.com") }
 
