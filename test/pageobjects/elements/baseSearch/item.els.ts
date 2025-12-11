@@ -23,7 +23,6 @@ export default class Item extends MyElement {
     }
 
     private get $starRating() { return this.$base.$('.global-views-star-rating-area-fill') }
-    
     public async getStarRating() {
         await this.waitForLoad()
         await this.$starRating.waitForExist()

@@ -2,19 +2,20 @@ import { customTimeout, getElementByText, str } from "../../../utils/utils"
 import { $, $ as $x } from "@wdio/globals"
 import MyElement from "../element"
 
+export type NavLink = {
+    text:str,
+    path:str,
+}
 export type NavMenu = {
     menuName:str,
-    links:{
-        text:str,
-        path:str,
-    }[],
+    links:NavLink[],
 }
 export default class NavBar extends MyElement {
     public get $base() { return $('.navbar') }
     
     readonly dropdownLinks:NavMenu[] = [
         {
-            menuName: "SHOP",
+            menuName:"SHOP",
             links: [
                 { text:"New Products", path:"/promodisplay/N?order=ss_searchable_updated_date:asc" },
                 { text:"Shop by Brand", path:"/brands" },
@@ -31,7 +32,7 @@ export default class NavBar extends MyElement {
             ]
         },
         {
-            menuName: "DEALS",
+            menuName:"DEALS",
             links: [
                 { text:"On Sale", path:"/promo/on_sale_today" },
                 { text:"Liquidation Center", path:"/liquidation" },
@@ -40,7 +41,7 @@ export default class NavBar extends MyElement {
             ]
         },
         {
-            menuName: "PROFESSIONAL",
+            menuName:"PROFESSIONAL",
             links: [
                 { text:"Commercial Accounts", path:"/commercial-account" },
                 { text:"OEM/ODM Services", path:"/oem" },
@@ -51,7 +52,7 @@ export default class NavBar extends MyElement {
             ]
         },
         {
-            menuName: "GET HELP",
+            menuName:"GET HELP",
             links: [
                 { text:"FAQs", path:"/faq" },
                 { text:"Tech Support", path:"/contact-us" },
@@ -61,7 +62,7 @@ export default class NavBar extends MyElement {
             ]
         },
         {
-            menuName: "LEARN",
+            menuName:"LEARN",
             links: [
                 { text:"Resource Center", path:"/resource-center" },
                 { text:"Customer Project Gallery", path:"http://projectgallery.parts-express.com/" },
@@ -73,20 +74,14 @@ export default class NavBar extends MyElement {
     public async openDropdown(dropdown:NavMenu) {
         await this.waitForLoad()
         const $dropdown = getElementByText(dropdown.menuName)
-        const isOpen = (await $dropdown.getAttribute("aria-expanded")) === "true"
-        if(!isOpen) {
-            await $dropdown.click()
-        }
-        await this.waitForLoad()
+        await $dropdown.click()
     }
     
-    public async clickLink(dropdown:NavMenu, linkName:str) {
-        //> use dropdownLinks.dropdowntitle, not just title. I need the menuname if I want to get the element by text
-        //> same with asserts and openDropdown
+    public async clickLink(dropdown:NavMenu, link:NavLink) {
         await this.waitForLoad()
+
         const $dropdown = getElementByText(dropdown.menuName)
-        const $linkToClick = getElementByText(linkName,$dropdown)
+        const $linkToClick = getElementByText(link.text,$dropdown)
         await $linkToClick.click()
-        await this.waitForLoad()
     }
 }

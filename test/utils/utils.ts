@@ -11,11 +11,28 @@ export const searchQueries = [
     "adapter","amp","amplifier","audio","cable","jack","microphone","plug","power","speaker","sound","stand","stereo","tool","wire"
 ]
 
-export const randLetters = (length = 5):str => Math.random().toString(36).slice(2, 2+length)
-
-export function randChars(length = 5):str {
+export function randLetters(length=5):str {
+    const keyboardChars = [
+        ...range(48,57), // 0-9
+        ...range(65,90), // A-Z
+        ...range(97,122),// a-z
+    ]
+    const goodCharacters:any[] = [
+        [32], // Space
+        ...Array(5).fill(null).map(()=>[...keyboardChars]),
+    ]
     const chars:str[] = []
-    for (let i = 0; i < length; i++) {
+    for(let i=0;i<length;i++) {
+        const val = String.fromCharCode(pickRandomFrom(pickRandomFrom(goodCharacters)))
+        chars.push(val)
+    }
+    return chars.join("")
+}
+
+
+export function randChars(length=5):str {
+    const chars:str[] = []
+    for (let i=0;i<length;i++) {
         const Numtostr = Math.floor(Math.random() * 2000);
         const val = String.fromCharCode(Numtostr)
         chars.push(val)
@@ -57,11 +74,3 @@ export function charScore(word:str):number {
     if (!char) return 0;
     return char.charCodeAt(0);
 }
-
-
-/** waits to stop loading */
-// export async function waitForLoad() {
-//     const $loadingIcon = $('#loadingIndicator')
-//     await $loadingIcon.waitForDisplayed({reverse:true})
-//     // await this.loadingIcon.waitForExist({reverse:true})
-// }

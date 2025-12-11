@@ -15,7 +15,6 @@ export default class CategorySidebar extends MyElement {
     
     public async isOpen() {
         await this.waitForLoad()
-        await this.$$categories[0].waitForExist()
         return this.$$categories[0].isDisplayed()
     }
     public async open() {

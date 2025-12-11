@@ -11,12 +11,12 @@ export default class SearchPageSortByDropdown extends AssertBase {
         await expect(await option.isSelected()).toBe(true)
         await base.waitForLoad()
     }
-    private dropdownAssert(value1:int,value2:int,ops:{reverse?:bool}={}) {
+    private async dropdownAssert(value1:int,value2:int,ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
         if(reverse) {
-            expect(value1).toBeGreaterThan(value2)
+            await expect(value1).toBeGreaterThan(value2)
         } else {
-            expect(value1).toBeLessThan(value2)
+            await expect(value1).toBeLessThan(value2)
         }
     }
     private async goToPageAndWait(pageNum:int) {
@@ -44,12 +44,13 @@ export default class SearchPageSortByDropdown extends AssertBase {
         for(const item of page2ndToLastItems) {
             page2ndToLastTotal += await item.getPrice()
         }
-        this.dropdownAssert(page1Total,page2ndToLastTotal,{reverse})
+
+        await this.dropdownAssert(page1Total,page2ndToLastTotal,{reverse})
     }
 
     // loosely sorts by stars
     public async confirmRating(ops:{reverse?:bool}={}) {
-        const {reverse=false} = ops;
+        const {reverse=true} = ops;
         await base.waitForLoad()
 
         const page1Items = await baseSearch.items
@@ -57,6 +58,7 @@ export default class SearchPageSortByDropdown extends AssertBase {
         for(const item of page1Items) {
             page1Total += await item.getStarRating()
         }
+        
         const middlePage = Math.ceil((await baseSearch.getPageInfo()).totalPages/2)
         await this.goToPageAndWait(middlePage)
 
@@ -66,7 +68,7 @@ export default class SearchPageSortByDropdown extends AssertBase {
             page2ndToLastTotal += await item.getStarRating()
         }
         
-        this.dropdownAssert(page1Total,page2ndToLastTotal,{reverse})
+        await this.dropdownAssert(page1Total,page2ndToLastTotal,{reverse})
     }
 
     // loosely sorts by name
@@ -87,7 +89,7 @@ export default class SearchPageSortByDropdown extends AssertBase {
             page2ndToLastTotal += charScore(await item.getTitle())
         }
         
-        this.dropdownAssert(page1Total,page2ndToLastTotal,{reverse})
+        await this.dropdownAssert(page1Total,page2ndToLastTotal,{reverse})
     }
 
     // loosely sorts by price
@@ -107,6 +109,6 @@ export default class SearchPageSortByDropdown extends AssertBase {
             page2ndToLastTotal += await item.getPrice()
         }
 
-        this.dropdownAssert(page1Total,page2ndToLastTotal,{reverse})
+        await this.dropdownAssert(page1Total,page2ndToLastTotal,{reverse})
     } 
 }

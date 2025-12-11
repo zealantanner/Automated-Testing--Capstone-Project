@@ -1,21 +1,20 @@
 import { bool, str, int, _, getElementByText } from "../utils/utils"
 import { base } from "../pageobjects/pages/base/base"
 
-export type AssertOps = { reverse?:bool }
+
 
 export default class AssertBase {
     public async href($element:ChainablePromiseElement, path:str|RegExp, ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
-        const linkText = await $element.getAttribute("href")
+
+        const href = await $element.getAttribute("href")
+        const assertion = reverse ? expect(href).not : expect(href)
         
-        const expectUrl = (reverse) ? expect(linkText).not : expect(linkText)
-        
-        await base.waitForLoad()
         if(path instanceof RegExp) {
-            await expectUrl.toMatch(path)
+            assertion.toMatch(path)
         } else {
-            await expectUrl.toContain(path)
+            assertion.toContain(path)
         }
     }
 }

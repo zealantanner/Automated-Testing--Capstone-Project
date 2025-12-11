@@ -8,10 +8,9 @@ export default class Popup extends MyElement {
     
     public get $btnClose() { return this.$base.$('button[aria-label="Close dialog"]') }
     public async dismissPopupIfPresent() {
-        await this.waitForLoad()
-        if(await this.$base.isExisting()) {
+        if(await this.$base.isDisplayed()) {
             await this.$btnClose.click()
-            await this.$base.waitForExist({
+            await this.$base.waitForDisplayed({
                 reverse: true,
                 timeout: customTimeout,
             })

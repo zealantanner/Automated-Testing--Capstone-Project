@@ -22,15 +22,25 @@ class Assert {
         await base.waitForLoad()
 
         const currentUrl = await browser.getUrl()
-
         const expectUrl = (reverse) ? expect(currentUrl).not : expect(currentUrl)
         
-        await base.waitForLoad()
         if(path instanceof RegExp) {
             await expectUrl.toMatch(path)
         } else {
             await expectUrl.toContain(path)
         }
+    }
+    public async confirmUrlIs(path:str|URL, ops:{reverse?:bool}={}) {
+        if(path instanceof URL) {
+            path = path.toString()
+        }
+        const {reverse=false} = ops;
+        await base.waitForLoad()
+
+        const currentUrl = await browser.getUrl()
+        const expectUrl = (reverse) ? expect(currentUrl).not : expect(currentUrl)
+        
+        await expectUrl.toBe(path)
     }
 }
 

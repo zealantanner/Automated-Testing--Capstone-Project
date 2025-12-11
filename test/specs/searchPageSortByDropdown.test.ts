@@ -9,16 +9,17 @@ import Assert from "../asserts/assert";
 
 
 describe(`Search Page Sort By Dropdown [MTQA-4231]`, () => {
+    const textToSearch = pickRandomFrom(searchQueries)
     before(async () => {
         // Go to https://www.parts-express.com
         await HomePage.open()
         // Dismiss popup modal via local storage
         await HomePage.Popup.dismissPopupViaLocalStorage()
         // Search for an item in the search bar
-        await HomePage.SearchBar.search(pickRandomFrom(searchQueries))
+        await HomePage.SearchBar.search(textToSearch)
         // Be on the search page
     })
-    describe(`Dropdown options`, () => {
+    describe(`Dropdown options when searching "${textToSearch}`, () => {
         it(`Sorts by "Best Match"`, async () => {
             // Select "Best Match"
             await SearchPage.SortByDropdown.selectOption(0)
@@ -38,7 +39,6 @@ describe(`Search Page Sort By Dropdown [MTQA-4231]`, () => {
             // Confirm items are sorted by popularity, aka reviews
             await Assert.SearchPageSortByDropdown.confirmPopularity()
         })
-
         it(`Sorts by "Highest Rated"`, async () => {
             // Select "Highest Rated"
             await SearchPage.SortByDropdown.selectOption(2)
@@ -47,9 +47,8 @@ describe(`Search Page Sort By Dropdown [MTQA-4231]`, () => {
             // Confirm "Highest Rated" is selected
             await Assert.SearchPageSortByDropdown.confirmOptionIsSelected(2)
             // Confirm items are sorted by rating, aka stars
-            await Assert.SearchPageSortByDropdown.confirmRating({reverse:true})
+            await Assert.SearchPageSortByDropdown.confirmRating()
         })
-
         it(`Sorts by "Name: A - Z"`, async () => {
             // Select "Name: A - Z"
             await SearchPage.SortByDropdown.selectOption(3)

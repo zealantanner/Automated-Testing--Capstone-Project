@@ -18,7 +18,6 @@ describe(`Search Page Categories [MTQA-4229]`, () => {
         await HomePage.Popup.dismissPopupViaLocalStorage()
         //Search for an item in the search bar
         await HomePage.SearchBar.search(pickRandomFrom(searchQueries), {pressEnterInstead:true})
-        //> check if enter actually works
         // Be on the search page
     })
     describe(`The category dropdown opens and closes`, () => {
@@ -34,35 +33,31 @@ describe(`Search Page Categories [MTQA-4229]`, () => {
         })
     })
     describe(`Adding and removing categories`, () => {
-        describe(`Adding a category filters and changes URL`, () => {
-            it(`Adds a category`, async () => {
-                const beforeUrl = await browser.getUrl()
-                const beforeItemAmount = await SearchPage.getresultAmount()
-                // Click to add a category
-                await SearchPage.CategorySidebar.addCategory()
-                // Confirm URL changes
-                await Assert.confirmUrlContains(CategorySearchPage.subUrl)
-                await Assert.confirmUrlContains(beforeUrl, {reverse:true})
-                // Confirm category is displayed as chosen
-                await Assert.SearchPageCategories.confirmCategoryDisplayed()
-                // Confirm items are filtered
-                await Assert.SearchPageCategories.confirmItemsFiltered(beforeItemAmount)
-            })
+        it(`Adds a category`, async () => {
+            const beforeUrl = await browser.getUrl()
+            const beforeItemAmount = await SearchPage.getresultAmount()
+            // Click to add a category
+            await SearchPage.CategorySidebar.addCategory()
+            // Confirm URL changes
+            await Assert.confirmUrlContains(CategorySearchPage.subUrl)
+            await Assert.confirmUrlContains(beforeUrl, {reverse:true})
+            // Confirm category is displayed as chosen
+            await Assert.SearchPageCategories.confirmCategoryDisplayed()
+            // Confirm items are filtered
+            await Assert.SearchPageCategories.confirmItemsFiltered(beforeItemAmount)
         })
-        describe(`Removing a category`, () => {
-            it(`Removes a category`, async () => {
-                const beforeUrl = await browser.getUrl()
-                const beforeItemAmount = await CategorySearchPage.getresultAmount()
-                // Click to remove a category
-                await CategorySearchPage.clearCategories()
-                // Confirm URL changes
-                await Assert.confirmUrlContains(SearchPage.subUrl)
-                await Assert.confirmUrlContains(beforeUrl,{reverse:true})
-                // Confirm category is not displayed as chosen
-                await Assert.SearchPageCategories.confirmCategoryDisplayed({reverse:true})
-                // Confirm items are filtered
-                await Assert.SearchPageCategories.confirmItemsFiltered(beforeItemAmount,{reverse:true})
-            })
+        it(`Removes a category`, async () => {
+            const beforeUrl = await browser.getUrl()
+            const beforeItemAmount = await CategorySearchPage.getresultAmount()
+            // Click to remove a category
+            await CategorySearchPage.clearCategories()
+            // Confirm URL changes
+            await Assert.confirmUrlContains(SearchPage.subUrl)
+            await Assert.confirmUrlContains(beforeUrl,{reverse:true})
+            // Confirm category is not displayed as chosen
+            await Assert.SearchPageCategories.confirmCategoryDisplayed({reverse:true})
+            // Confirm items are filtered
+            await Assert.SearchPageCategories.confirmItemsFiltered(beforeItemAmount,{reverse:true})
         })
     })
 })

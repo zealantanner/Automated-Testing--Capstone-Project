@@ -11,13 +11,14 @@ export default abstract class MyElement {
     public async waitForLoad() {
         const $loadingIcon = $('#loadingIndicator')
         await $loadingIcon.waitForDisplayed({reverse:true})
-        // await this.loadingIcon.waitForExist({reverse:true})
     }
 
-    /** waits until this element exists */
-    public async waitFor() {
+    /** waits until this element is displayed */
+    public async waitFor(ops:{reverse?:bool}={}) {
+        const {reverse=false} = ops;
         await base.waitForLoad()
-        await this.$base.waitForExist()
+        await this.$base.waitForExist({reverse})
         await base.waitForLoad()
     }
 }
+

@@ -26,7 +26,7 @@ describe(`Nav Links [MTQA-4219]`, () => {
             // Open each nav dropdown
             for(const link of dropdown.links) {
                 describe(`Tests link "${link.text}"`, () => {
-                    it(`Confirm "${link.text}" links to the url "${link.path}"`, async () => {
+                    it(`Confirm "${link.text}" links to the path "${link.path}"`, async () => {
                         // Confirm href is correct
                         Assert.NavLinks.confirmNavLink(dropdown,link)
                     })

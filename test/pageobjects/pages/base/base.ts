@@ -21,7 +21,6 @@ export default abstract class Base {
     public async waitForLoad() {
         const $loadingIcon = $('#loadingIndicator')
         await $loadingIcon.waitForDisplayed({reverse:true})
-        // await this.loadingIcon.waitForExist({reverse:true})
     }
 
     /** https://www.parts-express.com/ `subUrl` */
