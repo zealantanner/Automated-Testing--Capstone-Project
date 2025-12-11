@@ -2,7 +2,7 @@ import { bool, int, str } from "../utils/utils"
 import { base } from "../pageobjects/pages/base/base"
 
 
-/** Base for assertions */
+/** Base for all assertions */
 export default class AssertBase {
     /** Asserts `$element` has href that contains `path` */
     protected async assertHref($element:ChainablePromiseElement, path:str|RegExp, ops:{reverse?:bool}={}) {
