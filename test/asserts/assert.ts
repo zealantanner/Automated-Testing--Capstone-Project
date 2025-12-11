@@ -53,5 +53,6 @@ class Assert {
     }
 }
 
+
 /** Parent class for testing */
 export default new Assert();
