@@ -80,7 +80,7 @@ export default abstract class BaseSearch<TOptions extends SearchOptions | Catego
             url.searchParams.set("keywords", options.keywords)
         }
         return url
-    }
+    } 
 
     /** Opens page with specified search parameters */
     public async openSearch(options:TOptions) {
