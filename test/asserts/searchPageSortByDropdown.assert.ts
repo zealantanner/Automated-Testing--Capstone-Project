@@ -29,7 +29,7 @@ export default class SearchPageSortByDropdown extends AssertBase {
         const page1Items = await baseSearch.items
         let page1Total = 0
         for(const item of page1Items) {
-            page1Total += await item.getPrice()
+            page1Total += await item.getReviewCount()
         }
 
         await this.goToPageAndWait(-2)
@@ -37,7 +37,7 @@ export default class SearchPageSortByDropdown extends AssertBase {
         const page2ndToLastItems = await baseSearch.items
         let page2ndToLastTotal = 0
         for(const item of page2ndToLastItems) {
-            page2ndToLastTotal += await item.getPrice()
+            page2ndToLastTotal += await item.getReviewCount()
         }
         await this.assertCompareValues(page1Total,page2ndToLastTotal)
     }

@@ -18,8 +18,8 @@ export default class Item extends MyElement {
         await this.$reviews.waitForExist()
         const reviewText = await this.$reviews.getText()
         
-        const match = reviewText.match(/(?<amount>\d+) Reviews?/)
-        const reviewCount = match?.groups?.amount ? parseInt(match.groups.amount) : 0
+        const match = reviewText.match(/(\d+)/)
+        const reviewCount = match ? parseInt(match[1]) : 0
         return reviewCount
     }
     
@@ -31,8 +31,8 @@ export default class Item extends MyElement {
         if(!ratingText) {
             return 0
         }
-        const match = ratingText.match(/width:(?<amount>\d+)%/)
-        const ratingPercent = match?.groups?.amount ? parseInt(match.groups.amount) : 0
+        const match = ratingText.match(/(\d+)/)
+        const ratingPercent = match ? parseInt(match[1]) : 0
         return ratingPercent
     }
 

@@ -17,7 +17,7 @@ describe(`Search Page Sort By Dropdown [MTQA-4231]`, () => {
         await HomePage.SearchBar.search(textToSearch)
         // Be on the search page
     })
-    describe(`Dropdown options when searching "${textToSearch}`, () => {
+    describe(`Dropdown options when searching for "${textToSearch}"`, () => {
         it(`Sorts by "Best Match"`, async () => {
             // Select "Best Match"
             await SearchPage.SortByDropdown.selectOption(0)
