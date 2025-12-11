@@ -20,8 +20,8 @@ class Assert {
     /** Testing the "Sort By" dropdown on the search page */
     public get SearchPageSortByDropdown() { return new SearchPageSortByDropdown() }
 
-    /** Confirms the current url contains `path` */
-    public async confirmUrlContains(path:str|RegExp|URL, ops:{reverse?:bool}={}) {
+    /** Asserts the current url contains `path` */
+    public async assertUrlContains(path:str|RegExp|URL, ops:{reverse?:bool}={}) {
         if(path instanceof URL) {
             path = path.toString()
         }
@@ -38,8 +38,8 @@ class Assert {
         }
     }
 
-    /** Confirms the current url is exactly `path` */
-    public async confirmUrlIs(path:str|URL, ops:{reverse?:bool}={}) {
+    /** Asserts the current url is exactly `path` */
+    public async assertUrlIs(path:str|URL, ops:{reverse?:bool}={}) {
         if(path instanceof URL) {
             path = path.toString()
         }

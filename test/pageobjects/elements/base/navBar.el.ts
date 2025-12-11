@@ -78,7 +78,7 @@ export default class NavBar extends MyElement {
         },
     ]
 
-    /** Clicks to open `dropdown` */
+    /** Clicks to open specified `dropdown` */
     public async openDropdown(dropdown:NavMenu) {
         await this.waitForLoad()
         const $dropdown = getElementByText(dropdown.menuName)

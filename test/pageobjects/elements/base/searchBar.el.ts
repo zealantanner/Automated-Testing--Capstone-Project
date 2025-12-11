@@ -13,13 +13,13 @@ export default class SearchBar extends MyElement {
     /** Typeahead that appears when using the search bar */
     public get Typeahead() { return new Typeahead(this.$base) }
 
-    /** Sets the value of the input field */
+    /** Sets the value of the input field to `text` */
     public async inputText(text:str) {
         await this.waitForLoad()
         await this.$inputField.setValue(text)
     }
 
-    /** Types characters in the input field */
+    /** Types each character from `text` in the input field */
     public async typeText(text:str) {
         await this.waitForLoad()
         await this.$inputField.waitForExist()
@@ -30,7 +30,7 @@ export default class SearchBar extends MyElement {
         }
     }
 
-    /** Activates search by pressing `enter` or clicking search button */
+    /** Activates search by clicking search button or pressing `enter` */
     public async activateSearch(ops:{pressEnterInstead?:bool}={}) {
         const {pressEnterInstead=false} = ops;
         await this.waitForLoad()
@@ -43,7 +43,7 @@ export default class SearchBar extends MyElement {
         }
     }
 
-    /** Inputs text and activates search */
+    /** Inputs `text` and activates search */
     public async search(text:str="",ops:{pressEnterInstead?:bool}={}) {
         const {pressEnterInstead=false} = ops;
         await this.waitForLoad()

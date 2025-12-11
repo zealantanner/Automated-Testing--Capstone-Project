@@ -5,8 +5,8 @@ import { baseSearch } from "../pageobjects/pages/base/baseSearch"
 
 
 export default class SearchPageCategories extends AssertBase {
-    /** Confirms the category dropdown is open */
-    public async confirmOpen(ops:{reverse?:bool}={}) {
+    /** Asserts the category dropdown is open */
+    public async assertOpen(ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
         
@@ -18,8 +18,8 @@ export default class SearchPageCategories extends AssertBase {
         }
     }
 
-    /** Confirms category is active */
-    public async confirmCategoryChosen(ops:{reverse?:bool}={}) {
+    /** Asserts category is active */
+    public async assertCategoryChosen(ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
         
@@ -32,8 +32,8 @@ export default class SearchPageCategories extends AssertBase {
         }
     }
 
-    /** Confirms items are filtered, should be less than before */
-    public async confirmItemsFiltered(beforeItemAmount:int, ops:{reverse?:bool}={}) {
+    /** Asserts items are filtered, should be less than before */
+    public async assertItemsFiltered(beforeItemAmount:int, ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
 

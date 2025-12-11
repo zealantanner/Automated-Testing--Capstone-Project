@@ -21,80 +21,80 @@ describe(`Search Page Sort By Dropdown [MTQA-4231]`, () => {
         it(`Sorts by "Best Match"`, async () => {
             // Select "Best Match"
             await SearchPage.SortByDropdown.selectOption(0)
-            // Confirm URL changes accordingly
-            await Assert.confirmUrlContains("/search?keywords")
-            // Confirm "Best Match" is selected
-            await Assert.SearchPageSortByDropdown.confirmOptionIsSelected(0)
-            // Confirm items are sorted by relevance - Manual test [MTQA-4232]
+            // Assert URL changes accordingly
+            await Assert.assertUrlContains("/search?keywords")
+            // Assert "Best Match" is selected
+            await Assert.SearchPageSortByDropdown.assertOptionIsSelected(0)
+            // Assert items are sorted by relevance - Manual test [MTQA-4232]
         })
         it(`Sorts by "Most Popular"`, async () => {
             // Select "Most Popular"
             await SearchPage.SortByDropdown.selectOption(1)
-            // Confirm URL changes accordingly
-            await Assert.confirmUrlContains("order=custitem_pe_search_ranking:desc")
-            // Confirm "Most Popular" is selected
-            await Assert.SearchPageSortByDropdown.confirmOptionIsSelected(1)
-            // Confirm items are sorted by popularity, aka reviews
-            await Assert.SearchPageSortByDropdown.confirmPopularity()
+            // Assert URL changes accordingly
+            await Assert.assertUrlContains("order=custitem_pe_search_ranking:desc")
+            // Assert "Most Popular" is selected
+            await Assert.SearchPageSortByDropdown.assertOptionIsSelected(1)
+            // Assert items are sorted by popularity, aka reviews
+            await Assert.SearchPageSortByDropdown.assertPopularity()
         })
         it(`Sorts by "Highest Rated"`, async () => {
             // Select "Highest Rated"
             await SearchPage.SortByDropdown.selectOption(2)
-            // Confirm URL changes accordingly
-            await Assert.confirmUrlContains("order=custitem_pe_reviewrating:desc")
-            // Confirm "Highest Rated" is selected
-            await Assert.SearchPageSortByDropdown.confirmOptionIsSelected(2)
-            // Confirm items are sorted by rating, aka stars
-            await Assert.SearchPageSortByDropdown.confirmRating()
+            // Assert URL changes accordingly
+            await Assert.assertUrlContains("order=custitem_pe_reviewrating:desc")
+            // Assert "Highest Rated" is selected
+            await Assert.SearchPageSortByDropdown.assertOptionIsSelected(2)
+            // Assert items are sorted by rating, aka stars
+            await Assert.SearchPageSortByDropdown.assertRating()
         })
         it(`Sorts by "Name: A - Z"`, async () => {
             // Select "Name: A - Z"
             await SearchPage.SortByDropdown.selectOption(3)
-            // Confirm URL changes accordingly
-            await Assert.confirmUrlContains("order=storedisplayname:asc")
-            // Confirm "Name: A - Z" is selected
-            await Assert.SearchPageSortByDropdown.confirmOptionIsSelected(3)
-            // Confirm items are sorted by name alphabetically
-            await Assert.SearchPageSortByDropdown.confirmNameAlphabetically()
+            // Assert URL changes accordingly
+            await Assert.assertUrlContains("order=storedisplayname:asc")
+            // Assert "Name: A - Z" is selected
+            await Assert.SearchPageSortByDropdown.assertOptionIsSelected(3)
+            // Assert items are sorted by name alphabetically
+            await Assert.SearchPageSortByDropdown.assertNameAlphabetically()
         })
         it(`Sorts by "Name: Z - A"`, async () => {
             // Select "Name: Z - A"
             await SearchPage.SortByDropdown.selectOption(4)
-            // Confirm URL changes accordingly
-            await Assert.confirmUrlContains("order=storedisplayname:desc")
-            // Confirm "Name: Z - A" is selected
-            await Assert.SearchPageSortByDropdown.confirmOptionIsSelected(4)
-            // Confirm items are sorted by name reverse alphabetically
-            await Assert.SearchPageSortByDropdown.confirmNameAlphabetically({reverse:true})
+            // Assert URL changes accordingly
+            await Assert.assertUrlContains("order=storedisplayname:desc")
+            // Assert "Name: Z - A" is selected
+            await Assert.SearchPageSortByDropdown.assertOptionIsSelected(4)
+            // Assert items are sorted by name reverse alphabetically
+            await Assert.SearchPageSortByDropdown.assertNameAlphabetically({reverse:true})
         })
         it(`Sorts by "Price: Low to High"`, async () => {
             // Select "Price: Low to High"
             await SearchPage.SortByDropdown.selectOption(5)
-            // Confirm URL changes accordingly
-            await Assert.confirmUrlContains("order=base_price:asc")
-            // Confirm "Price: Low to High" is selected
-            await Assert.SearchPageSortByDropdown.confirmOptionIsSelected(5)
-            // Confirm items are sorted by price
-            await Assert.SearchPageSortByDropdown.confirmPrice()
+            // Assert URL changes accordingly
+            await Assert.assertUrlContains("order=base_price:asc")
+            // Assert "Price: Low to High" is selected
+            await Assert.SearchPageSortByDropdown.assertOptionIsSelected(5)
+            // Assert items are sorted by price
+            await Assert.SearchPageSortByDropdown.assertPrice()
         })
         it(`Sorts by "Price: High to Low"`, async () => {
             // Select "Price: High to Low"
             await SearchPage.SortByDropdown.selectOption(6)
-            // Confirm URL changes accordingly
-            await Assert.confirmUrlContains("order=base_price:desc")
-            // Confirm "Price: High to Low" is selected
-            await Assert.SearchPageSortByDropdown.confirmOptionIsSelected(6)
-            // Confirm items are sorted by price reverse
-            await Assert.SearchPageSortByDropdown.confirmPrice({reverse:true})
+            // Assert URL changes accordingly
+            await Assert.assertUrlContains("order=base_price:desc")
+            // Assert "Price: High to Low" is selected
+            await Assert.SearchPageSortByDropdown.assertOptionIsSelected(6)
+            // Assert items are sorted by price reverse
+            await Assert.SearchPageSortByDropdown.assertPrice({reverse:true})
         })
         it(`Sorts by "Newest First"`, async () => {
             // Select "Newest First"
             await SearchPage.SortByDropdown.selectOption(7)
-            // Confirm URL changes accordingly
-            await Assert.confirmUrlContains("order=ss_searchable_updated_date:asc")
-            // Confirm "Newest First" is selected
-            await Assert.SearchPageSortByDropdown.confirmOptionIsSelected(7)
-            // Confirm items are sorted by date - (unsure due to blackbox)
+            // Assert URL changes accordingly
+            await Assert.assertUrlContains("order=ss_searchable_updated_date:asc")
+            // Assert "Newest First" is selected
+            await Assert.SearchPageSortByDropdown.assertOptionIsSelected(7)
+            // Assert items are sorted by date - (unsure due to blackbox)
         })
     })
 })

@@ -14,8 +14,8 @@ export default class SearchBar extends AssertBase {
             .catch(() => {})
     }
 
-    /** Confirms the typeahead is open */
-    public async confirmTypeaheadDisplayed(ops:{reverse?:bool}={}) {
+    /** Asserts the typeahead is open */
+    public async assertTypeaheadDisplayed(ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
         await this.waitForTypeahead()
@@ -28,8 +28,8 @@ export default class SearchBar extends AssertBase {
         }
     }
 
-    /** Confirms the open typeahead has results */
-    public async confirmTypeaheadShowsResults(ops:{reverse?:bool}={}) {
+    /** Asserts the open typeahead has results */
+    public async assertTypeaheadShowsResults(ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
         await this.waitForTypeahead()
@@ -49,8 +49,8 @@ export default class SearchBar extends AssertBase {
         }
     }
 
-    /** Confirms search bar text length is `charAmount` */
-    public async confirmTextLength(charAmount:int,ops:{reverse?:bool}={}) {
+    /** Asserts search bar text length is `charAmount` */
+    public async assertTextLength(charAmount:int,ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
 

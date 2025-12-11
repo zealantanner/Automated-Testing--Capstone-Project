@@ -21,15 +21,15 @@ describe(`Search Bar [MTQA-4227]`, () => {
             it(`Makes the typeahead appear`, async () => {
                 // Input some valid text into search box
                 await SearchPage.SearchBar.inputText(validText)
-                // Confirm typeahead appears
-                await Assert.SearchBar.confirmTypeaheadDisplayed()
+                // Assert typeahead appears
+                await Assert.SearchBar.assertTypeaheadDisplayed()
             })
             it(`Activates search on enter`, async () => {
                 const beforeUrl = await browser.getUrl()
                 // Press enter to search
                 await SearchPage.SearchBar.activateSearch({pressEnterInstead:true})
-                // Confirm search activates on enter
-                await Assert.confirmUrlIs(beforeUrl,{reverse:true})
+                // Assert search activates on enter
+                await Assert.assertUrlIs(beforeUrl,{reverse:true})
             })
         })
         describe(`(Negative) Input too many characters`, () => {
@@ -38,9 +38,9 @@ describe(`Search Bar [MTQA-4227]`, () => {
                 // Input more than 100 characters into search box
                 await SearchPage.SearchBar.inputText(almostTooMuchText)
                 await SearchPage.SearchBar.typeText(randLetters(5))
-                // Confirm only 100 characters are able to be in the text box
-                await Assert.SearchBar.confirmTextLength(100)
-                await Assert.SearchBar.confirmTextLength(103,{reverse:true})
+                // Assert only 100 characters are able to be in the text box
+                await Assert.SearchBar.assertTextLength(100)
+                await Assert.SearchBar.assertTextLength(103,{reverse:true})
             })
         })
         describe(`(Negative) Input nonsense text`, () => {
@@ -48,9 +48,9 @@ describe(`Search Bar [MTQA-4227]`, () => {
                 const randomCharacters = randChars(15)
                 // Input random text into search box
                 await SearchPage.SearchBar.inputText(randomCharacters)
-                // Confirm typeahead appears with no results
-                await Assert.SearchBar.confirmTypeaheadDisplayed()
-                await Assert.SearchBar.confirmTypeaheadShowsResults({reverse:true})
+                // Assert typeahead appears with no results
+                await Assert.SearchBar.assertTypeaheadDisplayed()
+                await Assert.SearchBar.assertTypeaheadShowsResults({reverse:true})
             })
         })
     })
@@ -63,8 +63,8 @@ describe(`Search Bar [MTQA-4227]`, () => {
                 await SearchPage.SearchBar.inputText(text)
                 // Click the search button
                 await SearchPage.SearchBar.activateSearch()
-                // Confirm URL changes
-                await Assert.confirmUrlIs(beforeUrl,{reverse:true})
+                // Assert URL changes
+                await Assert.assertUrlIs(beforeUrl,{reverse:true})
             })
         })
         describe(`(Negative) When the search bar has no text inputted it doesn't search`, () => {
@@ -74,9 +74,9 @@ describe(`Search Bar [MTQA-4227]`, () => {
                 await SearchPage.SearchBar.inputText("")
                 // Click the search button
                 await SearchPage.SearchBar.activateSearch()
-                // Confirm the URL stays and no results
-                await Assert.confirmUrlIs(beforeUrl)
-                await Assert.SearchBar.confirmTypeaheadDisplayed({reverse:true})
+                // Assert the URL stays and no results
+                await Assert.assertUrlIs(beforeUrl)
+                await Assert.SearchBar.assertTypeaheadDisplayed({reverse:true})
             })
         })
     })

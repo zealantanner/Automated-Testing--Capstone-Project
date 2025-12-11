@@ -18,15 +18,15 @@ describe(`Nav Links [MTQA-4219]`, () => {
             it(`Opens ${dropdown.menuName}`, async () => {
                 // Click dropdown
                 await base.NavBar.openDropdown(dropdown)
-                // Confirm it's open and links are visible
-                await Assert.NavLinks.confirmDropdownOpen(dropdown)
+                // Assert it's open and links are visible
+                await Assert.NavLinks.assertDropdownOpen(dropdown)
             })
             // Open each nav dropdown
             for(const link of dropdown.links) {
                 describe(`Tests link "${link.text}"`, () => {
-                    it(`Confirm "${link.text}" links to the path "${link.path}"`, async () => {
-                        // Confirm href is correct
-                        Assert.NavLinks.confirmNavLink(dropdown,link)
+                    it(`Assert "${link.text}" links to the path "${link.path}"`, async () => {
+                        // Assert href is correct
+                        Assert.NavLinks.assertNavLink(dropdown,link)
                     })
                 })
             }
