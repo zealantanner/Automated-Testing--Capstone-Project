@@ -11,7 +11,7 @@ export default abstract class BaseSearch extends Base {
     /** @param subUrl "search" or "ss_category" */
     public abstract get subUrl():str
     
-    /** https://www.parts-express.com/ `subUrl` */
+    /** https://www.parts-express.com/ `search` or `ss_category` */
     public get baseUrl() { return new URL(this.subUrl, super.baseUrl) }
     
     /** Category menu on search page */
