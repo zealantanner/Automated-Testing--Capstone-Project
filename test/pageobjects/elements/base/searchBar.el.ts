@@ -1,17 +1,20 @@
-import { bool, str, int, _, pickRandomFrom, pickRandom$From } from "../../../utils/utils"
-import { browser, expect, $, $ as $x } from '@wdio/globals'
+import { bool, str, int, pickRandomFrom, pickRandom$From } from "../../../utils/utils"
+import { browser, expect, $ } from '@wdio/globals'
 import MyElement from "../element"
 import Typeahead from "../baseSearch/typeahead.el"
 
 
 
+/** The search bar on the top of the page */
 export default class SearchBar extends MyElement {
     public get $base() { return $('.row-one-search') }
-    
     public get $inputField() { return this.$base.$('.itemssearcher-input') }
     public get $btnConfirm() { return this.$base.$('.itemssearcher-button') }
+
+    /** Typeahead that appears when using the search bar */
     public get Typeahead() { return new Typeahead(this.$base) }
 
+    /** Clears text in the search bar */
     public async clearText() {
         await this.waitForLoad()
         
@@ -19,11 +22,15 @@ export default class SearchBar extends MyElement {
         await browser.keys(['Control', 'a'])
         await browser.keys('Backspace')
     }
+
+    /** Sets the value of the input field */
     public async inputText(text:str) {
         await this.waitForLoad()
         await this.$inputField.setValue(text)
     }
-    public async inputTextViaTyping(text:str) {
+
+    /** Types characters in the input field */
+    public async typeText(text:str) {
         await this.waitForLoad()
         await this.$inputField.waitForExist()
 
@@ -32,13 +39,8 @@ export default class SearchBar extends MyElement {
             await browser.keys(char)
         }
     }
-    public async clearAndInput(text:str) {
-        await this.waitForLoad()
-        await this.clearText()
-        
-        await this.waitForLoad()
-        await this.inputText(text)
-    }
+
+    /** Presses `enter` or clicks search button */
     public async activateSearch(ops:{pressEnterInstead?:bool}={}) {
         const {pressEnterInstead=false} = ops;
         await this.waitForLoad()
@@ -52,6 +54,7 @@ export default class SearchBar extends MyElement {
         await this.waitForLoad()
     }
 
+    /** Inputs text and activates search */
     public async search(text:str="",ops:{pressEnterInstead?:bool}={}) {
         const {pressEnterInstead=false} = ops;
         await this.waitForLoad()

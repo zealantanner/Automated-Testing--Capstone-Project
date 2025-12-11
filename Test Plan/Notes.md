@@ -22,3 +22,5 @@ Due to it being blackbox testing I can't test everything because I don't know ho
 
 I was having a hard time figuring out how to make my code wait for the page to load
 I realized I can just use the loading icon that follows the mouse
+
+When text boxes have a max you can't use `setValue()` you have to actually type the characters instead

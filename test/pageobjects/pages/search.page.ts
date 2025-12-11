@@ -4,10 +4,13 @@ import Base from './base/base';
 import BaseSearch, { SearchOptions } from './base/baseSearch';
 
 
-
+/** Page after searching
+ * 
+ *  https://www.parts-express.com/search */
 class SearchPage extends BaseSearch<SearchOptions> {
-    /** `search` */
-    readonly subUrl = "search"
+    /** @param subUrl "search" */
+    public get subUrl() { return "search" }
+
     /** `keywords:str, page?:int` */
     public async openSearch(options:SearchOptions) {
         await super.openSearch(options)
@@ -16,4 +19,7 @@ class SearchPage extends BaseSearch<SearchOptions> {
 
 
 
+/** Page after searching
+ * 
+ *  https://www.parts-express.com/search */
 export default new SearchPage();

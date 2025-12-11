@@ -1,42 +1,46 @@
-import { bool, str, int, _, getElementByText } from "../utils/utils"
+import { bool, str, int, getElementByText } from "../utils/utils"
 import AssertBase from "./assert.base"
 import { base } from "../pageobjects/pages/base/base"
 import { baseSearch } from "../pageobjects/pages/base/baseSearch"
 
 
 export default class SearchPageCategories extends AssertBase {
-    public async confirmClosed() {
-        await base.waitForLoad()
-
-        const isOpen = await baseSearch.CategorySidebar.isOpen()
-        await expect(isOpen).toBe(false)
-    }
-    public async confirmOpened() {
-        await base.waitForLoad()
-
-        const isOpen = await baseSearch.CategorySidebar.isOpen()
-        await expect(isOpen).toBe(true)
-    }
-
-    public async confirmCategoryDisplayed(ops:{reverse?:bool}={}) {
+    /** Confirms the category dropdown is open */
+    public async confirmOpen(ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
-
+        
+        const $topCategory = baseSearch.CategorySidebar.$$categories[0]
         if(reverse) {
-            await expect(baseSearch.CategorySidebar.$chosenCategory).not.toBeDisplayed()
+            await expect($topCategory).not.toBeDisplayed()
         } else {
-            await expect(baseSearch.CategorySidebar.$chosenCategory).toBeDisplayed()
+            await expect($topCategory).toBeDisplayed()
         }
     }
+
+    /** Confirms category is active */
+    public async confirmCategoryChosen(ops:{reverse?:bool}={}) {
+        const {reverse=false} = ops;
+        await base.waitForLoad()
+        
+        const $chosenCategory = baseSearch.CategorySidebar.$chosenCategory
+        if(reverse) {
+            await expect($chosenCategory).not.toBeDisplayed()
+        } else {
+            await expect($chosenCategory).toBeDisplayed()
+        }
+    }
+    
+    /** Confirms items are filtered, should be less than before */
     public async confirmItemsFiltered(beforeItemAmount:int, ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
 
-        const itemAmount = await baseSearch.getresultAmount()
+        const itemAmount = await baseSearch.getTotalResultAmount()
         if(reverse) {
-            await expect(itemAmount).toBeGreaterThan(beforeItemAmount)
+            expect(itemAmount).toBeGreaterThan(beforeItemAmount)
         } else {
-            await expect(itemAmount).toBeLessThan(beforeItemAmount)
+            expect(itemAmount).toBeLessThan(beforeItemAmount)
         }
     }
 }

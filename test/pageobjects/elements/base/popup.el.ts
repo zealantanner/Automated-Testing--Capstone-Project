@@ -1,12 +1,14 @@
 import { customTimeout, str } from "../../../utils/utils"
-import { $, $ as $x } from "@wdio/globals"
+import { $ } from "@wdio/globals"
 import MyElement from "../element"
 
 
+/** Annoying interrupting popup, disable with `dismissPopupViaLocalStorage` */
 export default class Popup extends MyElement {
     public get $base() { return $('*[data-testid="POPUP"]') }
-    
     public get $btnClose() { return this.$base.$('button[aria-label="Close dialog"]') }
+
+    /** Closes popup by clicking the `X` */
     public async dismissPopupIfPresent() {
         if(await this.$base.isDisplayed()) {
             await this.$btnClose.click()
@@ -16,6 +18,8 @@ export default class Popup extends MyElement {
             })
         }
     }
+
+    /** Closes popup by changing local storage */
     public async dismissPopupViaLocalStorage() {
         await this.waitForLoad()
         const now = Math.floor(Date.now()/1000)

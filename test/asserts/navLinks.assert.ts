@@ -1,12 +1,12 @@
-import { bool, str, int, _, getElementByText } from "../utils/utils"
+import { bool, str, int, getElementByText } from "../utils/utils"
 import AssertBase from "./assert.base"
 import { base } from "../pageobjects/pages/base/base"
 import { baseSearch } from "../pageobjects/pages/base/baseSearch"
 import { NavLink, NavMenu } from "../pageobjects/elements/base/navBar.el";
 
 
-
 export default class NavLinks extends AssertBase {
+    /** Confirms the `dropdown` is open */
     public async confirmDropdownOpen(dropdown:NavMenu, ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
@@ -15,6 +15,7 @@ export default class NavLinks extends AssertBase {
         const isOpen = (await $dropdown.getAttribute("aria-expanded")) === "true"
         await expect(isOpen).toBe(!reverse)
     }
+    /** Confirms the href of `link` under `dropdown` */
     public async confirmNavLink(dropdown:NavMenu, link:NavLink, ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()

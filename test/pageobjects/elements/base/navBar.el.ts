@@ -1,19 +1,23 @@
 import { customTimeout, getElementByText, str } from "../../../utils/utils"
-import { $, $ as $x } from "@wdio/globals"
+import { $ } from "@wdio/globals"
 import MyElement from "../element"
 
 export type NavLink = {
     text:str,
     path:str,
 }
+
 export type NavMenu = {
     menuName:str,
     links:NavLink[],
 }
+
+/** The navigation bar under the header of the page */
 export default class NavBar extends MyElement {
     public get $base() { return $('.navbar') }
-    
-    readonly dropdownLinks:NavMenu[] = [
+
+    /** Navbar names and links */
+    public readonly dropdownLinks:NavMenu[] = [
         {
             menuName:"SHOP",
             links: [
@@ -71,17 +75,10 @@ export default class NavBar extends MyElement {
         },
     ]
 
+    /** Clicks to open `dropdown` */
     public async openDropdown(dropdown:NavMenu) {
         await this.waitForLoad()
         const $dropdown = getElementByText(dropdown.menuName)
         await $dropdown.click()
-    }
-    
-    public async clickLink(dropdown:NavMenu, link:NavLink) {
-        await this.waitForLoad()
-
-        const $dropdown = getElementByText(dropdown.menuName)
-        const $linkToClick = getElementByText(link.text,$dropdown)
-        await $linkToClick.click()
     }
 }

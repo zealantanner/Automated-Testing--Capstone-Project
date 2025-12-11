@@ -1,28 +1,32 @@
-import { bool, str, int, _, pickRandomFrom, pickRandom$From } from "../../../utils/utils"
-import { browser, $, $ as $x } from '@wdio/globals'
+import { bool, str, int, pickRandomFrom, pickRandom$From } from "../../../utils/utils"
+import { browser, $ } from '@wdio/globals'
 import MyElement from "../element"
 
 
 
-/** @param Item an item in the search results */
+/** An item in the search results */
 export default class Item extends MyElement {
     constructor(private _$base:ChainablePromiseElement) {
         super()
     }
     public get $base() { return this._$base }
-    
     private get $reviews() { return this.$base.$('.ratings-total') }
+    private get $starRating() { return this.$base.$('.global-views-star-rating-area-fill') }
+    private get $title() { return this.$base.$('.facets-item-cell-grid-title') }
+    private get $price() { return this.$base.$('.product-views-price-exact') }
+
+    /** Returns the amount of reviews for this item */
     public async getReviewCount() {
         await this.waitForLoad()
         await this.$reviews.waitForExist()
         const reviewText = await this.$reviews.getText()
-
+        
         const match = reviewText.match(/(?<amount>\d+) Reviews?/)
         const reviewCount = match?.groups?.amount ? parseInt(match.groups.amount) : 0
         return reviewCount
     }
-
-    private get $starRating() { return this.$base.$('.global-views-star-rating-area-fill') }
+    
+    /** Returns the percentage of star level for this item */
     public async getStarRating() {
         await this.waitForLoad()
         await this.$starRating.waitForExist()
@@ -35,14 +39,14 @@ export default class Item extends MyElement {
         return ratingPercent
     }
 
-    private get $title() { return this.$base.$('.facets-item-cell-grid-title') }
+    /** Returns the percentage of star level for this item */
     public async getTitle() {
         await this.waitForLoad()
         await this.$title.waitForExist()
         return this.$title.getText()
     }
 
-    private get $price() { return this.$base.$('.product-views-price-exact') }
+    /** Returns the price for this item */
     public async getPrice() {
         await this.waitForLoad()
         await this.$price.waitForExist()

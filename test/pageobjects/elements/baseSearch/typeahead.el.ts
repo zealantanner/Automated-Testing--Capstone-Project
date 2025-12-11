@@ -1,10 +1,10 @@
-import { bool, str, int, _, pickRandomFrom, pickRandom$From } from "../../../utils/utils"
-import { $, $ as $x, $$ } from "@wdio/globals"
+import { bool, str, int, pickRandomFrom, pickRandom$From } from "../../../utils/utils"
+import { $, $$ } from "@wdio/globals"
 import MyElement from "../element"
 
 
 
-
+/** Typeahead that appears when using the search bar */
 export default class Typeahead extends MyElement {
     constructor(private $parentBase:ChainablePromiseElement) {
         super()
@@ -17,23 +17,6 @@ export default class Typeahead extends MyElement {
             $$items: this.$base.$$('.typehaead-searchspring-item'),
             $footer: this.$base.$('.typehaead-searchspring-searchresult-link'),
         }
-    }
-
-
-    public get $$options() { return this.$base.$$('option') }
-    public get $selectedOption() { return this.$base.$('option[selected]') }
-
-    public async selectOption(optionNum:int) {
-        await this.waitForLoad()
-        await this.$base.waitForExist()
-        
-        await this.$base.click()
-        await this.waitForLoad()
-
-        await this.$$options[optionNum].waitForExist()
-        await this.$$options[optionNum].click()
-        await this.waitForLoad()
-        // await this.$base.se
     }
 }
 

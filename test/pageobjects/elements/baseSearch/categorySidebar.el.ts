@@ -1,22 +1,23 @@
-import { bool, str, int, _, pickRandomFrom, pickRandom$From } from "../../../utils/utils"
-import { $, $ as $x, $$ } from "@wdio/globals"
+import { bool, str, int, pickRandomFrom, pickRandom$From } from "../../../utils/utils"
+import { $, $$ } from "@wdio/globals"
 import MyElement from "../element"
 
 
 
-
+/** Category menu on search page */
 export default class CategorySidebar extends MyElement {
     public get $base() { return $('[data-facet-id="ss_category"]') }
-    
     public get $btnExpander() { return this.$base.$('.facets-faceted-navigation-item-facet-group-expander') }
-    
     public get $$categories() { return this.$base.$$('li a') }
     public get $chosenCategory() { return this.$base.$('.facets-faceted-navigation-item-facet-option.option-active') }
     
+    /** Returns a `bool` for if the category dropdown is open */
     public async isOpen() {
         await this.waitForLoad()
         return this.$$categories[0].isDisplayed()
     }
+
+    /** Clicks to open the category dropdown */
     public async open() {
         await this.waitForLoad()
         await this.$btnExpander.waitForExist()
@@ -26,6 +27,8 @@ export default class CategorySidebar extends MyElement {
         await this.$$categories[0].waitForDisplayed()
         await this.waitForLoad()
     }
+
+    /** Clicks to close the category dropdown */
     public async close() {
         await this.waitForLoad()
         if(await this.isOpen()) {
@@ -35,20 +38,18 @@ export default class CategorySidebar extends MyElement {
         await this.waitForLoad()
     }
     
+    /** Clicks to add a random category unless specified by `index?` */
     public async addCategory(index?:int) {
         await this.waitForLoad()
         const $category = (index)
-            ? this.$$categories[index]
-            : await pickRandom$From(this.$$categories)
+        ? this.$$categories[index]
+        : await pickRandom$From(this.$$categories)
         await $category.click()
         await this.waitForLoad()
     }
+    
+    /** Clicks the added category to remove it */
     public async removeCategory() {
-        await this.waitForLoad()
-        await this.$chosenCategory.click()
-        await this.waitForLoad()
-    }
-    public async clearCategories() {
         await this.waitForLoad()
         await this.$chosenCategory.click()
         await this.waitForLoad()
