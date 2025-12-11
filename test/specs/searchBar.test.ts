@@ -1,23 +1,24 @@
 import HomePage from "../pageobjects/pages/home.page"
 import SearchPage from "../pageobjects/pages/search.page"
 import Assert from "../asserts/assert"
-import { pickRandomFrom, randChars, randLetters, searchQueries } from "../utils/utils"
+import { pickRandomFrom, randChars, randLetters, range, searchQueries, shuffle } from "../utils/utils"
 
 
 
 
 describe(`Search Bar [MTQA-4227]`, () => {
+    const randomizedQueries = shuffle(searchQueries)
     before(async () => {
         // Go to https://www.parts-express.com
         await HomePage.open()
         // Dismiss popup modal via local storage
         await HomePage.Popup.dismissPopupViaLocalStorage()
         // Go to search page
-        await HomePage.SearchBar.search(pickRandomFrom(searchQueries))
+        await HomePage.SearchBar.search(randomizedQueries[0])
     })
     describe(`Input field`, () => {
-        describe(`Input text`, () => {
-            const validText = pickRandomFrom(searchQueries)
+        const validText = randomizedQueries[1]
+        describe(`Input text "${validText}"`, () => {
             it(`Makes the typeahead appear`, async () => {
                 // Input some valid text into search box
                 await SearchPage.SearchBar.inputText(validText)
@@ -56,8 +57,8 @@ describe(`Search Bar [MTQA-4227]`, () => {
     })
     describe(`Submit Button`, () => {
         describe(`URL changes with valid text inputted`, () => {
-            it(`Changes URL according to text inputted`, async () => {
-                const text = pickRandomFrom(searchQueries)
+            const text = randomizedQueries[2]
+            it(`Changes URL according to text inputted "${text}"`, async () => {
                 const beforeUrl = await browser.getUrl()
                 // Input text into search box
                 await SearchPage.SearchBar.inputText(text)
@@ -81,4 +82,3 @@ describe(`Search Bar [MTQA-4227]`, () => {
         })
     })
 })
-

@@ -24,7 +24,7 @@ export default class SearchPageCategories extends AssertBase {
         await base.waitForLoad()
         
         const $chosenCategory = baseSearch.CategorySidebar.$chosenCategory
-        await $chosenCategory.waitForExist()
+        await $chosenCategory.waitForExist({reverse})
         if(reverse) {
             await expect($chosenCategory).not.toBeDisplayed()
         } else {

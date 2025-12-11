@@ -14,7 +14,7 @@ describe(`Search Page Categories [MTQA-4229]`, () => {
         // Dismiss popup modal via local storage
         await HomePage.Popup.dismissPopupViaLocalStorage()
         //Search for an item in the search bar
-        await HomePage.SearchBar.search(pickRandomFrom(searchQueries), {pressEnterInstead:true})
+        await HomePage.SearchBar.search(pickRandomFrom(searchQueries))
         // Be on the search page
     })
     describe(`The category dropdown opens and closes`, () => {
@@ -34,7 +34,7 @@ describe(`Search Page Categories [MTQA-4229]`, () => {
             const beforeUrl = await browser.getUrl()
             const beforeItemAmount = await SearchPage.getTotalResultAmount()
             // Click to add a category
-            await SearchPage.CategorySidebar.addCategory()
+            await SearchPage.CategorySidebar.addCategory({preferFirstHalf:true})
             // Assert URL changes
             await Assert.assertUrlContains(CategorySearchPage.subUrl)
             await Assert.assertUrlContains(beforeUrl,{reverse:true})

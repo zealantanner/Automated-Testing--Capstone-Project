@@ -1,4 +1,4 @@
-import { int, pickRandom$From } from "../../../utils/utils"
+import { bool, int, pickRandom$From } from "../../../utils/utils"
 import MyElement from "../element"
 
 
@@ -35,17 +35,19 @@ export default class CategorySidebar extends MyElement {
     }
 
     /** Clicks to add a random category unless specified by `index?` */
-    public async addCategory(index?:int) {
+    public async addCategory(ops:{index?:int,preferFirstHalf?:bool}={}) {
+        const {index,preferFirstHalf=false} = ops;
         await this.waitForLoad()
         const $category = (index)
-        ? this.$$categories[index]
-        : await pickRandom$From(this.$$categories)
+            ? this.$$categories[index]
+            : await pickRandom$From(this.$$categories, {preferFirstHalf})
         await $category.click()
     }
 
     /** Clicks the added category to remove it */
     public async removeCategory() {
         await this.waitForLoad()
+        await this.$chosenCategory.waitForExist()
         await this.$chosenCategory.click()
     }
 }

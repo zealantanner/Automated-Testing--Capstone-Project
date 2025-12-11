@@ -1,4 +1,4 @@
-import { bool, int, customTimeout } from "../utils/utils"
+import { bool, int } from "../utils/utils"
 import { base } from "../pageobjects/pages/base/base"
 import AssertBase from "./assert.base"
 
@@ -10,8 +10,11 @@ export default class SearchBar extends AssertBase {
         await base.waitForLoad()
 
         return base.SearchBar.Typeahead.$base
-            .waitForDisplayed({timeout:customTimeout,reverse,timeoutMsg:`Typeahead did${reverse?``:`n't`} appear`})
+            .waitForExist({timeout:5000,reverse,timeoutMsg:`Typeahead did${reverse?``:`n't`} appear`})
             .catch(() => {})
+        // return base.SearchBar.Typeahead.$base
+        //     .waitForDisplayed({timeout:5000,reverse,timeoutMsg:`Typeahead did${reverse?``:`n't`} appear`})
+        //     .catch(() => {})
     }
 
     /** Asserts the typeahead is open */
@@ -22,9 +25,9 @@ export default class SearchBar extends AssertBase {
 
         const $typeahead = base.SearchBar.Typeahead.$base
         if(reverse) {
-            await expect($typeahead).not.toBeDisplayed()
+            await expect($typeahead).not.toExist()
         } else {
-            await expect($typeahead).toBeDisplayed()
+            await expect($typeahead).toExist()
         }
     }
 

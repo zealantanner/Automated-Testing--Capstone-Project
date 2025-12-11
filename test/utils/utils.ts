@@ -3,12 +3,12 @@ export type bool = boolean;
 export type int = number;
 export type str = string;
 
-export const customTimeout = 5000;
-
+/** List of good search queries to test with */
 export const searchQueries = [
     "adapter","amp","amplifier","audio","cable","jack","microphone","plug","power","speaker","sound","stand","stereo","tool","wire"
 ]
 
+/** Returns a string of random letters numbers and spaces */
 export function randLetters(length=5):str {
     const keyboardChars = [
         ...range(48,57), // 0-9
@@ -27,7 +27,7 @@ export function randLetters(length=5):str {
     return chars.join("")
 }
 
-
+/** Returns a string of random unicode characters */
 export function randChars(length=5):str {
     const chars:str[] = []
     for (let i=0;i<length;i++) {
@@ -38,6 +38,7 @@ export function randChars(length=5):str {
     return chars.join("")
 }
 
+/** Returns an array counting from `start` to `stop` */
 export function range(start:int, stop:int):int[] {
     const result:int[] = [];
     for(let i = start; i <= stop; i++) {
@@ -46,27 +47,41 @@ export function range(start:int, stop:int):int[] {
     return result;
 }
 
+/** Returns randomized array */
 export function shuffle<T>(array:T[]):T[] {
     return array
-    .map(value => ({ value, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value)
+        .map(value => ({ value, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value)
 }
 
+/** Returns random value in `array` */
 export function pickRandomFrom<T>(array:T[]):T {
     return shuffle(array)[0]
 }
-export async function pickRandom$From($$elements:ChainablePromiseArray):Promise<ChainablePromiseElement> {
-    const randomVal = shuffle(range(0, await $$elements.length - 1))[0]
+
+/** Returns random `$element` in `$$elements` */
+export async function pickRandom$From($$elements:ChainablePromiseArray, ops:{preferFirstHalf?:bool}={}):Promise<ChainablePromiseElement> {
+    const {preferFirstHalf=false} = ops;
+    
+    const length = await $$elements.length
+    const arrayLength = preferFirstHalf ? Math.ceil(length/2) : length-1
+
+    const randomVal = pickRandomFrom(range(0, arrayLength))
+
     const $toReturn = $$elements[randomVal]
     return $toReturn
 }
 
+/** Returns `$element` that has text: `text` */
 export function getElementByText(text:str, $base=$('body')) {
     const $element = $base.$(`//*[contains(text(),'${text}')]`)
     return $element
 }
 
+/** Returns score for the first character in given string `word`
+ * 
+ * `A` is lower, `Z` is higher */
 export function charScore(word:str):number {
     const char = word.trim().toLowerCase()[0];
     if (!char) return 0;
