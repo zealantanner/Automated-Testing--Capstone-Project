@@ -14,14 +14,14 @@ export default class SearchBar extends MyElement {
     /** Typeahead that appears when using the search bar */
     public get Typeahead() { return new Typeahead(this.$base) }
 
-    /** Clears text in the search bar */
-    public async clearText() {
-        await this.waitForLoad()
+    // /** Clears text in the search bar */
+    // public async clearText() {
+    //     await this.waitForLoad()
         
-        await this.$inputField.click()
-        await browser.keys(['Control', 'a'])
-        await browser.keys('Backspace')
-    }
+    //     await this.$inputField.click()
+    //     await browser.keys(['Control', 'a'])
+    //     await browser.keys('Backspace')
+    // }
 
     /** Sets the value of the input field */
     public async inputText(text:str) {

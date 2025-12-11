@@ -14,6 +14,9 @@ describe(`Search Bar [MTQA-4227]`, () => {
         await HomePage.open()
         // Dismiss popup modal via local storage
         await HomePage.Popup.dismissPopupViaLocalStorage()
+        //> get rid of cookie toast
+        //> class="cookie-warning-banner-view-close-button"
+
         // Go to search page
         await HomePage.SearchBar.search(pickRandomFrom(searchQueries))
     })
@@ -74,8 +77,8 @@ describe(`Search Bar [MTQA-4227]`, () => {
             it(`Should make nothing happen on click with no text in input field`, async () => {
                 const beforeUrl = await browser.getUrl()
                 // Have no text inputted in the search box
-                // await SearchPage.SearchBar.inputText("")
-                await SearchPage.SearchBar.clearText()
+                await SearchPage.SearchBar.inputText("")
+                // await SearchPage.SearchBar.clearText()
                 // Click the search button
                 await SearchPage.SearchBar.activateSearch()
                 // Confirm the URL stays and no results

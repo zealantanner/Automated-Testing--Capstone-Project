@@ -40,12 +40,12 @@ export default class SearchBar extends AssertBase {
         const $$items = base.SearchBar.Typeahead.Results.$$items
         if(reverse) {
             // Typeahead title starts with "No results for"
-            await expect($title).toHaveText("No results for")
+            await expect($title).toHaveText(/No results for/)
             // Has no items in the results
             await expect($$items).toBeElementsArrayOfSize(0)
         } else {
             // Typeahead title starts with "Search results for"
-            await expect($title).toHaveText("Search results for")
+            await expect($title).toHaveText(/Search results for/)
             // Has an item in the results
             await expect($$items).toBeElementsArrayOfSize({gte:1})
         }

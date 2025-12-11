@@ -11,8 +11,8 @@ export type SearchOptions = { keywords:str, page?:int }
 export type CategoryOptions = { categories:str[], keywords?:str, page?:int }
 
 //> sometimes they have "keywords=wire connector&oq=wire"
-//> might delete all the ability to search via url
-//> get rid of readonly jank with suburl
+//> delete all the ability to search via url //>//>//>
+//> look at all references
 
 /** The base search page */
 export default abstract class BaseSearch<TOptions extends SearchOptions | CategoryOptions> extends Base {
