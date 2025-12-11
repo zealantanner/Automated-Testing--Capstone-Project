@@ -1,7 +1,7 @@
 import HomePage from "../pageobjects/pages/home.page"
 import SearchPage from "../pageobjects/pages/search.page"
 import Assert from "../asserts/assert"
-import { pickRandomFrom, randChars, randLetters, range, searchQueries, shuffle } from "../utils/utils"
+import { randChars, randLetters, searchQueries, shuffle } from "../utils/utils"
 
 
 

@@ -8,13 +8,14 @@ import CategorySearchPage from "../pageobjects/pages/categorySearch.page";
 
 
 describe(`Search Page Categories [MTQA-4229]`, () => {
+    const textToSearch = pickRandomFrom(searchQueries)
     before(async () => {
         // Go to https://www.parts-express.com
         await HomePage.open()
         // Dismiss popup modal via local storage
         await HomePage.Popup.dismissPopupViaLocalStorage()
         //Search for an item in the search bar
-        await HomePage.SearchBar.search(pickRandomFrom(searchQueries))
+        await HomePage.SearchBar.search(textToSearch)
         // Be on the search page
     })
     describe(`The category dropdown opens and closes`, () => {
