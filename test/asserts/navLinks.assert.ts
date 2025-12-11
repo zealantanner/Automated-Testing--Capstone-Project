@@ -4,6 +4,7 @@ import { base } from "../pageobjects/pages/base/base"
 import { NavLink, NavMenu } from "../pageobjects/elements/base/navBar.el";
 
 
+/** Testing the nav bar */
 export default class NavLinks extends AssertBase {
     /** Asserts the `dropdown` is open */
     public async assertDropdownOpen(dropdown:NavMenu, ops:{reverse?:bool}={}) {
@@ -16,14 +17,13 @@ export default class NavLinks extends AssertBase {
     }
 
     /** Asserts the href of `link` under `dropdown` */
-    public async assertNavLink(dropdown:NavMenu, link:NavLink, ops:{reverse?:bool}={}) {
-        const {reverse=false} = ops;
+    public async assertNavLink(dropdown:NavMenu, link:NavLink) {
         await base.waitForLoad()
 
         const $dropdown = getElementByText(dropdown.menuName,base.NavBar.$base)
         const $link = getElementByText(link.text,$dropdown)
         const linkText = await $link.getAttribute("href")
-        await this.assertHref($link, linkText, {reverse})
+        await this.assertHref($link, linkText)
         await expect(linkText).toBe(link.path)
     }
 }

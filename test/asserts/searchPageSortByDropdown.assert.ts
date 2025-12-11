@@ -4,6 +4,7 @@ import { base } from "../pageobjects/pages/base/base"
 import { baseSearch } from "../pageobjects/pages/base/baseSearch"
 
 
+/** Testing the "Sort By" dropdown on the search page */
 export default class SearchPageSortByDropdown extends AssertBase {
     /** Asserts a "Sort By" option is selected */
     public async assertOptionIsSelected(optionNum:int) {

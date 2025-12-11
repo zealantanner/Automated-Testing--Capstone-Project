@@ -3,6 +3,7 @@ import { base } from "../pageobjects/pages/base/base"
 import AssertBase from "./assert.base"
 
 
+/** Testing the search bar */
 export default class SearchBar extends AssertBase {
     /** Waits for the typeahead to show up */
     private async waitForTypeahead(ops:{reverse?:bool}={}) {
