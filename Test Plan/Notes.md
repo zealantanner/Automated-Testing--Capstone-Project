@@ -3,11 +3,11 @@ Sometimes category dropdown doesn't appear depending on
 
 For ever test make a md file and add it to the canvas where it should be. with the link to jira
 
-
+`npx wdio run ./wdio.conf.ts --spec .\test\specs\navLinks.test.ts`
 
 
 Presentation:
-Some cool thing I did with my code
+Some cool things I did with my code
 A certain test case example running like my typeahead
 Show injecting local storage
 

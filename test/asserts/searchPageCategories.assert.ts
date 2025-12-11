@@ -29,6 +29,9 @@ export default class SearchPageCategories extends AssertBase {
         } else {
             await expect($chosenCategory).toBeDisplayed()
         }
+//> [firefox 146.0 windows #0-2] Expect $(`[data-facet-id="ss_category"]`).$(`.facets-faceted-navigation-item-facet-option.option-active`) to be displayed
+//> Expected: "displayed"
+//> Received: "not displayed"
     }
 
     /** Confirms items are filtered, should be less than before */

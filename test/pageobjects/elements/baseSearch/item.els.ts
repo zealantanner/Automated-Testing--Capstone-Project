@@ -43,6 +43,7 @@ export default class Item extends MyElement {
     public async getTitle() {
         await this.waitForLoad()
         await this.$title.waitForExist()
+
         return this.$title.getText()
     }
 
@@ -50,8 +51,9 @@ export default class Item extends MyElement {
     public async getPrice() {
         await this.waitForLoad()
         await this.$price.waitForExist()
+
         const priceText = await this.$price.getAttribute('data-rate')
-        const priceNum = priceText ? parseFloat(priceText) : 0
+        const priceNum = priceText ? parseInt(priceText.replace(/\D/g,"")) : 0
         return priceNum
     }
 }

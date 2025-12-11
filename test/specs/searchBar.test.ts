@@ -6,7 +6,7 @@ import { base } from "../pageobjects/pages/base/base"
 
 
 
-
+//> remove url search
 
 describe(`Search Bar [MTQA-4227]`, () => {
     before(async () => {
