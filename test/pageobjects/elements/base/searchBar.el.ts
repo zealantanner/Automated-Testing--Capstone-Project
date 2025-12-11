@@ -21,7 +21,7 @@ export default class SearchBar extends MyElement {
     //     await this.$inputField.click()
     //     await browser.keys(['Control', 'a'])
     //     await browser.keys('Backspace')
-    // }
+    // } //> remove this
 
     /** Sets the value of the input field */
     public async inputText(text:str) {
