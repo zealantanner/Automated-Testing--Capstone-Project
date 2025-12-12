@@ -6,7 +6,7 @@ import SearchPageCategories from "./searchPageCategories.assert"
 import SearchPageSortByDropdown from "./searchPageSortByDropdown.assert"
 
 
-/** Parent class for testing */
+/** Main class for testing */
 class Assert {
     /** Testing nav bar */
     public get NavLinks() { return new NavLinks() }
@@ -34,7 +34,7 @@ class Assert {
             await expectUrl.toContain(path)
         }
     }
-    
+
     /** Asserts current url is exactly `path` */
     public async assertUrlIs(path:str|URL, ops:{reverse?:bool}={}) {
         if(path instanceof URL) {
@@ -50,5 +50,5 @@ class Assert {
     }
 }
 
-/** Parent class for testing */
+/** Main class for testing */
 export default new Assert();

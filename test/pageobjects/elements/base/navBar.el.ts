@@ -69,7 +69,7 @@ export default class NavBar extends MyElement {
         }
     }
 
-    /** Navbar names and links */
+    /** Navbar menu names and links */
     public readonly menusAndLinks:NavMenu[] = [
         {
             title:"SHOP",
@@ -141,21 +141,6 @@ export default class NavBar extends MyElement {
             return navMenu
         } else {
             return menu
-        }
-    }
-    /** Returns specified `NavLink` in `menu` */
-    public getLink(menu:NavMenu,link:int|str|NavLink):NavLink {
-        if(typeof link === "number") { // index
-            const navLink = menu.links[link]
-            return navLink
-        } else if(typeof link === "string") { // title
-            const navLink = menu.links.find((val) => val.title === link)
-            if(!navLink) {
-                throw new Error(`No NavLink with name "${link}" in "${menu.title}"`)
-            }
-            return navLink
-        } else {
-            return link
         }
     }
 

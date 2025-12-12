@@ -21,6 +21,7 @@ export default class SortByDropdown extends MyElement {
 
         await this.$$options[optionNum].waitForExist()
         await this.$$options[optionNum].click()
+
         await base.waitForLoad()
     }
 }

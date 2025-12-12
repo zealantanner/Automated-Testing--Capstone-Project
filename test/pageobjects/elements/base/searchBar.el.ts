@@ -21,7 +21,6 @@ export default class SearchBar extends MyElement {
         await base.waitForLoad()
         await this.$inputField.setValue(text)
     }
-
     /** Types each character from `text` to `$inputField` */
     public async typeText(text:str) {
         await base.waitForLoad()
@@ -45,7 +44,6 @@ export default class SearchBar extends MyElement {
             await this.$btnConfirm.click()
         }
     }
-
     /** Inputs `text` and activates search */
     public async search(text:str="",ops:{pressEnterInstead?:bool}={}) {
         const {pressEnterInstead=false} = ops;

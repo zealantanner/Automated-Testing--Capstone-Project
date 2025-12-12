@@ -52,7 +52,7 @@ export default class SearchPageSortByDropdown extends AssertBase {
             page1Total += await item.getStarRating()
         }
 
-        const middlePage = Math.ceil((await baseSearch.getPageInfo()).totalPages/2)
+        const middlePage = Math.ceil((await baseSearch.getPageInfo()).totalPagesNumber/2)
         await this.goToPageAndWait(middlePage)
 
         const page2ndToLastItems = await baseSearch.items

@@ -11,7 +11,6 @@ class CategorySearchPage extends BaseSearch {
 
     /** "Clear All" button for current filters */
     public get $btnClearAll() { return $('.facets-facets-display-clear') }
-    
     /** Presses "Clear All" to clear filters */
     public async clearCategories() {
         await this.waitForLoad()

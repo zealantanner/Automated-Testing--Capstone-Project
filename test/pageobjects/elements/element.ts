@@ -4,7 +4,7 @@ import { base } from "../pages/base/base"
 
 /** The base for my custom elements */
 export default abstract class MyElement {
-    /** The selector for this element */
+    /** Selector for this element */
     public abstract get $base():ChainablePromiseElement
 
     /** Waits until `this` element is displayed */
@@ -15,7 +15,6 @@ export default abstract class MyElement {
         await this.$base.waitForExist({reverse})
         await base.waitForLoad()
     }
-
     /** Waits for `$element` called `name` to show up */
     public async waitFor($element:ChainablePromiseElement,name:str,ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
@@ -28,5 +27,4 @@ export default abstract class MyElement {
             })
             .catch(() => {})
     }
-
 }

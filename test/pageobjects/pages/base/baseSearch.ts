@@ -10,7 +10,7 @@ import CategorySidebar from '../../elements/baseSearch/categorySidebar.el'
 export default abstract class BaseSearch extends Base {
     /** @param subUrl "search" or "ss_category" */
     public abstract get subUrl():str
-    /** https://www.parts-express.com/ `search` or `ss_category` */
+    /** https://www.parts-express.com/ `"search" | "ss_category"` */
     public get baseUrl() { return new URL(this.subUrl, super.baseUrl) }
     
     /** Category menu on search page */
@@ -18,7 +18,7 @@ export default abstract class BaseSearch extends Base {
     /** "Sort By" dropdown on search page */
     public get SortByDropdown() { return new SortByDropdown() }
 
-    /** Sits above item results on search page, usually says "See `x` results for `search term`" */
+    /** Above item results on search page, usually says "See `x` results for `search term`" */
     private get $totalItemsH2() { return $('.facets-facet-browse-title-products h2') }
     /** Returns current page and total pages for this search */
     public async getTotalResultAmount() {
@@ -26,20 +26,24 @@ export default abstract class BaseSearch extends Base {
         return parseInt(amount)
     }
 
+    /** Element that displays "Page `current page`/`total pages`" */
     private get $pageNumber() { return $('p.global-views-pagination-label-plp-header')}
-    /** Returns current page and total pages for this search */
+    /** Returns `currentPageNumber` and `totalPagesNumber` for this search */
     public async getPageInfo() {
         await this.waitForLoad()
         const textAttr = await this.$pageNumber.getText()
         const match = textAttr.match(/Page (\d+)\/(\d+)/)
-        const currentPageNum = match ? parseInt(match[1]) : -1
-        const totalPages = match ? parseInt(match[2]) : -1
+        const currentPageNumber = match ? parseInt(match[1]) : -1
+        const totalPagesNumber = match ? parseInt(match[2]) : -1
         return {
-            currentPageNum,
-            totalPages,
+            /** Total pages for this search*/
+            currentPageNumber,
+            /** Total pages for this search*/
+            totalPagesNumber,
         }
     }
-
+    
+    /** Each item in the search results, as array of `Item` */
     public get items() {
         return $$('.facets-item-collection-view-cell')
         .map(el => new Item($(el)))
@@ -48,7 +52,7 @@ export default abstract class BaseSearch extends Base {
     /** Changes Url to go to specified page. Supports negative for last pages (`-1` = last page)*/
     public async goToPage(num=1) {
         const pageInfo = await this.getPageInfo()
-        const lastPageNum = pageInfo.totalPages
+        const lastPageNum = pageInfo.totalPagesNumber
         if(num < 0) {
             num = lastPageNum + num + 1
         }
