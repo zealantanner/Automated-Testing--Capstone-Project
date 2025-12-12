@@ -1,13 +1,16 @@
 # Component: Nav Links [[Nav Links.canvas]]
 - ## Test Case: [Nav links (Automated)](https://mtechqa.atlassian.net/browse/MTQA-4219)
-	- For each dropdown:
+	- For each navbar menu:
 		1. Test: Dropdown opens
-			- [[Opens each dropdown]]
-			1. Test: Each link under specified dropdown hrefs to the correct URL
-				- [[Confirms href is correct]]
+			- [[Assert the menu opens]]
+		2. For each link
+			- [[Assert href is correct]]
+			- [[Assert there are no duplicate links]]
+		3. Test: Each link under specified dropdown hrefs to the correct URL
+			- [[Assert href is correct]]
 - ## Test Case: [Nav links (Manual)](https://mtechqa.atlassian.net/browse/MTQA-4220)
-	1. Test: Dropdown aspects behave correctly Dropdown button becomes highlighted
-		- [[Dropdown aspects behave correctly]]
+	1. Test: Assert dropdown aspects behave correctly
+		- [[Assert dropdown aspects behave correctly]]
 # Component: Search Bar [[Search Bar.canvas]]
 - ## Test Case: [Search bar (Automated)](https://mtechqa.atlassian.net/browse/MTQA-4227)
 	- #### Input Field:

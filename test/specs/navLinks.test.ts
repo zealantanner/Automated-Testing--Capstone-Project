@@ -12,7 +12,7 @@ describe(`Nav Links [MTQA-4219]`, () => {
         // Dismiss popup modal via local storage
         await HomePage.Popup.dismissPopupViaLocalStorage()
     })
-    // Each navbar link
+    // Each navbar menu
     describe(`Each navbar menu`, () => {
         // Open each nav menu
         for(const menu1 of base.NavBar.menusAndLinks) {
@@ -31,9 +31,10 @@ describe(`Nav Links [MTQA-4219]`, () => {
                             await Assert.NavLinks.assertNavLink(menu1,link1,link1.path)
                         })
                         describe(`Tests duplicate links for "${link1.title}"`, () => {
+                            // Loop through each link in each menu again
                             for(const menu2 of base.NavBar.menusAndLinks) {
                                 for(const link2 of menu2.links) {
-                                    // Asserts paths are different unless path names are the same
+                                    // If the paths are the same but the names are different
                                     if(link1.path === link2.path && link1.title !== link2.title) {
                                         it(`Asserts link is different than "${link2.title}"`, async () => {
                                             // Assert hrefs don't repeat
@@ -48,7 +49,7 @@ describe(`Nav Links [MTQA-4219]`, () => {
                 it(`Asserts closes`, async () => {
                     // Click to close menu
                     await base.NavBar.closeMenu(menu1)
-                    // Assert  menu is closed
+                    // Assert menu is closed
                     await Assert.NavLinks.assertNavMenuOpen(menu1,{reverse:true})
                 })
             })

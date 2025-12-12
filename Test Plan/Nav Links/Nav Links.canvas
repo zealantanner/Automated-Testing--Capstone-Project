@@ -4,12 +4,12 @@
 		{"id":"5e803f525a9db211","type":"group","x":1600,"y":-1280,"width":920,"height":1120,"color":"4","label":"All the links"},
 		{"id":"dde9e5c191aa9e8c","type":"group","x":1600,"y":-2400,"width":1040,"height":800,"color":"4","label":"Dropdowns"},
 		{"id":"f28424e8caa2e5e7","type":"file","file":"Nav Links/images/Links.png","x":160,"y":-2880,"width":1398,"height":160,"color":"3"},
-		{"id":"aebe2d162ea9f93d","type":"file","file":"Nav Links/Tests/Opens each dropdown.md","x":1640,"y":-2000,"width":280,"height":260,"color":"6"},
+		{"id":"aebe2d162ea9f93d","type":"file","file":"Nav Links/Tests/Automated/Assert the menu opens.md","x":1640,"y":-2000,"width":280,"height":260,"color":"6"},
 		{"id":"e7363b8d2926197e","type":"text","text":"# For each dropdown button","x":1760,"y":-2320,"width":260,"height":100,"color":"4"},
 		{"id":"3bc40201d2374d80","type":"text","text":"# On Click","x":1880,"y":-2180,"width":140,"height":60,"color":"4"},
 		{"id":"0c39f9828a9a3623","type":"text","text":"# For each link in each dropdown","x":1760,"y":-1140,"width":240,"height":100,"color":"4"},
 		{"id":"b4816ade034a2800","type":"text","text":"# Learn","x":1380,"y":-2300,"width":120,"height":60,"color":"4"},
-		{"id":"0a66f3eae4fecc3b","type":"file","file":"Nav Links/Tests/Dropdown aspects behave correctly.md","x":2260,"y":-2000,"width":300,"height":360,"color":"2"},
+		{"id":"0a66f3eae4fecc3b","type":"file","file":"Nav Links/Tests/Manual/Assert dropdown aspects behave correctly.md","x":2260,"y":-2000,"width":300,"height":400,"color":"2"},
 		{"id":"cb9b710879cf2435","type":"file","file":"Nav Links/images/Dropdowns/Learn.png","x":1300,"y":-2200,"width":280,"height":250,"color":"4"},
 		{"id":"5718314b0a56becf","type":"file","file":"Nav Links/Dropdowns/Learn links.md","x":1300,"y":-1320,"width":280,"height":460,"color":"4"},
 		{"id":"45332ecbdb092e03","type":"file","file":"Nav Links/images/Dropdowns/Professional.png","x":580,"y":-2200,"width":360,"height":380,"color":"4"},
@@ -25,7 +25,8 @@
 		{"id":"44ee1bdb160651a4","type":"text","text":"# Deals","x":340,"y":-2300,"width":120,"height":60,"color":"4"},
 		{"id":"938fce4fa09f79c9","type":"file","file":"Nav Links/Dropdowns/Deals links.md","x":260,"y":-1320,"width":280,"height":460,"color":"4"},
 		{"id":"10e130ce5062a1f1","type":"file","file":"Nav Links/Navbar dropdown links.md","x":-60,"y":-680,"width":420,"height":1280,"color":"4"},
-		{"id":"f7c6836d3e7f524d","type":"file","file":"Nav Links/Tests/Confirms href is correct.md","x":1680,"y":-880,"width":320,"height":340,"color":"6"}
+		{"id":"f7c6836d3e7f524d","type":"file","file":"Nav Links/Tests/Automated/Assert href is correct.md","x":1680,"y":-860,"width":320,"height":300,"color":"6"},
+		{"id":"8105974da9f50fc1","type":"file","file":"Nav Links/Tests/Automated/Assert there are no duplicate links.md","x":2140,"y":-860,"width":320,"height":220,"color":"6"}
 	],
 	"edges":[
 		{"id":"ad2191fa5bdb9d89","fromNode":"f28424e8caa2e5e7","fromSide":"bottom","toNode":"16294cf3dbecaaad","toSide":"top","color":"3"},
@@ -60,6 +61,7 @@
 		{"id":"d3e213ece9da46d4","fromNode":"9c7f3f35fab4cc44","fromSide":"right","toNode":"0c39f9828a9a3623","toSide":"left","color":"4"},
 		{"id":"b305882b8a0855de","fromNode":"8234fba86b42af8a","fromSide":"right","toNode":"0c39f9828a9a3623","toSide":"left","color":"4"},
 		{"id":"e8c80c5245cdb4b9","fromNode":"5718314b0a56becf","fromSide":"right","toNode":"0c39f9828a9a3623","toSide":"left","color":"4"},
-		{"id":"b37d9a63a9d04a8d","fromNode":"0c39f9828a9a3623","fromSide":"right","toNode":"0a66f3eae4fecc3b","toSide":"bottom","color":"4"}
+		{"id":"b37d9a63a9d04a8d","fromNode":"0c39f9828a9a3623","fromSide":"right","toNode":"0a66f3eae4fecc3b","toSide":"bottom","color":"4"},
+		{"id":"9d4f737dd93e0c4b","fromNode":"0c39f9828a9a3623","fromSide":"right","toNode":"8105974da9f50fc1","toSide":"top","color":"4"}
 	]
 }

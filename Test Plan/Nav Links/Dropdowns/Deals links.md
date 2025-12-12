@@ -4,4 +4,4 @@
 - [Gift Certificates](https://www.parts-express.com/gift-certificate)
 
 
-[[Confirms href is correct]]
+[[Assert href is correct]]

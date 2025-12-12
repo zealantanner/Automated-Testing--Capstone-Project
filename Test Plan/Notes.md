@@ -42,3 +42,26 @@ When text boxes have a max you can't use `setValue()` you have to actually type 
 //> finish comments on everything
 
 //> go over all jira tickets and obsidian again
+
+(not an excuse):
+There's a few things I couldn't test because I don't know exactly how this website should work
+
+I made an element class that I use for big elements 
+
+Show off favorite test case and things I'm proud of
+
+Don't take a long time
+
+Mention how I `waitForLoad()` by waiting for the loading icon to go away
+## I'm proud of my naming scheme
+How I put $element in front of element so I know it's a ChainablePromiseElement
+
+I put a description on every function and getter
+
+I made a custom element class so I can put an element into another class like this
+`public get CategorySidebar() { return new CategorySidebar() }`
+
+Nav links fails, I say oops, just kidding! that's a problem with the website not my code
+
+Show off how I test if there's duplicate
+Show off sort by dropdown test

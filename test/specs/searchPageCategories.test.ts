@@ -18,20 +18,22 @@ describe(`Search Page Categories [MTQA-4229]`, () => {
         await HomePage.SearchBar.search(textToSearch)
         // Be on search page
     })
-    describe(`Category dropdown opens and closes`, () => {
-        it(`Opens and closes on click`, async () => {
+    describe(`Category dropdown closes and opens`, () => {
+        it(`Assert category dropdown closes`, async () => {
             // Click category dropdown button
             await SearchPage.CategorySidebar.close()
-            // Assert it closes
+            // Assert the category dropdown closes
             await Assert.SearchPageCategories.assertOpen({reverse:true})
+        })
+        it(`Assert category dropdown closes`, async () => {
             // Click category dropdown button again
             await SearchPage.CategorySidebar.open()
-            // Assert it opens
+            // Assert the category dropdown opens
             await Assert.SearchPageCategories.assertOpen()
         })
     })
     describe(`Adding and removing categories`, () => {
-        it(`Adds a category`, async () => {
+        it(`Assert category is added and items are filtered`, async () => {
             const beforeUrl = await browser.getUrl()
             const beforeItemAmount = await SearchPage.getTotalResultAmount()
             // Click to add a category
@@ -44,7 +46,7 @@ describe(`Search Page Categories [MTQA-4229]`, () => {
             // Assert items are filtered
             await Assert.SearchPageCategories.assertItemsFiltered(beforeItemAmount)
         })
-        it(`Removes a category`, async () => {
+        it(`Assert category is removed and items are unfiltered`, async () => {
             const beforeUrl = await browser.getUrl()
             const beforeItemAmount = await CategorySearchPage.getTotalResultAmount()
             // Click to remove a category
@@ -54,7 +56,7 @@ describe(`Search Page Categories [MTQA-4229]`, () => {
             await Assert.assertUrlContains(beforeUrl,{reverse:true})
             // Assert category is not displayed as chosen
             await Assert.SearchPageCategories.assertCategoryChosen({reverse:true})
-            // Assert items are filtered
+            // Assert items are unfiltered
             await Assert.SearchPageCategories.assertItemsFiltered(beforeItemAmount,{reverse:true})
         })
     })

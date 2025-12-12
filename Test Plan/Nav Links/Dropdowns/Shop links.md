@@ -12,4 +12,4 @@
 - [Novelty](https://www.parts-express.com/novelty)
 
 
-[[Confirms href is correct]]
+[[Assert href is correct]]

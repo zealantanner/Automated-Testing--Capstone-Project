@@ -6,4 +6,4 @@
 - [Installer/Integrator Referral Sign-up](https://www.parts-express.com/installerintegrator-referral-signup)
 
 
-[[Confirms href is correct]]
+[[Assert href is correct]]

@@ -19,33 +19,33 @@ describe(`Search Bar [MTQA-4227]`, () => {
     describe(`Input field`, () => {
         const validText = randomizedQueries[1]
         describe(`Input text "${validText}"`, () => {
-            it(`Makes typeahead appear`, async () => {
+            it(`Assert typeahead appears`, async () => {
                 // Input some valid text into search box
                 await SearchPage.SearchBar.inputText(validText)
                 // Assert typeahead appears
                 await Assert.SearchBar.assertTypeaheadDisplayed()
             })
-            it(`Activates search on enter`, async () => {
+            it(`Assert pressing enter activates search function`, async () => {
                 const beforeUrl = await browser.getUrl()
                 // Press enter to search
                 await SearchPage.SearchBar.activateSearch({pressEnterInstead:true})
-                // Assert search activates on enter
+                // Assert search function activates on enter
                 await Assert.assertUrlIs(beforeUrl,{reverse:true})
             })
         })
         describe(`(Negative) Input too many characters`, () => {
-            it(`Is limited to 100 characters`, async () => {
+            it(`Assert text box is limited to 100 characters`, async () => {
                 const almostTooMuchText = randLetters(98)
                 // Input more than 100 characters into search box
                 await SearchPage.SearchBar.inputText(almostTooMuchText)
                 await SearchPage.SearchBar.typeText(randLetters(5))
-                // Assert only 100 characters are able to be in text box
+                // Assert text box is limited to 100 characters
                 await Assert.SearchBar.assertTextLength(100)
                 await Assert.SearchBar.assertTextLength(103,{reverse:true})
             })
         })
         describe(`(Negative) Input nonsense text`, () => {
-            it(`Shows no results in typeahead`, async () => {
+            it(`Assert typeahead appears with no results`, async () => {
                 const randomCharacters = randChars(15)
                 // Input random text into search box
                 await SearchPage.SearchBar.inputText(randomCharacters)
@@ -58,7 +58,7 @@ describe(`Search Bar [MTQA-4227]`, () => {
     describe(`Submit Button`, () => {
         describe(`URL changes with valid text inputted`, () => {
             const text = randomizedQueries[2]
-            it(`Changes URL according to text inputted "${text}"`, async () => {
+            it(`Assert URL changes according to text inputted "${text}"`, async () => {
                 const beforeUrl = await browser.getUrl()
                 // Input text into search box
                 await SearchPage.SearchBar.inputText(text)
@@ -69,13 +69,13 @@ describe(`Search Bar [MTQA-4227]`, () => {
             })
         })
         describe(`(Negative) When search bar has no text inputted it doesn't search`, () => {
-            it(`Should make nothing happen on click with no text in input field`, async () => {
+            it(`Assert nothing happens on click when there's no text in input field`, async () => {
                 const beforeUrl = await browser.getUrl()
                 // Have no text inputted in search bar
                 await SearchPage.SearchBar.inputText("")
                 // Click search button
                 await SearchPage.SearchBar.activateSearch()
-                // Assert URL stays and no results
+                // Assert URL stays the same with no typeahead
                 await Assert.assertUrlIs(beforeUrl)
                 await Assert.SearchBar.assertTypeaheadDisplayed({reverse:true})
             })
