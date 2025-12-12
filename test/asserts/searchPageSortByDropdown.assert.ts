@@ -42,7 +42,6 @@ export default class SearchPageSortByDropdown extends AssertBase {
         }
         await this.assertCompareValues(page1Total,page2ndToLastTotal)
     }
-
     /** Asserts "Highest Rating" by stars */
     public async assertRating() {
         await base.waitForLoad()
@@ -63,7 +62,6 @@ export default class SearchPageSortByDropdown extends AssertBase {
         }
         await this.assertCompareValues(page1Total,page2ndToLastTotal)
     }
-
     /** Asserts "Name" by letter score */
     public async assertNameAlphabetically(ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
@@ -84,7 +82,6 @@ export default class SearchPageSortByDropdown extends AssertBase {
         }
         await this.assertCompareValues(page1Total,page2ndToLastTotal,{reverse:!reverse})
     }
-
     /** Asserts "Price" by price */
     public async assertPrice(ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;

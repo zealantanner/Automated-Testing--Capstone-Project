@@ -10,13 +10,10 @@ import SearchPageSortByDropdown from "./searchPageSortByDropdown.assert"
 class Assert {
     /** Testing nav bar */
     public get NavLinks() { return new NavLinks() }
-
     /** Testing search bar */
     public get SearchBar() { return new SearchBar() }
-
     /** Testing categories on search page */
     public get SearchPageCategories() { return new SearchPageCategories() }
-
     /** Testing "Sort By" dropdown on search page */
     public get SearchPageSortByDropdown() { return new SearchPageSortByDropdown() }
 
@@ -37,7 +34,7 @@ class Assert {
             await expectUrl.toContain(path)
         }
     }
-
+    
     /** Asserts current url is exactly `path` */
     public async assertUrlIs(path:str|URL, ops:{reverse?:bool}={}) {
         if(path instanceof URL) {
