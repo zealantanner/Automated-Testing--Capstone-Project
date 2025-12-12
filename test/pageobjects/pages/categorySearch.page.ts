@@ -9,6 +9,7 @@ class CategorySearchPage extends BaseSearch {
     /** @param subUrl "ss_category" */
     public get subUrl() { return "ss_category" }
 
+    /** "Clear All" button for the current filters */
     public get $btnClearAll() { return $('.facets-facets-display-clear') }
     
     /** Presses "Clear All" to clear filters */

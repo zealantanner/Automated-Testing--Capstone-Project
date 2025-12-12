@@ -7,7 +7,9 @@ import Typeahead from "../baseSearch/typeahead.el"
 /** The search bar on the top of the page */
 export default class SearchBar extends MyElement {
     public get $base() { return $('.row-one-search') }
+    /** The text field for the search bar */
     public get $inputField() { return this.$base.$('.itemssearcher-input') }
+    /** The search button for the search bar */
     public get $btnConfirm() { return this.$base.$('.itemssearcher-button') }
 
     /** Typeahead that appears when using the search bar */

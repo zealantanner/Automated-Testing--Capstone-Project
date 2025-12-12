@@ -2,11 +2,14 @@ import { bool, int, random$From } from "../../../utils/utils"
 import MyElement from "../element"
 
 
-/** Category menu on search page */
+/** Category sidebar menu on search page */
 export default class CategorySidebar extends MyElement {
     public get $base() { return $('[data-facet-id="ss_category"]') }
+    /** Category dropdown button */
     public get $btnExpander() { return this.$base.$('.facets-faceted-navigation-item-facet-group-expander') }
+    /** Categories in the category sidebar */
     public get $$categories() { return this.$base.$$('li a') }
+    /** Currently applied category. Sits above the rest in category sidebar */
     public get $chosenCategory() { return this.$base.$('.facets-faceted-navigation-item-facet-option.option-active') }
     
     /** Returns a `bool` for if the category dropdown is open */

@@ -10,7 +10,7 @@ export default abstract class MyElement {
 
     /** Waits until the page is done loading */
     public async waitForLoad() {
-        const $loadingIcon = $('#loadingIndicator')
+        const $loadingIcon = $('#loadingIndicator') //> maybe put that in base
         await $loadingIcon.waitForDisplayed({reverse:true})
     }
 
@@ -26,7 +26,7 @@ export default abstract class MyElement {
     /** Waits for `$element` called `name` to show up */
     public async waitFor($element:ChainablePromiseElement,name:str,ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
-        await base.waitForLoad()
+        await base.waitForLoad()//> base??????? I shouldnt use page on element... unless?
         return $element
             .waitForExist({
             // waitForDisplayed
