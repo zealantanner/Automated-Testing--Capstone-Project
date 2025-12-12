@@ -1,4 +1,4 @@
-import { bool, getElementByText, int, str } from "../utils/utils"
+import { bool, str } from "../utils/utils"
 import AssertBase from "./assert.base"
 import { base } from "../pageobjects/pages/base/base"
 import { NavLink, NavMenu } from "../pageobjects/elements/base/navBar.el";

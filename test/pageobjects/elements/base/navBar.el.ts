@@ -1,4 +1,4 @@
-import { bool, getElementByText, int, str } from "../../../utils/utils"
+import { int, str } from "../../../utils/utils"
 import { $ } from "@wdio/globals"
 import MyElement from "../element"
 import { base } from "../../pages/base/base"

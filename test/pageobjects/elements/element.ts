@@ -1,5 +1,4 @@
 import { bool, str } from "../../utils/utils"
-import { $ } from "@wdio/globals"
 import { base } from "../pages/base/base"
 
 

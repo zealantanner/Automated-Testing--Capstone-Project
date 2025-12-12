@@ -1,7 +1,6 @@
 import Assert from "../asserts/assert"
 import { base } from "../pageobjects/pages/base/base";
 import HomePage from "../pageobjects/pages/home.page";
-import { randomFrom, shuffle } from "../utils/utils";
 
 
 
