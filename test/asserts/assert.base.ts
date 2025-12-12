@@ -13,9 +13,9 @@ export default class AssertBase {
         const assertion = reverse ? expect(href).not : expect(href)
         
         if(path instanceof RegExp) {
-            assertion.toMatch(path)
+            await assertion.toMatch(path)
         } else {
-            assertion.toContain(path)
+            await assertion.toContain(path)
         }
     }
 
@@ -27,5 +27,19 @@ export default class AssertBase {
         } else {
             await expect(value1).toBeGreaterThan(value2)
         }
+    }
+
+    /** Waits for `$element` called `name` to show up */
+    protected async waitFor($element:ChainablePromiseElement,name:str,ops:{reverse?:bool}={}) {
+        const {reverse=false} = ops;
+        await base.waitForLoad()
+        return $element
+            .waitForExist({
+            // waitForDisplayed
+                timeout:5000,
+                reverse,
+                timeoutMsg:`${name} did${reverse?"":"n't"} appear`
+            })
+            .catch(() => {})
     }
 }

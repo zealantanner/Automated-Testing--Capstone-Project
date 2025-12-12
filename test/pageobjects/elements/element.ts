@@ -1,4 +1,4 @@
-import { bool } from "../../utils/utils"
+import { bool, str } from "../../utils/utils"
 import { $ } from "@wdio/globals"
 import { base } from "../pages/base/base"
 
@@ -15,11 +15,26 @@ export default abstract class MyElement {
     }
 
     /** Waits until `this` element is displayed */
-    public async waitFor(ops:{reverse?:bool}={}) {
+    public async waitForThis(ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
 
         await this.$base.waitForExist({reverse})
         await base.waitForLoad()
+        
     }
+    /** Waits for `$element` called `name` to show up */
+    public async waitFor($element:ChainablePromiseElement,name:str,ops:{reverse?:bool}={}) {
+        const {reverse=false} = ops;
+        await base.waitForLoad()
+        return $element
+            .waitForExist({
+            // waitForDisplayed
+                timeout:5000,
+                reverse,
+                timeoutMsg:`${name} did${reverse?``:`n't`} appear`
+            })
+            .catch(() => {})
+    }
+
 }

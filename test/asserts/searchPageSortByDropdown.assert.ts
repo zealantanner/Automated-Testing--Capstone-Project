@@ -19,8 +19,8 @@ export default class SearchPageSortByDropdown extends AssertBase {
         await base.waitForLoad()
         await baseSearch.goToPage(pageNum)
         await base.waitForLoad()
-        await baseSearch.SortByDropdown.waitFor()
-        await (await baseSearch.items)[1].waitFor()
+        await baseSearch.SortByDropdown.waitForThis()
+        await (await baseSearch.items)[1].waitForThis()
     }
 
     /** Asserts "Most Popular" by reviews */

@@ -1,4 +1,4 @@
-import { bool, getElementByText } from "../utils/utils"
+import { bool, getElementByText, int, str } from "../utils/utils"
 import AssertBase from "./assert.base"
 import { base } from "../pageobjects/pages/base/base"
 import { NavLink, NavMenu } from "../pageobjects/elements/base/navBar.el";
@@ -6,24 +6,28 @@ import { NavLink, NavMenu } from "../pageobjects/elements/base/navBar.el";
 
 /** Testing the nav bar */
 export default class NavLinks extends AssertBase {
-    /** Asserts the `dropdown` is open */
-    public async assertDropdownOpen(dropdown:NavMenu, ops:{reverse?:bool}={}) {
+    /** Asserts the `menu` is open */
+    public async assertNavMenuOpen(menu:NavMenu,ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
-        
-        const $dropdown = getElementByText(dropdown.menuName,base.NavBar.$base)
-        const isOpen = (await $dropdown.getAttribute("aria-expanded")) === "true"
-        await expect(isOpen).toBe(!reverse)
+
+        const $dropdown = base.NavBar.$dropdown(menu)
+        await this.waitFor($dropdown,"Dropdown",{reverse})
+
+        if(reverse) {
+            await expect($dropdown).not.toBeDisplayed()
+        } else {
+            await expect($dropdown).toBeDisplayed()
+        }
     }
 
-    /** Asserts the href of `link` under `dropdown` */
-    public async assertNavLink(dropdown:NavMenu, link:NavLink) {
+    /** Asserts the href of `link` under open `menu` */
+    public async assertNavLink(menu:NavMenu,link:NavLink,path:str,ops:{reverse?:bool}={}) {
+        const {reverse=false} = ops;
+
         await base.waitForLoad()
 
-        const $dropdown = getElementByText(dropdown.menuName,base.NavBar.$base)
-        const $link = getElementByText(link.text,$dropdown)
-        const linkText = await $link.getAttribute("href")
-        await this.assertHref($link, linkText)
-        await expect(linkText).toBe(link.path)
+        const $link = base.NavBar.$link(menu,link)
+        await this.assertHref($link, path, {reverse})
     }
 }

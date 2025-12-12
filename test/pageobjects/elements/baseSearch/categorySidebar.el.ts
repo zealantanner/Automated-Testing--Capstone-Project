@@ -1,4 +1,4 @@
-import { bool, int, pickRandom$From } from "../../../utils/utils"
+import { bool, int, random$From } from "../../../utils/utils"
 import MyElement from "../element"
 
 
@@ -40,7 +40,7 @@ export default class CategorySidebar extends MyElement {
         await this.waitForLoad()
         const $category = (index)
             ? this.$$categories[index]
-            : await pickRandom$From(this.$$categories, {preferFirstHalf})
+            : await random$From(this.$$categories, {preferFirstHalf})
         await $category.click()
     }
 

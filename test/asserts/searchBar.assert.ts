@@ -5,26 +5,13 @@ import AssertBase from "./assert.base"
 
 /** Testing the search bar */
 export default class SearchBar extends AssertBase {
-    /** Waits for the typeahead to show up */
-    private async waitForTypeahead(ops:{reverse?:bool}={}) {
-        const {reverse=false} = ops;
-        await base.waitForLoad()
-
-        return base.SearchBar.Typeahead.$base
-            .waitForExist({timeout:5000,reverse,timeoutMsg:`Typeahead did${reverse?``:`n't`} appear`})
-            .catch(() => {})
-        // return base.SearchBar.Typeahead.$base
-        //     .waitForDisplayed({timeout:5000,reverse,timeoutMsg:`Typeahead did${reverse?``:`n't`} appear`})
-        //     .catch(() => {})
-    }
-
     /** Asserts the typeahead is open */
     public async assertTypeaheadDisplayed(ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
-        await this.waitForTypeahead()
-
         const $typeahead = base.SearchBar.Typeahead.$base
+        await this.waitFor($typeahead, "Typeahead")
+
         if(reverse) {
             await expect($typeahead).not.toExist()
         } else {
@@ -36,7 +23,9 @@ export default class SearchBar extends AssertBase {
     public async assertTypeaheadShowsResults(ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
-        await this.waitForTypeahead()
+
+        const $typeahead = base.SearchBar.Typeahead.$base
+        await this.waitFor($typeahead, "Typeahead")
 
         const $title = base.SearchBar.Typeahead.Results.$title
         const $$items = base.SearchBar.Typeahead.Results.$$items

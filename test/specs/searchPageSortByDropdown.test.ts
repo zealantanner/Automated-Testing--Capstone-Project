@@ -1,4 +1,4 @@
-import { pickRandomFrom, searchQueries } from "../utils/utils";
+import { randomFrom, searchQueries } from "../utils/utils";
 import HomePage from "../pageobjects/pages/home.page"
 import SearchPage from "../pageobjects/pages/search.page"
 import Assert from "../asserts/assert";
@@ -7,7 +7,7 @@ import Assert from "../asserts/assert";
 
 
 describe(`Search Page Sort By Dropdown [MTQA-4231]`, () => {
-    const textToSearch = pickRandomFrom(searchQueries)
+    const textToSearch = randomFrom(searchQueries)
     before(async () => {
         // Go to https://www.parts-express.com
         await HomePage.open()

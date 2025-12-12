@@ -21,7 +21,7 @@ export function randLetters(length=5):str {
     ]
     const chars:str[] = []
     for(let i=0;i<length;i++) {
-        const val = String.fromCharCode(pickRandomFrom(pickRandomFrom(goodCharacters)))
+        const val = String.fromCharCode(randomFrom(randomFrom(goodCharacters)))
         chars.push(val)
     }
     return chars.join("")
@@ -56,18 +56,18 @@ export function shuffle<T>(array:T[]):T[] {
 }
 
 /** Returns random value in `array` */
-export function pickRandomFrom<T>(array:T[]):T {
+export function randomFrom<T>(array:T[]):T {
     return shuffle(array)[0]
 }
 
 /** Returns random `$element` in `$$elements` */
-export async function pickRandom$From($$elements:ChainablePromiseArray, ops:{preferFirstHalf?:bool}={}):Promise<ChainablePromiseElement> {
+export async function random$From($$elements:ChainablePromiseArray, ops:{preferFirstHalf?:bool}={}):Promise<ChainablePromiseElement> {
     const {preferFirstHalf=false} = ops;
     
     const length = await $$elements.length
     const arrayLength = preferFirstHalf ? Math.ceil(length/2) : length-1
 
-    const randomVal = pickRandomFrom(range(0, arrayLength))
+    const randomVal = randomFrom(range(0, arrayLength))
 
     const $toReturn = $$elements[randomVal]
     return $toReturn
