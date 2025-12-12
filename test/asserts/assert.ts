@@ -8,19 +8,19 @@ import SearchPageSortByDropdown from "./searchPageSortByDropdown.assert"
 
 /** Parent class for testing */
 class Assert {
-    /** Testing the nav bar */
+    /** Testing nav bar */
     public get NavLinks() { return new NavLinks() }
 
-    /** Testing the search bar */
+    /** Testing search bar */
     public get SearchBar() { return new SearchBar() }
 
-    /** Testing the categories on the search page */
+    /** Testing categories on search page */
     public get SearchPageCategories() { return new SearchPageCategories() }
 
-    /** Testing the "Sort By" dropdown on the search page */
+    /** Testing "Sort By" dropdown on search page */
     public get SearchPageSortByDropdown() { return new SearchPageSortByDropdown() }
 
-    /** Asserts the current url contains `path` */
+    /** Asserts current url contains `path` */
     public async assertUrlContains(path:str|RegExp|URL, ops:{reverse?:bool}={}) {
         if(path instanceof URL) {
             path = path.toString()
@@ -38,7 +38,7 @@ class Assert {
         }
     }
 
-    /** Asserts the current url is exactly `path` */
+    /** Asserts current url is exactly `path` */
     public async assertUrlIs(path:str|URL, ops:{reverse?:bool}={}) {
         if(path instanceof URL) {
             path = path.toString()

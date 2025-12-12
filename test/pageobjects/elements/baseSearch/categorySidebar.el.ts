@@ -1,4 +1,5 @@
 import { bool, int, random$From } from "../../../utils/utils"
+import { base } from "../../pages/base/base"
 import MyElement from "../element"
 
 
@@ -7,20 +8,20 @@ export default class CategorySidebar extends MyElement {
     public get $base() { return $('[data-facet-id="ss_category"]') }
     /** Category dropdown button */
     public get $btnExpander() { return this.$base.$('.facets-faceted-navigation-item-facet-group-expander') }
-    /** Categories in the category sidebar */
+    /** Categories in category sidebar */
     public get $$categories() { return this.$base.$$('li a') }
-    /** Currently applied category. Sits above the rest in category sidebar */
+    /** Currently applied category. Top in category sidebar */
     public get $chosenCategory() { return this.$base.$('.facets-faceted-navigation-item-facet-option.option-active') }
     
-    /** Returns a `bool` for if the category dropdown is open */
+    /** Returns a `bool` for if category dropdown is open */
     public async isOpen() {
-        await this.waitForLoad()
+        await base.waitForLoad()
         return this.$$categories[0].isDisplayed()
     }
 
-    /** Clicks to open the category dropdown */
+    /** Clicks to open category dropdown */
     public async open() {
-        await this.waitForLoad()
+        await base.waitForLoad()
         await this.$btnExpander.waitForExist()
         if(!await this.isOpen()) {
             await this.$btnExpander.click()
@@ -28,9 +29,9 @@ export default class CategorySidebar extends MyElement {
         await this.$$categories[0].waitForDisplayed()
     }
 
-    /** Clicks to close the category dropdown */
+    /** Clicks to close category dropdown */
     public async close() {
-        await this.waitForLoad()
+        await base.waitForLoad()
         if(await this.isOpen()) {
             await this.$btnExpander.click()
         }
@@ -40,16 +41,16 @@ export default class CategorySidebar extends MyElement {
     /** Clicks to add a random category unless specified by `index?` */
     public async addCategory(ops:{index?:int,preferFirstHalf?:bool}={}) {
         const {index,preferFirstHalf=false} = ops;
-        await this.waitForLoad()
+        await base.waitForLoad()
         const $category = (index)
             ? this.$$categories[index]
             : await random$From(this.$$categories, {preferFirstHalf})
         await $category.click()
     }
 
-    /** Clicks the added category to remove it */
+    /** Clicks added category to remove it */
     public async removeCategory() {
-        await this.waitForLoad()
+        await base.waitForLoad()
         await this.$chosenCategory.waitForExist()
         await this.$chosenCategory.click()
     }

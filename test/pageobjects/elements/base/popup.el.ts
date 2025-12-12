@@ -1,5 +1,6 @@
 import { $ } from "@wdio/globals"
 import MyElement from "../element"
+import { base } from "../../pages/base/base"
 
 
 /** Annoying interrupting popup, disable with `dismissPopupViaLocalStorage` */
@@ -8,7 +9,7 @@ export default class Popup extends MyElement {
 
     /** Closes popup by changing local storage */
     public async dismissPopupViaLocalStorage() {
-        await this.waitForLoad()
+        await base.waitForLoad()
         const now = Math.floor(Date.now()/1000)
         const storage = {
             viewedForms: {

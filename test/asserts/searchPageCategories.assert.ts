@@ -4,9 +4,9 @@ import { base } from "../pageobjects/pages/base/base"
 import { baseSearch } from "../pageobjects/pages/base/baseSearch"
 
 
-/** Testing the categories on the search page */
+/** Testing categories on search page */
 export default class SearchPageCategories extends AssertBase {
-    /** Asserts the category dropdown is open */
+    /** Asserts category dropdown is open */
     public async assertOpen(ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()

@@ -5,27 +5,25 @@ import Popup from '../../elements/base/popup.el'
 import NavBar from '../../elements/base/navBar.el'
 
 
-/** The base page */
+/** Base page */
 export default abstract class Base {
     /** @param subUrl https://www.parts-express.com/ `subUrl` */
     public abstract get subUrl():str
-    
     /** https://www.parts-express.com/ `subUrl` */
     public get baseUrl() { return new URL(this.subUrl,"https://www.parts-express.com") }
 
     /** Annoying popup that interrupts the test, disable with `dismissPopupViaLocalStorage` */
     public get Popup() { return new Popup() }
-
-    /** The search bar on the top of the page */
+    /** Search bar on top of page */
     public get SearchBar() { return new SearchBar() }
-
-    /** The navigation bar under the header of the page */
+    /** Navigation bar under header of page */
     public get NavBar() { return new NavBar() }
 
-    /** Waits until the page is done loading */
+    /** Icon that appears when website is loading */
+    private get $loadingIcon() { return $('#loadingIndicator') }
+    /** Waits until page is done loading */
     public async waitForLoad() {
-        const $loadingIcon = $('#loadingIndicator')
-        await $loadingIcon.waitForDisplayed({reverse:true})
+        await this.$loadingIcon.waitForDisplayed({reverse:true})
     }
 
     /** Opens `baseUrl` */
@@ -36,7 +34,7 @@ export default abstract class Base {
     }
 }
 
-/** The base page */
+/** Base page */
 export const base = new class extends Base {
     public get subUrl() { return "" }
 }

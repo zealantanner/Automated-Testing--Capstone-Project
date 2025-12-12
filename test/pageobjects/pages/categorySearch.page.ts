@@ -9,7 +9,7 @@ class CategorySearchPage extends BaseSearch {
     /** @param subUrl "ss_category" */
     public get subUrl() { return "ss_category" }
 
-    /** "Clear All" button for the current filters */
+    /** "Clear All" button for current filters */
     public get $btnClearAll() { return $('.facets-facets-display-clear') }
     
     /** Presses "Clear All" to clear filters */
@@ -20,7 +20,7 @@ class CategorySearchPage extends BaseSearch {
         await this.$btnClearAll.click()
     }
 
-    /** @deprecated Get to this page by applying a category */
+    /** @deprecated Get to this page by searching and applying a category */
     public async open() {
         await super.open(this.baseUrl)
     }
@@ -30,4 +30,3 @@ class CategorySearchPage extends BaseSearch {
  * 
  *  https://www.parts-express.com/ss_category */
 export default new CategorySearchPage();
-//> go over all jira tickets and obsidian again

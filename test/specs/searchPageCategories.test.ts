@@ -14,17 +14,17 @@ describe(`Search Page Categories [MTQA-4229]`, () => {
         await HomePage.open()
         // Dismiss popup modal via local storage
         await HomePage.Popup.dismissPopupViaLocalStorage()
-        //Search for an item in the search bar
+        // Search for an item in search bar
         await HomePage.SearchBar.search(textToSearch)
-        // Be on the search page
+        // Be on search page
     })
-    describe(`The category dropdown opens and closes`, () => {
+    describe(`Category dropdown opens and closes`, () => {
         it(`Opens and closes on click`, async () => {
-            // Click the category dropdown button
+            // Click category dropdown button
             await SearchPage.CategorySidebar.close()
             // Assert it closes
             await Assert.SearchPageCategories.assertOpen({reverse:true})
-            // Click the category dropdown button again
+            // Click category dropdown button again
             await SearchPage.CategorySidebar.open()
             // Assert it opens
             await Assert.SearchPageCategories.assertOpen()

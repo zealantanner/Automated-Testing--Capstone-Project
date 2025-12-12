@@ -21,20 +21,20 @@ describe(`Nav Links [MTQA-4219]`, () => {
                 it(`Asserts opens`, async () => {
                     // Click to open menu
                     await base.NavBar.openMenu(menu1)
-                    // Assert the menu is opened
+                    // Assert menu is opened
                     await Assert.NavLinks.assertNavMenuOpen(menu1)
                 })
                 describe(`Links`, () => {
                     // For each link
                     for(const link1 of menu1.links) {
-                        it(`Asserts "${link1.title}" links to the path "${link1.path}"`, async () => {
+                        it(`Asserts "${link1.title}" links to path "${link1.path}"`, async () => {
                             // Assert href on link is correct
                             await Assert.NavLinks.assertNavLink(menu1,link1,link1.path)
                         })
                         describe(`Tests duplicate links for "${link1.title}"`, () => {
                             for(const menu2 of base.NavBar.menusAndLinks) {
                                 for(const link2 of menu2.links) {
-                                    // Asserts the paths are different unless the paths are the same
+                                    // Asserts paths are different unless path names are the same
                                     if(link1.path === link2.path && link1.title !== link2.title) {
                                         it(`Asserts link is different than "${link2.title}"`, async () => {
                                             // Assert hrefs don't repeat
@@ -49,11 +49,10 @@ describe(`Nav Links [MTQA-4219]`, () => {
                 it(`Asserts closes`, async () => {
                     // Click to close menu
                     await base.NavBar.closeMenu(menu1)
-                    // Assert the menu is closed
+                    // Assert  menu is closed
                     await Assert.NavLinks.assertNavMenuOpen(menu1,{reverse:true})
                 })
             })
         }
-    })//>update jira and obsidian
-})//> comment on all getters
-//> change confirm to assert on jiras and obsidian
+    })
+})

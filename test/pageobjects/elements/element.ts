@@ -8,12 +8,6 @@ export default abstract class MyElement {
     /** The selector for this element */
     public abstract get $base():ChainablePromiseElement
 
-    /** Waits until the page is done loading */
-    public async waitForLoad() {
-        const $loadingIcon = $('#loadingIndicator') //> maybe put that in base
-        await $loadingIcon.waitForDisplayed({reverse:true})
-    }
-
     /** Waits until `this` element is displayed */
     public async waitForThis(ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
@@ -21,12 +15,12 @@ export default abstract class MyElement {
 
         await this.$base.waitForExist({reverse})
         await base.waitForLoad()
-        
     }
+
     /** Waits for `$element` called `name` to show up */
     public async waitFor($element:ChainablePromiseElement,name:str,ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
-        await base.waitForLoad()//> base??????? I shouldnt use page on element... unless?
+        await base.waitForLoad()
         return $element
             .waitForExist({
             // waitForDisplayed

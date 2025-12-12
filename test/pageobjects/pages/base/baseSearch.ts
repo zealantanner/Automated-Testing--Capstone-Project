@@ -6,20 +6,19 @@ import SortByDropdown from '../../elements/baseSearch/sortByDropdown.el'
 import CategorySidebar from '../../elements/baseSearch/categorySidebar.el'
 
 
-/** The base search page */
+/** Base search page */
 export default abstract class BaseSearch extends Base {
     /** @param subUrl "search" or "ss_category" */
     public abstract get subUrl():str
-    
     /** https://www.parts-express.com/ `search` or `ss_category` */
     public get baseUrl() { return new URL(this.subUrl, super.baseUrl) }
     
     /** Category menu on search page */
     public get CategorySidebar() { return new CategorySidebar() }
-
     /** "Sort By" dropdown on search page */
     public get SortByDropdown() { return new SortByDropdown() }
 
+    /** Sits above item results on search page, usually says "See `x` results for `search term`" */
     private get $totalItemsH2() { return $('.facets-facet-browse-title-products h2') }
     /** Returns current page and total pages for this search */
     public async getTotalResultAmount() {
@@ -61,7 +60,7 @@ export default abstract class BaseSearch extends Base {
     }
 }
 
-/** The base search page */
+/** Base search page */
 export const baseSearch = new class extends BaseSearch {
     public get subUrl() { return "search" }
 }

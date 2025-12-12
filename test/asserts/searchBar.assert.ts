@@ -3,9 +3,9 @@ import { base } from "../pageobjects/pages/base/base"
 import AssertBase from "./assert.base"
 
 
-/** Testing the search bar */
+/** Testing search bar */
 export default class SearchBar extends AssertBase {
-    /** Asserts the typeahead is open */
+    /** Asserts typeahead is open */
     public async assertTypeaheadDisplayed(ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
@@ -19,7 +19,7 @@ export default class SearchBar extends AssertBase {
         }
     }
 
-    /** Asserts the open typeahead has results */
+    /** Asserts open typeahead shows results */
     public async assertTypeaheadShowsResults(ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
@@ -32,12 +32,12 @@ export default class SearchBar extends AssertBase {
         if(reverse) {
             // Typeahead title starts with "No results for"
             await expect($title).toHaveText(/No results for/)
-            // Has no items in the results
+            // Has no items in results
             await expect($$items).toBeElementsArrayOfSize(0)
         } else {
             // Typeahead title starts with "Search results for"
             await expect($title).toHaveText(/Search results for/)
-            // Has an item in the results
+            // Has an item in results
             await expect($$items).toBeElementsArrayOfSize({gte:1})
         }
     }

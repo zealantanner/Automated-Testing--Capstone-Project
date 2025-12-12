@@ -13,9 +13,9 @@ describe(`Search Page Sort By Dropdown [MTQA-4231]`, () => {
         await HomePage.open()
         // Dismiss popup modal via local storage
         await HomePage.Popup.dismissPopupViaLocalStorage()
-        // Search for an item in the search bar
+        // Search for an item in search bar
         await HomePage.SearchBar.search(textToSearch)
-        // Be on the search page
+        // Be on search page
     })
     describe(`Dropdown options when searching for "${textToSearch}"`, () => {
         it(`Sorts by "Best Match"`, async () => {

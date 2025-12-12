@@ -8,7 +8,7 @@ class HomePage extends Base {
     /** @param subUrl "" */
     public get subUrl() { return "" }
 
-    /** Opens the home page */
+    /** Opens home page */
     public async open() {
         await super.open();
     }

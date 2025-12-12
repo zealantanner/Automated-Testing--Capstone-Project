@@ -19,7 +19,7 @@ describe(`Search Bar [MTQA-4227]`, () => {
     describe(`Input field`, () => {
         const validText = randomizedQueries[1]
         describe(`Input text "${validText}"`, () => {
-            it(`Makes the typeahead appear`, async () => {
+            it(`Makes typeahead appear`, async () => {
                 // Input some valid text into search box
                 await SearchPage.SearchBar.inputText(validText)
                 // Assert typeahead appears
@@ -39,13 +39,13 @@ describe(`Search Bar [MTQA-4227]`, () => {
                 // Input more than 100 characters into search box
                 await SearchPage.SearchBar.inputText(almostTooMuchText)
                 await SearchPage.SearchBar.typeText(randLetters(5))
-                // Assert only 100 characters are able to be in the text box
+                // Assert only 100 characters are able to be in text box
                 await Assert.SearchBar.assertTextLength(100)
                 await Assert.SearchBar.assertTextLength(103,{reverse:true})
             })
         })
         describe(`(Negative) Input nonsense text`, () => {
-            it(`Shows no results in the typeahead`, async () => {
+            it(`Shows no results in typeahead`, async () => {
                 const randomCharacters = randChars(15)
                 // Input random text into search box
                 await SearchPage.SearchBar.inputText(randomCharacters)
@@ -62,20 +62,20 @@ describe(`Search Bar [MTQA-4227]`, () => {
                 const beforeUrl = await browser.getUrl()
                 // Input text into search box
                 await SearchPage.SearchBar.inputText(text)
-                // Click the search button
+                // Click search button
                 await SearchPage.SearchBar.activateSearch()
                 // Assert URL changes
                 await Assert.assertUrlIs(beforeUrl,{reverse:true})
             })
         })
-        describe(`(Negative) When the search bar has no text inputted it doesn't search`, () => {
+        describe(`(Negative) When search bar has no text inputted it doesn't search`, () => {
             it(`Should make nothing happen on click with no text in input field`, async () => {
                 const beforeUrl = await browser.getUrl()
-                // Have no text inputted in the search box
+                // Have no text inputted in search bar
                 await SearchPage.SearchBar.inputText("")
-                // Click the search button
+                // Click search button
                 await SearchPage.SearchBar.activateSearch()
-                // Assert the URL stays and no results
+                // Assert URL stays and no results
                 await Assert.assertUrlIs(beforeUrl)
                 await Assert.SearchBar.assertTypeaheadDisplayed({reverse:true})
             })

@@ -31,3 +31,14 @@ I was having a hard time figuring out how to make my code wait for the page to l
 I realized I can just use the loading icon that follows the mouse
 
 When text boxes have a max you can't use `setValue()` you have to actually type the characters instead
+
+
+//> update jira and obsidian for nav links
+
+//> comment on all getters
+
+//> change confirm to assert on jiras and obsidian
+
+//> finish comments on everything
+
+//> go over all jira tickets and obsidian again

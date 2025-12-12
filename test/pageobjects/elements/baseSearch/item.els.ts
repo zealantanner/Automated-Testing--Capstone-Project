@@ -1,26 +1,27 @@
+import { base } from "../../pages/base/base"
 import MyElement from "../element"
 
 
-/** An item in the search results */
+/** An item in search results */
 export default class Item extends MyElement {
     constructor(private _$base:ChainablePromiseElement) {
         super()
     }
     public get $base() { return this._$base }
-    /** Contains the amount of reviews of the item */
+    /** Contains amount of reviews on this item */
     private get $reviews() { return this.$base.$('.ratings-total') }
-    /** Contains the style width percentage which is the star rating
+    /** Contains style width percentage AKA star rating
      *  
      *  e.g. `style="width:90%"` */
     private get $starRating() { return this.$base.$('.global-views-star-rating-area-fill') }
-    /** Contains the name of the item */
+    /** Contains name of this item */
     private get $title() { return this.$base.$('.facets-item-cell-grid-title') }
-    /** Contains the price of the item */
+    /** Contains price of this item */
     private get $price() { return this.$base.$('.product-views-price-exact') }
 
-    /** Returns the amount of reviews for this item */
+    /** Returns amount of reviews on this item */
     public async getReviewCount() {
-        await this.waitForLoad()
+        await base.waitForLoad()
         await this.$reviews.waitForExist()
         const reviewText = await this.$reviews.getText()
         
@@ -28,9 +29,9 @@ export default class Item extends MyElement {
         const reviewCount = match ? parseInt(match[1]) : 0
         return reviewCount
     }
-    /** Returns the percentage of star level for this item */
+    /** Returns star level percentage for this item */
     public async getStarRating() {
-        await this.waitForLoad()
+        await base.waitForLoad()
         await this.$starRating.waitForExist()
         const ratingText = await this.$starRating.getAttribute('style')
         if(!ratingText) {
@@ -40,16 +41,16 @@ export default class Item extends MyElement {
         const ratingPercent = match ? parseInt(match[1]) : 0
         return ratingPercent
     }
-    /** Returns the percentage of star level for this item */
+    /** Returns name of this item */
     public async getTitle() {
-        await this.waitForLoad()
+        await base.waitForLoad()
         await this.$title.waitForExist()
 
         return this.$title.getText()
     }
-    /** Returns the price for this item */
+    /** Returns price of this item */
     public async getPrice() {
-        await this.waitForLoad()
+        await base.waitForLoad()
         await this.$price.waitForExist()
 
         const priceText = await this.$price.getAttribute('data-rate')

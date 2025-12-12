@@ -79,7 +79,7 @@ export function getElementByText(text:str, $base=$('body')) {
     return $element
 }
 
-/** Returns score for the first character in given string `word`
+/** Returns score for starting character in given string `word`
  * 
  * `A` is lower, `Z` is higher */
 export function charScore(word:str):number {

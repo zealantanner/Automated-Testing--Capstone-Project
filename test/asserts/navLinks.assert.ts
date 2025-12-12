@@ -4,9 +4,9 @@ import { base } from "../pageobjects/pages/base/base"
 import { NavLink, NavMenu } from "../pageobjects/elements/base/navBar.el";
 
 
-/** Testing the nav bar */
+/** Testing nav bar */
 export default class NavLinks extends AssertBase {
-    /** Asserts the `menu` is open */
+    /** Asserts `menu` is open */
     public async assertNavMenuOpen(menu:NavMenu,ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
@@ -21,7 +21,7 @@ export default class NavLinks extends AssertBase {
         }
     }
 
-    /** Asserts the href of `link` under open `menu` */
+    /** Asserts href of `link` under open `menu` */
     public async assertNavLink(menu:NavMenu,link:NavLink,path:str,ops:{reverse?:bool}={}) {
         const {reverse=false} = ops;
 

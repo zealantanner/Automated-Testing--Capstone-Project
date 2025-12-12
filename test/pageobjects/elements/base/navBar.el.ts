@@ -1,22 +1,23 @@
 import { bool, getElementByText, int, str } from "../../../utils/utils"
 import { $ } from "@wdio/globals"
 import MyElement from "../element"
+import { base } from "../../pages/base/base"
 
 
-/** A navbar's links */
+/** A navbar menu's links */
 export type NavLink = {
-    /** Title of the link
+    /** Title of navbar menu link
      * 
      *  e.g. `"New Products"` */
     title:str,
-    /** Url path of the link
+    /** Url path of link
      * 
      *  e.g. `"/speaker-components"` */
     path:str,
 }
 /** Navbar title and links */
 export type NavMenu = {
-    /** Title of the navbar
+    /** Title of navbar menu
      * 
      *  e.g. `"SHOP"` */
     title:str,
@@ -26,7 +27,7 @@ export type NavMenu = {
     links:NavLink[],
 }
 
-/** The navigation bar under the header of the page */
+/** Navigation bar under header of page */
 export default class NavBar extends MyElement {
     public get $base() { return $('.navbar') }
     /** Get all navbar `$$menus` */
@@ -168,7 +169,7 @@ export default class NavBar extends MyElement {
     }
     /** Clicks to open or close specified `menu` */
     public async clickMenu(menu:NavMenu) {
-        await this.waitForLoad()
+        await base.waitForLoad()
 
         const navMenu = this.getMenu(menu)
         const $btnToggle = this.$btnDropdownToggle(navMenu)
@@ -177,7 +178,7 @@ export default class NavBar extends MyElement {
     }
     /** Clicks to open specified `menu` */
     public async openMenu(menu:NavMenu) {
-        await this.waitForLoad()
+        await base.waitForLoad()
 
         if(!await this.isMenuOpen(menu)) {
             await this.clickMenu(menu)
@@ -186,7 +187,7 @@ export default class NavBar extends MyElement {
     }
     /** Clicks to close specified `menu` */
     public async closeMenu(menu:NavMenu) {
-        await this.waitForLoad()
+        await base.waitForLoad()
         
         if(await this.isMenuOpen(menu)) {
             await this.clickMenu(menu)
