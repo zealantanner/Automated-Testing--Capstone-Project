@@ -22,7 +22,6 @@ export default abstract class MyElement {
         await base.waitForLoad()
         return $element
             .waitForExist({
-            // waitForDisplayed
                 timeout:5000,
                 reverse,
                 timeoutMsg:`${name} did${reverse?``:`n't`} appear`

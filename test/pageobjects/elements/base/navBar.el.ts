@@ -61,13 +61,10 @@ export default class NavBar extends MyElement {
     public $link(menu:NavMenu,link:NavLink) {
         const $menu = this.$menu(menu)
         if(typeof link === "number") { // index
-            // return $menu.$$(`//*[@data-touchpoint]`)[link]
             return $menu.$$(`//ul[@class="dropdown-menu"]/li/a`)[link]
         } else if(typeof link === "string") { // name
-            // return $menu.$(`//*[@data-touchpoint][contains(text(),"${link}")]`)
             return $menu.$(`//ul[@class="dropdown-menu"]/li/a[contains(text(),"${link}")]`) 
         } else { // NavLink
-            // return $menu.$(`//*[@data-touchpoint][contains(text(),"${link.title}")]`)
             return $menu.$(`//ul[@class="dropdown-menu"]/li/a[contains(text(),"${link.title}")]`) 
         }
     }
