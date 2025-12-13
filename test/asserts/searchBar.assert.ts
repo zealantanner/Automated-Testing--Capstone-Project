@@ -1,16 +1,15 @@
-import { bool, int } from "../utils/utils"
 import { base } from "../pageobjects/pages/base/base"
 import AssertBase from "./assert.base"
 
 
-/** Testing search bar */
+/** Don't use this, use `Assert.SearchBar` instead */
 export default class SearchBar extends AssertBase {
     /** Asserts typeahead is open */
-    public async assertTypeaheadDisplayed(ops:{reverse?:bool}={}) {
-        const {reverse=false} = ops;
+    public async assertTypeaheadDisplayed(ops:{reverse?:boolean,timeout?:number}={}) {
+        const {reverse=false,timeout} = ops;
         await base.waitForLoad()
         const $typeahead = base.SearchBar.Typeahead.$base
-        await this.waitFor($typeahead, "Typeahead")
+        await this.waitFor($typeahead, "Typeahead",{reverse,timeout})
 
         if(reverse) {
             await expect($typeahead).not.toExist()
@@ -20,7 +19,7 @@ export default class SearchBar extends AssertBase {
     }
 
     /** Asserts open typeahead shows results */
-    public async assertTypeaheadShowsResults(ops:{reverse?:bool}={}) {
+    public async assertTypeaheadShowsResults(ops:{reverse?:boolean}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
 
@@ -30,20 +29,16 @@ export default class SearchBar extends AssertBase {
         const $title = base.SearchBar.Typeahead.Results.$title
         const $$items = base.SearchBar.Typeahead.Results.$$items
         if(reverse) {
-            // Typeahead title starts with "No results for"
             await expect($title).toHaveText(/No results for/)
-            // Has no items in results
             await expect($$items).toBeElementsArrayOfSize(0)
         } else {
-            // Typeahead title starts with "Search results for"
             await expect($title).toHaveText(/Search results for/)
-            // Has an item in results
             await expect($$items).toBeElementsArrayOfSize({gte:1})
         }
     }
 
     /** Asserts search bar text length is `charAmount` */
-    public async assertTextLength(charAmount:int,ops:{reverse?:bool}={}) {
+    public async assertTextLength(charAmount:number,ops:{reverse?:boolean}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
 

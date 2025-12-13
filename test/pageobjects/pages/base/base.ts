@@ -1,18 +1,16 @@
-import { str } from "../../../utils/utils"
-import { browser, $ } from '@wdio/globals'
+import { browser } from '@wdio/globals'
 import SearchBar from '../../elements/base/searchBar.el'
 import Popup from '../../elements/base/popup.el'
 import NavBar from '../../elements/base/navBar.el'
 
-
 /** Base page */
 export default abstract class Base {
     /** @param subUrl https://www.parts-express.com/ `subUrl` */
-    public abstract get subUrl():str
+    public abstract get subUrl():string
     /** https://www.parts-express.com/ `subUrl` */
     public get baseUrl() { return new URL(this.subUrl,"https://www.parts-express.com") }
 
-    /** Annoying popup that interrupts the test, disable with `dismissPopupViaLocalStorage` */
+    /** Annoying interrupting popup, disable with `dismissPopupViaLocalStorage` */
     public get Popup() { return new Popup() }
     /** Search bar on top of page */
     public get SearchBar() { return new SearchBar() }
@@ -27,7 +25,7 @@ export default abstract class Base {
     }
 
     /** Opens `baseUrl` */
-    public async open(path:str|URL= this.baseUrl) {
+    public async openPage(path:string|URL= this.baseUrl) {
         await this.waitForLoad()
         await browser.url(path.toString())
         await this.waitForLoad()

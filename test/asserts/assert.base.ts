@@ -1,11 +1,13 @@
-import { bool, int, str } from "../utils/utils"
+import { expect } from '@wdio/globals'
 import { base } from "../pageobjects/pages/base/base"
 
 
-/** Base for all assertions */
+/** Base for all assertions
+ *  
+ * Don't use this, use `Assert` instead */
 export default class AssertBase {
     /** Asserts `$element` has href that contains `path` */
-    protected async assertHref($element:ChainablePromiseElement, path:str|RegExp, ops:{reverse?:bool}={}) {
+    protected async assertHref($element:ChainablePromiseElement, path:string|RegExp, ops:{reverse?:boolean}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
 
@@ -19,25 +21,15 @@ export default class AssertBase {
         }
     }
 
-    /** Asserts `value1`>`value2` */
-    protected async assertCompareValues(value1:int,value2:int,ops:{reverse?:bool}={}) {
-        const {reverse=false} = ops;
-        if(reverse) {
-            await expect(value1).toBeLessThan(value2)
-        } else {
-            await expect(value1).toBeGreaterThan(value2)
-        }
-    }
-
     /** Waits for `$element` called `name` to show up */
-    protected async waitFor($element:ChainablePromiseElement,name:str,ops:{reverse?:bool}={}) {
-        const {reverse=false} = ops;
+    protected async waitFor($element:ChainablePromiseElement,name:string,ops:{reverse?:boolean,timeout?:number,timeoutMsg?:string}={}) {
+        const {reverse=false,timeout,timeoutMsg=`${name} did${reverse?"":"n't"} appear`} = ops;
         await base.waitForLoad()
         return $element
             .waitForExist({
-                timeout:5000,
+                timeout,
                 reverse,
-                timeoutMsg:`${name} did${reverse?"":"n't"} appear`
+                timeoutMsg
             })
             .catch(() => {})
     }

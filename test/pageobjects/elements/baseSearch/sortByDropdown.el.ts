@@ -1,5 +1,3 @@
-import { int } from "../../../utils/utils"
-import { $ } from "@wdio/globals"
 import MyElement from "../element"
 import { base } from "../../pages/base/base"
 
@@ -12,15 +10,17 @@ export default class SortByDropdown extends MyElement {
     /** Currently chosen sort option */
     public get $selectedOption() { return this.$base.$('option[selected]') }
 
+    /** Returns `$option` specified by index */
+    public $option(index:number) {
+        return this.$$options[index]
+    }
     /** Selects specified sort option */
-    public async selectOption(optionNum:int) {
+    public async selectOption(index:number) {
         await base.waitForLoad()
-        await this.$base.waitForExist()
-        
-        await this.$base.click()
-
-        await this.$$options[optionNum].waitForExist()
-        await this.$$options[optionNum].click()
+        await this.waitForThis()
+        await this.$base.waitForClickable()
+        await this.$option(index).waitForExist()
+        await this.$base.selectByIndex(index)
 
         await base.waitForLoad()
     }

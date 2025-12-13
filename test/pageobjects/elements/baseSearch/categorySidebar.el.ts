@@ -1,4 +1,4 @@
-import { bool, int, random$From } from "../../../utils/utils"
+import { random$From } from "../../../utils/utils"
 import { base } from "../../pages/base/base"
 import MyElement from "../element"
 
@@ -13,22 +13,22 @@ export default class CategorySidebar extends MyElement {
     /** Currently applied category. Top in category sidebar */
     public get $chosenCategory() { return this.$base.$('.facets-faceted-navigation-item-facet-option.option-active') }
     
-    /** Returns a `bool` for if category dropdown is open */
+    /** Returns a `boolean` for if category dropdown is open */
     public async isOpen() {
         await base.waitForLoad()
         return this.$$categories[0].isDisplayed()
     }
     /** Clicks to open category dropdown */
-    public async open() {
+    public async clickToOpen() {
         await base.waitForLoad()
-        await this.$btnExpander.waitForExist()
+        // await this.$btnExpander.waitForExist()
         if(!await this.isOpen()) {
             await this.$btnExpander.click()
         }
-        await this.$$categories[0].waitForDisplayed()
+        // await this.$$categories[0].waitForDisplayed()
     }
     /** Clicks to close category dropdown */
-    public async close() {
+    public async clickToClose() {
         await base.waitForLoad()
         if(await this.isOpen()) {
             await this.$btnExpander.click()
@@ -36,7 +36,7 @@ export default class CategorySidebar extends MyElement {
         await this.$$categories[0].waitForDisplayed({reverse:true})
     }
     /** Clicks to add a random category unless specified by `index?` */
-    public async addCategory(ops:{index?:int,preferFirstHalf?:bool}={}) {
+    public async addCategory(ops:{index?:number,preferFirstHalf?:boolean}={}) {
         const {index,preferFirstHalf=false} = ops;
         await base.waitForLoad()
         const $category = (index)

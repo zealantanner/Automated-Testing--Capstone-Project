@@ -1,15 +1,10 @@
-
-export type bool = boolean;
-export type int = number;
-export type str = string;
-
 /** List of good search queries to test with */
 export const searchQueries = [
     "adapter","amp","amplifier","audio","cable","jack","microphone","plug","power","speaker","sound","stand","stereo","tool","wire"
 ]
 
 /** Returns a string of random letters numbers and spaces */
-export function randLetters(length=5):str {
+export function randLetters(length=5):string {
     const keyboardChars = [
         ...range(48,57), // 0-9
         ...range(65,90), // A-Z
@@ -19,7 +14,7 @@ export function randLetters(length=5):str {
         [32], // Space
         ...Array(5).fill(null).map(()=>[...keyboardChars]),
     ]
-    const chars:str[] = []
+    const chars:string[] = []
     for(let i=0;i<length;i++) {
         const val = String.fromCharCode(randomFrom(randomFrom(goodCharacters)))
         chars.push(val)
@@ -28,8 +23,8 @@ export function randLetters(length=5):str {
 }
 
 /** Returns a string of random unicode characters */
-export function randChars(length=5):str {
-    const chars:str[] = []
+export function randChars(length=5):string {
+    const chars:string[] = []
     for (let i=0;i<length;i++) {
         const Numtostr = Math.floor(Math.random() * 2000);
         const val = String.fromCharCode(Numtostr)
@@ -39,8 +34,8 @@ export function randChars(length=5):str {
 }
 
 /** Returns an array counting from `start` to `stop` */
-export function range(start:int, stop:int):int[] {
-    const result:int[] = [];
+export function range(start:number, stop:number):number[] {
+    const result:number[] = [];
     for(let i = start; i <= stop; i++) {
         result.push(i)
     }
@@ -61,7 +56,7 @@ export function randomFrom<T>(array:T[]):T {
 }
 
 /** Returns random `$element` in `$$elements` */
-export async function random$From($$elements:ChainablePromiseArray, ops:{preferFirstHalf?:bool}={}):Promise<ChainablePromiseElement> {
+export async function random$From($$elements:ChainablePromiseArray, ops:{preferFirstHalf?:boolean}={}):Promise<ChainablePromiseElement> {
     const {preferFirstHalf=false} = ops;
     
     const length = await $$elements.length
@@ -74,7 +69,7 @@ export async function random$From($$elements:ChainablePromiseArray, ops:{preferF
 }
 
 /** Returns `$element` that has text: `text` */
-export function getElementByText(text:str, $base=$('body')) {
+export function getElementByText(text:string, $base=$('body')) {
     const $element = $base.$(`//*[contains(text(),'${text}')]`)
     return $element
 }
@@ -82,7 +77,7 @@ export function getElementByText(text:str, $base=$('body')) {
 /** Returns score for starting character in given string `word`
  * 
  * `A` is lower, `Z` is higher */
-export function charScore(word:str):number {
+export function charScore(word:string):number {
     const char = word.trim().toLowerCase()[0];
     if (!char) return 0;
     return char.charCodeAt(0);

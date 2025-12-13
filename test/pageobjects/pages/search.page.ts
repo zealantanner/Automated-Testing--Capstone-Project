@@ -9,8 +9,8 @@ class SearchPage extends BaseSearch {
     public get subUrl() { return "search" }
 
     /** @deprecated Get to this page by searching from search bar */
-    public async open() {
-        await super.open(this.baseUrl)
+    public async openPage() {
+        await super.openPage(this.baseUrl)
     }
 }
 

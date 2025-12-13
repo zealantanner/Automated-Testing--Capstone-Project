@@ -1,6 +1,15 @@
 Sometimes category dropdown doesn't appear depending on 
 click to remove cookie toast
 
+download all my jira tickets
+put epics and stories as the readme or wiki for my github so everything is linked on github
+
+put all jira tickets on obsidian
+
+//> change open function to open page
+
+//> eventually make videos of each test running
+
 for name z-a 
 `//> Error: element (".facets-item-cell-grid-title") still not existing after 10000ms`
 
@@ -58,10 +67,16 @@ How I put $element in front of element so I know it's a ChainablePromiseElement
 
 I put a description on every function and getter
 
-I made a custom element class so I can put an element into another class like this
+I made a custom element class so I can put an element into another class
 `public get CategorySidebar() { return new CategorySidebar() }`
 
 Nav links fails, I say oops, just kidding! that's a problem with the website not my code
 
 Show off how I test if there's duplicate
 Show off sort by dropdown test
+
+
+
+Bugs to report:
+When searching with 3 or less letters the typeahead doesn't appear. "amp"
+Duplicate link in the navbar menu

@@ -1,18 +1,17 @@
-import { bool, str } from "../utils/utils"
 import AssertBase from "./assert.base"
 import { base } from "../pageobjects/pages/base/base"
 import { NavLink, NavMenu } from "../pageobjects/elements/base/navBar.el";
 
-
-/** Testing nav bar */
-export default class NavLinks extends AssertBase {
+//> get rid of "dont use this"
+/** Don't use this, use `Assert.NavBar` instead */
+export default class NavBar extends AssertBase {
     /** Asserts `menu` is open */
-    public async assertNavMenuOpen(menu:NavMenu,ops:{reverse?:bool}={}) {
+    public async assertNavMenuIsOpen(menu:NavMenu,ops:{reverse?:boolean}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
 
         const $dropdown = base.NavBar.$dropdown(menu)
-        await this.waitFor($dropdown,"Dropdown",{reverse})
+        await this.waitFor($dropdown,"Dropdown",{reverse,timeout:100})
 
         if(reverse) {
             await expect($dropdown).not.toBeDisplayed()
@@ -22,7 +21,7 @@ export default class NavLinks extends AssertBase {
     }
 
     /** Asserts href of `link` under open `menu` */
-    public async assertNavLink(menu:NavMenu,link:NavLink,path:str,ops:{reverse?:bool}={}) {
+    public async assertNavLink(menu:NavMenu,link:NavLink,path:string,ops:{reverse?:boolean}={}) {
         const {reverse=false} = ops;
 
         await base.waitForLoad()

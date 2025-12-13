@@ -2,7 +2,7 @@ import { base } from "../../pages/base/base"
 import MyElement from "../element"
 
 
-/** An item in search results */
+/** An item in the search results */
 export default class Item extends MyElement {
     constructor(private _$base:ChainablePromiseElement) {
         super()
@@ -22,6 +22,7 @@ export default class Item extends MyElement {
     /** Returns amount of reviews on this item */
     public async getReviewCount() {
         await base.waitForLoad()
+        await this.waitForThis()
         await this.$reviews.waitForExist()
         const reviewText = await this.$reviews.getText()
         
@@ -32,6 +33,7 @@ export default class Item extends MyElement {
     /** Returns star level percentage for this item */
     public async getStarRating() {
         await base.waitForLoad()
+        await this.waitForThis()
         await this.$starRating.waitForExist()
         const ratingText = await this.$starRating.getAttribute('style')
         if(!ratingText) {
@@ -44,6 +46,7 @@ export default class Item extends MyElement {
     /** Returns name of this item */
     public async getTitle() {
         await base.waitForLoad()
+        await this.waitForThis()
         await this.$title.waitForExist()
 
         return this.$title.getText()
@@ -51,6 +54,7 @@ export default class Item extends MyElement {
     /** Returns price of this item */
     public async getPrice() {
         await base.waitForLoad()
+        await this.waitForThis()
         await this.$price.waitForExist()
 
         const priceText = await this.$price.getAttribute('data-rate')

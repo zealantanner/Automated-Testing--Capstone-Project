@@ -1,21 +1,22 @@
-import { bool, int, charScore } from "../utils/utils"
+import { charScore } from "../utils/utils"
 import AssertBase from "./assert.base"
 import { base } from "../pageobjects/pages/base/base"
 import { baseSearch } from "../pageobjects/pages/base/baseSearch"
 
 
-/** Testing "Sort By" dropdown on search page */
+/** Don't use this, use `Assert.SearchPageSortByDropdown` instead */
 export default class SearchPageSortByDropdown extends AssertBase {
     /** Asserts a "Sort By" option is selected */
-    public async assertOptionIsSelected(optionNum:int) {
+    public async assertOptionIsSelected(index:number) {
         await base.waitForLoad()
-        const $option = baseSearch.SortByDropdown.$$options[optionNum]
-        await expect(await $option.isSelected()).toBe(true)
+        
+        const $option = baseSearch.SortByDropdown.$option(index)
+        await expect($option).toBeSelected()
         await base.waitForLoad()
     }
 
     /** Goes to page `pageNum` and waits for everything load */
-    private async goToPageAndWait(pageNum:int) {
+    private async goToPageAndWait(pageNum:number) {
         await base.waitForLoad()
         await baseSearch.goToPage(pageNum)
         await base.waitForLoad()
@@ -40,9 +41,9 @@ export default class SearchPageSortByDropdown extends AssertBase {
         for(const item of page2ndToLastItems) {
             page2ndToLastTotal += await item.getReviewCount()
         }
-        await this.assertCompareValues(page1Total,page2ndToLastTotal)
+        await expect(page1Total).toBeGreaterThan(page2ndToLastTotal)
     }
-    /** Asserts "Highest Rating" by stars */
+    /** Asserts "Highest Rated" by stars */
     public async assertRating() {
         await base.waitForLoad()
 
@@ -60,10 +61,10 @@ export default class SearchPageSortByDropdown extends AssertBase {
         for(const item of page2ndToLastItems) {
             page2ndToLastTotal += await item.getStarRating()
         }
-        await this.assertCompareValues(page1Total,page2ndToLastTotal)
+        await expect(page1Total).toBeGreaterThan(page2ndToLastTotal)
     }
     /** Asserts "Name" by letter score */
-    public async assertNameAlphabetically(ops:{reverse?:bool}={}) {
+    public async assertNameAlphabetically(ops:{reverse?:boolean}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
 
@@ -80,10 +81,14 @@ export default class SearchPageSortByDropdown extends AssertBase {
         for(const item of page2ndToLastItems) {
             page2ndToLastTotal += charScore(await item.getTitle())
         }
-        await this.assertCompareValues(page1Total,page2ndToLastTotal,{reverse:!reverse})
+        if(reverse) {
+            await expect(page1Total).toBeGreaterThan(page2ndToLastTotal)
+        } else {
+            await expect(page1Total).toBeLessThan(page2ndToLastTotal)
+        }
     }
     /** Asserts "Price" by price */
-    public async assertPrice(ops:{reverse?:bool}={}) {
+    public async assertPrice(ops:{reverse?:boolean}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
         const page1Items = await baseSearch.items
@@ -99,6 +104,10 @@ export default class SearchPageSortByDropdown extends AssertBase {
         for(const item of page2ndToLastItems) {
             page2ndToLastTotal += await item.getPrice()
         }
-        await this.assertCompareValues(page1Total,page2ndToLastTotal,{reverse:!reverse})
+        if(reverse) {
+            await expect(page1Total).toBeGreaterThan(page2ndToLastTotal)
+        } else {
+            await expect(page1Total).toBeLessThan(page2ndToLastTotal)
+        }
     } 
 }

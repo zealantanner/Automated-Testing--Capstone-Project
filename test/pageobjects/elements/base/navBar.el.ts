@@ -1,5 +1,3 @@
-import { int, str } from "../../../utils/utils"
-import { $ } from "@wdio/globals"
 import MyElement from "../element"
 import { base } from "../../pages/base/base"
 
@@ -9,18 +7,18 @@ export type NavLink = {
     /** Title of navbar menu link
      * 
      *  e.g. `"New Products"` */
-    title:str,
+    name:string,
     /** Url path of link
      * 
      *  e.g. `"/speaker-components"` */
-    path:str,
+    path:string,
 }
 /** Navbar title and links */
 export type NavMenu = {
     /** Title of navbar menu
      * 
      *  e.g. `"SHOP"` */
-    title:str,
+    name:string,
     /** Array of `NavLinks`
      * 
      *  e.g. `text:"Pro Audio"`, `path:"/pro-audio"` */
@@ -33,13 +31,13 @@ export default class NavBar extends MyElement {
     /** Get all navbar `$$menus` */
     public get $$menus() { return this.$base.$$('.navbar-nav') }
     /** Get specified navbar `$menu` via `index` | `name` | `NavMenu` */
-    public $menu(menu:int|str|NavMenu) {
+    public $menu(menu:number|string|NavMenu) {
         if(typeof menu === "number") { // index
             return this.$$menus[menu]
         } else if(typeof menu === "string") { // name
             return this.$base.$(`//*[contains(text(),"${menu}")]/../..`)
         } else { // NavMenu
-            return this.$base.$(`//*[contains(text(),"${menu.title}")]/../..`)
+            return this.$base.$(`//*[contains(text(),"${menu.name}")]/../..`)
         }
     }
     /** Get `$dropdown` in specified `menu` which contains links */
@@ -55,86 +53,86 @@ export default class NavBar extends MyElement {
     /** Get all `$$links` in specified `menu` */
     public $$links(menu:NavMenu) {
         const $menu = this.$menu(menu)
-        return $menu.$$('[data-touchpoint]')
+        return $menu.$$(`//ul[@class="dropdown-menu"]/li/a`)
     }
     /** Get specified `$link` via `index` | `name` | `NavLink` in specified `menu`  */
     public $link(menu:NavMenu,link:NavLink) {
         const $menu = this.$menu(menu)
         if(typeof link === "number") { // index
-            return $menu.$$(`//ul[@class="dropdown-menu"]/li/a`)[link]
+            return this.$$links(menu)[link]
         } else if(typeof link === "string") { // name
             return $menu.$(`//ul[@class="dropdown-menu"]/li/a[contains(text(),"${link}")]`) 
         } else { // NavLink
-            return $menu.$(`//ul[@class="dropdown-menu"]/li/a[contains(text(),"${link.title}")]`) 
+            return $menu.$(`//ul[@class="dropdown-menu"]/li/a[contains(text(),"${link.name}")]`) 
         }
     }
 
     /** Navbar menu names and links */
-    public readonly menusAndLinks:NavMenu[] = [
+    public readonly NavMenusWithLinks:NavMenu[] = [
         {
-            title:"SHOP",
+            name:"SHOP",
             links: [
-                { title:"New Products", path:"/promodisplay/N?order=ss_searchable_updated_date:asc" },
-                { title:"Shop by Brand", path:"/brands" },
-                { title:"Home A/V", path:"/home-a-v" },
-                { title:"Speaker Components", path:"/speaker-components" },
-                { title:"Pro Audio", path:"/pro-audio" },
-                { title:"Car Audio", path:"/car-audio" },
-                { title:"Electronic Parts", path:"/electronic-parts" },
-                { title:"Connectors & Adapters", path:"/connectors-adapters" },
-                { title:"Tools & Supplies", path:"/tools-supplies" },
-                { title:"Battery & Power", path:"/battery-power" },
-                { title:"Wire & Cables", path:"/wire-cables" },
-                { title:"Novelty", path:"/novelty" },
+                { name:"New Products", path:"/promodisplay/N?order=ss_searchable_updated_date:asc" },
+                { name:"Shop by Brand", path:"/brands" },
+                { name:"Home A/V", path:"/home-a-v" },
+                { name:"Speaker Components", path:"/speaker-components" },
+                { name:"Pro Audio", path:"/pro-audio" },
+                { name:"Car Audio", path:"/car-audio" },
+                { name:"Electronic Parts", path:"/electronic-parts" },
+                { name:"Connectors & Adapters", path:"/connectors-adapters" },
+                { name:"Tools & Supplies", path:"/tools-supplies" },
+                { name:"Battery & Power", path:"/battery-power" },
+                { name:"Wire & Cables", path:"/wire-cables" },
+                { name:"Novelty", path:"/novelty" },
             ]
         },
         {
-            title:"DEALS",
+            name:"DEALS",
             links: [
-                { title:"On Sale", path:"/promo/on_sale_today" },
-                { title:"Liquidation Center", path:"/liquidation" },
-                { title:"Open Box & Refurbished", path:"/promo/refurbished-restocked-open-box-products" },
-                { title:"Gift Certificates", path:"/gift-certificate" },
+                { name:"On Sale", path:"/promo/on_sale_today" },
+                { name:"Liquidation Center", path:"/liquidation" },
+                { name:"Open Box & Refurbished", path:"/promo/refurbished-restocked-open-box-products" },
+                { name:"Gift Certificates", path:"/gift-certificate" },
             ]
         },
         {
-            title:"PROFESSIONAL",
+            name:"PROFESSIONAL",
             links: [
-                { title:"Commercial Accounts", path:"/commercial-account" },
-                { title:"OEM/ODM Services", path:"/oem" },
-                { title:"Business Forms", path:"/forms" },
-                { title:"Education", path:"/education" },
-                { title:"Installer/Integrator Referral Network", path:"/installerintegrator-referral-network" },
-                { title:"Installer/Integrator Referral Sign-up", path:"/installerintegrator-referral-signup" },
+                { name:"Commercial Accounts", path:"/commercial-account" },
+                { name:"OEM/ODM Services", path:"/oem" },
+                { name:"Business Forms", path:"/forms" },
+                { name:"Education", path:"/education" },
+                { name:"Installer/Integrator Referral Network", path:"/installerintegrator-referral-network" },
+                { name:"Installer/Integrator Referral Sign-up", path:"/installerintegrator-referral-signup" },
             ]
         },
         {
-            title:"GET HELP",
+            name:"GET HELP",
             links: [
-                { title:"FAQs", path:"/faq" },
-                { title:"Tech Support", path:"/contact-us" },
-                { title:"Woofer Replacement Tool", path:"/woofer-replacement" },
-                { title:"Track My Order", path:"https://orderstatus.parts-express.com" },
-                { title:"Contact Us", path:"/contact-us" },
+                { name:"FAQs", path:"/faq" },
+                { name:"Tech Support", path:"/contact-us" },
+                { name:"Woofer Replacement Tool", path:"/woofer-replacement" },
+                { name:"Track My Order", path:"https://orderstatus.parts-express.com" },
+                { name:"Contact Us", path:"/contact-us" },
             ]
         },
         {
-            title:"LEARN",
+            name:"LEARN",
             links: [
-                { title:"Resource Center", path:"/resource-center" },
-                { title:"Customer Project Gallery", path:"http://projectgallery.parts-express.com" },
-                { title:"TechTalk Forum", path:"http://techtalk.parts-express.com" },
+                { name:"Resource Center", path:"/resource-center" },
+                { name:"Customer Project Gallery", path:"http://projectgallery.parts-express.com" },
+                { name:"TechTalk Forum", path:"http://techtalk.parts-express.com" },
             ]
         },
     ]
 
     /** Returns specified `NavMenu` */
-    public getMenu(menu:int|str|NavMenu):NavMenu {
+    public getMenu(menu:number|string|NavMenu):NavMenu {
         if(typeof menu === "number") { // index
-            const navMenu = this.menusAndLinks[menu]
+            const navMenu = this.NavMenusWithLinks[menu]
             return navMenu
         } else if(typeof menu === "string") { // title
-            const navMenu = this.menusAndLinks.find((val) => val.title === menu)
+            const navMenu = this.NavMenusWithLinks.find((val) => val.name === menu)
             if(!navMenu) {
                 throw new Error(`No NavMenu with name "${menu}"`)
             }
@@ -144,8 +142,8 @@ export default class NavBar extends MyElement {
         }
     }
 
-    /** Returns `bool` if specified `menu` is open */
-    public isMenuOpen(menu:NavMenu) {
+    /** Returns `boolean` if specified `menu` is open */
+    public async isMenuOpen(menu:NavMenu) {
         const navMenu = this.getMenu(menu)
         return this.$dropdown(navMenu).isDisplayed()
     }
@@ -155,11 +153,11 @@ export default class NavBar extends MyElement {
 
         const navMenu = this.getMenu(menu)
         const $btnToggle = this.$btnDropdownToggle(navMenu)
-        await this.waitFor($btnToggle,`Navbar "${navMenu.title}"`)
-        await this.$btnDropdownToggle(navMenu).click()
+        await this.waitFor($btnToggle,`Navbar "${navMenu.name}"`)
+        await $btnToggle.click()
     }
     /** Clicks to open specified `menu` */
-    public async openMenu(menu:NavMenu) {
+    public async clickToOpenMenu(menu:NavMenu) {
         await base.waitForLoad()
 
         if(!await this.isMenuOpen(menu)) {
@@ -168,7 +166,7 @@ export default class NavBar extends MyElement {
         await this.$dropdown(menu).waitForDisplayed()
     }
     /** Clicks to close specified `menu` */
-    public async closeMenu(menu:NavMenu) {
+    public async clickTocloseMenu(menu:NavMenu) {
         await base.waitForLoad()
         
         if(await this.isMenuOpen(menu)) {

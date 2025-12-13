@@ -1,6 +1,6 @@
-import { bool, str } from "../utils/utils"
+import { expect, browser } from '@wdio/globals'
 import { base } from "../pageobjects/pages/base/base"
-import NavLinks from "./navLinks.assert"
+import NavBar from "./navLinks.assert"
 import SearchBar from "./searchBar.assert"
 import SearchPageCategories from "./searchPageCategories.assert"
 import SearchPageSortByDropdown from "./searchPageSortByDropdown.assert"
@@ -8,8 +8,8 @@ import SearchPageSortByDropdown from "./searchPageSortByDropdown.assert"
 
 /** Main class for testing */
 class Assert {
-    /** Testing nav bar */
-    public get NavLinks() { return new NavLinks() }
+    /** Testing navbar menus */
+    public get NavBar() { return new NavBar() }
     /** Testing search bar */
     public get SearchBar() { return new SearchBar() }
     /** Testing categories on search page */
@@ -18,35 +18,32 @@ class Assert {
     public get SearchPageSortByDropdown() { return new SearchPageSortByDropdown() }
 
     /** Asserts current url contains `path` */
-    public async assertUrlContains(path:str|RegExp|URL, ops:{reverse?:bool}={}) {
+    public async assertCurrentUrlContains(path:string|RegExp|URL, ops:{reverse?:boolean}={}) {
         if(path instanceof URL) {
             path = path.toString()
         }
         const {reverse=false} = ops;
         await base.waitForLoad()
 
-        const currentUrl = await browser.getUrl()
-        const expectUrl = (reverse) ? expect(currentUrl).not : expect(currentUrl)
-        
+        const expectBrowser = (reverse) ? expect(browser).not : expect(browser)
         if(path instanceof RegExp) {
-            await expectUrl.toMatch(path)
+            await expectBrowser.toHaveUrl(expect.stringMatching(path))
         } else {
-            await expectUrl.toContain(path)
+            await expectBrowser.toHaveUrl(expect.stringContaining(path))
         }
     }
-
+    
     /** Asserts current url is exactly `path` */
-    public async assertUrlIs(path:str|URL, ops:{reverse?:bool}={}) {
+    public async assertCurrentUrlIs(path:string|URL, ops:{reverse?:boolean}={}) {
         if(path instanceof URL) {
             path = path.toString()
         }
         const {reverse=false} = ops;
         await base.waitForLoad()
-
-        const currentUrl = await browser.getUrl()
-        const expectUrl = (reverse) ? expect(currentUrl).not : expect(currentUrl)
         
-        await expectUrl.toBe(path)
+        const expectBrowser = (reverse) ? expect(browser).not : expect(browser)
+        
+        await expectBrowser.toHaveUrl(path)
     }
 }
 

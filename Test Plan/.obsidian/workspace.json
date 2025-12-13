@@ -4,8 +4,158 @@
     "type": "split",
     "children": [
       {
+        "id": "1d1b4a85118d0040",
+        "type": "tabs",
+        "dimension": 47.93875147232038,
+        "children": [
+          {
+            "id": "b1f1c82fa25d8021",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Epics and stories.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Epics and stories"
+            }
+          },
+          {
+            "id": "b820be526bb6122c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Nav Links/Tests/Automated/2b. Assert there are no duplicate links.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2b. Assert there are no duplicate links"
+            }
+          },
+          {
+            "id": "dcb8f907532e0a83",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Nav Links/Tests/Manual/2. Assert links have highlight.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2. Assert links have highlight"
+            }
+          },
+          {
+            "id": "8b19ae8c070c2725",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Nav Links/Tests/Automated/2a. Assert href is correct.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2a. Assert href is correct"
+            }
+          },
+          {
+            "id": "5f42e4bb031be296",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Nav Links/Tests/Automated/1. Assert the menu opens.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1. Assert the menu opens"
+            }
+          },
+          {
+            "id": "d37db112031efca6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Nav Links/Tests/Automated/2b. Assert there are no duplicate links.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2b. Assert there are no duplicate links"
+            }
+          },
+          {
+            "id": "274047e4be55e897",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Search Bar/Tests/Automated/Input field/1a. Assert typeahead appears.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1a. Assert typeahead appears"
+            }
+          },
+          {
+            "id": "ffc67fbf3a561957",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Search Bar/Tests/Manual/1. Assert typing in the search field feels normal.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1. Assert typing in the search field feels normal"
+            }
+          },
+          {
+            "id": "43d0eeedacf742b7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Search Bar/Tests/Manual/1. Assert typing in the search field feels normal.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1. Assert typing in the search field feels normal"
+            }
+          },
+          {
+            "id": "80da2e76f559229a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Templates/My template.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "My template"
+            }
+          }
+        ]
+      },
+      {
         "id": "a50c5a72ba9688ca",
         "type": "tabs",
+        "dimension": 52.06124852767962,
         "children": [
           {
             "id": "7904d9342875e747",
@@ -24,22 +174,6 @@
             }
           },
           {
-            "id": "b1f1c82fa25d8021",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Epics and stories.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "Epics and stories"
-            }
-          },
-          {
             "id": "8de098433a65ad7c",
             "type": "leaf",
             "pinned": true,
@@ -48,9 +182,9 @@
               "state": {
                 "file": "Nav Links/Nav Links.canvas",
                 "viewState": {
-                  "x": 1635.4710681242195,
-                  "y": -1731.015835891072,
-                  "zoom": -1.6874919731837386
+                  "x": 2117.0822029108954,
+                  "y": -1352.2832433019303,
+                  "zoom": -0.8987715027928627
                 }
               },
               "pinned": true,
@@ -67,9 +201,9 @@
               "state": {
                 "file": "Search Bar/Search Bar.canvas",
                 "viewState": {
-                  "x": -1122.904606454504,
-                  "y": -1860.423137973204,
-                  "zoom": -2.3714382879892018
+                  "x": -3040.904093497555,
+                  "y": -2312.641963302648,
+                  "zoom": -1.5341296594966436
                 }
               },
               "pinned": true,
@@ -86,9 +220,9 @@
               "state": {
                 "file": "Search Page Categories/Search Page Categories.canvas",
                 "viewState": {
-                  "x": -554.4603836187124,
-                  "y": 1558.4996306886865,
-                  "zoom": -1.7170164062492512
+                  "x": 2035.0098265183633,
+                  "y": 1410.2600543599601,
+                  "zoom": -2.0526403391054497
                 }
               },
               "pinned": true,
@@ -105,9 +239,9 @@
               "state": {
                 "file": "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
                 "viewState": {
-                  "x": -173.31974056387637,
-                  "y": 281.7301642871861,
-                  "zoom": -0.5555320388264606
+                  "x": 1741.089714651928,
+                  "y": 302.6799069352881,
+                  "zoom": -1.5195237248597726
                 }
               },
               "pinned": true,
@@ -116,35 +250,115 @@
             }
           },
           {
-            "id": "0884cb5cc8de4760",
+            "id": "6c844d02f38743eb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Nav Links/Tests/Automated/Assert there are no duplicate links.md",
+                "file": "Nav Links/Tests/Automated/1. Assert the menu opens.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Assert there are no duplicate links"
+              "title": "1. Assert the menu opens"
             }
           },
           {
-            "id": "71d49b1bd3d1e230",
+            "id": "18eee81852d64ce1",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          },
+          {
+            "id": "fce94ac3dc5af0b2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Nav Links/Tests/Automated/Assert href is correct.md",
+                "file": "Nav Links/Tests/Manual/1. Assert dropdown aspects behave correctly.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Assert href is correct"
+              "title": "1. Assert dropdown aspects behave correctly"
             }
           },
           {
-            "id": "998cc03eb8d05f39",
+            "id": "00cf99b15a3453ad",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Nav Links/Tests/Automated/1. Assert the menu opens.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1. Assert the menu opens"
+            }
+          },
+          {
+            "id": "7005c670fde84637",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Search Page Categories/Tests/Automated/1b. Assert category dropdown opens.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1b. Assert category dropdown opens"
+            }
+          },
+          {
+            "id": "910890746351f378",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Search Page Categories/Tests/Automated/2a. Assert category is added, url changes and items are filtered.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2a. Assert category is added, url changes and items are filtered"
+            }
+          },
+          {
+            "id": "09dea765ec375cbf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Search Page Sort By Dropdown/Tests/Manual/1b. Somehow assert \"Newest First\" sorts by date.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1b. Somehow assert \"Newest First\" sorts by date"
+            }
+          },
+          {
+            "id": "c12683670c085011",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Search Page Sort By Dropdown/Tests/Manual/1b. Somehow assert \"Newest First\" sorts by date.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1b. Somehow assert \"Newest First\" sorts by date"
+            }
+          },
+          {
+            "id": "c5b7d0a1d142fed3",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -158,7 +372,7 @@
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 13
       }
     ],
     "direction": "vertical"
@@ -190,7 +404,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#test/unsure",
+                "query": "unsure",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -215,7 +429,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 523.5110321044922
+    "width": 360.5110321044922
   },
   "right": {
     "id": "24dc774896c24788",
@@ -307,7 +521,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 416.5
+    "width": 416.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -317,55 +532,53 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false,
-      "publish:Publish changes...": false
+      "bases:Create new base": false
     }
   },
-  "active": "998cc03eb8d05f39",
+  "active": "c5b7d0a1d142fed3",
   "lastOpenFiles": [
+    "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
     "Epics and stories.md",
-    "Nav Links/Tests/Automated/Assert href is correct.md",
-    "Search Bar/Tests/Automated/Submit button/Should make nothing happen on click with no text in input field.md",
-    "!misc/trash/Untitled.md",
-    "!misc/trash/Typeahead/Brands/Brands are relevant.md",
-    "!misc/trash/Typeahead/Brands/Clicks on a brand - unsure.md",
-    "Search Page Sort By Dropdown/Tests/Manual/Sorts by most relevant.md",
-    "Search Page Sort By Dropdown/Tests/Automated/Sorting by rating.md",
-    "Search Page Sort By Dropdown/Tests/Automated/Sorting by price.md",
-    "Search Page Sort By Dropdown/Tests/Automated/Sorting by popularity.md",
-    "Search Page Sort By Dropdown/Tests/Automated/Sorting by name alphabetically.md",
-    "Search Page Sort By Dropdown/Tests/Unsure/Sorting by date -  unsure.md",
+    "Search Page Sort By Dropdown/Tests/Manual/1b. Somehow assert \"Newest First\" sorts by date.md",
+    "Search Page Categories/Search Page Categories.canvas",
+    "Templates/My template.md",
+    "Notes.md",
+    "Templates",
+    "Search Page Categories/Tests/Automated/2a. Assert category is added, url changes and items are filtered.md",
+    "Search Page Categories/Tests/Automated/Assert category changes url.md",
+    "Search Bar/Search Bar.canvas",
+    "Nav Links/Nav Links.canvas",
+    "Search Page Categories/Tests/Automated/1b. Assert category dropdown opens.md",
+    "Search Bar/Tests/Manual/1. Assert typing in the search field feels normal.md",
+    "Nav Links/Tests/Automated/2b. Assert there are no duplicate links.md",
+    "Search Bar/Tests/Automated/Input field/1a. Assert typeahead appears.md",
+    "Nav Links/Tests/Automated/1. Assert the menu opens.md",
+    "Search Page Sort By Dropdown/Tests/Manual/Assert items sort by newest.md",
+    "Nav Links/Tests/Manual/1. Assert dropdown aspects behave correctly.md",
+    "Nav Links/Tests/Automated/3. Assert the menu closes.md",
+    "Nav Links/Tests/Automated/2a. Assert href is correct.md",
+    "Nav Links/Tests/Manual/2. Assert links have highlight.md",
+    "!misc/Unsure.md",
+    "Search Page Sort By Dropdown/Tests/Automated/3a. Assert option loosely sorts correctly.md",
+    "Search Page Sort By Dropdown/Tests/Automated/1a. Assert sort by \"Best Match\".md",
+    "Search Page Sort By Dropdown/Tests/Automated/1h. Assert sort by \"Newest First\".md",
+    "Search Page Sort By Dropdown/Tests/Automated/1e. Assert sort by \"Name Z - A\".md",
+    "Search Page Categories/Tests/Automated/2b. Assert category is removed, url changes and items are unfiltered.md",
+    "Search Bar/Tests/Automated/Input field/1b. Assert pressing enter activates search function.md",
+    "Search Bar/Tests/Automated/Input field/Activates search on enter.md",
+    "Test Plan.canvas",
+    "Search Bar/Tests/Automated/Submit button/2. Assert nothing happens on click when there's no text in input field.md",
+    "Untitled.base",
     "Search Page Sort By Dropdown/Tests/Unsure",
-    "Search Page Sort By Dropdown/Tests/Automated/Shows option appears to be selected.md",
-    "Search Page Sort By Dropdown/Tests/Manual/Highlights blue on hover.md",
-    "Search Page Sort By Dropdown/Tests/Automated/Changes URL according to sort by option.md",
-    "Search Page Categories/Tests/Automated/Removes a category.md",
     "Search Page Sort By Dropdown/Tests/Automated",
     "Search Page Sort By Dropdown/Tests/Manual",
-    "Search Page Categories/Tests/Automated/Opens and closes on click.md",
-    "Search Page Categories/Tests/Manual/Items that are irrelevant to the filter are not included.md",
-    "Search Page Categories/Tests/Manual/Highlights red on hover.md",
-    "Search Page Categories/Tests/Manual/Displayed items are relevant to the category.md",
-    "Search Page Categories/Tests/Automated/Adds a category.md",
-    "Search Bar/Tests/Automated/Input field/Shows no results in the typeahead.md",
     "Search Page Categories/Tests/Automated",
     "Search Page Categories/Tests/Manual",
-    "Search Bar/Tests/Automated/Input field/Makes the typeahead appear.md",
-    "Search Bar/Tests/Automated/Input field/Is limited to 100 characters.md",
-    "Search Bar/Tests/Manual/Inputting text feels normal.md",
-    "Search Bar/Tests/Automated/Input field/Activates search on enter.md",
     "Search Bar/Tests/Automated/Submit button",
     "Search Bar/Tests/Manual",
     "Search Bar/Tests/Automated/Input field",
-    "Search Bar/Tests/Automated",
-    "Nav Links/Tests/Automated",
-    "Nav Links/Nav Links.canvas",
-    "Search Bar/Search Bar.canvas",
-    "Test Plan.canvas",
-    "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
     "Search Page Categories/images/Category.png",
     "!misc/trash/Removed.canvas",
-    "Search Page Categories/Search Page Categories.canvas",
     "Search Page Categories/images/Category chosen.png",
     "Search Page Categories/images/Chosen category filter.png",
     "Search Page Categories/images/Chosen category in dropdown.png",

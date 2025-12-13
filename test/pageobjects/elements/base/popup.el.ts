@@ -1,4 +1,4 @@
-import { $ } from "@wdio/globals"
+import { browser } from '@wdio/globals'
 import MyElement from "../element"
 import { base } from "../../pages/base/base"
 

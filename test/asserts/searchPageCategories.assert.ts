@@ -1,13 +1,12 @@
-import { bool, int } from "../utils/utils"
 import AssertBase from "./assert.base"
 import { base } from "../pageobjects/pages/base/base"
 import { baseSearch } from "../pageobjects/pages/base/baseSearch"
 
 
-/** Testing categories on search page */
+/** Don't use this, use `Assert.SearchPageCategories` instead*/
 export default class SearchPageCategories extends AssertBase {
     /** Asserts category dropdown is open */
-    public async assertOpen(ops:{reverse?:bool}={}) {
+    public async assertOpen(ops:{reverse?:boolean}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
         
@@ -20,12 +19,12 @@ export default class SearchPageCategories extends AssertBase {
     }
 
     /** Asserts category is active */
-    public async assertCategoryChosen(ops:{reverse?:bool}={}) {
+    public async assertCategoryChosen(ops:{reverse?:boolean}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
         
         const $chosenCategory = baseSearch.CategorySidebar.$chosenCategory
-        await $chosenCategory.waitForExist({reverse})
+        await $chosenCategory.waitForDisplayed({reverse})
         if(reverse) {
             await expect($chosenCategory).not.toBeDisplayed()
         } else {
@@ -34,7 +33,7 @@ export default class SearchPageCategories extends AssertBase {
     }
 
     /** Asserts items are filtered, should be less than before */
-    public async assertItemsFiltered(beforeItemAmount:int, ops:{reverse?:bool}={}) {
+    public async assertItemsFiltered(beforeItemAmount:number, ops:{reverse?:boolean}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
 

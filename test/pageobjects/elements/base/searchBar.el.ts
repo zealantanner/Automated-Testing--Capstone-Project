@@ -1,7 +1,6 @@
-import { bool, str } from "../../../utils/utils"
-import { browser, $ } from '@wdio/globals'
+import { browser } from '@wdio/globals'
 import MyElement from "../element"
-import Typeahead from "../baseSearch/typeahead.el"
+import Typeahead from "./typeahead.el"
 import { base } from "../../pages/base/base"
 
 
@@ -16,15 +15,19 @@ export default class SearchBar extends MyElement {
     /** Typeahead when using search bar */
     public get Typeahead() { return new Typeahead(this.$base) }
 
+    /** Sets value of `$inputField` to "" */
+    public async clearText() {
+        await base.waitForLoad()
+        await this.$inputField.setValue("")
+    }
     /** Sets value of `$inputField` to `text` */
-    public async inputText(text:str) {
+    public async inputText(text:string) {
         await base.waitForLoad()
         await this.$inputField.setValue(text)
     }
     /** Types each character from `text` to `$inputField` */
-    public async typeText(text:str) {
+    public async typeText(text:string) {
         await base.waitForLoad()
-        await this.$inputField.waitForExist()
 
         await this.$inputField.click()
         for(const char of text) {
@@ -33,11 +36,11 @@ export default class SearchBar extends MyElement {
     }
 
     /** Activates search by clicking search button or pressing `enter` */
-    public async activateSearch(ops:{pressEnterInstead?:bool}={}) {
-        const {pressEnterInstead=false} = ops;
+    public async activateSearch(ops:{submitWithEnter?:boolean}={}) {
+        const {submitWithEnter=false} = ops;
         await base.waitForLoad()
         
-        if(pressEnterInstead) {
+        if(submitWithEnter) {
             await this.$inputField.click()
             await browser.keys('Enter')
         } else {
@@ -45,11 +48,11 @@ export default class SearchBar extends MyElement {
         }
     }
     /** Inputs `text` and activates search */
-    public async search(text:str="",ops:{pressEnterInstead?:bool}={}) {
+    public async search(text:string="",ops:{pressEnterInstead?:boolean}={}) {
         const {pressEnterInstead=false} = ops;
         await base.waitForLoad()
 
         await this.inputText(text)
-        await this.activateSearch({pressEnterInstead})
+        await this.activateSearch({submitWithEnter: pressEnterInstead})
     }
 }

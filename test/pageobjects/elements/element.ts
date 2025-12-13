@@ -1,4 +1,3 @@
-import { bool, str } from "../../utils/utils"
 import { base } from "../pages/base/base"
 
 
@@ -8,15 +7,16 @@ export default abstract class MyElement {
     public abstract get $base():ChainablePromiseElement
 
     /** Waits until `this` element is displayed */
-    public async waitForThis(ops:{reverse?:bool}={}) {
+    public async waitForThis(ops:{reverse?:boolean}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
 
-        await this.$base.waitForExist({reverse})
+        // await this.$base.waitForExist({reverse})
+        await this.$base.waitForDisplayed({reverse})
         await base.waitForLoad()
     }
     /** Waits for `$element` called `name` to show up */
-    public async waitFor($element:ChainablePromiseElement,name:str,ops:{reverse?:bool}={}) {
+    public async waitFor($element:ChainablePromiseElement,name:string,ops:{reverse?:boolean}={}) {
         const {reverse=false} = ops;
         await base.waitForLoad()
         return $element

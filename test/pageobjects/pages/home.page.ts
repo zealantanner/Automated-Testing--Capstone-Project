@@ -9,8 +9,8 @@ class HomePage extends Base {
     public get subUrl() { return "" }
 
     /** Opens home page */
-    public async open() {
-        await super.open();
+    public async openPage() {
+        await super.openPage();
     }
 }
 

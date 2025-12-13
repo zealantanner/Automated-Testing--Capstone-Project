@@ -1,5 +1,4 @@
 import Assert from "../asserts/assert"
-import { base } from "../pageobjects/pages/base/base";
 import HomePage from "../pageobjects/pages/home.page";
 
 
@@ -7,50 +6,35 @@ import HomePage from "../pageobjects/pages/home.page";
 
 describe(`Nav Links [MTQA-4219]`, () => {
     before(async () => {
-        // Go to https://www.parts-express.com
-        await HomePage.open()
-        // Dismiss popup modal via local storage
+        await HomePage.openPage()
         await HomePage.Popup.dismissPopupViaLocalStorage()
     })
-    // Each navbar menu
     describe(`Each navbar menu`, () => {
-        // Open each nav menu
-        for(const menu1 of base.NavBar.menusAndLinks) {
-            describe(`"${menu1.title}"`, () => {
-                it(`Asserts opens`, async () => {
-                    // Click to open menu
-                    await base.NavBar.openMenu(menu1)
-                    // Assert menu is opened
-                    await Assert.NavLinks.assertNavMenuOpen(menu1)
+        for(const menu1 of HomePage.NavBar.NavMenusWithLinks) {
+            describe(`"${menu1.name}"`, () => {
+                it(`Assert the menu opens`, async () => {
+                    await HomePage.NavBar.clickToOpenMenu(menu1)
+                    await Assert.NavBar.assertNavMenuIsOpen(menu1)
                 })
-                describe(`Links`, () => {
-                    // For each link
-                    for(const link1 of menu1.links) {
-                        it(`Asserts "${link1.title}" links to path "${link1.path}"`, async () => {
-                            // Assert href on link is correct
-                            await Assert.NavLinks.assertNavLink(menu1,link1,link1.path)
-                        })
-                        describe(`Tests duplicate links for "${link1.title}"`, () => {
-                            // Loop through each link in each menu again
-                            for(const menu2 of base.NavBar.menusAndLinks) {
-                                for(const link2 of menu2.links) {
-                                    // If the paths are the same but the names are different
-                                    if(link1.path === link2.path && link1.title !== link2.title) {
-                                        it(`Asserts link is different than "${link2.title}"`, async () => {
-                                            // Assert hrefs don't repeat
-                                            await Assert.NavLinks.assertNavLink(menu1,link1,link2.path,{reverse:true})
-                                        })
-                                    }
+                for(const link1 of menu1.links) {
+                    it(`Assert "${link1.name}" links to path "${link1.path}"`, async () => {
+                        await Assert.NavBar.assertNavLink(menu1,link1,link1.path)
+                    })
+                    describe(`Tests duplicate links for "${link1.name}"`, () => {
+                        for(const menu2 of HomePage.NavBar.NavMenusWithLinks) {
+                            for(const link2 of menu2.links) {
+                                if(link1.path === link2.path && link1.name !== link2.name) {
+                                    it(`Assert link is different than "${link2.name}"`, async () => {
+                                        await Assert.NavBar.assertNavLink(menu1,link1,link2.path,{reverse:true})
+                                    })
                                 }
                             }
-                        })
-                    }
-                })
-                it(`Asserts closes`, async () => {
-                    // Click to close menu
-                    await base.NavBar.closeMenu(menu1)
-                    // Assert menu is closed
-                    await Assert.NavLinks.assertNavMenuOpen(menu1,{reverse:true})
+                        }
+                    })
+                }
+                it(`Assert the menu closes`, async () => {
+                    await HomePage.NavBar.clickTocloseMenu(menu1)
+                    await Assert.NavBar.assertNavMenuIsOpen(menu1,{reverse:true})
                 })
             })
         }

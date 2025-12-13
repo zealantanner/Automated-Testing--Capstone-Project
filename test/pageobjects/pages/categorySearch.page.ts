@@ -1,4 +1,3 @@
-import { $ } from '@wdio/globals';
 import BaseSearch from './base/baseSearch';
 
 
@@ -20,8 +19,8 @@ class CategorySearchPage extends BaseSearch {
     }
 
     /** @deprecated Get to this page by searching and applying a category */
-    public async open() {
-        await super.open(this.baseUrl)
+    public async openPage() {
+        await super.openPage(this.baseUrl)
     }
 }
 
