@@ -2,7 +2,7 @@ import { base } from "../pageobjects/pages/base/base"
 import AssertBase from "./assert.base"
 
 
-/** Don't use this, use `Assert.SearchBar` instead */
+/** Search bar tests */
 export default class SearchBar extends AssertBase {
     /** Asserts typeahead is open */
     public async assertTypeaheadDisplayed(ops:{reverse?:boolean,timeout?:number}={}) {

@@ -2,9 +2,7 @@ import { expect } from '@wdio/globals'
 import { base } from "../pageobjects/pages/base/base"
 
 
-/** Base for all assertions
- *  
- * Don't use this, use `Assert` instead */
+/** Base for all assertions */
 export default class AssertBase {
     /** Asserts `$element` has href that contains `path` */
     protected async assertHref($element:ChainablePromiseElement, path:string|RegExp, ops:{reverse?:boolean}={}) {

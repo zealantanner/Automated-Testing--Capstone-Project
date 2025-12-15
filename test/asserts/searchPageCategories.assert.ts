@@ -3,7 +3,7 @@ import { base } from "../pageobjects/pages/base/base"
 import { baseSearch } from "../pageobjects/pages/base/baseSearch"
 
 
-/** Don't use this, use `Assert.SearchPageCategories` instead*/
+/** Search page categories tests */
 export default class SearchPageCategories extends AssertBase {
     /** Asserts category dropdown is open */
     public async assertOpen(ops:{reverse?:boolean}={}) {

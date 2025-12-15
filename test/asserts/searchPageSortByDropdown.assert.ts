@@ -4,7 +4,7 @@ import { base } from "../pageobjects/pages/base/base"
 import { baseSearch } from "../pageobjects/pages/base/baseSearch"
 
 
-/** Don't use this, use `Assert.SearchPageSortByDropdown` instead */
+/** Search page "Sort By" dropdown tests */
 export default class SearchPageSortByDropdown extends AssertBase {
     /** Asserts a "Sort By" option is selected */
     public async assertOptionIsSelected(index:number) {

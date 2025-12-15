@@ -2,8 +2,8 @@ import AssertBase from "./assert.base"
 import { base } from "../pageobjects/pages/base/base"
 import { NavLink, NavMenu } from "../pageobjects/elements/base/navBar.el";
 
-//> get rid of "dont use this"
-/** Don't use this, use `Assert.NavBar` instead */
+
+/** Navbar menu tests */
 export default class NavBar extends AssertBase {
     /** Asserts `menu` is open */
     public async assertNavMenuIsOpen(menu:NavMenu,ops:{reverse?:boolean}={}) {
