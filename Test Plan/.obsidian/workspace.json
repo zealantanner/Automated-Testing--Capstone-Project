@@ -9,6 +9,22 @@
         "dimension": 47.93875147232038,
         "children": [
           {
+            "id": "7904d9342875e747",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Notes.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Notes"
+            }
+          },
+          {
             "id": "b1f1c82fa25d8021",
             "type": "leaf",
             "pinned": true,
@@ -158,22 +174,6 @@
         "dimension": 52.06124852767962,
         "children": [
           {
-            "id": "7904d9342875e747",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "Notes"
-            }
-          },
-          {
             "id": "8de098433a65ad7c",
             "type": "leaf",
             "pinned": true,
@@ -182,9 +182,9 @@
               "state": {
                 "file": "Nav Links/Nav Links.canvas",
                 "viewState": {
-                  "x": 2117.0822029108954,
-                  "y": -1352.2832433019303,
-                  "zoom": -0.8987715027928627
+                  "x": 1081.6767369370395,
+                  "y": -1426.317426104905,
+                  "zoom": -1.8481572541892932
                 }
               },
               "pinned": true,
@@ -363,12 +363,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Notes.md",
+                "file": "Epics and stories.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Notes"
+              "title": "Epics and stories"
+            }
+          },
+          {
+            "id": "fceffc7ec1496049",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Presentation notes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Presentation notes"
             }
           }
         ],
@@ -535,19 +549,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "c5b7d0a1d142fed3",
+  "active": "fceffc7ec1496049",
   "lastOpenFiles": [
-    "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
+    "Nav Links/Nav Links.canvas",
+    "Notes.md",
     "Epics and stories.md",
+    "Presentation notes.md",
+    "Untitled.base",
+    "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
     "Search Page Sort By Dropdown/Tests/Manual/1b. Somehow assert \"Newest First\" sorts by date.md",
     "Search Page Categories/Search Page Categories.canvas",
     "Templates/My template.md",
-    "Notes.md",
     "Templates",
     "Search Page Categories/Tests/Automated/2a. Assert category is added, url changes and items are filtered.md",
     "Search Page Categories/Tests/Automated/Assert category changes url.md",
     "Search Bar/Search Bar.canvas",
-    "Nav Links/Nav Links.canvas",
     "Search Page Categories/Tests/Automated/1b. Assert category dropdown opens.md",
     "Search Bar/Tests/Manual/1. Assert typing in the search field feels normal.md",
     "Nav Links/Tests/Automated/2b. Assert there are no duplicate links.md",
@@ -567,8 +583,6 @@
     "Search Bar/Tests/Automated/Input field/1b. Assert pressing enter activates search function.md",
     "Search Bar/Tests/Automated/Input field/Activates search on enter.md",
     "Test Plan.canvas",
-    "Search Bar/Tests/Automated/Submit button/2. Assert nothing happens on click when there's no text in input field.md",
-    "Untitled.base",
     "Search Page Sort By Dropdown/Tests/Unsure",
     "Search Page Sort By Dropdown/Tests/Automated",
     "Search Page Sort By Dropdown/Tests/Manual",

@@ -21,11 +21,9 @@ export default class CategorySidebar extends MyElement {
     /** Clicks to open category dropdown */
     public async clickToOpen() {
         await base.waitForLoad()
-        // await this.$btnExpander.waitForExist()
         if(!await this.isOpen()) {
             await this.$btnExpander.click()
         }
-        // await this.$$categories[0].waitForDisplayed()
     }
     /** Clicks to close category dropdown */
     public async clickToClose() {

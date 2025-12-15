@@ -11,7 +11,6 @@ export default abstract class MyElement {
         const {reverse=false} = ops;
         await base.waitForLoad()
 
-        // await this.$base.waitForExist({reverse})
         await this.$base.waitForDisplayed({reverse})
         await base.waitForLoad()
     }
