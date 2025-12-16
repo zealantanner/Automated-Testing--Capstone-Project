@@ -6,7 +6,7 @@
       {
         "id": "1d1b4a85118d0040",
         "type": "tabs",
-        "dimension": 32.427937915742795,
+        "dimension": 51.38705416116248,
         "children": [
           {
             "id": "7904d9342875e747",
@@ -121,7 +121,7 @@
       {
         "id": "a50c5a72ba9688ca",
         "type": "tabs",
-        "dimension": 67.57206208425721,
+        "dimension": 48.61294583883752,
         "children": [
           {
             "id": "18eee81852d64ce1",
@@ -279,8 +279,23 @@
               "icon": "lucide-layout-dashboard",
               "title": "Code organization"
             }
+          },
+          {
+            "id": "a701da0b3dd111eb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Presentation notes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Presentation notes"
+            }
           }
-        ]
+        ],
+        "currentTab": 10
       }
     ],
     "direction": "vertical"
@@ -312,7 +327,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "4218",
+                "query": "\"",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -333,12 +348,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 255.5110321044922
+    "width": 545.5110321044922
   },
   "right": {
     "id": "24dc774896c24788",
@@ -444,8 +458,18 @@
       "bases:Create new base": false
     }
   },
-  "active": "18eee81852d64ce1",
+  "active": "a701da0b3dd111eb",
   "lastOpenFiles": [
+    "Search Page Sort By Dropdown/Tests/Automated/1d. Assert sort by 'Name A - Z'.md",
+    "Search Page Sort By Dropdown/Tests/Automated/1h. Assert sort by 'Newest First'.md",
+    "Search Page Sort By Dropdown/Tests/Automated/1g. Assert sort by 'Price High to Low'.md",
+    "Search Page Sort By Dropdown/Tests/Automated/1f. Assert sort by 'Price Low to High'.md",
+    "Search Page Sort By Dropdown/Tests/Automated/1c. Assert sort by 'Highest Rated'.md",
+    "Search Page Sort By Dropdown/Tests/Manual/1b. Somehow assert 'Newest First' sorts by date.md",
+    "Search Page Sort By Dropdown/Tests/Automated/1b. Assert sort by 'Most Popular'.md",
+    "Search Page Sort By Dropdown/Tests/Automated/1a. Assert sort by 'Best Match'.md",
+    "Search Page Sort By Dropdown/Tests/Manual/1a. Assert 'Best Match' sorts by most relevant.md",
+    "Search Page Sort By Dropdown/Tests/Automated/1e. Assert sort by 'Name Z - A'.md",
     "Notes.md",
     "Presentation notes.md",
     "Code organization.canvas",
@@ -471,21 +495,12 @@
     "Nav Links/Tests/Automated/1. Assert the menu opens.md",
     "Nav Links/Tests/Automated/2a. Assert href is correct.md",
     "Nav Links/Tests/Manual/2. Assert links have highlight.md",
-    "Search Page Sort By Dropdown/Tests/Manual/1b. Somehow assert \"Newest First\" sorts by date.md",
     "Search Page Categories/Search Page Categories.canvas",
     "Untitled.base",
     "Templates",
     "Search Page Categories/Tests/Automated/2a. Assert category is added, url changes and items are filtered.md",
     "Search Page Categories/Tests/Automated/Assert category changes url.md",
     "Search Page Categories/Tests/Automated/1b. Assert category dropdown opens.md",
-    "Search Page Sort By Dropdown/Tests/Manual/Assert items sort by newest.md",
-    "Nav Links/Tests/Manual/1. Assert dropdown aspects behave correctly.md",
-    "Nav Links/Tests/Automated/3. Assert the menu closes.md",
-    "!misc/Unsure.md",
-    "Search Page Sort By Dropdown/Tests/Automated/3a. Assert option loosely sorts correctly.md",
-    "Search Page Sort By Dropdown/Tests/Automated/1a. Assert sort by \"Best Match\".md",
-    "Search Page Sort By Dropdown/Tests/Automated/1h. Assert sort by \"Newest First\".md",
-    "Search Page Sort By Dropdown/Tests/Automated/1e. Assert sort by \"Name Z - A\".md",
     "Search Page Sort By Dropdown/Tests/Unsure",
     "Search Page Categories/images/Category.png",
     "!misc/trash/Removed.canvas",

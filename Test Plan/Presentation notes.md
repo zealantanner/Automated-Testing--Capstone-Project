@@ -37,4 +37,5 @@
 1. Would you give your stamp of approval that the components you tested are ready for the end user, meaning that the end user should not find any problems with the components?
 	It's a user-ready website, but there's a few small bugs that barely affect the average user
 2. Share what you could have done better and or what you could improve on (**not excuses**).
+	I could have done more negative
 	I added a lot to my code that I never ended up using, I ended up deleting a bunch. I needed to first write the test files, write down step by step exactly what they should do before getting ahead of myself. Writing the functions there even though they don't exist yet
