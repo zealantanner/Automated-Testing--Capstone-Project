@@ -41,22 +41,6 @@
             }
           },
           {
-            "id": "b1f1c82fa25d8021",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Test Plan.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "Test Plan"
-            }
-          },
-          {
             "id": "8de098433a65ad7c",
             "type": "leaf",
             "pinned": true,
@@ -131,8 +115,26 @@
               "icon": "lucide-layout-dashboard",
               "title": "Search Page Sort By Dropdown"
             }
+          },
+          {
+            "id": "7a00885950fac473",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Code organization.canvas",
+                "viewState": {
+                  "x": -1620,
+                  "y": -580,
+                  "zoom": -2.222392421336448
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Code organization"
+            }
           }
-        ]
+        ],
+        "currentTab": 6
       },
       {
         "id": "a50c5a72ba9688ca",
@@ -140,8 +142,9 @@
         "dimension": 48.282097649186255,
         "children": [
           {
-            "id": "c5b7d0a1d142fed3",
+            "id": "b1f1c82fa25d8021",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
@@ -149,36 +152,9 @@
                 "mode": "source",
                 "source": false
               },
+              "pinned": true,
               "icon": "lucide-file",
               "title": "Test Plan"
-            }
-          },
-          {
-            "id": "9aa5039adf17090d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Presentation notes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Presentation notes"
-            }
-          },
-          {
-            "id": "0acb01d6fc889692",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Notes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Notes"
             }
           }
         ]
@@ -383,7 +359,7 @@
                     "viewState": {
                       "x": 0,
                       "y": -315.8820489124855,
-                      "zoom": -0.43014439166905216
+                      "zoom": -0.8421814123332091
                     }
                   },
                   "pinned": true,
@@ -407,8 +383,26 @@
                   "icon": "lucide-layout-dashboard",
                   "title": "Code organization"
                 }
+              },
+              {
+                "id": "0c6ac1bd57928e44",
+                "type": "leaf",
+                "state": {
+                  "type": "canvas",
+                  "state": {
+                    "file": "Nav Links/Nav Links.canvas",
+                    "viewState": {
+                      "x": 1541.3111201730421,
+                      "y": -851.4405599196074,
+                      "zoom": -2.482676543408482
+                    }
+                  },
+                  "icon": "lucide-layout-dashboard",
+                  "title": "Nav Links"
+                }
               }
-            ]
+            ],
+            "currentTab": 3
           }
         ],
         "direction": "vertical",
@@ -417,19 +411,55 @@
         "width": 735,
         "height": 1055,
         "maximize": false,
+        "zoom": 2
+      },
+      {
+        "id": "82795e25a8430cb3",
+        "type": "window",
+        "children": [
+          {
+            "id": "4455b0e32593c147",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "c5b7d0a1d142fed3",
+                "type": "leaf",
+                "state": {
+                  "type": "canvas",
+                  "state": {
+                    "file": "Code organization.canvas",
+                    "viewState": {
+                      "x": -1620,
+                      "y": -580,
+                      "zoom": -2.3215678264272834
+                    }
+                  },
+                  "icon": "lucide-layout-dashboard",
+                  "title": "Code organization"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 2060,
+        "y": 48,
+        "width": 2103.254638671875,
+        "height": 1116.806396484375,
+        "maximize": false,
         "zoom": -0.5
       }
     ]
   },
-  "active": "c5b7d0a1d142fed3",
+  "active": "7a00885950fac473",
   "lastOpenFiles": [
-    "Notes.md",
     "Presentation notes.md",
+    "Nav Links/Nav Links.canvas",
+    "Test Plan.canvas",
     "Test Plan.md",
     "Code organization.canvas",
-    "Test Plan.canvas",
+    "Notes.md",
     "Presentation.md",
-    "Nav Links/Nav Links.canvas",
     "Search Bar/Search Bar.canvas",
     "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
     "Search Page Categories/Tests/Automated/2a. Assert category is added, url changes and items are filtered.md",
