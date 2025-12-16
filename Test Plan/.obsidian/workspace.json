@@ -134,7 +134,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 1
       },
       {
         "id": "a50c5a72ba9688ca",
@@ -451,14 +451,14 @@
       }
     ]
   },
-  "active": "7a00885950fac473",
+  "active": "0c6ac1bd57928e44",
   "lastOpenFiles": [
+    "Notes.md",
+    "Code organization.canvas",
     "Presentation notes.md",
     "Nav Links/Nav Links.canvas",
     "Test Plan.canvas",
     "Test Plan.md",
-    "Code organization.canvas",
-    "Notes.md",
     "Presentation.md",
     "Search Bar/Search Bar.canvas",
     "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
