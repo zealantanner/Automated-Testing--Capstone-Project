@@ -9,12 +9,12 @@ export default class SearchBar extends AssertBase {
         const {reverse=false,timeout} = ops;
         await base.waitForLoad()
         const $typeahead = base.SearchBar.Typeahead.$base
-        await this.waitFor($typeahead, "Typeahead",{reverse,timeout})
+        await this.waitFor($typeahead,{reverse,timeout})
 
         if(reverse) {
-            await expect($typeahead).not.toExist()
+            await expect($typeahead).not.toExist({wait:timeout})
         } else {
-            await expect($typeahead).toExist()
+            await expect($typeahead).toExist({wait:timeout})
         }
     }
 
@@ -24,7 +24,7 @@ export default class SearchBar extends AssertBase {
         await base.waitForLoad()
 
         const $typeahead = base.SearchBar.Typeahead.$base
-        await this.waitFor($typeahead, "Typeahead")
+        await this.waitFor($typeahead)
 
         const $title = base.SearchBar.Typeahead.Results.$title
         const $$items = base.SearchBar.Typeahead.Results.$$items

@@ -14,7 +14,7 @@ describe(`Nav Links [MTQA-4219]`, () => {
             describe(`"${menu1.name}"`, () => {
                 it(`Assert the menu opens`, async () => {
                     await HomePage.NavBar.clickToOpenMenu(menu1)
-                    await Assert.NavBar.assertNavMenuIsOpen(menu1)
+                    await Assert.NavBar.assertNavMenuIsOpen(menu1,{timeout:300})
                 })
                 for(const link1 of menu1.links) {
                     it(`Assert "${link1.name}" links to path "${link1.path}"`, async () => {
@@ -34,7 +34,7 @@ describe(`Nav Links [MTQA-4219]`, () => {
                 }
                 it(`Assert the menu closes`, async () => {
                     await HomePage.NavBar.clickTocloseMenu(menu1)
-                    await Assert.NavBar.assertNavMenuIsOpen(menu1,{reverse:true})
+                    await Assert.NavBar.assertNavMenuIsOpen(menu1,{reverse:true,timeout:300})
                 })
             })
         }

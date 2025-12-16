@@ -6,12 +6,12 @@ import { NavLink, NavMenu } from "../pageobjects/elements/base/navBar.el";
 /** Navbar menu tests */
 export default class NavBar extends AssertBase {
     /** Asserts `menu` is open */
-    public async assertNavMenuIsOpen(menu:NavMenu,ops:{reverse?:boolean}={}) {
-        const {reverse=false} = ops;
+    public async assertNavMenuIsOpen(menu:NavMenu,ops:{reverse?:boolean,timeout?:number}={}) {
+        const {reverse=false,timeout} = ops;
         await base.waitForLoad()
 
         const $dropdown = base.NavBar.$dropdown(menu)
-        await this.waitFor($dropdown,"Dropdown",{reverse,timeout:100})
+        await this.waitFor($dropdown,{reverse,timeout})
 
         if(reverse) {
             await expect($dropdown).not.toBeDisplayed()

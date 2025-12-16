@@ -70,13 +70,19 @@ I put a description on every function and getter
 I made a custom element class so I can put an element into another class
 `public get CategorySidebar() { return new CategorySidebar() }`
 
-Nav links fails, I say oops, just kidding! that's a problem with the website not my code
+Nav links fails, that's a problem with the website not my code
 
 Show off how I test if there's duplicate
 Show off sort by dropdown test
+
+
+## draw thing on canvas to show off how page objects are structured
 
 
 
 Bugs to report:
 When searching with 3 or less letters the typeahead doesn't appear. "amp"
 Duplicate link in the navbar menu
+
+
+

@@ -3,8 +3,8 @@
 		{"id":"b2ef0b7539626096","type":"group","x":-1440,"y":-440,"width":2360,"height":1240,"color":"3","label":"Sort by choices"},
 		{"id":"5c27fd8932bcd023","type":"group","x":1000,"y":-520,"width":1360,"height":1360,"color":"3","label":"Filter chosen"},
 		{"id":"52190252404df79a","type":"text","text":"# On Click","x":1340,"y":-200,"width":160,"height":60,"color":"4"},
-		{"id":"c90c87c0db2d0ca8","type":"file","file":"Search Page Sort By Dropdown/Tests/Automated/2a. Assert Url changes according to sort by option.md","x":1160,"y":0,"width":520,"height":600,"color":"6"},
-		{"id":"67d2a3917e4644db","type":"file","file":"Search Page Sort By Dropdown/Tests/Manual/2a. Assert option highlights blue on hover.md","x":1740,"y":-380,"width":260,"height":200,"color":"2"},
+		{"id":"c90c87c0db2d0ca8","type":"file","file":"Search Page Sort By Dropdown/Tests/Automated/2a. Assert Url changes according to sort by option.md","x":1320,"y":0,"width":360,"height":300,"color":"6"},
+		{"id":"67d2a3917e4644db","type":"file","file":"Search Page Sort By Dropdown/Tests/Manual/2a. Assert option highlights blue on hover.md","x":1740,"y":-380,"width":300,"height":200,"color":"2"},
 		{"id":"f39935c6528f24b5","type":"file","file":"Search Page Sort By Dropdown/Tests/Automated/2b. Asserts option appears to be selected after clicked.md","x":1720,"y":0,"width":280,"height":240,"color":"6"},
 		{"id":"cc8a008d623884c9","type":"text","text":"# On Hover","x":1460,"y":-380,"width":160,"height":60,"color":"4"},
 		{"id":"64a016e257aa0a8a","type":"text","text":"# For each option to sort by","x":1060,"y":-400,"width":240,"height":100,"color":"4"},
@@ -26,8 +26,8 @@
 		{"id":"5e750fa7854da31b","type":"text","text":"# Most Popular","x":-1100,"y":-380,"width":220,"height":60,"color":"4"},
 		{"id":"ea58c71c84cdcee7","type":"file","file":"Search Page Sort By Dropdown/Tests/Automated/1a. Assert sort by \"Best Match\".md","x":-1400,"y":-180,"width":260,"height":260,"color":"6"},
 		{"id":"f021d3b8c8e1131e","type":"text","text":"# Best Match","x":-1360,"y":-380,"width":180,"height":60,"color":"4"},
-		{"id":"fd18dd841bf9fefc","x":520,"y":320,"width":260,"height":240,"color":"2","type":"file","file":"Search Page Sort By Dropdown/Tests/Manual/1b. Somehow assert \"Newest First\" sorts by date.md"},
-		{"id":"231df8aff82331f3","type":"file","file":"Search Page Sort By Dropdown/Tests/Manual/1a. Assert \"Best Match\" sorts by most relevant.md","x":-1320,"y":360,"width":240,"height":200,"color":"2"}
+		{"id":"fd18dd841bf9fefc","type":"file","file":"Search Page Sort By Dropdown/Tests/Manual/1b. Somehow assert \"Newest First\" sorts by date.md","x":520,"y":320,"width":280,"height":240,"color":"2"},
+		{"id":"231df8aff82331f3","type":"file","file":"Search Page Sort By Dropdown/Tests/Manual/1a. Assert \"Best Match\" sorts by most relevant.md","x":-1320,"y":360,"width":320,"height":200,"color":"2"}
 	],
 	"edges":[
 		{"id":"8cc1e68081b120df","fromNode":"64a016e257aa0a8a","fromSide":"right","toNode":"52190252404df79a","toSide":"top","color":"4"},

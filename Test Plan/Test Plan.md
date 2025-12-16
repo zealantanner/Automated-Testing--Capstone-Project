@@ -1,4 +1,5 @@
-# Component: Nav Links [[Nav Links.canvas]]
+# [Epic](https://mtechqa.atlassian.net/browse/MTQA-4218)
+# Component: [[Nav Links.canvas|Nav Links]]
 - ## Test Case: [Nav links (Automated)](https://mtechqa.atlassian.net/browse/MTQA-4219)
 	- For each navbar menu:
 		1. Test: [[1. Assert the menu opens]]
@@ -10,7 +11,7 @@
 	- For each navbar menu:
 		- Test: [[1. Assert dropdown aspects behave correctly]]
 	    - Test: [[2. Assert links have highlight]]
-# Component: Search Bar [[Search Bar.canvas]]
+# Component: [[Search Bar.canvas|Search Bar]]
 - ## Test Case: [Search bar (Automated)](https://mtechqa.atlassian.net/browse/MTQA-4227)
 	- #### Input Field:
 	1. Test: Input text
@@ -28,7 +29,7 @@
         - Test: [[1. Assert typing in the search field feels normal]]
 	- #### Submit Button:
         - Test: [[2. Assert items on search page are relevant to the text inputted]]
-# Component: Search Page Categories [[Search Page Categories.canvas]]
+# Component: [[Search Page Categories.canvas|Search Page Categories]]
 - ## Test Case: [Search Page Categories (Automated)](https://mtechqa.atlassian.net/browse/MTQA-4229)
     1. Category dropdown closes and opens
 	    - Test: [[1a. Assert category dropdown closes]]
@@ -43,7 +44,7 @@
         - [[2. Assert items that are irrelevant to the filter are not included]]
     - Test: Highlights red when hovered over
         - [[3. Assert highlights red on hover]]
-# Component: Search Page Sort By Dropdown [[Search Page Sort By Dropdown.canvas]]
+# Component: [[Search Page Sort By Dropdown.canvas|Search Page Sort By Dropdown]]
 - ## Test Case: [Sort By Dropdown (Automated)](https://mtechqa.atlassian.net/browse/MTQA-4231)
     1. Dropdown options
 	    - Test: [[1a. Assert sort by "Best Match"]]

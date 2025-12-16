@@ -4,5 +4,5 @@
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "./",
   "showLineNumber": false,
-  "readableLineLength": true
+  "readableLineLength": false
 }

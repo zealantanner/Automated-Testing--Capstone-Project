@@ -20,14 +20,13 @@ export default class AssertBase {
     }
 
     /** Waits for `$element` called `name` to show up */
-    protected async waitFor($element:ChainablePromiseElement,name:string,ops:{reverse?:boolean,timeout?:number,timeoutMsg?:string}={}) {
-        const {reverse=false,timeout,timeoutMsg=`${name} did${reverse?"":"n't"} appear`} = ops;
+    protected async waitFor($element:ChainablePromiseElement,ops:{reverse?:boolean,timeout?:number,timeoutMsg?:string}={}) {
+        const {reverse=false,timeout,} = ops;
         await base.waitForLoad()
         return $element
             .waitForExist({
                 timeout,
                 reverse,
-                timeoutMsg
             })
             .catch(() => {})
     }

@@ -3,6 +3,7 @@ import SearchBar from '../../elements/base/searchBar.el'
 import Popup from '../../elements/base/popup.el'
 import NavBar from '../../elements/base/navBar.el'
 
+
 /** Base page */
 export default abstract class Base {
     /** @param subUrl https://www.parts-express.com/ `subUrl` */
