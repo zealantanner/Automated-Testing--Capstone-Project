@@ -18,7 +18,7 @@
 		{"id":"0bbdfc59c3b5b42e","type":"file","file":"Search Bar/images/Search Bar/Text Input.png","x":-3880,"y":-2940,"width":400,"height":91,"color":"4"},
 		{"id":"293773f98d315c14","type":"text","text":"# Input nonsense text","x":-2080,"y":-3040,"width":280,"height":60,"color":"1"},
 		{"id":"7fa4e30b97adcd02","type":"text","text":"# On Click","x":300,"y":-3240,"width":140,"height":60,"color":"1"},
-		{"id":"b207a7d616ce96f5","type":"file","file":"Search Bar/Tests/Automated/Submit button/1. Assert URL changes with text inputted.md","x":-980,"y":-2760,"width":320,"height":340,"color":"6"},
+		{"id":"b207a7d616ce96f5","type":"file","file":"Search Bar/Tests/Automated/Submit button/1. Assert url changes with text inputted.md","x":-980,"y":-2760,"width":320,"height":340,"color":"6"},
 		{"id":"c85d0cc0eb8997d9","type":"file","file":"Search Bar/Tests/Manual/2. Assert items on search page are relevant to the text inputted.md","x":-580,"y":-2760,"width":300,"height":220,"color":"2"},
 		{"id":"ee97ab598672dffd","type":"file","file":"Search Bar/images/Search Bar/Bad Text Input.png","x":-2200,"y":-2940,"width":398,"height":86,"color":"1"},
 		{"id":"f6f454131a3754f6","type":"file","file":"Search Bar/Tests/Automated/Input field/3. Assert typeahead appears with no results.md","x":-1920,"y":-2740,"width":320,"height":260,"color":"6"},

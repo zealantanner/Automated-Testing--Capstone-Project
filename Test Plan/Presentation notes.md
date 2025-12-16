@@ -20,12 +20,18 @@
 5. Explain why you did not automate certain Test Cases and why you did automate the chosen Test Cases.
 	- I chose elements that seemed like they'd be a big enough challenge for me, which it was
 	- I didn't do the cart because carts tend to not be testable, you tend to run into captchas or bot prevention
+	- There's a few aspects that are better as manual tests like when hovering on a link or making sure searched items are relevant
 
 <u>Automation:</u>
 1. Briefly explain and show how you have your code organized. 
-	[[Code organization.canvas|Code organization]]
+	- [[Code organization.canvas|Code organization]]
+	  I made my code base as if it's meant to be expanded to test the entire website. That just felt like the right way to do it
+	- I put $ in the name of an element so I know just by looking at it that it's a `ChainablePromiseElement`
+	  Same with functions that get specific elements
 2. Share 1 or more challenge that you overcame.
+	- The sort by dropdown, there's a special way to select from a dropdown like this
 	- Dealing with the popup
+	  Show injecting local storage
 	- I wanted a way to split things up into multiple files instead of every element going in the same file. I did that with this
 	  `public get CategorySidebar() { return new CategorySidebar() }`
 3. **Show the instructor _all_ of your tests running and passing as expected.**
@@ -35,7 +41,12 @@
 
 <u>Overall:</u>
 1. Would you give your stamp of approval that the components you tested are ready for the end user, meaning that the end user should not find any problems with the components?
-	It's a user-ready website, but there's a few small bugs that barely affect the average user
+	It's a user-ready website, but there's a few small bugs that barely affect the average user. They wouldn't find these bugs
 2. Share what you could have done better and or what you could improve on (**not excuses**).
-	I could have done more negative
+	I could have done more negative tests, making sure something doesn't happen to make sure I'm not doing false positives
 	I added a lot to my code that I never ended up using, I ended up deleting a bunch. I needed to first write the test files, write down step by step exactly what they should do before getting ahead of myself. Writing the functions there even though they don't exist yet
+
+<u>Extra:</u>
+bugs I found
+- Duplicate link in the navbar menu
+- When searching with 3 or less letters the typeahead doesn't appear. "amp"

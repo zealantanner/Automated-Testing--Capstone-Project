@@ -1,3 +1,5 @@
+Copy and paste all assignments from canvas so I remember what I learned
+
 Sometimes category dropdown doesn't appear depending on 
 click to remove cookie toast
 
