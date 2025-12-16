@@ -6,8 +6,24 @@
       {
         "id": "1d1b4a85118d0040",
         "type": "tabs",
-        "dimension": 47.09379128137384,
+        "dimension": 51.71790235081374,
         "children": [
+          {
+            "id": "18eee81852d64ce1",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Presentation notes.md",
+                "mode": "source",
+                "source": false
+              },
+              "pinned": true,
+              "icon": "lucide-file",
+              "title": "Presentation notes"
+            }
+          },
           {
             "id": "7904d9342875e747",
             "type": "leaf",
@@ -106,8 +122,8 @@
               "state": {
                 "file": "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
                 "viewState": {
-                  "x": 652.4898525466405,
-                  "y": 220.42871596088958,
+                  "x": 1470.0628601963836,
+                  "y": 6.560280184963148,
                   "zoom": -1.4099792150832604
                 }
               },
@@ -116,30 +132,13 @@
               "title": "Search Page Sort By Dropdown"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       },
       {
         "id": "a50c5a72ba9688ca",
         "type": "tabs",
-        "dimension": 52.90620871862616,
+        "dimension": 48.282097649186255,
         "children": [
-          {
-            "id": "18eee81852d64ce1",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Presentation notes.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true,
-              "icon": "lucide-file",
-              "title": "Presentation notes"
-            }
-          },
           {
             "id": "c5b7d0a1d142fed3",
             "type": "leaf",
@@ -239,7 +238,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 545.5110321044922
+    "width": 400.5110321044922
   },
   "right": {
     "id": "24dc774896c24788",
@@ -365,7 +364,7 @@
                   "type": "markdown",
                   "state": {
                     "file": "Test Plan.md",
-                    "mode": "source",
+                    "mode": "preview",
                     "source": false
                   },
                   "pinned": true,
@@ -383,7 +382,7 @@
                     "file": "Test Plan.canvas",
                     "viewState": {
                       "x": 0,
-                      "y": -320,
+                      "y": -315.8820489124855,
                       "zoom": -0.43014439166905216
                     }
                   },
@@ -391,9 +390,25 @@
                   "icon": "lucide-layout-dashboard",
                   "title": "Test Plan"
                 }
+              },
+              {
+                "id": "ffc69f62d61954ad",
+                "type": "leaf",
+                "state": {
+                  "type": "canvas",
+                  "state": {
+                    "file": "Code organization.canvas",
+                    "viewState": {
+                      "x": -1620,
+                      "y": -580,
+                      "zoom": -2.3215678264272834
+                    }
+                  },
+                  "icon": "lucide-layout-dashboard",
+                  "title": "Code organization"
+                }
               }
-            ],
-            "currentTab": 1
+            ]
           }
         ],
         "direction": "vertical",
@@ -406,14 +421,14 @@
       }
     ]
   },
-  "active": "74199c2a000dc0e9",
+  "active": "c5b7d0a1d142fed3",
   "lastOpenFiles": [
-    "Presentation notes.md",
-    "Test Plan.canvas",
-    "Test Plan.md",
-    "Presentation.md",
     "Notes.md",
+    "Presentation notes.md",
+    "Test Plan.md",
     "Code organization.canvas",
+    "Test Plan.canvas",
+    "Presentation.md",
     "Nav Links/Nav Links.canvas",
     "Search Bar/Search Bar.canvas",
     "Search Page Sort By Dropdown/Search Page Sort By Dropdown.canvas",
