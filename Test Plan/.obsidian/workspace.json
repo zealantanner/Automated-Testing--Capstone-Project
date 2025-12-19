@@ -412,50 +412,14 @@
         "height": 1055,
         "maximize": false,
         "zoom": 2
-      },
-      {
-        "id": "82795e25a8430cb3",
-        "type": "window",
-        "children": [
-          {
-            "id": "4455b0e32593c147",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "c5b7d0a1d142fed3",
-                "type": "leaf",
-                "state": {
-                  "type": "canvas",
-                  "state": {
-                    "file": "Code organization.canvas",
-                    "viewState": {
-                      "x": -1620,
-                      "y": -580,
-                      "zoom": -2.3215678264272834
-                    }
-                  },
-                  "icon": "lucide-layout-dashboard",
-                  "title": "Code organization"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 2060,
-        "y": 48,
-        "width": 2103.254638671875,
-        "height": 1116.806396484375,
-        "maximize": false,
-        "zoom": -0.5
       }
     ]
   },
   "active": "7904d9342875e747",
   "lastOpenFiles": [
-    "Nav Links/Nav Links.canvas",
-    "Notes.md",
     "Code organization.canvas",
+    "Notes.md",
+    "Nav Links/Nav Links.canvas",
     "Presentation notes.md",
     "Test Plan.canvas",
     "Test Plan.md",

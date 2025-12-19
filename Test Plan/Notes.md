@@ -100,3 +100,6 @@ Don't be nervous
 Reach out to people on linkedin just by messaging them. Find a company, find some people who work in that company, and ask them what it's like to work at that company, and if there are openings
 
 add readme to every project on my portfolio
+
+
+on my github 6 projects, include just a project called "portfolio" that is just a readme
