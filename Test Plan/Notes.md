@@ -103,3 +103,9 @@ add readme to every project on my portfolio
 
 
 on my github 6 projects, include just a project called "portfolio" that is just a readme
+
+add a video to each readme in each github project
+
+Make "found bugs" page too
+
+change projects section on linkedin
